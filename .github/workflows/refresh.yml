@@ -1,0 +1,26 @@
+name: Relève des cotes Betclic
+on:
+  schedule:
+    # Heures UTC : 7h et 11h UTC = 8h et 12h à Paris en hiver (9h et 13h en été), + 17h UTC pour le soir
+    - cron: "0 7 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Relever les cotes
+        run: python scripts/fetch_odds.py
+      - name: Commit data.json
+        run: |
+          git config user.name "paris-du-jour-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "Cotes Betclic du $(TZ=Europe/Paris date '+%d/%m %H:%M')" && git push)

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paris du jour</title>
+<meta name="description" content="Les paris sportifs du jour avec les cotes Betclic et un calcul de mise selon ton solde.">
+<meta name="theme-color" content="#1a1033">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Paris du jour">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{
+  --glass: rgba(255,255,255,.13);
+  --glass-strong: rgba(255,255,255,.2);
+  --stroke: rgba(255,255,255,.28);
+  --text: #fff;
+  --muted: rgba(255,255,255,.68);
+  --safe:#34d399; --bal:#60a5fa; --big:#fbbf24; --poker:#f472b6;
+  --radius: 26px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:#2a1153}
+html,body{margin:0;min-height:100%;color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+body{padding:calc(env(safe-area-inset-top) + 14px) calc(env(safe-area-inset-right) + 16px) calc(env(safe-area-inset-bottom) + 28px) calc(env(safe-area-inset-left) + 16px);overflow-x:hidden}
+.bg{position:fixed;inset:-25%;z-index:-1;background:
+  radial-gradient(30% 25% at 20% 22%, rgba(255,94,98,.95) 0%, transparent 70%),
+  radial-gradient(30% 25% at 78% 20%, rgba(245,158,11,.85) 0%, transparent 70%),
+  radial-gradient(35% 30% at 75% 62%, rgba(6,182,212,.9) 0%, transparent 70%),
+  radial-gradient(35% 30% at 25% 78%, rgba(168,85,247,.95) 0%, transparent 70%),
+  linear-gradient(160deg,#3b1670,#0e2a5c);
+  animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{0%{transform:translate3d(0,0,0) rotate(0)}100%{transform:translate3d(-4%,3%,0) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.bg{animation:none}}
+.glass{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.06));
+  -webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);
+  border:1px solid var(--stroke);border-radius:var(--radius);
+  box-shadow:0 10px 40px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(255,255,255,.08)}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 38%)}
+header{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 16px}
+h1{font-size:34px;letter-spacing:-.02em;margin:0;font-weight:800}
+.sub{color:var(--muted);font-size:13px;margin-top:2px}
+.refresh{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:20px;color:#fff;cursor:pointer}
+.card{padding:16px 16px;margin-bottom:14px}
+.balance label{font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.balrow{display:flex;align-items:center;gap:8px;margin-top:6px}
+.balrow input{flex:1;min-width:0;background:rgba(255,255,255,.1);border:1px solid var(--stroke);border-radius:16px;color:#fff;
+  font-size:30px;font-weight:700;padding:10px 14px;outline:none;font-family:inherit}
+.balrow input:focus{border-color:#fff;background:rgba(255,255,255,.16)}
+.balrow .eur{font-size:28px;font-weight:700}
+.seg{display:flex;background:rgba(0,0,0,.18);border-radius:14px;padding:3px;margin-top:12px}
+.seg button{flex:1;border:0;background:transparent;color:var(--muted);font:600 14px/1 inherit;padding:10px 4px;border-radius:11px;cursor:pointer}
+.seg button.on{background:rgba(255,255,255,.28);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.hint{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.4}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:9px 15px;border-radius:999px;font-weight:600;font-size:14px;color:#fff;cursor:pointer;border:1px solid var(--stroke);
+  background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.chip.on{background:rgba(255,255,255,.85);color:#1a1033}
+.tier{margin:22px 2px 10px;display:flex;align-items:baseline;justify-content:space-between}
+.tier h2{margin:0;font-size:22px;letter-spacing:-.01em}
+.tier .meta{font-size:12.5px;color:var(--muted)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle;box-shadow:0 0 12px currentColor}
+.pick{padding:14px 15px;margin-bottom:10px}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.comp{font-size:12px;color:var(--muted);font-weight:600}
+.match{font-size:16px;font-weight:700;margin-top:2px;line-height:1.25}
+.sel{margin-top:8px;font-size:15px}
+.sel b{font-weight:700}
+.odds{flex:none;text-align:center;min-width:70px;padding:8px 10px;border-radius:16px;background:rgba(255,255,255,.18);border:1px solid var(--stroke)}
+.odds .o{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.odds .p{font-size:11px;color:var(--muted);font-weight:600}
+.reason{font-size:13px;color:rgba(255,255,255,.82);margin-top:8px;line-height:1.4}
+.stake{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.pill{font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:12px;background:rgba(0,0,0,.2)}
+.pill.g{background:rgba(52,211,153,.22)}
+.bar{height:5px;border-radius:5px;background:rgba(255,255,255,.15);margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:5px}
+.empty{color:var(--muted);font-size:14px;padding:14px}
+.combo .legs{margin:8px 0 0;padding:0;list-style:none;font-size:14px}
+.combo .legs li{padding:4px 0;border-top:1px solid rgba(255,255,255,.1)}
+.combo .legs li:first-child{border-top:0}
+.foot{font-size:12.5px;color:var(--muted);line-height:1.5;padding:16px}
+.foot b{color:#fff}
+.foot a{color:#fff}
+.warn{border-color:rgba(251,191,36,.5)}
+.src{font-size:12.5px;line-height:1.45}
+.src b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header>
+  <div>
+    <h1>Paris du jour</h1>
+    <div class="sub" id="today"></div>
+  </div>
+  <div class="glass refresh" id="reload" title="Recharger" aria-label="Recharger">↻</div>
+</header>
+
+<section class="glass card balance">
+  <label for="bal">Mon solde Betclic</label>
+  <div class="balrow"><input id="bal" type="number" inputmode="decimal" min="0" step="0.01" placeholder="100"><span class="eur">€</span></div>
+  <div class="seg" id="profile">
+    <button data-p="0.5">Prudent</button><button data-p="1" class="on">Normal</button><button data-p="1.5">Audacieux</button>
+  </div>
+  <div class="hint" id="rule"></div>
+</section>
+
+<section class="glass card src warn" id="src">Chargement des cotes…</section>
+
+<div class="chips" id="chips"></div>
+<main id="list"></main>
+
+<section class="glass foot">
+  <b>Jeu responsable.</b> Une cote ne garantit rien : même un pari « sûr » à 1,30 perd environ 1 fois sur 4. Les pourcentages affichés sont les probabilités implicites des cotes Betclic (marge du bookmaker retirée), pas des prédictions. Ne mise que ce que tu peux te permettre de perdre, ne cherche jamais à « te refaire ». Interdit aux moins de 18 ans.
+  Besoin d'aide ? <b>Joueurs Info Service : <a href="tel:0974751313">09 74 75 13 13</a></b> (appel non surtaxé) · <a href="https://www.joueurs-info-service.fr" target="_blank" rel="noopener">joueurs-info-service.fr</a>
+</section>
+
+<script>
+const TIERS = [
+  {key:'safe',  name:'Les plus sûrs',          min:1.15, max:1.60, pct:4,   color:'var(--safe)',  desc:'cotes 1,15 – 1,60'},
+  {key:'bal',   name:'Équilibrés',             min:1.60, max:2.50, pct:2.5, color:'var(--bal)',   desc:'cotes 1,60 – 2,50'},
+  {key:'big',   name:'Grosses cotes jouables', min:2.50, max:5.00, pct:1,   color:'var(--big)',   desc:'cotes 2,50 – 5'},
+  {key:'poker', name:'Coups de poker',         min:5.00, max:15.0, pct:0.5, color:'var(--poker)', desc:'cotes > 5, très risqué'},
+];
+const COMBO_PCT = 1.5, MAX_PCT = 5;
+const SPORTS = {football:'⚽ Foot', basketball:'🏀 Basket', tennis:'🎾 Tennis', rugby:'🏉 Rugby'};
+const $ = s => document.querySelector(s);
+const fmtEur = v => v.toLocaleString('fr-FR',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtOdd = v => v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtPct = v => (v*100).toLocaleString('fr-FR',{maximumFractionDigits:0})+' %';
+const tParis = d => new Date(d).toLocaleString('fr-FR',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit'});
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let DATA = null, sport = 'all';
+let balance = parseFloat(localStorage.getItem('pdj_balance')||'') || 0;
+let profile = parseFloat(localStorage.getItem('pdj_profile')||'1') || 1;
+
+$('#today').textContent = new Date().toLocaleDateString('fr-FR',{timeZone:'Europe/Paris',weekday:'long',day:'numeric',month:'long'});
+if (balance) $('#bal').value = balance;
+document.querySelectorAll('#profile button').forEach(b=>{
+  b.classList.toggle('on', parseFloat(b.dataset.p)===profile);
+  b.onclick=()=>{profile=parseFloat(b.dataset.p);localStorage.setItem('pdj_profile',profile);
+    document.querySelectorAll('#profile button').forEach(x=>x.classList.toggle('on',x===b));render();};
+});
+$('#bal').addEventListener('input',e=>{balance=Math.max(0,parseFloat(String(e.target.value).replace(',','.'))||0);localStorage.setItem('pdj_balance',balance);render();});
+$('#reload').onclick=()=>load(true);
+
+function stakePct(base){ return Math.min(MAX_PCT, base*profile); }
+function stakeFor(base){ const pct=stakePct(base); const eur=Math.floor(balance*pct)/100; return {pct, eur}; }
+
+function formTxt(f){
+  if(!f||!f.results||!f.results.length) return null;
+  const c={1:0,2:0,3:0}; f.results.forEach(r=>c[r]=(c[r]||0)+1);
+  return `${c[1]}V ${c[3]}N ${c[2]}D`;
+}
+
+function buildPicks(matches){
+  const picks=[];
+  for(const m of matches){
+    const inv=m.selections.map(s=>1/s.odds), sum=inv.reduce((a,b)=>a+b,0), margin=sum-1;
+    const sels=m.selections.map((s,i)=>({...s,p:inv[i]/sum}));
+    const fav=[...sels].sort((a,b)=>b.p-a.p)[0];
+    const [home,away]=[m.form?.[0],m.form?.[1]];
+    for(const t of TIERS){
+      const inTier=sels.filter(s=>s.odds>=t.min && s.odds<t.max);
+      if(!inTier.length) continue;
+      const s=inTier.sort((a,b)=>b.p-a.p)[0];
+      const isDraw=/^nul$/i.test(s.name);
+      let r=[];
+      if(isDraw) r.push(`Match nul. Cotes des deux camps : ${sels.filter(x=>x!==s).map(x=>fmtOdd(x.odds)).join(' / ')}`);
+      else if(s===fav) r.push(s.p>=0.6?`Favori net selon Betclic (${fmtPct(s.p)} implicite)`:`Léger favori (${fmtPct(s.p)} implicite)`);
+      else r.push(`Outsider : ${fmtPct(s.p)} implicite, favori ${esc(fav.name)} à ${fmtOdd(fav.odds)}`);
+      const fh=formTxt(home), fa=formTxt(away);
+      if(fh&&fa) r.push(`Forme 5 derniers (Betclic) : ${esc(home.name)} ${fh} · ${esc(away.name)} ${fa}`);
+      r.push(`Marge Betclic ${(margin*100).toFixed(1).replace('.',',')} %`);
+      picks.push({tier:t.key,m,s,reason:r.join('. ')+'.'});
+    }
+  }
+  return picks;
+}
+
+function pickCard(pk,t){
+  const st=stakeFor(t.pct);
+  const stakeHtml = balance>0
+    ? `<span class="pill">Mise ${fmtEur(st.eur)}</span><span class="pill">${st.pct.toLocaleString('fr-FR')} % du solde</span><span class="pill g">Gain potentiel ${fmtEur(st.eur*pk.s.odds)}</span>`
+    : `<span class="pill">Mise conseillée : ${st.pct.toLocaleString('fr-FR')} % du solde</span>`;
+  return `<article class="glass pick">
+    <div class="top"><div>
+      <div class="comp">${SPORTS[pk.m.sport]?.split(' ')[0]||''} ${esc(pk.m.competition)} · ${tParis(pk.m.start)}</div>
+      <div class="match">${esc(pk.m.name)}</div>
+      <div class="sel">${esc(pk.m.market)} : <b>${esc(pk.s.name)}</b></div>
+    </div>
+    <div class="odds"><div class="o">${fmtOdd(pk.s.odds)}</div><div class="p">${fmtPct(pk.s.p)}</div></div></div>
+    <div class="bar"><i style="width:${(pk.s.p*100).toFixed(0)}%;background:${t.color}"></i></div>
+    <div class="reason">${pk.reason}</div>
+    <div class="stake">${stakeHtml}</div>
+  </article>`;
+}
+
+function comboCard(legs,title){
+  const odds=legs.reduce((a,l)=>a*l.s.odds,1), p=legs.reduce((a,l)=>a*l.s.p,1);
+  const st=stakeFor(COMBO_PCT);
+  const stakeHtml = balance>0
+    ? `<span class="pill">Mise ${fmtEur(st.eur)}</span><span class="pill">${st.pct.toLocaleString('fr-FR')} % du solde</span><span class="pill g">Gain potentiel ${fmtEur(st.eur*odds)}</span>`
+    : `<span class="pill">Mise conseillée : ${st.pct.toLocaleString('fr-FR')} % du solde</span>`;
+  return `<article class="glass pick combo">
+    <div class="top"><div><div class="comp">${title}</div><div class="match">${legs.length} sélections « sûres »</div></div>
+    <div class="odds"><div class="o">${fmtOdd(odds)}</div><div class="p">${fmtPct(p)}</div></div></div>
+    <ul class="legs">${legs.map(l=>`<li>${esc(l.m.name)} : <b>${esc(l.s.name)}</b> @ ${fmtOdd(l.s.odds)} <span style="color:var(--muted)">· ${tParis(l.m.start)}</span></li>`).join('')}</ul>
+    <div class="reason">Cote combinée = produit des cotes. Probabilité ≈ produit des probabilités implicites : il suffit d'une sélection perdante pour tout perdre.</div>
+    <div class="stake">${stakeHtml}</div></article>`;
+}
+
+function render(){
+  if(!DATA) return;
+  const now=Date.now();
+  const all=DATA.matches.filter(m=>new Date(m.start).getTime()>now);
+  const sports=[...new Set(all.map(m=>m.sport))];
+  $('#chips').innerHTML=[['all','Tous'],...sports.map(s=>[s,SPORTS[s]||s])].map(([k,l])=>`<div class="chip ${k===sport?'on':''}" data-s="${k}">${l}</div>`).join('');
+  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{sport=c.dataset.s;render();});
+  const matches=all.filter(m=>sport==='all'||m.sport===sport);
+  const picks=buildPicks(matches);
+  $('#rule').textContent = `Mise fixe par catégorie (profil ${profile===1?'Normal':profile<1?'Prudent':'Audacieux'}) : sûrs ${stakePct(4).toLocaleString('fr-FR')} %, équilibrés ${stakePct(2.5).toLocaleString('fr-FR')} %, grosses cotes ${stakePct(1).toLocaleString('fr-FR')} %, poker ${stakePct(.5).toLocaleString('fr-FR')} %, combinés ${stakePct(COMBO_PCT).toLocaleString('fr-FR')} %. Jamais plus de 5 % du solde par pari.${balance?'':' Entre ton solde pour voir les mises en euros.'}`;
+  let html='';
+  if(!matches.length) html=`<div class="glass card empty">Plus de match à venir dans ce relevé. Les cotes sont relevées automatiquement chaque matin et à midi : reviens plus tard.</div>`;
+  for(const t of TIERS){
+    const list=picks.filter(p=>p.tier===t.key).sort((a,b)=>b.s.p-a.s.p);
+    if(!list.length) continue;
+    html+=`<div class="tier"><h2><span class="dot" style="color:${t.color};background:${t.color}"></span>${t.name}</h2><span class="meta">${list.length} · ${t.desc}</span></div>`;
+    html+=list.map(p=>pickCard(p,t)).join('');
+    if(t.key==='safe' && list.length>=2){
+      const uniq=[]; const seen=new Set();
+      for(const p of list){ if(!seen.has(p.m.id)){seen.add(p.m.id);uniq.push(p);} }
+      let combos='';
+      if(uniq.length>=2) combos+=comboCard(uniq.slice(0,2),'Combiné duo');
+      if(uniq.length>=3) combos+=comboCard(uniq.slice(0,3),'Combiné trio');
+      if(combos) html+=`<div class="tier"><h2><span class="dot" style="color:#c4b5fd;background:#c4b5fd"></span>Petits combinés</h2><span class="meta">tirés des plus sûrs</span></div>`+combos;
+    }
+  }
+  $('#list').innerHTML=html;
+}
+
+async function load(force){
+  try{
+    const r=await fetch('data.json'+(force?'?t='+Date.now():''),{cache:'no-cache'});
+    DATA=await r.json();
+    const ageH=(Date.now()-new Date(DATA.fetchedAt).getTime())/36e5;
+    $('#src').innerHTML=`<b>Cotes Betclic relevées le ${esc(DATA.fetchedAtParis.replace(' ',' à '))}</b> (heure de Paris), source : <a href="${DATA.sourceUrl}" target="_blank" rel="noopener" style="color:#fff">betclic.fr</a>. À vérifier dans l'app avant de parier, les cotes bougent.${ageH>14?' <b>Relevé ancien</b> : les cotes ont probablement changé.':''}`;
+    render();
+  }catch(e){ $('#src').textContent='Impossible de charger les cotes (hors ligne ?).'; }
+}
+load();
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
