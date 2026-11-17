@@ -1,8 +1,8 @@
 {
  "source": "Betclic.fr (pages publiques, cotes avant-match)",
  "sourceUrl": "https://www.betclic.fr/",
- "fetchedAt": "2026-11-17T19:37:20.442671Z",
- "fetchedAtParis": "17/11/2026 20:37",
+ "fetchedAt": "2026-11-17T19:42:40.395462Z",
+ "fetchedAtParis": "17/11/2026 20:42",
  "matches": [
   {
    "id": "1277918153023488",
@@ -15,7 +15,7 @@
    "selections": [
     {
      "name": "Irlande",
-     "odds": 1.89
+     "odds": 1.96
     },
     {
      "name": "Nul",
@@ -23,7 +23,7 @@
     },
     {
      "name": "Kosovo",
-     "odds": 3.88
+     "odds": 3.6
     }
    ],
    "form": [
