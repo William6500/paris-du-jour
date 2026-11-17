@@ -231,7 +231,7 @@ function render(){
   const picks=buildPicks(matches);
   $('#rule').textContent = `Mise fixe par catégorie (profil ${profile===1?'Normal':profile<1?'Prudent':'Audacieux'}) : sûrs ${stakePct(4).toLocaleString('fr-FR')} %, équilibrés ${stakePct(2.5).toLocaleString('fr-FR')} %, grosses cotes ${stakePct(1).toLocaleString('fr-FR')} %, poker ${stakePct(.5).toLocaleString('fr-FR')} %, combinés ${stakePct(COMBO_PCT).toLocaleString('fr-FR')} %. Jamais plus de 5 % du solde par pari.${balance?'':' Entre ton solde pour voir les mises en euros.'}`;
   let html='';
-  if(!matches.length) html=`<div class="glass card empty">Plus de match à venir dans ce relevé. Les cotes sont relevées automatiquement chaque matin et à midi : reviens plus tard.</div>`;
+  if(!matches.length) html=`<div class="glass card empty">Plus de match à venir dans ce relevé. Les cotes seront mises à jour au prochain relevé : reviens plus tard.</div>`;
   for(const t of TIERS){
     const list=picks.filter(p=>p.tier===t.key).sort((a,b)=>b.s.p-a.s.p);
     if(!list.length) continue;
