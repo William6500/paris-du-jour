@@ -65,9 +65,29 @@ h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .sel{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:5px 10px;border-radius:12px;background:rgba(255,255,255,.14);font-size:13.5px;font-weight:650}
 .sel .mk{color:var(--muted);font-weight:600}
 .odd{margin-left:auto;font-size:24px;font-weight:850;letter-spacing:-.03em}
-.ring{flex:none;width:44px;height:44px;position:relative}
+.ring{flex:none;width:46px;height:46px;position:relative}
 .ring svg{transform:rotate(-90deg)}
-.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:11.5px;font-weight:800}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
+.ring b small{font-size:7.5px;font-weight:700;margin-left:.5px;opacity:.85}
+.ring b.w3{font-size:10.5px}
+.chip.live{display:inline-flex;align-items:center;gap:6px}
+.chip.live i{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 0 rgba(239,68,68,.7);animation:pulse 1.6s infinite}
+.chip.live.on{background:rgba(239,68,68,.92);color:#fff;border-color:rgba(255,255,255,.5)}
+.chip.live.on i{background:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(239,68,68,.7)}70%{box-shadow:0 0 0 7px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+.dates{display:flex;gap:2px;padding:3px;border-radius:14px;margin:0 2px 12px;overflow-x:auto;scrollbar-width:none}.dates::-webkit-scrollbar{display:none}
+.dates button{flex:1 0 auto;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:12.5px;font-weight:700;padding:8px 10px;border-radius:11px;cursor:pointer;white-space:nowrap}
+.dates button.on{background:rgba(255,255,255,.3);color:#fff}
+.dates.off{opacity:.45;pointer-events:none}
+.tab{position:relative}.tab .n{position:absolute;top:4px;right:8px;min-width:16px;padding:0 4px;border-radius:8px;background:rgba(255,255,255,.18);font-size:9.5px;line-height:15px}
+.livebar{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:#fecaca;letter-spacing:.03em}
+.livebar i{width:8px;height:8px;border-radius:50%;background:#ef4444;animation:pulse 1.6s infinite}
+.score{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;margin:4px 0 8px;display:flex;gap:8px;align-items:center}
+.score .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.score .sc{padding:3px 10px;border-radius:10px;background:rgba(0,0,0,.25)}
+.pre{display:flex;gap:6px;flex-wrap:wrap}
+.pre span{padding:5px 9px;border-radius:10px;background:rgba(255,255,255,.12);font-size:12.5px;font-weight:700}
+.pre span em{font-style:normal;color:var(--muted);font-weight:600;margin-right:5px}
 .stake{display:flex;align-items:center;gap:6px;margin-left:auto;font-size:13px;font-weight:700}
 .stake .eur{padding:6px 10px;border-radius:12px;background:rgba(0,0,0,.22)}
 .stake .win{color:var(--safe)}
@@ -127,6 +147,7 @@ details ul{padding-left:18px;margin:6px 0}
  <div class="tab" data-t="combo"><span class="ic">🔗</span>Combinés</div>
 </nav>
 <div class="chips" id="chips"></div>
+<div class="glass dates" id="dates"></div>
 <main id="list"></main>
 <div class="glass toast" id="toast"></div>
 
@@ -152,7 +173,7 @@ const odd=v=>v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDi
 const pc=v=>Math.round(v*100)+' %';
 const hm=d=>new Date(d).toLocaleString('fr-FR',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit'});
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let D=null,tab='safe',sport='all',shown=PAGE;
+let D=null,tab='safe',sports=new Set(),liveOnly=false,day='all',shown=PAGE,LIVE={},liveT=0;
 let bal=parseFloat(localStorage.getItem('pdj_balance')||'')||0, prof=parseFloat(localStorage.getItem('pdj_profile')||'1')||1;
 $('#today').textContent=new Date().toLocaleDateString('fr-FR',{timeZone:'Europe/Paris',weekday:'long',day:'numeric',month:'long'});
 if(bal) $('#bal').value=bal;
@@ -190,7 +211,7 @@ function stake(base){
   if(bal<MIN_STAKE) return {pct,none:true};
   return {pct,e,min};
 }
-function ring(p,col){const r=18,c=2*Math.PI*r;return `<div class="ring"><svg width="44" height="44"><circle cx="22" cy="22" r="${r}" stroke="rgba(255,255,255,.18)" stroke-width="4.5" fill="none"/><circle cx="22" cy="22" r="${r}" stroke="${col}" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-dasharray="${c*p} ${c}"/></svg><b>${pc(p)}</b></div>`}
+function ring(p,col){const r=19,c=2*Math.PI*r,v=Math.round(p*100);return `<div class="ring"><svg width="46" height="46"><circle cx="23" cy="23" r="${r}" stroke="rgba(255,255,255,.18)" stroke-width="4" fill="none"/><circle cx="23" cy="23" r="${r}" stroke="${col}" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="${c*p} ${c}"/></svg><b class="${v>=100?'w3':''}">${v}<small>%</small></b></div>`}
 function stakeHtml(base,o){const s=stake(base);if(!bal)return `<div class="stake"><span class="eur">${s.pct.toLocaleString('fr-FR')} %</span></div>`;if(s.none)return `<div class="stake"><span class="badge b-min">Solde &lt; 0,10 €</span></div>`;
   return `<div class="stake">${s.min?'<span class="badge b-min">min</span>':''}<span class="eur">${eur(s.e)}</span><span class="win">→ ${eur(s.e*o)}</span></div>`}
 function dots(f){return `<div class="dots">${(f||[]).map(r=>`<span class="dot ${r}">${{W:'V',D:'N',L:'D'}[r]}</span>`).join('')}</div>`}
@@ -240,25 +261,78 @@ function comboCard(c){
 }
 window.tog=(e,el)=>{if(e.target.closest('a'))return;el.classList.toggle('open')};
 
+const DUR={football:120,basketball:140,tennis:200,rugby_union:110,rugby:110};
+const LBL={football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby'};
+const dayKey=d=>new Date(d).toLocaleDateString('fr-CA',{timeZone:'Europe/Paris'});
+function liveState(m,now){
+  const st=new Date(m.start).getTime(), inWin=st<=now&&now<st+(DUR[m.sport]||120)*6e4, e=LIVE[m.id];
+  if(e&&e.state==='in')return {live:true,e};
+  if(e&&e.state==='post')return {live:false,done:true,e};
+  if(e&&e.state==='pre'&&st>now)return {live:false};
+  return {live:inWin,est:inWin};
+}
+async function pollLive(force){
+  if(!D||(!force&&Date.now()-liveT<55000))return;liveT=Date.now();
+  const now=Date.now(),need={};
+  for(const m of D.matches){const st=new Date(m.start).getTime();if(m.espn&&st<=now+6e5&&now<st+(DUR[m.sport]||120)*6e4+36e5)need[m.espn.sport+'/'+m.espn.league]=1}
+  const ks=Object.keys(need);if(!ks.length)return;
+  await Promise.all(ks.map(async k=>{try{const r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/${k}/scoreboard`,{cache:'no-store'});const j=await r.json();
+    for(const ev of j.events||[]){const m=D.matches.find(x=>x.espn&&String(x.espn.event)===String(ev.id));if(!m)continue;
+      const c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');
+      LIVE[m.id]={state:ev.status.type.state,clock:ev.status.type.shortDetail||ev.status.displayClock,sh:h?.score,sa:a?.score}}}catch(e){}}));
+  render();
+}
+setInterval(()=>{if(!document.hidden)pollLive()},60000);
+function liveCard(m,ls){
+  const e=ls.e, hasScore=e&&e.sh!=null;
+  return `<article class="glass card" onclick="tog(event,this)">
+   <div class="row"><span class="livebar"><i></i>EN DIRECT${e?.clock?' · '+esc(e.clock):''}</span><span class="small" style="margin-left:auto">${SP[m.sport]||''} ${esc(m.competition)}</span></div>
+   <div class="score"><span class="nm">${esc(m.home)}</span>${hasScore?`<span class="sc">${esc(e.sh)} – ${esc(e.sa)}</span>`:'<span class="small">vs</span>'}<span class="nm" style="text-align:right">${esc(m.away)}</span></div>
+   ${ls.est?'<div class="small" style="margin-bottom:6px">En cours d\'après l\'heure de début (score indisponible)</div>':''}
+   <div class="small" style="margin-bottom:5px">Cotes Betclic d'avant-match · pas les cotes live</div>
+   <div class="pre">${m.main.map((x,i)=>`<span><em>${m.main.length===3?['1','N','2'][i]:i+1}</em>${odd(x.odds)}</span>`).join('')}</div>
+   ${details(m,null)}</article>`;
+}
 function render(){
   if(!D)return;
-  const now=Date.now(), live=id=>new Date(M(id).start).getTime()>now;
-  const okSport=id=>sport==='all'||M(id).sport===sport;
-  const sports=[...new Set(D.matches.filter(m=>new Date(m.start)>now).map(m=>m.sport))];
-  $('#chips').innerHTML=[['all','Tous'],...sports.map(s=>[s,(SP[s]||'')+' '+({football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby'}[s]||s)])].map(([k,l])=>`<div class="chip ${k===sport?'on':''}" data-s="${k}">${l}</div>`).join('');
-  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{sport=c.dataset.s;shown=PAGE;render()});
+  const now=Date.now(), up=id=>new Date(M(id).start).getTime()>now;
+  const okSport=id=>!sports.size||sports.has(M(id).sport);
+  const today=dayKey(now), tom=dayKey(now+864e5);
+  const okDay=id=>day==='all'||dayKey(M(id).start)===day;
+  const allSports=[...new Set(D.matches.map(m=>m.sport))];
+  const liveList=D.matches.filter(m=>okSport(m.id)).map(m=>[m,liveState(m,now)]).filter(x=>x[1].live).sort((a,b)=>(!!b[1].e-!!a[1].e)||(new Date(b[0].start)-new Date(a[0].start)));
+  // chips
+  $('#chips').innerHTML=`<div class="chip ${!sports.size&&!liveOnly?'on':''}" data-s="all">Tous</div><div class="chip live ${liveOnly?'on':''}" data-s="live"><i></i>LIVE${liveList.length?' '+liveList.length:''}</div>`+
+    allSports.map(s=>`<div class="chip ${sports.has(s)?'on':''}" data-s="${s}">${SP[s]||''} ${LBL[s]||s}</div>`).join('');
+  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const k=c.dataset.s;
+    if(k==='all'){sports.clear();liveOnly=false}else if(k==='live'){liveOnly=!liveOnly;if(liveOnly)pollLive(true)}else{sports.has(k)?sports.delete(k):sports.add(k)}
+    shown=PAGE;render()});
+  // dates
+  const days=[...new Set(D.matches.filter(m=>up(m.id)).map(m=>dayKey(m.start)))].sort();
+  if(day!=='all'&&!days.includes(day))day='all';
+  const dl=k=>k===today?'Aujourd\'hui':k===tom?'Demain':new Date(k+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'short',day:'numeric'});
+  $('#dates').className='glass dates'+(liveOnly?' off':'');
+  $('#dates').innerHTML=`<button data-d="all" class="${day==='all'?'on':''}">Tout</button>`+days.map(k=>`<button data-d="${k}" class="${day===k?'on':''}">${dl(k)}</button>`).join('');
+  document.querySelectorAll('#dates button').forEach(b=>b.onclick=()=>{day=b.dataset.d;shown=PAGE;render()});
   $('#rule').textContent=bal?`max ${MAX_PCT} % · min 0,10 €`:'Entre ton solde pour voir les mises';
+  // compteurs des onglets
+  const pickOk=p=>up(p.matchId)&&okSport(p.matchId)&&okDay(p.matchId);
+  const comboOk=c=>c.legs.every(l=>up(l.matchId)&&okSport(l.matchId)&&okDay(l.matchId));
+  const cnt={combo:D.combos.filter(comboOk).length};for(const k of ['safe','bal','big','poker'])cnt[k]=D.picks.filter(p=>p.tier===k&&pickOk(p)).length;
+  document.querySelectorAll('.tab').forEach(t=>{let n=t.querySelector('.n');if(!n){n=document.createElement('span');n.className='n';t.appendChild(n)}n.textContent=liveOnly?'–':cnt[t.dataset.t]});
   let html='';
-  if(tab==='combo'){
-    const cs=D.combos.filter(c=>c.legs.every(l=>live(l.matchId))&&c.legs.some(l=>okSport(l.matchId)));
+  if(liveOnly){
+    html=liveList.map(([m,ls])=>liveCard(m,ls)).join('')||`<div class="glass empty">🔴 Aucun match en direct pour l'instant${sports.size?' dans ces sports':''}.</div>`;
+  }else if(tab==='combo'){
+    const cs=D.combos.filter(comboOk);
     const g=[['multi','Plusieurs matchs'],['mycombi','Même match · cotes Betclic'],['estimate','Même match · estimations']];
     for(const [k,t] of g){const l=cs.filter(c=>c.kind===k);if(l.length)html+=`<div class="sec">${t}</div>`+l.map(comboCard).join('')}
   }else{
-    const ps=D.picks.filter(p=>p.tier===tab&&live(p.matchId)&&okSport(p.matchId)).sort((a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk));
+    const ps=D.picks.filter(p=>p.tier===tab&&pickOk(p)).sort((a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk));
     html=ps.slice(0,shown).map(pickCard).join('');
     if(ps.length>shown) html+=`<button class="more" onclick="shown+=${PAGE};render()">Voir plus (${ps.length-shown})</button>`;
   }
-  $('#list').innerHTML=html||`<div class="glass empty">Rien à venir ici pour l'instant.</div>`;
+  $('#list').innerHTML=html||`<div class="glass empty">Rien à venir avec ces filtres.</div>`;
 }
 function showSrc(){
   const old=ageMin(D)>14*60, fresh=ageMin(D)<=STALE_MIN;
@@ -269,6 +343,7 @@ async function load(){
   try{const c=JSON.parse(localStorage.getItem('pdj_live')||'null');if(c)useData(c,false)}catch(e){}
   try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-cache'});useData(await r.json(),false)}catch(e){if(!D)$('#src').textContent='Hors ligne'}
   if(!D||ageMin(D)>STALE_MIN)liveRefresh(true);
+  pollLive(true);
 }
 load();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');

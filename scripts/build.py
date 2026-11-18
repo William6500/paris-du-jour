@@ -181,6 +181,7 @@ def main():
             "absents": (note or {}).get("absents", {}), "lineups": (note or {}).get("lineups") or {k: ", ".join(v) for k, v in c.get("lineups", {}).items()},
             "mood": (note or {}).get("mood"), "news": c.get("news", []),
             "predictor": c.get("predictor"), "signal": round(s, 3) if s is not None else None, "adj": adj,
+            "espn": {"event": c.get("espnEvent"), "league": c.get("league"), "sport": "soccer" if m["sport"] == "football" else "basketball"} if c.get("espnEvent") else None,
             "hasContext": has_ctx, "reason": reason, "sources": sources, "url": m.get("url"),
             "main": [{"name": x["name"], "odds": x["odds"], "pm": round(x["pm"], 4), "pk": round(x["pk"], 4)} for x in main_mk["sel"]] if main_mk else [],
         }
