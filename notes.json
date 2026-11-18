@@ -1,72 +1,292 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
  "Flamengo - Atletico Paranaense": {
-  "date": "2026-11-18", "adj": 2,
+  "date": "2026-11-18",
+  "adj": 2,
   "short": "Flamengo au complet, Athletico privé de Viveros (21 buts) et de 2 défenseurs centraux",
-  "absents": {"home": ["De la Cruz (sélection)", "Valencia (sélection)", "Paquetá (doute, genou)"],
-              "away": ["Viveros (suspendu, meilleur buteur du championnat)", "Dantas (suspendu)", "Arthur Dias (sélection)", "Luiz Gustavo (blessure musculaire)", "Claudinho (ligaments croisés)"]},
-  "lineups": {"home": "Rossi ; Varela, Léo Ortiz, Léo Pereira, Ayrton Lucas ; Pulgar, Jorginho, Arrascaeta ; Carrascal, Pedro, Samuel Lino",
-              "away": "Mycael ; Benavídez, Aguirre, Esquivel ; Gilberto, Jadson, Portilla, Mendoza ; Zapelli, Vargas, João Cruz"},
+  "absents": {
+   "home": [
+    "De la Cruz (sélection)",
+    "Valencia (sélection)",
+    "Paquetá (doute, genou)"
+   ],
+   "away": [
+    "Viveros (suspendu, meilleur buteur du championnat)",
+    "Dantas (suspendu)",
+    "Arthur Dias (sélection)",
+    "Luiz Gustavo (blessure musculaire)",
+    "Claudinho (ligaments croisés)"
+   ]
+  },
+  "lineups": {
+   "home": "Rossi ; Varela, Léo Ortiz, Léo Pereira, Ayrton Lucas ; Pulgar, Jorginho, Arrascaeta ; Carrascal, Pedro, Samuel Lino",
+   "away": "Mycael ; Benavídez, Aguirre, Esquivel ; Gilberto, Jadson, Portilla, Mendoza ; Zapelli, Vargas, João Cruz"
+  },
   "mood": "Leader avec 3 pts d'avance avant le choc contre Palmeiras samedi, 3 victoires de suite. Athletico 5e, 4 matchs sans victoire.",
-  "sources": [{"label": "ge.globo", "url": "https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/11/18/flamengo-x-athletico-pr-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"},
-              {"label": "Flashscore", "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"}]
+  "sources": [
+   {
+    "label": "ge.globo",
+    "url": "https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/11/18/flamengo-x-athletico-pr-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+   },
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
+   }
+  ]
  },
  "Cruzeiro - Palmeiras": {
-  "date": "2026-11-18", "adj": 1.5,
+  "date": "2026-11-18",
+  "adj": 1.5,
   "short": "Cruzeiro sur 4 victoires, Palmeiras sans Gómez, Murilo, Piquerez ni Maurício",
-  "absents": {"home": ["Arroyo (sélection)", "Jonathan Jesus (sélection)", "Sinisterra (blessé)", "Gabriel Pec (blessé)", "Wesley et Kauã Moraes (suspendus)"],
-              "away": ["Gustavo Gómez (sélection)", "Maurício (sélection)", "Murilo (cuisse)", "Piquerez (cuisse)", "Paulinho (mollet)", "Arias, Flaco López, Giay probablement remplaçants"]},
-  "lineups": {"home": "Otávio ; William, Fabrício Bruno, Villalba, Rojas ; Romero, Zé Lucas, Gerson, Matheus Pereira ; Marquinhos, Kaio Jorge",
-              "away": "Carlos Miguel ; E. Martínez, Bruno Fuchs, Barboza ; Khellven, Marlon Freitas, Lucas Evangelista, Andreas Pereira, Arthur ; Sosa, Vitor Roque"},
+  "absents": {
+   "home": [
+    "Arroyo (sélection)",
+    "Jonathan Jesus (sélection)",
+    "Sinisterra (blessé)",
+    "Gabriel Pec (blessé)",
+    "Wesley et Kauã Moraes (suspendus)"
+   ],
+   "away": [
+    "Gustavo Gómez (sélection)",
+    "Maurício (sélection)",
+    "Murilo (cuisse)",
+    "Piquerez (cuisse)",
+    "Paulinho (mollet)",
+    "Arias, Flaco López, Giay probablement remplaçants"
+   ]
+  },
+  "lineups": {
+   "home": "Otávio ; William, Fabrício Bruno, Villalba, Rojas ; Romero, Zé Lucas, Gerson, Matheus Pereira ; Marquinhos, Kaio Jorge",
+   "away": "Carlos Miguel ; E. Martínez, Bruno Fuchs, Barboza ; Khellven, Marlon Freitas, Lucas Evangelista, Andreas Pereira, Arthur ; Sosa, Vitor Roque"
+  },
   "mood": "Palmeiras 2e à 3 pts de Flamengo, défense inédite, pense à la finale de Libertadores le 28. Cruzeiro 3e et en confiance.",
-  "sources": [{"label": "ge.globo", "url": "https://ge.globo.com/mg/futebol/brasileirao-serie-a/noticia/2026/11/18/cruzeiro-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"},
-              {"label": "UOL", "url": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/18/palmeiras-joga-sobrevida-no-brasileiro-com-zaga-inedita-e-ataque-desfalcado.ghtm"}]
+  "sources": [
+   {
+    "label": "ge.globo",
+    "url": "https://ge.globo.com/mg/futebol/brasileirao-serie-a/noticia/2026/11/18/cruzeiro-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+   },
+   {
+    "label": "UOL",
+    "url": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/18/palmeiras-joga-sobrevida-no-brasileiro-com-zaga-inedita-e-ataque-desfalcado.ghtm"
+   }
+  ]
  },
  "Corinthians - Botafogo": {
-  "date": "2026-11-19", "adj": -1.5,
+  "date": "2026-11-19",
+  "adj": -1.5,
   "short": "Corinthians sans Yuri Alberto ni deux titulaires suspendus",
-  "absents": {"home": ["Yuri Alberto (suspendu)", "André Ramalho (suspendu)", "Matheus Pereira (suspendu)", "Kayke (ligaments croisés)"],
-              "away": ["Danilo (adducteurs)", "Jordan Barrera (cheville)"]},
-  "lineups": {"home": "Hugo Souza ; Matheuzinho, G. Paulista, G. Henrique, Angileri ; Raniele, Breno Bidon, Bidu ; Kaio César, Memphis, Vitinho",
-              "away": "Gabriel Batista ; Vitinho, Justino, Marçal, Alex Telles ; Huguinho, Edenilson, Medina ; Montoro, Tiquinho Soares, Matheus Martins"},
-  "sources": [{"label": "Flashscore", "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"}]
+  "absents": {
+   "home": [
+    "Yuri Alberto (suspendu)",
+    "André Ramalho (suspendu)",
+    "Matheus Pereira (suspendu)",
+    "Kayke (ligaments croisés)"
+   ],
+   "away": [
+    "Danilo (adducteurs)",
+    "Jordan Barrera (cheville)"
+   ]
+  },
+  "lineups": {
+   "home": "Hugo Souza ; Matheuzinho, G. Paulista, G. Henrique, Angileri ; Raniele, Breno Bidon, Bidu ; Kaio César, Memphis, Vitinho",
+   "away": "Gabriel Batista ; Vitinho, Justino, Marçal, Alex Telles ; Huguinho, Edenilson, Medina ; Montoro, Tiquinho Soares, Matheus Martins"
+  },
+  "sources": [
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
+   }
+  ]
  },
  "Gremio RS - Bahia Salvador BA": {
-  "date": "2026-11-19", "adj": -1,
+  "date": "2026-11-19",
+  "adj": -1,
   "short": "Grêmio sans Kannemann ni Villasanti (suspendus)",
-  "absents": {"home": ["Kannemann (suspendu)", "Villasanti (suspendu)", "Marlon (doute, mollet)"], "away": ["Léo Vieira (tendon rotulien)"]},
-  "sources": [{"label": "Flashscore", "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"}]
+  "absents": {
+   "home": [
+    "Kannemann (suspendu)",
+    "Villasanti (suspendu)",
+    "Marlon (doute, mollet)"
+   ],
+   "away": [
+    "Léo Vieira (tendon rotulien)"
+   ]
+  },
+  "sources": [
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
+   }
+  ]
  },
  "Coritiba PR - Santos": {
-  "date": "2026-11-18", "adj": 0,
+  "date": "2026-11-18",
+  "adj": 0,
   "short": "Beaucoup d'absents des deux côtés, Neymar et Coutinho titulaires probables à Santos",
-  "absents": {"home": ["Pedro Morisco (sélection)", "Keno (genou)", "Lucas Ronier (ligaments croisés)", "Lucas Crepaldi (avant-bras)"],
-              "away": ["Gabriel Brazão (épaule)", "Lucas Veríssimo (cuisse)", "Barreal (suspendu)", "Gabriel Bontempo (sélection)"]},
-  "lineups": {"away": "Diógenes ; Rodinei, João Alencar, Willian Arão, Luan Peres ; G. Henrique, Arthur ; Cebolinha, Coutinho, Neymar ; Gabigol"},
-  "sources": [{"label": "Flashscore", "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"}]
+  "absents": {
+   "home": [
+    "Pedro Morisco (sélection)",
+    "Keno (genou)",
+    "Lucas Ronier (ligaments croisés)",
+    "Lucas Crepaldi (avant-bras)"
+   ],
+   "away": [
+    "Gabriel Brazão (épaule)",
+    "Lucas Veríssimo (cuisse)",
+    "Barreal (suspendu)",
+    "Gabriel Bontempo (sélection)"
+   ]
+  },
+  "lineups": {
+   "away": "Diógenes ; Rodinei, João Alencar, Willian Arão, Luan Peres ; G. Henrique, Arthur ; Cebolinha, Coutinho, Neymar ; Gabigol"
+  },
+  "sources": [
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
+   }
+  ]
  },
  "Remo - Chapecoense SC": {
-  "date": "2026-11-18", "adj": 0,
+  "date": "2026-11-18",
+  "adj": 0,
   "short": "Deux équipes du bas de tableau, Chapecoense sur 4 défaites en 5",
-  "absents": {"home": ["Marllon (suspendu)", "Jaderson (cuisse)", "Gabriel Poveda (cuisse)"],
-              "away": ["Heitor (cuisse)", "Robert (ligaments croisés)", "Rafael Carvalheira (ligaments croisés)", "Maurício Garcez (jambe)"]},
-  "sources": [{"label": "Flashscore", "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"}]
+  "absents": {
+   "home": [
+    "Marllon (suspendu)",
+    "Jaderson (cuisse)",
+    "Gabriel Poveda (cuisse)"
+   ],
+   "away": [
+    "Heitor (cuisse)",
+    "Robert (ligaments croisés)",
+    "Rafael Carvalheira (ligaments croisés)",
+    "Maurício Garcez (jambe)"
+   ]
+  },
+  "sources": [
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
+   }
+  ]
  },
  "Chelsea F. - Paris SG F.": {
-  "date": "2026-11-18", "adj": -1,
+  "date": "2026-11-18",
+  "adj": -1,
   "short": "Chelsea 0 but encaissé en 4 matchs de LDC, mais sans Malard (8 buts) ni Lauren James",
-  "absents": {"home": ["Melvine Malard (ischio-jambiers)", "Lauren James (ischio)", "Naomi Girma (mollet)", "Kadeisha Buchanan (doute, choc à la tête)"],
-              "away": ["Sakina Karchaoui", "Rasheedat Ajibade", "Anaïs Ebayilin", "Leuchter"]},
+  "absents": {
+   "home": [
+    "Melvine Malard (ischio-jambiers)",
+    "Lauren James (ischio)",
+    "Naomi Girma (mollet)",
+    "Kadeisha Buchanan (doute, choc à la tête)"
+   ],
+   "away": [
+    "Sakina Karchaoui",
+    "Rasheedat Ajibade",
+    "Anaïs Ebayilin",
+    "Leuchter"
+   ]
+  },
   "mood": "Chelsea 5e (8 pts), invaincu cette saison. PSG 10e (5 pts), battu par le Bayern, doit prendre des points.",
-  "sources": [{"label": "ESPN", "url": "https://www.espn.co.uk/football/story/_/id/50512333/chelsea-melvine-malard-psg-uwcl"},
-              {"label": "Hooligan Soccer", "url": "https://hooligan-soccer.com/chelsea-women-take-on-psg-women-in-champions-league/"}]
+  "sources": [
+   {
+    "label": "ESPN",
+    "url": "https://www.espn.co.uk/football/story/_/id/50512333/chelsea-melvine-malard-psg-uwcl"
+   },
+   {
+    "label": "Hooligan Soccer",
+    "url": "https://hooligan-soccer.com/chelsea-women-take-on-psg-women-in-champions-league/"
+   }
+  ]
  },
  "Real Madrid F. - Inter Milan F.": {
-  "date": "2026-11-18", "adj": 1,
+  "date": "2026-11-18",
+  "adj": 1,
   "short": "Inter a encaissé 10 buts sur ses 2 derniers matchs de LDC, Real seulement privé de Toletti",
-  "absents": {"home": ["Sandie Toletti (ischio)"], "away": ["Sheila García (incertaine)"]},
+  "absents": {
+   "home": [
+    "Sandie Toletti (ischio)"
+   ],
+   "away": [
+    "Sheila García (incertaine)"
+   ]
+  },
   "mood": "Real 7e (6 pts), 3-0 contre le Paris FC mais nul contre Badalona. Inter 13e, battu 1-4 par City puis renversé 2-3 par la Juve.",
-  "sources": [{"label": "Betfair (preview)", "url": "https://www.betfair.es/blog/futbol/uefa-champions-league-femenina/real-madrid---inter-de-milan-alineaciones-horario-donde-ver-pronosticos-y-estadisticas-171126-1377.html"},
-              {"label": "realmadrid.com", "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo-femenino/previas/previa-real-madrid-inter-j5-wcl-17-11-2026"}]
+  "sources": [
+   {
+    "label": "Betfair (preview)",
+    "url": "https://www.betfair.es/blog/futbol/uefa-champions-league-femenina/real-madrid---inter-de-milan-alineaciones-horario-donde-ver-pronosticos-y-estadisticas-171126-1377.html"
+   },
+   {
+    "label": "realmadrid.com",
+    "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo-femenino/previas/previa-real-madrid-inter-j5-wcl-17-11-2026"
+   }
+  ]
+ },
+ "BK Hacken F. - Manchester City F.": {
+  "date": "2026-11-18",
+  "adj": 0,
+  "short": "City sans Miedema (blessée) ni Yamashita (suspendue) ; Häcken privé de Sampaio, Löwing et Akgün",
+  "absents": {
+   "home": [
+    "Helena Sampaio (ligaments croisés)",
+    "Lisa Löwing (ligaments croisés)",
+    "Nesrin Akgün (ischio-jambiers)",
+    "Elin Rubensson (reprise après grossesse)"
+   ],
+   "away": [
+    "Viviane Miedema (blessée)",
+    "Ayaka Yamashita (suspendue, rouge contre Chelsea)"
+   ]
+  },
+  "lineups": {
+   "home": "Non communiquée (Tindell et Anvegård de retour dans le groupe)",
+   "away": "Non communiquée (Eartha Cumings attendue dans les buts)"
+  },
+  "mood": "Häcken (2 pts en 4 matchs) cherche sa première victoire en phase de ligue ; City doit gagner pour rester dans la course à la qualification directe.",
+  "sources": [
+   {
+    "label": "BK Häcken",
+    "url": "https://bkhacken.se/nyhet/truppen-mot-manchester-city"
+   },
+   {
+    "label": "Fotbollskanalen",
+    "url": "https://www.fotbollskanalen.se/artiklar/womens-champions-league/beskedet-tindell-redo-for-spel"
+   },
+   {
+    "label": "Man City",
+    "url": "https://www.mancity.com/news/womens/bk-hacken-man-city-travelling-squad-63930517"
+   }
+  ]
+ },
+ "Juventus F. - Oud-Heuverlee F.": {
+  "date": "2026-11-18",
+  "adj": 0.5,
+  "short": "Juventus au complet (retours de Khelifi et Pinto) face au champion de Belgique",
+  "absents": {
+   "home": [],
+   "away": []
+  },
+  "lineups": {
+   "home": "Rusek ; Lenzini, Rosucci, Salvai, Carbonell ; Hayashi, Schatzer, Pavan ; Bartel, Redondo, Noordman",
+   "away": "Seynhaeve ; Smit, Janssen, Gielen, Everaerts ; Biesmans, Bosteels, Hoekx ; Kuijpers, Papatheodorou, Conijnenberg"
+  },
+  "mood": "Guerrero voit des progrès après une période difficile ; la qualification reste à portée avant l'avant-dernière journée. Leuven, direct et rapide, a accroché la Roma.",
+  "sources": [
+   {
+    "label": "Juventus",
+    "url": "https://www.juventus.com/en/news/articles/uwcl-juventus-women-oh-leuven-redondo-and-guerrero-s-pre-match-comments"
+   },
+   {
+    "label": "Tuttosport",
+    "url": "https://www.tuttosport.com/news/calcio/calciofemminile/2026/11/18-152666804/juve_women-leuven_orario_probabili_formazioni_e_dove_vedere_in_tv_e_streaming_la_champions_league"
+   },
+   {
+    "label": "Calcio Rosa",
+    "url": "https://calciorosa.com/juventus-women-leuven-rientri-girelli-champions-league/"
+   }
+  ]
  }
 }
