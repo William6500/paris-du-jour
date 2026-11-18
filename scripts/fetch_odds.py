@@ -106,9 +106,17 @@ def main():
     now = datetime.now(timezone.utc)
     horizon = now + timedelta(hours=HORIZON_H)
     matches, urls, errors, ok = {}, {}, [], 0
-    for path in PAGES:
+    def fetch_page(path):
         try:
-            html = get(path)
+            return path, get(path)
+        except Exception as e:  # noqa
+            return path, e
+    with ThreadPoolExecutor(8) as ex:
+        pages = list(ex.map(fetch_page, PAGES))
+    for path, html in pages:
+        if isinstance(html, Exception):
+            errors.append(f"{path}: {html}"); continue
+        try:
             for u, mid in HREF_RE.findall(html):
                 urls.setdefault(mid, u)
             st = state_of(html)
@@ -148,7 +156,7 @@ def main():
             return m, parse_match_page(get(m["url"]))
         except Exception as e:  # noqa
             return m, e
-    with ThreadPoolExecutor(4) as ex:
+    with ThreadPoolExecutor(8) as ex:
         for m, res in ex.map(detail, todo):
             if isinstance(res, dict) and res["markets"]:
                 m["markets"] = res["markets"]; m["mycombis"] = res["mycombis"]; m["round"] = res["round"]

@@ -57,7 +57,7 @@ def scoreboards(sport_path, leagues, dates):
             return [(lg, e) for e in get(f"{API}/{sport_path}/{lg}/scoreboard?dates={d}").get("events", [])]
         except Exception:
             return []
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(16) as ex:
         for r in ex.map(one, [(lg, d) for lg in leagues for d in dates]):
             evs += r
     return evs
@@ -157,7 +157,7 @@ def summarize(sport_path, lg, eid, home_name, away_name):
 def main():
     raw = json.load(open("raw_odds.json", encoding="utf-8"))
     now = datetime.now(timezone.utc)
-    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 3)})
+    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 2)})
     pools = {"football": ("soccer", scoreboards("soccer", SOCCER, dates)),
              "basketball": ("basketball", scoreboards("basketball", BASKET, dates))}
     ctx, jobs = {}, []
@@ -185,7 +185,7 @@ def main():
             return mid, summarize(sp, lg, e["id"], eh, ea)
         except Exception as ex:
             return mid, {"error": str(ex)}
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(12) as ex:
         for mid, c in ex.map(run, jobs):
             if "error" not in c:
                 ctx[mid] = c
