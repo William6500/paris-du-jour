@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
-# Relève les cotes Betclic et publie data.json sur GitHub Pages (à lancer depuis une machine que Betclic ne bloque pas).
+# Relève les cotes Betclic + contexte ESPN, reconstruit data.json et publie sur GitHub Pages.
+# À lancer depuis une machine que Betclic ne bloque pas (Betclic répond 403 aux serveurs GitHub Actions).
+# Étape facultative avant ce script : mettre à jour notes.json (absences, compos, ambiance) par recherche web.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 git pull -q --rebase origin main
-python3 scripts/fetch_odds.py
-git add data.json
+python3 scripts/fetch_odds.py                       # 1. cotes Betclic (obligatoire)
+python3 scripts/enrich_espn.py || echo "ESPN indisponible : contexte ESPN ignoré"   # 2. contexte public
+python3 scripts/build.py                            # 3. modèle, picks, combinés -> data.json
+git add data.json notes.json
 if git diff --cached --quiet; then echo "Pas de changement"; exit 0; fi
 git -c user.name="paris-du-jour-bot" -c user.email="William6500@users.noreply.github.com" commit -qm "Cotes Betclic du $(TZ=Europe/Paris date '+%d/%m %H:%M')"
 git push -q origin main

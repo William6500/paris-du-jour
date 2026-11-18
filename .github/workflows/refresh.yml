@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Relever les cotes
-        run: python scripts/fetch_odds.py
+        run: python scripts/fetch_odds.py && (python scripts/enrich_espn.py || true) && python scripts/build.py
       - name: Commit data.json
         run: |
           git config user.name "paris-du-jour-bot"
