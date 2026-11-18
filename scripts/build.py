@@ -261,6 +261,7 @@ def main():
     combos += sorted(est, key=lambda x: -x["p"])[:6]
     now = datetime.fromisoformat(raw["fetchedAt"].replace("Z", "+00:00"))
     out = {"source": "Betclic.fr (cotes avant-match) + ESPN (forme, classement, H2H, blessés NBA) + presse (absences, compos)",
+           "oddsSource": raw.get("source", "Betclic.fr"),
            "fetchedAt": raw["fetchedAt"], "fetchedAtParis": now.astimezone(PARIS).strftime("%d/%m/%Y %H:%M"),
            "builtAtParis": datetime.now(timezone.utc).astimezone(PARIS).strftime("%d/%m/%Y %H:%M"),
            "matches": out_matches, "picks": picks, "combos": combos}

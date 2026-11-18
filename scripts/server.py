@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Mini API (Render) : GET /api/data relance la relève Betclic + build et renvoie data.json avec CORS.
-Aucun secret. Cache 2 min pour les cotes, 60 min pour le contexte ESPN."""
+"""Mini API (Render) : GET /api/data relance la relève + build et renvoie data.json avec CORS.
+Source 1 : betclic.fr. Source 2 (si betclic.fr refuse le serveur) : Betclic FR via The Odds API, clé dans la
+variable d'environnement ODDS_API_KEY (jamais dans le dépôt). Cache 2 min (15 min en secours), contexte ESPN 60 min."""
 import json, os, subprocess, sys, threading, time, urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
@@ -22,7 +23,7 @@ def run(script):
 
 def refresh():
     with lock:
-        if state["data"] and time.time() - state["t"] < ODDS_TTL:
+        if state["data"] and time.time() - state["t"] < state.get("ttl", ODDS_TTL):
             return state["data"]
         try:
             with urllib.request.urlopen(NOTES_URL, timeout=10) as r:
@@ -31,7 +32,15 @@ def refresh():
             src = os.path.join(HERE, "..", "notes.json")
             if os.path.exists(src):
                 open(os.path.join(WORK, "notes.json"), "wb").write(open(src, "rb").read())
-        log = [run("fetch_odds.py")]
+        try:
+            log = [run("fetch_odds.py")]          # 1. betclic.fr en direct
+            ttl = ODDS_TTL
+        except Exception as e:
+            if not os.environ.get("ODDS_API_KEY"):
+                raise RuntimeError("betclic.fr refuse ce serveur (403) et aucune source de secours n'est configurée") from e
+            log = [f"betclic.fr refusé, secours The Odds API", run("fetch_oddsapi.py")]   # 2. secours (clé serveur)
+            ttl = int(os.environ.get("ODDS_API_TTL", "900"))
+        state["ttl"] = ttl
         if time.time() - state["ctx_t"] > CTX_TTL or not os.path.exists(os.path.join(WORK, "context.json")):
             try:
                 log.append(run("enrich_espn.py")); state["ctx_t"] = time.time()
@@ -45,28 +54,6 @@ def refresh():
         return data
 
 
-PROBES = ["https://www.betclic.fr/football-sfootball", "https://www.betclic.fr/", "https://www.betclic.pt/futebol-sfootball",
-          "https://www.betclic.com/", "https://www.coteur.com/cote/real-madrid-cf-f-inter-f-1616643",
-          "https://www.comparateur-de-cotes.fr/comparateur/football"]
-FULL = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8", "Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none", "Sec-Fetch-User": "?1", "Upgrade-Insecure-Requests": "1"}
-
-
-def probe():  # diagnostic : liste d'URL fixe, pas de proxy ouvert
-    out = []
-    for u in PROBES:
-        try:
-            req = urllib.request.Request(u, headers=FULL)
-            with urllib.request.urlopen(req, timeout=15) as r:
-                b = r.read()
-                out.append({"url": u, "final": r.geturl(), "code": r.status, "size": len(b), "betclic": b.lower().count(b"betclic")})
-        except Exception as e:
-            out.append({"url": u, "error": str(e)[:120]})
-    return out
-
-
 class H(BaseHTTPRequestHandler):
     def cors(self):
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -77,9 +64,7 @@ class H(BaseHTTPRequestHandler):
         self.send_response(204); self.cors(); self.end_headers()
 
     def do_GET(self):
-        if self.path.startswith("/probe"):
-            body, code = json.dumps(probe()).encode(), 200
-        elif self.path.startswith("/health"):
+        if self.path.startswith("/health"):
             body, code = b'{"ok":true}', 200
         elif self.path.startswith("/api/data"):
             try:

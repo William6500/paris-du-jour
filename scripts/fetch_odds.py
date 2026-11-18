@@ -162,7 +162,7 @@ def main():
                 m["markets"] = res["markets"]; m["mycombis"] = res["mycombis"]; m["round"] = res["round"]
             elif isinstance(res, Exception):
                 errors.append(f"{m['url']}: {res}")
-    out = {"fetchedAt": now.isoformat().replace("+00:00", "Z"), "source": "betclic.fr",
+    out = {"fetchedAt": now.isoformat().replace("+00:00", "Z"), "source": "Betclic.fr",
            "matches": sorted(matches.values(), key=lambda m: m["start"]), "errors": errors}
     json.dump(out, open("raw_odds.json", "w", encoding="utf-8"), ensure_ascii=False)
     print(f"Betclic : {len(matches)} matchs, {len(todo)} pages match, {ok} pages liste, erreurs: {len(errors)}")

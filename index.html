@@ -32,6 +32,12 @@ body{padding:calc(env(safe-area-inset-top) + 10px) calc(env(safe-area-inset-righ
 header{display:flex;align-items:center;justify-content:space-between;margin:2px 2px 12px}
 h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .sub{color:var(--muted);font-size:13px;font-weight:600;text-transform:capitalize}
+.upd{display:flex;align-items:center;gap:7px;padding:10px 14px;border-radius:999px;color:#fff;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.upd .spin{display:inline-block;font-size:17px;line-height:1}
+.upd.busy .spin{animation:rot .9s linear infinite}.upd.busy{opacity:.85}
+@keyframes rot{to{transform:rotate(360deg)}}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 18px);transform:translate(-50%,30px);opacity:0;transition:.3s;z-index:20;padding:11px 16px;border-radius:18px;font-size:13px;font-weight:600;max-width:92vw;text-align:center;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
 .iconbtn{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:19px;cursor:pointer;color:#fff}
 .bank{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 16px}
 .bank .lab{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
@@ -104,7 +110,7 @@ details ul{padding-left:18px;margin:6px 0}
 <div class="bg"></div>
 <header>
  <div><h1>Paris du jour</h1><div class="sub" id="today"></div></div>
- <div class="glass iconbtn" id="reload" aria-label="Recharger">↻</div>
+ <button class="glass upd" id="reload" aria-label="Mettre à jour les cotes"><span class="spin">↻</span><span id="updtxt">Mettre à jour</span></button>
 </header>
 
 <section class="glass bank">
@@ -122,6 +128,7 @@ details ul{padding-left:18px;margin:6px 0}
 </nav>
 <div class="chips" id="chips"></div>
 <main id="list"></main>
+<div class="glass toast" id="toast"></div>
 
 <footer class="glass foot">
  <b>18+ · Une cote ne garantit rien.</b> Ne mise que ce que tu peux perdre. <b>Joueurs Info Service <a href="tel:0974751313">09 74 75 13 13</a></b>
@@ -152,7 +159,28 @@ if(bal) $('#bal').value=bal;
 document.querySelectorAll('#profile button').forEach(b=>{b.classList.toggle('on',+b.dataset.p===prof);b.onclick=()=>{prof=+b.dataset.p;localStorage.setItem('pdj_profile',prof);document.querySelectorAll('#profile button').forEach(x=>x.classList.toggle('on',x===b));render()}});
 $('#bal').addEventListener('input',e=>{bal=Math.max(0,parseFloat(String(e.target.value).replace(',','.'))||0);localStorage.setItem('pdj_balance',bal);render()});
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.t;shown=PAGE;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));render();window.scrollTo({top:$('#tabs').offsetTop-10,behavior:'smooth'})});
-$('#reload').onclick=()=>load(true);
+const API='https://paris-du-jour-api.onrender.com/api/data';
+const RAW='https://raw.githubusercontent.com/William6500/paris-du-jour/main/data.json';
+const STALE_MIN=30;
+let busy=false;
+$('#reload').onclick=()=>liveRefresh(false);
+function toast(t,ms=3500){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),ms)}
+const ageMin=d=>d?(Date.now()-new Date(d.fetchedAt))/6e4:1e9;
+function useData(d,save){if(!d||!d.matches?.length)return false;if(D&&new Date(d.fetchedAt)<new Date(D.fetchedAt))return false;D=d;if(save)try{localStorage.setItem('pdj_live',JSON.stringify(d))}catch(e){}showSrc();render();return true}
+async function getJSON(u,ms){const c=new AbortController(),t=setTimeout(()=>c.abort(),ms);try{const r=await fetch(u,{cache:'no-store',signal:c.signal});const j=await r.json();if(!r.ok)throw new Error(j.error||r.status);return j}finally{clearTimeout(t)}}
+async function liveRefresh(quiet){
+  if(busy)return;busy=true;const b=$('#reload');b.classList.add('busy');$('#updtxt').textContent='Relève…';
+  const wake=setTimeout(()=>{$('#updtxt').textContent='Réveil serveur…'},6000);
+  try{
+    const d=await getJSON(API+'?t='+Date.now(),100000);
+    useData(d,true);toast('✅ Cotes à jour · '+d.fetchedAtParis.split(' ')[1]);
+  }catch(e){
+    let msg='Direct indisponible';
+    try{const prev=D?.fetchedAt;const d=await getJSON(RAW+'?t='+Date.now(),15000);if(useData(d,true)&&d.fetchedAt!==prev)msg+=' · relevé plus récent chargé';}catch(_){}
+    if(!quiet)toast('⚠️ '+msg+' · cotes du '+(D?D.fetchedAtParis.replace(' ',' à '):'—'),5000);
+  }finally{clearTimeout(wake);busy=false;b.classList.remove('busy');$('#updtxt').textContent='Mettre à jour'}
+}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&D&&ageMin(D)>STALE_MIN)liveRefresh(true)});
 
 function stake(base){
   const pct=Math.min(MAX_PCT,base*prof);
@@ -232,14 +260,15 @@ function render(){
   }
   $('#list').innerHTML=html||`<div class="glass empty">Rien à venir ici pour l'instant.</div>`;
 }
-async function load(force){
-  try{
-    const r=await fetch('data.json'+(force?'?t='+Date.now():''),{cache:'no-cache'});D=await r.json();
-    const old=(Date.now()-new Date(D.fetchedAt))/36e5>14;
-    $('#src').innerHTML=`<span class="led ${old?'old':''}"></span>Betclic · ${esc(D.fetchedAtParis.split(' ')[1])}${old?' · ancien':''}`;
-    $('#src').onclick=()=>alert(`Cotes Betclic relevées le ${D.fetchedAtParis.replace(' ',' à ')} (heure de Paris). À vérifier dans l'app avant de parier.\nContexte : ${D.source}.`);
-    render();
-  }catch(e){$('#src').textContent='Hors ligne'}
+function showSrc(){
+  const old=ageMin(D)>14*60, fresh=ageMin(D)<=STALE_MIN;
+  $('#src').innerHTML=`<span class="led ${old?'old':''}"></span>${D.live?'Direct':'Betclic'} · ${esc(D.fetchedAtParis.split(' ')[1])}${old?' · ancien':''}`;
+  $('#src').onclick=()=>alert(`Cotes ${D.oddsSource||'Betclic.fr'} relevées le ${D.fetchedAtParis.replace(' ',' à ')} (heure de Paris). À vérifier dans l'app avant de parier.\nContexte : ${D.source}.`);
+}
+async function load(){
+  try{const c=JSON.parse(localStorage.getItem('pdj_live')||'null');if(c)useData(c,false)}catch(e){}
+  try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-cache'});useData(await r.json(),false)}catch(e){if(!D)$('#src').textContent='Hors ligne'}
+  if(!D||ageMin(D)>STALE_MIN)liveRefresh(true);
 }
 load();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
