@@ -1,905 +1,9 @@
 {
  "source": "Betclic.fr (pages publiques, cotes avant-match)",
  "sourceUrl": "https://www.betclic.fr/",
- "fetchedAt": "2026-11-17T19:42:40.395462Z",
- "fetchedAtParis": "17/11/2026 20:42",
+ "fetchedAt": "2026-11-18T07:05:05.339624Z",
+ "fetchedAtParis": "18/11/2026 08:05",
  "matches": [
-  {
-   "id": "1277918153023488",
-   "name": "Irlande - Kosovo",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Irlande",
-     "odds": 1.96
-    },
-    {
-     "name": "Nul",
-     "odds": 3.1
-    },
-    {
-     "name": "Kosovo",
-     "odds": 3.6
-    }
-   ],
-   "form": [
-    {
-     "name": "Irlande",
-     "results": [
-      2,
-      1,
-      3,
-      3,
-      2
-     ]
-    },
-    {
-     "name": "Kosovo",
-     "results": [
-      1,
-      2,
-      3,
-      3,
-      3
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1277951102418944",
-   "name": "Hongrie - Irlande du Nord",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Hongrie",
-     "odds": 1.92
-    },
-    {
-     "name": "Nul",
-     "odds": 3.08
-    },
-    {
-     "name": "Irlande du Nord",
-     "odds": 3.8
-    }
-   ],
-   "form": [
-    {
-     "name": "Hongrie",
-     "results": [
-      2,
-      3,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Irlande du Nord",
-     "results": [
-      1,
-      3,
-      1,
-      3,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279423908159488",
-   "name": "Ukraine - Géorgie",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Ukraine",
-     "odds": 2.02
-    },
-    {
-     "name": "Nul",
-     "odds": 3.07
-    },
-    {
-     "name": "Géorgie",
-     "odds": 3.47
-    }
-   ],
-   "form": [
-    {
-     "name": "Ukraine",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Géorgie",
-     "results": [
-      2,
-      3,
-      2,
-      3,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279640356265984",
-   "name": "Pays de Galles - Portugal",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Pays de Galles",
-     "odds": 7.25
-    },
-    {
-     "name": "Nul",
-     "odds": 5.25
-    },
-    {
-     "name": "Portugal",
-     "odds": 1.28
-    }
-   ],
-   "form": [
-    {
-     "name": "Pays de Galles",
-     "results": [
-      2,
-      2,
-      1,
-      2,
-      2
-     ]
-    },
-    {
-     "name": "Portugal",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279640478949376",
-   "name": "Danemark - Norvège",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Danemark",
-     "odds": 2.3
-    },
-    {
-     "name": "Nul",
-     "odds": 3.88
-    },
-    {
-     "name": "Norvège",
-     "odds": 2.4
-    }
-   ],
-   "form": [
-    {
-     "name": "Danemark",
-     "results": [
-      2,
-      1,
-      2,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Norvège",
-     "results": [
-      1,
-      2,
-      2,
-      2,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279659994001408",
-   "name": "Bosnie-Herzégovine - Roumanie",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Bosnie-Herzégovine",
-     "odds": 1.98
-    },
-    {
-     "name": "Nul",
-     "odds": 3.55
-    },
-    {
-     "name": "Roumanie",
-     "odds": 3.1
-    }
-   ],
-   "form": [
-    {
-     "name": "Bosnie-Herzégovine",
-     "results": [
-      3,
-      1,
-      3,
-      1,
-      2
-     ]
-    },
-    {
-     "name": "Roumanie",
-     "results": [
-      2,
-      2,
-      2,
-      2,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279660036980736",
-   "name": "Israël - Autriche",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Israël",
-     "odds": 3.85
-    },
-    {
-     "name": "Nul",
-     "odds": 3.9
-    },
-    {
-     "name": "Autriche",
-     "odds": 1.68
-    }
-   ],
-   "form": [
-    {
-     "name": "Israël",
-     "results": [
-      2,
-      2,
-      3,
-      3,
-      3
-     ]
-    },
-    {
-     "name": "Autriche",
-     "results": [
-      1,
-      1,
-      3,
-      3,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1279660054814720",
-   "name": "Pologne - Suède",
-   "start": "2026-11-17T19:45:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Ligue des Nations UEFA",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Pologne",
-     "odds": 2.0
-    },
-    {
-     "name": "Nul",
-     "odds": 3.75
-    },
-    {
-     "name": "Suède",
-     "odds": 2.92
-    }
-   ],
-   "form": [
-    {
-     "name": "Pologne",
-     "results": [
-      3,
-      2,
-      1,
-      2,
-      2
-     ]
-    },
-    {
-     "name": "Suède",
-     "results": [
-      1,
-      1,
-      3,
-      1,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1257816746639361",
-   "name": "Virtus Bologne - Panathinaikos",
-   "start": "2026-11-17T20:00:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "Euroligue",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "Virtus Bologne",
-     "odds": 3.05
-    },
-    {
-     "name": "Panathinaikos",
-     "odds": 1.3
-    }
-   ],
-   "form": [
-    {
-     "name": "Virtus Bologne",
-     "results": [
-      2,
-      2,
-      1,
-      2,
-      1
-     ]
-    },
-    {
-     "name": "Panathinaikos",
-     "results": [
-      2,
-      1,
-      1,
-      2,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1280461146963968",
-   "name": "Chili - Colombie",
-   "start": "2026-11-17T23:00:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "Matchs Amicaux",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Chili",
-     "odds": 3.55
-    },
-    {
-     "name": "Nul",
-     "odds": 3.1
-    },
-    {
-     "name": "Colombie",
-     "odds": 1.98
-    }
-   ],
-   "form": [
-    {
-     "name": "Chili",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      2
-     ]
-    },
-    {
-     "name": "Colombie",
-     "results": [
-      2,
-      3,
-      2,
-      1,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1281766610436098",
-   "name": "USA - Haïti",
-   "start": "2026-11-18T00:00:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "CONCACAF Ligue des nations",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "USA",
-     "odds": 1.04
-    },
-    {
-     "name": "Nul",
-     "odds": 9.75
-    },
-    {
-     "name": "Haïti",
-     "odds": 20.0
-    }
-   ],
-   "form": [
-    {
-     "name": "USA",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Haïti",
-     "results": [
-      1,
-      1,
-      1,
-      2,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1282175238406144",
-   "name": "Guyane - St Vincent/Grenadines",
-   "start": "2026-11-18T00:00:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "CONCACAF Ligue des nations",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Guyane",
-     "odds": 2.67
-    },
-    {
-     "name": "Nul",
-     "odds": 3.5
-    },
-    {
-     "name": "St Vincent/Grenadines",
-     "odds": 2.23
-    }
-   ],
-   "form": [
-    {
-     "name": "Guyane",
-     "results": [
-      2,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "St Vincent/Grenadines",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1278054570659840",
-   "name": "Toronto Raptors - New York Knicks",
-   "start": "2026-11-18T00:30:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "NBA",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "Toronto Raptors",
-     "odds": 2.38
-    },
-    {
-     "name": "New York Knicks",
-     "odds": 1.49
-    }
-   ],
-   "form": [
-    {
-     "name": "Toronto Raptors",
-     "results": [
-      1,
-      2,
-      2,
-      2,
-      2
-     ]
-    },
-    {
-     "name": "New York Knicks",
-     "results": [
-      1,
-      1,
-      2,
-      2,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1282528651513856",
-   "name": "Salvador - Saint-Martin",
-   "start": "2026-11-18T01:00:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "CONCACAF Ligue des nations",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Salvador",
-     "odds": 1.25
-    },
-    {
-     "name": "Nul",
-     "odds": 5.25
-    },
-    {
-     "name": "Saint-Martin",
-     "odds": 8.25
-    }
-   ],
-   "form": [
-    {
-     "name": "Salvador",
-     "results": [
-      1,
-      2,
-      2,
-      3,
-      1
-     ]
-    },
-    {
-     "name": "Saint-Martin",
-     "results": [
-      1,
-      2,
-      1,
-      1,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1278054571720704",
-   "name": "San Antonio Spurs - Detroit Pistons",
-   "start": "2026-11-18T01:00:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "NBA",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "San Antonio Spurs",
-     "odds": 1.19
-    },
-    {
-     "name": "Detroit Pistons",
-     "odds": 4.05
-    }
-   ],
-   "form": [
-    {
-     "name": "San Antonio Spurs",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Detroit Pistons",
-     "results": [
-      2,
-      2,
-      1,
-      1,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1278054575898625",
-   "name": "Minnesota Timberwolves - Portland Trail Blazers",
-   "start": "2026-11-18T01:00:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "NBA",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "Minnesota Timberwolves",
-     "odds": 1.57
-    },
-    {
-     "name": "Portland Trail Blazers",
-     "odds": 2.2
-    }
-   ],
-   "form": [
-    {
-     "name": "Minnesota Timberwolves",
-     "results": [
-      1,
-      1,
-      1,
-      2,
-      1
-     ]
-    },
-    {
-     "name": "Portland Trail Blazers",
-     "results": [
-      2,
-      1,
-      1,
-      1,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1281764221784082",
-   "name": "Mexique - Jamaïque",
-   "start": "2026-11-18T02:30:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "CONCACAF Ligue des nations",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Mexique",
-     "odds": 1.09
-    },
-    {
-     "name": "Nul",
-     "odds": 7.75
-    },
-    {
-     "name": "Jamaïque",
-     "odds": 15.5
-    }
-   ],
-   "form": [
-    {
-     "name": "Mexique",
-     "results": [
-      2,
-      1,
-      1,
-      1,
-      2
-     ]
-    },
-    {
-     "name": "Jamaïque",
-     "results": [
-      1,
-      2,
-      1,
-      3,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1283347800145920",
-   "name": "Nicaragua - Montserrat",
-   "start": "2026-11-18T03:00:00Z",
-   "sport": "football",
-   "sportName": "Football",
-   "competition": "CONCACAF Ligue des nations",
-   "market": "Résultat du match (t. rég)",
-   "selections": [
-    {
-     "name": "Nicaragua",
-     "odds": 1.18
-    },
-    {
-     "name": "Nul",
-     "odds": 6.0
-    },
-    {
-     "name": "Montserrat",
-     "odds": 10.5
-    }
-   ],
-   "form": [
-    {
-     "name": "Nicaragua",
-     "results": [
-      2,
-      2,
-      2,
-      2,
-      2
-     ]
-    },
-    {
-     "name": "Montserrat",
-     "results": [
-      2,
-      1,
-      1,
-      1,
-      1
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1278054575902721",
-   "name": "Los Angeles Clippers - Utah Jazz",
-   "start": "2026-11-18T03:30:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "NBA",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "Los Angeles Clippers",
-     "odds": 1.36
-    },
-    {
-     "name": "Utah Jazz",
-     "odds": 2.82
-    }
-   ],
-   "form": [
-    {
-     "name": "Los Angeles Clippers",
-     "results": [
-      2,
-      1,
-      2,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Utah Jazz",
-     "results": [
-      2,
-      2,
-      2,
-      2,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
-  {
-   "id": "1278054569615360",
-   "name": "Los Angeles Lakers - Charlotte Hornets",
-   "start": "2026-11-18T04:00:00Z",
-   "sport": "basketball",
-   "sportName": "Basketball",
-   "competition": "NBA",
-   "market": "Vainqueur du match",
-   "selections": [
-    {
-     "name": "Los Angeles Lakers",
-     "odds": 1.29
-    },
-    {
-     "name": "Charlotte Hornets",
-     "odds": 3.2
-    }
-   ],
-   "form": [
-    {
-     "name": "Los Angeles Lakers",
-     "results": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "name": "Charlotte Hornets",
-     "results": [
-      2,
-      2,
-      1,
-      2,
-      2
-     ]
-    }
-   ],
-   "matchOfTheDay": false
-  },
   {
    "id": "1282780446064640",
    "name": "Carlos Alcaraz - Daniil Medvedev",
@@ -911,11 +15,11 @@
    "selections": [
     {
      "name": "Carlos Alcaraz",
-     "odds": 1.22
+     "odds": 1.21
     },
     {
      "name": "Daniil Medvedev",
-     "odds": 3.75
+     "odds": 3.8
     }
    ],
    "form": [
@@ -934,6 +38,988 @@
      "results": [
       1,
       1,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282513989287936",
+   "name": "Absheron Lions - Prievidza",
+   "start": "2026-11-18T15:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Absheron Lions",
+     "odds": 2.77
+    },
+    {
+     "name": "Prievidza",
+     "odds": 1.3
+    }
+   ],
+   "form": [
+    {
+     "name": "Absheron Lions",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Prievidza",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282551313346560",
+   "name": "Kolossos Rhodes - Gence BC",
+   "start": "2026-11-18T16:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Kolossos Rhodes",
+     "odds": 1.05
+    },
+    {
+     "name": "Gence BC",
+     "odds": 5.75
+    }
+   ],
+   "form": [
+    {
+     "name": "Kolossos Rhodes",
+     "results": [
+      2,
+      1,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Gence BC",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281667025080320",
+   "name": "Bertram Derthona - Rigas Zelli",
+   "start": "2026-11-18T16:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Bertram Derthona",
+     "odds": 1.16
+    },
+    {
+     "name": "Rigas Zelli",
+     "odds": 3.58
+    }
+   ],
+   "form": [
+    {
+     "name": "Bertram Derthona",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Rigas Zelli",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281673417195525",
+   "name": "CR Témouchent - JS El Biar",
+   "start": "2026-11-18T16:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Algérie Ligue 1",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "CR Témouchent",
+     "odds": 2.05
+    },
+    {
+     "name": "Nul",
+     "odds": 2.63
+    },
+    {
+     "name": "JS El Biar",
+     "odds": 3.55
+    }
+   ],
+   "form": [
+    {
+     "name": "CR Témouchent",
+     "results": [
+      2,
+      3,
+      1,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "JS El Biar",
+     "results": [
+      2,
+      1,
+      3,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281673417211904",
+   "name": "Constantine - ES Ben Aknoun",
+   "start": "2026-11-18T16:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Algérie Ligue 1",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Constantine",
+     "odds": 1.83
+    },
+    {
+     "name": "Nul",
+     "odds": 2.92
+    },
+    {
+     "name": "ES Ben Aknoun",
+     "odds": 3.83
+    }
+   ],
+   "form": [
+    {
+     "name": "Constantine",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "ES Ben Aknoun",
+     "results": [
+      3,
+      2,
+      3,
+      3,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1258684749455360",
+   "name": "Besiktas Istanbul - Real Madrid",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Euroligue",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Besiktas Istanbul",
+     "odds": 3.0
+    },
+    {
+     "name": "Real Madrid",
+     "odds": 1.3
+    }
+   ],
+   "form": [
+    {
+     "name": "Besiktas Istanbul",
+     "results": [
+      1,
+      2,
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Real Madrid",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281687579267072",
+   "name": "U-Banca Transilvania - Maxima Roma",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "U-Banca Transilvania",
+     "odds": 1.93
+    },
+    {
+     "name": "Maxima Roma",
+     "odds": 1.61
+    }
+   ],
+   "form": [
+    {
+     "name": "U-Banca Transilvania",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Maxima Roma",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282588983427072",
+   "name": "Galatasaray SK - Legia Warszawa",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Ligue des Champions",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Galatasaray SK",
+     "odds": 1.12
+    },
+    {
+     "name": "Legia Warszawa",
+     "odds": 4.05
+    }
+   ],
+   "form": [
+    {
+     "name": "Galatasaray SK",
+     "results": [
+      1,
+      1,
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Legia Warszawa",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282588989730816",
+   "name": "AEK Athènes - Falco KC Szombathely",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Ligue des Champions",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "AEK Athènes",
+     "odds": 1.59
+    },
+    {
+     "name": "Falco KC Szombathely",
+     "odds": 1.96
+    }
+   ],
+   "form": [
+    {
+     "name": "AEK Athènes",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Falco KC Szombathely",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589094584320",
+   "name": "Keravnos - Nitra Blue Wings",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Keravnos",
+     "odds": 1.39
+    },
+    {
+     "name": "Nitra Blue Wings",
+     "odds": 2.45
+    }
+   ],
+   "form": [
+    {
+     "name": "Keravnos",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Nitra Blue Wings",
+     "results": [
+      2,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589153300480",
+   "name": "Tartu Rock - MZT Skopje",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Tartu Rock",
+     "odds": 1.43
+    },
+    {
+     "name": "MZT Skopje",
+     "odds": 2.33
+    }
+   ],
+   "form": [
+    {
+     "name": "Tartu Rock",
+     "results": [
+      1,
+      2,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "MZT Skopje",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589230899200",
+   "name": "AEK Larnaca - Dziki Warszawa",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "AEK Larnaca",
+     "odds": 2.52
+    },
+    {
+     "name": "Dziki Warszawa",
+     "odds": 1.36
+    }
+   ],
+   "form": [
+    {
+     "name": "AEK Larnaca",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Dziki Warszawa",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589236150272",
+   "name": "CSM Oradea - Lokomotiv Plovdiv 1926",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "CSM Oradea",
+     "odds": 1.1
+    },
+    {
+     "name": "Lokomotiv Plovdiv 1926",
+     "odds": 4.55
+    }
+   ],
+   "form": [
+    {
+     "name": "CSM Oradea",
+     "results": [
+      1,
+      2,
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Lokomotiv Plovdiv 1926",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589295910912",
+   "name": "VEF Riga - Neftchi IK",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "VEF Riga",
+     "odds": 1.05
+    },
+    {
+     "name": "Neftchi IK",
+     "odds": 5.5
+    }
+   ],
+   "form": [
+    {
+     "name": "VEF Riga",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Neftchi IK",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282589329473536",
+   "name": "Szolnoki Olaj - Dinamo Bucuresti",
+   "start": "2026-11-18T17:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Szolnoki Olaj",
+     "odds": 1.79
+    },
+    {
+     "name": "Dinamo Bucuresti",
+     "odds": 1.75
+    }
+   ],
+   "form": [
+    {
+     "name": "Szolnoki Olaj",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Dinamo Bucuresti",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281702910504960",
+   "name": "Cedevita Olimpija - Burgos",
+   "start": "2026-11-18T17:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Cedevita Olimpija",
+     "odds": 1.29
+    },
+    {
+     "name": "Burgos",
+     "odds": 2.73
+    }
+   ],
+   "form": [
+    {
+     "name": "Cedevita Olimpija",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Burgos",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282607733014528",
+   "name": "Trepca - KK Split",
+   "start": "2026-11-18T17:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Trepca",
+     "odds": 1.83
+    },
+    {
+     "name": "KK Split",
+     "odds": 1.71
+    }
+   ],
+   "form": [
+    {
+     "name": "Trepca",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "KK Split",
+     "results": [
+      2,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281382011641856",
+   "name": "Real Madrid F. - Inter Milan F.",
+   "start": "2026-11-18T17:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Real Madrid F.",
+     "odds": 1.15
+    },
+    {
+     "name": "Nul",
+     "odds": 6.5
+    },
+    {
+     "name": "Inter Milan F.",
+     "odds": 10.0
+    }
+   ],
+   "form": [
+    {
+     "name": "Real Madrid F.",
+     "results": [
+      3,
+      1,
+      3,
+      1,
+      3
+     ]
+    },
+    {
+     "name": "Inter Milan F.",
+     "results": [
+      2,
+      1,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281383255248896",
+   "name": "BK Hacken F. - Manchester City F.",
+   "start": "2026-11-18T17:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "BK Hacken F.",
+     "odds": 6.6
+    },
+    {
+     "name": "Nul",
+     "odds": 5.25
+    },
+    {
+     "name": "Manchester City F.",
+     "odds": 1.28
+    }
+   ],
+   "form": [
+    {
+     "name": "BK Hacken F.",
+     "results": [
+      3,
+      1,
+      3,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Manchester City F.",
+     "results": [
+      3,
+      1,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281724033019904",
+   "name": "Aris Salonique - Le Mans",
+   "start": "2026-11-18T18:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Aris Salonique",
+     "odds": 1.17
+    },
+    {
+     "name": "Le Mans",
+     "odds": 3.45
+    }
+   ],
+   "form": [
+    {
+     "name": "Aris Salonique",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Le Mans",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281724689424384",
+   "name": "KK Buducnost - Slask Wroclaw",
+   "start": "2026-11-18T18:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "KK Buducnost",
+     "odds": 1.05
+    },
+    {
+     "name": "Slask Wroclaw",
+     "odds": 5.4
+    }
+   ],
+   "form": [
+    {
+     "name": "KK Buducnost",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Slask Wroclaw",
+     "results": [
+      1,
+      2,
+      1,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281725468520448",
+   "name": "Chemnitz - Tofas Bursa",
+   "start": "2026-11-18T18:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Eurocoupe",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Chemnitz",
+     "odds": 2.12
+    },
+    {
+     "name": "Tofas Bursa",
+     "odds": 1.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Chemnitz",
+     "results": [
+      1,
+      2,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Tofas Bursa",
+     "results": [
+      2,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282626896793600",
+   "name": "Szczecin - BC Hallmann Vienna",
+   "start": "2026-11-18T18:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "Coupe d'Europe FIBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Szczecin",
+     "odds": 1.31
+    },
+    {
+     "name": "BC Hallmann Vienna",
+     "odds": 2.75
+    }
+   ],
+   "form": [
+    {
+     "name": "Szczecin",
+     "results": [
+      1,
+      1,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "BC Hallmann Vienna",
+     "results": [
+      1,
+      2,
       2,
       2,
       1
@@ -979,6 +1065,1376 @@
       2,
       2,
       2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281381828149256",
+   "name": "Chelsea F. - Paris SG F.",
+   "start": "2026-11-18T20:00:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Chelsea F.",
+     "odds": 1.24
+    },
+    {
+     "name": "Nul",
+     "odds": 5.1
+    },
+    {
+     "name": "Paris SG F.",
+     "odds": 7.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Chelsea F.",
+     "results": [
+      1,
+      1,
+      3,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Paris SG F.",
+     "results": [
+      3,
+      3,
+      1,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281385115435008",
+   "name": "Juventus F. - Oud-Heuverlee F.",
+   "start": "2026-11-18T20:00:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Juventus F.",
+     "odds": 1.22
+    },
+    {
+     "name": "Nul",
+     "odds": 4.7
+    },
+    {
+     "name": "Oud-Heuverlee F.",
+     "odds": 8.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Juventus F.",
+     "results": [
+      1,
+      1,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Oud-Heuverlee F.",
+     "results": [
+      2,
+      1,
+      3,
+      3,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268934263214080",
+   "name": "Coritiba PR - Santos",
+   "start": "2026-11-18T22:30:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Coritiba PR",
+     "odds": 3.05
+    },
+    {
+     "name": "Nul",
+     "odds": 3.15
+    },
+    {
+     "name": "Santos",
+     "odds": 1.95
+    }
+   ],
+   "form": [
+    {
+     "name": "Coritiba PR",
+     "results": [
+      3,
+      2,
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Santos",
+     "results": [
+      2,
+      1,
+      3,
+      3,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268937289400320",
+   "name": "Remo - Chapecoense SC",
+   "start": "2026-11-18T23:00:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Remo",
+     "odds": 1.49
+    },
+    {
+     "name": "Nul",
+     "odds": 3.78
+    },
+    {
+     "name": "Chapecoense SC",
+     "odds": 4.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Remo",
+     "results": [
+      3,
+      3,
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Chapecoense SC",
+     "results": [
+      2,
+      1,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268934042996736",
+   "name": "Flamengo - Atletico Paranaense",
+   "start": "2026-11-18T23:30:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Flamengo",
+     "odds": 1.2
+    },
+    {
+     "name": "Nul",
+     "odds": 4.95
+    },
+    {
+     "name": "Atletico Paranaense",
+     "odds": 8.25
+    }
+   ],
+   "form": [
+    {
+     "name": "Flamengo",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Atletico Paranaense",
+     "results": [
+      2,
+      3,
+      2,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268934194008064",
+   "name": "Cruzeiro - Palmeiras",
+   "start": "2026-11-18T23:30:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Cruzeiro",
+     "odds": 2.47
+    },
+    {
+     "name": "Nul",
+     "odds": 3.13
+    },
+    {
+     "name": "Palmeiras",
+     "odds": 2.3
+    }
+   ],
+   "form": [
+    {
+     "name": "Cruzeiro",
+     "results": [
+      2,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Palmeiras",
+     "results": [
+      1,
+      3,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054570663939",
+   "name": "Orlando Magic - Philadelphie 76ers",
+   "start": "2026-11-19T00:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Orlando Magic",
+     "odds": 1.94
+    },
+    {
+     "name": "Philadelphie 76ers",
+     "odds": 1.74
+    }
+   ],
+   "form": [
+    {
+     "name": "Orlando Magic",
+     "results": [
+      2,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Philadelphie 76ers",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054571708416",
+   "name": "Cleveland Cavaliers - Memphis Grizzlies",
+   "start": "2026-11-19T00:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Cleveland Cavaliers",
+     "odds": 1.44
+    },
+    {
+     "name": "Memphis Grizzlies",
+     "odds": 2.53
+    }
+   ],
+   "form": [
+    {
+     "name": "Cleveland Cavaliers",
+     "results": [
+      2,
+      1,
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Memphis Grizzlies",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054574850048",
+   "name": "Indiana Pacers - Houston Rockets",
+   "start": "2026-11-19T00:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Indiana Pacers",
+     "odds": 2.93
+    },
+    {
+     "name": "Houston Rockets",
+     "odds": 1.34
+    }
+   ],
+   "form": [
+    {
+     "name": "Indiana Pacers",
+     "results": [
+      2,
+      2,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Houston Rockets",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054576963586",
+   "name": "Miami Heat - Milwaukee Bucks",
+   "start": "2026-11-19T00:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Miami Heat",
+     "odds": 1.1
+    },
+    {
+     "name": "Milwaukee Bucks",
+     "odds": 5.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Miami Heat",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Milwaukee Bucks",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268932691398656",
+   "name": "Corinthians - Botafogo",
+   "start": "2026-11-19T00:30:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Corinthians",
+     "odds": 1.68
+    },
+    {
+     "name": "Nul",
+     "odds": 3.25
+    },
+    {
+     "name": "Botafogo",
+     "odds": 3.88
+    }
+   ],
+   "form": [
+    {
+     "name": "Corinthians",
+     "results": [
+      2,
+      3,
+      2,
+      1,
+      3
+     ]
+    },
+    {
+     "name": "Botafogo",
+     "results": [
+      3,
+      1,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1268936049979392",
+   "name": "Gremio RS - Bahia Salvador BA",
+   "start": "2026-11-19T00:30:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Brésil Série A",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Gremio RS",
+     "odds": 2.1
+    },
+    {
+     "name": "Nul",
+     "odds": 3.18
+    },
+    {
+     "name": "Bahia Salvador BA",
+     "odds": 2.72
+    }
+   ],
+   "form": [
+    {
+     "name": "Gremio RS",
+     "results": [
+      1,
+      1,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "name": "Bahia Salvador BA",
+     "results": [
+      1,
+      2,
+      3,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054570672132",
+   "name": "Toronto Raptors - Washington Wizards",
+   "start": "2026-11-19T00:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Toronto Raptors",
+     "odds": 1.33
+    },
+    {
+     "name": "Washington Wizards",
+     "odds": 2.97
+    }
+   ],
+   "form": [
+    {
+     "name": "Toronto Raptors",
+     "results": [
+      1,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Washington Wizards",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054574858243",
+   "name": "Brooklyn Nets - Chicago Bulls",
+   "start": "2026-11-19T00:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Brooklyn Nets",
+     "odds": 1.62
+    },
+    {
+     "name": "Chicago Bulls",
+     "odds": 2.1
+    }
+   ],
+   "form": [
+    {
+     "name": "Brooklyn Nets",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Chicago Bulls",
+     "results": [
+      2,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054570668033",
+   "name": "New Orleans Pelicans - Detroit Pistons",
+   "start": "2026-11-19T01:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "New Orleans Pelicans",
+     "odds": 3.08
+    },
+    {
+     "name": "Detroit Pistons",
+     "odds": 1.31
+    }
+   ],
+   "form": [
+    {
+     "name": "New Orleans Pelicans",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Detroit Pistons",
+     "results": [
+      2,
+      2,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054575898624",
+   "name": "Oklahoma City Thunder - Atlanta Hawks",
+   "start": "2026-11-19T01:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Oklahoma City Thunder",
+     "odds": 1.3
+    },
+    {
+     "name": "Atlanta Hawks",
+     "odds": 3.12
+    }
+   ],
+   "form": [
+    {
+     "name": "Oklahoma City Thunder",
+     "results": [
+      1,
+      2,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Atlanta Hawks",
+     "results": [
+      1,
+      1,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054575902720",
+   "name": "Dallas Mavericks - Golden State Warriors",
+   "start": "2026-11-19T01:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Dallas Mavericks",
+     "odds": 1.38
+    },
+    {
+     "name": "Golden State Warriors",
+     "odds": 2.75
+    }
+   ],
+   "form": [
+    {
+     "name": "Dallas Mavericks",
+     "results": [
+      1,
+      1,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Golden State Warriors",
+     "results": [
+      1,
+      1,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054570659843",
+   "name": "Denver Nuggets - Boston Celtics",
+   "start": "2026-11-19T02:30:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Denver Nuggets",
+     "odds": 1.98
+    },
+    {
+     "name": "Boston Celtics",
+     "odds": 1.65
+    }
+   ],
+   "form": [
+    {
+     "name": "Denver Nuggets",
+     "results": [
+      1,
+      2,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Boston Celtics",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054576955392",
+   "name": "Sacramento Kings - Phoenix Suns",
+   "start": "2026-11-19T03:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Sacramento Kings",
+     "odds": 2.85
+    },
+    {
+     "name": "Phoenix Suns",
+     "odds": 1.32
+    }
+   ],
+   "form": [
+    {
+     "name": "Sacramento Kings",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Phoenix Suns",
+     "results": [
+      2,
+      1,
+      1,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278054580105216",
+   "name": "Los Angeles Lakers - Utah Jazz",
+   "start": "2026-11-19T03:00:00Z",
+   "sport": "basketball",
+   "sportName": "Basketball",
+   "competition": "NBA",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Los Angeles Lakers",
+     "odds": 1.14
+    },
+    {
+     "name": "Utah Jazz",
+     "odds": 4.25
+    }
+   ],
+   "form": [
+    {
+     "name": "Los Angeles Lakers",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Utah Jazz",
+     "results": [
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278823825932288",
+   "name": "Al Wasl - Hatta",
+   "start": "2026-11-19T12:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "EAU Premier League",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Al Wasl",
+     "odds": 1.08
+    },
+    {
+     "name": "Nul",
+     "odds": 7.75
+    },
+    {
+     "name": "Hatta",
+     "odds": 11.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Al Wasl",
+     "results": [
+      1,
+      1,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Hatta",
+     "results": [
+      2,
+      2,
+      1,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1283693806100480",
+   "name": "Ben Shelton - Rafael Jodar",
+   "start": "2026-11-19T13:00:00Z",
+   "sport": "tennis",
+   "sportName": "Tennis",
+   "competition": "Nitto ATP Finals",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Ben Shelton",
+     "odds": 1.39
+    },
+    {
+     "name": "Rafael Jodar",
+     "odds": 2.49
+    }
+   ],
+   "form": [
+    {
+     "name": "Ben Shelton",
+     "results": [
+      1,
+      1,
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Rafael Jodar",
+     "results": [
+      2,
+      1,
+      2,
+      2,
+      2
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1278938403844096",
+   "name": "Al-Ain - Al Dhafra",
+   "start": "2026-11-19T15:25:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "EAU Premier League",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Al-Ain",
+     "odds": 1.09
+    },
+    {
+     "name": "Nul",
+     "odds": 7.25
+    },
+    {
+     "name": "Al Dhafra",
+     "odds": 11.5
+    }
+   ],
+   "form": [
+    {
+     "name": "Al-Ain",
+     "results": [
+      2,
+      1,
+      1,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Al Dhafra",
+     "results": [
+      2,
+      1,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282579369033728",
+   "name": "MB Rouissat - CR Belouizdad",
+   "start": "2026-11-19T16:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Algérie Ligue 1",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "MB Rouissat",
+     "odds": 4.2
+    },
+    {
+     "name": "Nul",
+     "odds": 2.73
+    },
+    {
+     "name": "CR Belouizdad",
+     "odds": 1.74
+    }
+   ],
+   "form": [
+    {
+     "name": "MB Rouissat",
+     "results": [
+      1,
+      1,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "CR Belouizdad",
+     "results": [
+      1,
+      1,
+      3,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282579373228032",
+   "name": "MC Alger - Olympique Akbou",
+   "start": "2026-11-19T16:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Algérie Ligue 1",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "MC Alger",
+     "odds": 1.3
+    },
+    {
+     "name": "Nul",
+     "odds": 3.58
+    },
+    {
+     "name": "Olympique Akbou",
+     "odds": 7.5
+    }
+   ],
+   "form": [
+    {
+     "name": "MC Alger",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Olympique Akbou",
+     "results": [
+      3,
+      1,
+      1,
+      3,
+      3
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281580227117056",
+   "name": "Austria Vienne F. - Bayern Munich F.",
+   "start": "2026-11-19T17:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Austria Vienne F.",
+     "odds": 15.5
+    },
+    {
+     "name": "Nul",
+     "odds": 8.0
+    },
+    {
+     "name": "Bayern Munich F.",
+     "odds": 1.05
+    }
+   ],
+   "form": [
+    {
+     "name": "Austria Vienne F.",
+     "results": [
+      1,
+      3,
+      2,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Bayern Munich F.",
+     "results": [
+      3,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281583289995264",
+   "name": "Paris FC F. - HB Køge F.",
+   "start": "2026-11-19T17:45:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Paris FC F.",
+     "odds": 1.55
+    },
+    {
+     "name": "Nul",
+     "odds": 3.9
+    },
+    {
+     "name": "HB Køge F.",
+     "odds": 4.15
+    }
+   ],
+   "form": [
+    {
+     "name": "Paris FC F.",
+     "results": [
+      3,
+      3,
+      1,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "HB Køge F.",
+     "results": [
+      2,
+      1,
+      1,
+      3,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1282664876228608",
+   "name": "JS Kabylie - USM Alger",
+   "start": "2026-11-19T19:00:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Algérie Ligue 1",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "JS Kabylie",
+     "odds": 2.0
+    },
+    {
+     "name": "Nul",
+     "odds": 2.6
+    },
+    {
+     "name": "USM Alger",
+     "odds": 3.4
+    }
+   ],
+   "form": [
+    {
+     "name": "JS Kabylie",
+     "results": [
+      3,
+      1,
+      1,
+      1,
+      3
+     ]
+    },
+    {
+     "name": "USM Alger",
+     "results": [
+      2,
+      1,
+      3,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1283693812396032",
+   "name": "Alexander Zverev - Arthur Fils",
+   "start": "2026-11-19T19:30:00Z",
+   "sport": "tennis",
+   "sportName": "Tennis",
+   "competition": "Nitto ATP Finals",
+   "market": "Vainqueur du match",
+   "selections": [
+    {
+     "name": "Alexander Zverev",
+     "odds": 1.29
+    },
+    {
+     "name": "Arthur Fils",
+     "odds": 2.9
+    }
+   ],
+   "form": [
+    {
+     "name": "Alexander Zverev",
+     "results": [
+      1,
+      2,
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Arthur Fils",
+     "results": [
+      2,
+      1,
+      2,
+      2,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1281578658443264",
+   "name": "Arsenal F. - OL Lyonnes F.",
+   "start": "2026-11-19T20:00:00Z",
+   "sport": "football",
+   "sportName": "Football",
+   "competition": "Ligue des Champions F.",
+   "market": "Résultat du match (t. rég)",
+   "selections": [
+    {
+     "name": "Arsenal F.",
+     "odds": 3.45
+    },
+    {
+     "name": "Nul",
+     "odds": 3.63
+    },
+    {
+     "name": "OL Lyonnes F.",
+     "odds": 1.74
+    }
+   ],
+   "form": [
+    {
+     "name": "Arsenal F.",
+     "results": [
+      1,
+      3,
+      1,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "OL Lyonnes F.",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "matchOfTheDay": false
+  },
+  {
+   "id": "1256453388140544",
+   "name": "FC Grenoble Rugby - Provence Rugby",
+   "start": "2026-11-19T20:00:00Z",
+   "sport": "rugby_union",
+   "sportName": "Rugby à XV",
+   "competition": "Pro D2",
+   "market": "Résultat du match (tps rég.)",
+   "selections": [
+    {
+     "name": "FC Grenoble Rugby",
+     "odds": 1.5
+    },
+    {
+     "name": "Nul",
+     "odds": 18.25
+    },
+    {
+     "name": "Provence Rugby",
+     "odds": 2.17
+    }
+   ],
+   "form": [
+    {
+     "name": "FC Grenoble Rugby",
+     "results": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Provence Rugby",
+     "results": [
+      1,
+      1,
+      1,
+      3,
+      1
      ]
     }
    ],
