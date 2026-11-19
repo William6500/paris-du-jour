@@ -12,13 +12,19 @@ PAGES = [
     "/football-sfootball/ligue-1-mcdonald-s-c4", "/football-sfootball/angl-premier-league-c3",
     "/football-sfootball/espagne-laliga-c7", "/football-sfootball/italie-serie-a-c6",
     "/football-sfootball/allemagne-bundesliga-c5", "/football-sfootball/ligue-des-champions-c8",
-    "/football-sfootball/ligue-des-nations-uefa-c22676", "/basketball-sbasketball/nba-c13",
+    "/football-sfootball/ligue-2-bkt-c19", "/football-sfootball/liga-betclic-c32",
+    "/football-sfootball/pays-bas-eredivisie-c21", "/football-sfootball/ligue-europa-c3453",
+    "/basketball-sbasketball/nba-c13",
     "/tennis-stennis/nitto-atp-finals-c1",
 ]
 STATE_RE = re.compile(r'<script id="ng-state" type="application/json">(.*?)</script>', re.S)
 HREF_RE = re.compile(r'href="(/[^"?#]+-m(\d+))"')
-HORIZON_H = 40
-MAX_MATCH_PAGES = 40
+# Fenêtre : au moins 4 jours, et toujours jusqu'à la fin du dimanche (heure de Paris) -> tout le week-end.
+HORIZON_MIN_H = 96
+FULL_H = 48            # pages match complètes pour tous les matchs foot à moins de 48 h
+MAX_MATCH_PAGES = 110  # au-delà de 48 h : grands championnats en priorité, dans la limite
+TOP_COMPS = ("Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des Champions", "Ligue Europa",
+             "Ligue 2", "Liga Betclic", "Eredivisie")
 # Marchés gardés (pages match football). Le reste (buteurs, score exact...) est ignoré.
 KEEP = [
     (r"^Résultat du match", "1N2"),
@@ -104,7 +110,10 @@ def parse_match_page(html):
 
 def main():
     now = datetime.now(timezone.utc)
-    horizon = now + timedelta(hours=HORIZON_H)
+    paris = now + timedelta(hours=1)  # Europe/Paris en hiver (UTC+1) ; marge suffisante pour la fenêtre
+    to_monday = (7 - paris.weekday()) % 7 or 7
+    end_sunday = (paris + timedelta(days=to_monday)).replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(hours=1)
+    horizon = max(now + timedelta(hours=HORIZON_MIN_H), end_sunday.replace(tzinfo=timezone.utc))
     matches, urls, errors, ok = {}, {}, [], 0
     def fetch_page(path):
         try:
@@ -149,14 +158,19 @@ def main():
         print("Échec de la relève:", errors, file=sys.stderr); sys.exit(1)
     for mid, m in matches.items():
         m["url"] = BASE + urls[mid] if mid in urls else None
-    todo = [m for m in sorted(matches.values(), key=lambda m: m["start"]) if m["sport"] == "football" and m["url"]][:MAX_MATCH_PAGES]
+    foot = [m for m in sorted(matches.values(), key=lambda m: m["start"]) if m["sport"] == "football" and m["url"]]
+    near_lim = (now + timedelta(hours=FULL_H)).isoformat().replace("+00:00", "Z")
+    near = [m for m in foot if m["start"] <= near_lim]
+    far = [m for m in foot if m["start"] > near_lim]
+    far.sort(key=lambda m: (not any(c in m["competition"] for c in TOP_COMPS), m["start"]))
+    todo = (near + far)[:MAX_MATCH_PAGES]
 
     def detail(m):
         try:
             return m, parse_match_page(get(m["url"]))
         except Exception as e:  # noqa
             return m, e
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(12) as ex:
         for m, res in ex.map(detail, todo):
             if isinstance(res, dict) and res["markets"]:
                 m["markets"] = res["markets"]; m["mycombis"] = res["mycombis"]; m["round"] = res["round"]

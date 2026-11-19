@@ -157,7 +157,7 @@ def summarize(sport_path, lg, eid, home_name, away_name):
 def main():
     raw = json.load(open("raw_odds.json", encoding="utf-8"))
     now = datetime.now(timezone.utc)
-    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 2)})
+    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 6)})
     pools = {"football": ("soccer", scoreboards("soccer", SOCCER, dates)),
              "basketball": ("basketball", scoreboards("basketball", BASKET, dates))}
     ctx, jobs = {}, []
