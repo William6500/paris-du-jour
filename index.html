@@ -76,7 +76,7 @@ h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .chip.live.on i{background:#fff}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(239,68,68,.7)}70%{box-shadow:0 0 0 7px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
 .dates{display:flex;gap:2px;padding:3px;border-radius:14px;margin:0 2px 12px;overflow-x:auto;scrollbar-width:none}.dates::-webkit-scrollbar{display:none}
-.dates button{flex:1 0 auto;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:12.5px;font-weight:700;padding:8px 10px;border-radius:11px;cursor:pointer;white-space:nowrap}
+.dates button{flex:1 0 auto;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:12.5px;font-weight:700;padding:8px 7px;border-radius:11px;cursor:pointer;white-space:nowrap}
 .dates button.on{background:rgba(255,255,255,.3);color:#fff}
 .dates.off{opacity:.45;pointer-events:none}
 .tab{position:relative}.tab .n{position:absolute;top:4px;right:8px;min-width:16px;padding:0 4px;border-radius:8px;background:rgba(255,255,255,.18);font-size:9.5px;line-height:15px}
@@ -165,7 +165,7 @@ details ul{padding-left:18px;margin:6px 0}
 
 <script>
 const PCT={safe:4,bal:2.5,big:1,poker:0.5}, COL={safe:'var(--safe)',bal:'var(--bal)',big:'var(--big)',poker:'var(--poker)',combo:'var(--combo)'};
-const SP={football:'⚽',basketball:'🏀',tennis:'🎾',rugby_union:'🏉',rugby:'🏉'};
+const SP={football:'⚽',basketball:'🏀',tennis:'🎾',rugby_union:'🏉',rugby:'🏉',badminton:'🏸',handball:'🤾',ice_hockey:'🏒',volleyball:'🏐'};
 const MAX_PCT=5, MIN_STAKE=0.10, PAGE=10;
 const $=s=>document.querySelector(s);
 const eur=v=>v.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
@@ -261,8 +261,8 @@ function comboCard(c){
 }
 window.tog=(e,el)=>{if(e.target.closest('a'))return;el.classList.toggle('open')};
 
-const DUR={football:120,basketball:140,tennis:200,rugby_union:110,rugby:110};
-const LBL={football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby'};
+const DUR={football:120,basketball:140,tennis:200,rugby_union:110,rugby:110,badminton:70,handball:100,ice_hockey:150,volleyball:120};
+const LBL={football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby',badminton:'Badminton',handball:'Hand',ice_hockey:'Hockey',volleyball:'Volley'};
 const dayKey=d=>new Date(d).toLocaleDateString('fr-CA',{timeZone:'Europe/Paris'});
 function liveState(m,now){
   const st=new Date(m.start).getTime(), inWin=st<=now&&now<st+(DUR[m.sport]||120)*6e4, e=LIVE[m.id];
