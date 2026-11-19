@@ -288,5 +288,225 @@
     "url": "https://calciorosa.com/juventus-women-leuven-rientri-girelli-champions-league/"
    }
   ]
+ },
+ "Arsenal F. - OL Lyonnes F.": {
+  "date": "2026-11-19",
+  "adj": -1,
+  "short": "Arsenal sans Mariona, Kelly, Blackstenius, Cerci ; Lyon leader, 4/4 avec 20 buts marqués",
+  "absents": {
+   "home": [
+    "Mariona Caldentey (blessée)",
+    "Chloe Kelly (blessée)",
+    "Stina Blackstenius (blessée)",
+    "Selina Cerci (blessée)",
+    "Michelle Agyemang (blessée)",
+    "Katie Reid (cheville)",
+    "Emily Fox (doute, coup)"
+   ],
+   "away": [
+    "Johanna Rytting Kaneryd (ligaments croisés)"
+   ]
+  },
+  "lineups": {
+   "home": "Rodríguez ; Holmberg, Williamson, Catley, Batlle ; Cooney-Cross, Stanway, Baum, Smith, Maanum ; Russo",
+   "away": "Grohs ; Brand, Sangaré, Renard, Bacha ; Egurrola, Yohannes, Dumornay ; Bècho, Chawinga, Katoto"
+  },
+  "mood": "Lyon en tête de la phase de ligue, 8 victoires de suite toutes compétitions et titulaires reposés le week-end (11 changements). Arsenal invaincu sur 5 matchs mais 3 nuls récents, Maanum de retour.",
+  "sources": [
+   {
+    "label": "Pain in the Arsenal",
+    "url": "https://paininthearsenal.com/arsenal-vs-lyon-womens-champions-league-preview-predictions-team-news-and-tv-info"
+   },
+   {
+    "label": "FreeTips",
+    "url": "https://www.freetips.com/football/arsenal-vs-lyon-betting-tips-predictions-20261117-0012/"
+   },
+   {
+    "label": "UEFA.com",
+    "url": "https://www.uefa.com/womenschampionsleague/news/02ab-220ff9af21a9-748c51d8b995-1000--women-s-champions-league-matchday-5-thursday-preview-arsenal/"
+   }
+  ]
+ },
+ "Barcelone F. - Servette FC Chenois F.": {
+  "date": "2026-11-19",
+  "adj": -0.5,
+  "short": "Barça diminué (V. López, Kika, Kerolin, Aleixandri) mais retrouve Paredes et Graham Hansen",
+  "absents": {
+   "home": [
+    "Vicky López (musculaire)",
+    "Kika Nazareth (musculaire)",
+    "Kerolin (musculaire)",
+    "Laia Aleixandri (genou, fin de rééducation)"
+   ],
+   "away": [
+    "Enith Salón (ligaments croisés)"
+   ]
+  },
+  "lineups": {
+   "home": "Cata Coll ; Camara, Paredes, van Asten, Brugts ; Serrajordi, Guijarro, Schertenleib ; Graham Hansen, Pajor, Pina",
+   "away": "Weimar ; Simon, Ballesté, Nakkach, Bourma ; Serrano, Hernández ; Marinelli, Karchouni, Marchão ; Sobal"
+  },
+  "mood": "Barça 2e (10 pts), deux nuls de suite (Arsenal, Deportivo), une première depuis 2019 ; effectif court. Servette 14e (3 pts), a perdu tous ses déplacements dans cette phase, coach Toro sur le départ.",
+  "sources": [
+   {
+    "label": "Sport",
+    "url": "https://www.sport.es/es/noticias/barca/futbol-femenino/barca-busca-recuperar-pulso-servette-136591275"
+   },
+   {
+    "label": "Betfair (blog)",
+    "url": "https://www.betfair.es/blog/futbol/uefa-champions-league-femenina/fc-barcelona---servette-alineaciones-horario-donde-ver-pronosticos-y-estadisticas-171126-1377.html"
+   },
+   {
+    "label": "La Vanguardia",
+    "url": "https://www.lavanguardia.com/deportes/futbol-femenino/20261119/11687267/barca-herido-recibe-servette-busca-triunfo-balsamico.html"
+   }
+  ]
+ },
+ "Benfica F. - AS Roma F.": {
+  "date": "2026-11-19",
+  "adj": 1,
+  "short": "Benfica 9e (6 pts) à domicile, Roma 12e (4 pts) privée de Greggi",
+  "absents": {
+   "home": [
+    "Lara Martins (ligaments croisés)",
+    "Joana Valente (ligaments croisés)",
+    "Diana Silva (enceinte)"
+   ],
+   "away": [
+    "Greggi (ischio-jambiers, blessée le 14/11)"
+   ]
+  },
+  "lineups": {
+   "home": "Pauels ; Amado, Diana Gomes, Demehin, Lund ; Pauleta, Norton, Nycole Raysla, Møller, Lúcia Alves, Dorsin",
+   "away": "Baldi ; Thøgersen, Oladipo, Ottey, Oliviero ; Doms, Rieke, Giugliano ; Pilgrim, Van Dooren"
+  },
+  "mood": "Benfica sur 2 victoires (3-1 contre Austria Vienne, 5-0 en coupe), vise 9 pts pour le play-off. Roma leader en Serie A, a battu Servette 2-1, pressing haut.",
+  "sources": [
+   {
+    "label": "SL Benfica",
+    "url": "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/18/futebol-feminino-benfica-as-roma-antevisao-5-jornada-fase-de-liga-liga-dos-campeoes"
+   },
+   {
+    "label": "Dia de Jogo",
+    "url": "https://diadejogo.pt/noticias/antevisao-benfica-roma-feminino-2026-11-19"
+   },
+   {
+    "label": "Bola na Rede",
+    "url": "https://bolanarede.pt/nacional/futebol-feminino-nacional/ivan-baptista-e-anna-csiki-na-antevisao-do-jogo-com-a-roma-para-a-champions-league-feminina-sao-duas-boas-equipas-que-gostam-de-ter-bola-sao-tao-mais-fortes-quanto-mais-tempo-a-tiverem/"
+   }
+  ]
+ },
+ "Vasco de Gama - Internacional RS": {
+  "date": "2026-11-19",
+  "adj": 1,
+  "short": "Vasco sur 2 victoires, Inter sans Thiago Maia, Bernabei ni Maripán (suspendu)",
+  "absents": {
+   "home": [
+    "Nuno Moreira (adducteur)",
+    "Tchê Tchê (tendinopathie)",
+    "Cuesta (hanche)"
+   ],
+   "away": [
+    "Thiago Maia (cuisse)",
+    "Bernabei (entorse genou)",
+    "Maripán (suspendu)",
+    "Rochet (lombaires)",
+    "Kayky (cheville)"
+   ]
+  },
+  "lineups": {
+   "home": "Léo Jardim ; Paulo Henrique (Puma Rodríguez), Saldivia, Robert Renan, Cuiabano ; Sosa, Thiago Mendes, Lescano ; Andrés Gómez, Colidio, Bruno Duarte",
+   "away": "Kauan Jesus ; Ronaldo, Mercado, Juninho ; Aguirre, Villagra, Bruno Gomes, Matheus Bahia ; Vitinho, Alan Patrick, Alerrandro"
+  },
+  "mood": "Vasco 11e (44 pts), quasi sauvé, vise le G-8 après avoir battu Athletico et Chapecoense. Inter juste au-dessus de la zone rouge (38 pts), sans victoire à l'extérieur sous Eduardo Baptista, arrivé à Rio avec 4 h de retard.",
+  "sources": [
+   {
+    "label": "ge.globo",
+    "url": "https://ge.globo.com/rj/futebol/brasileirao-serie-a/noticia/2026/11/19/vasco-x-internacional-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+   },
+   {
+    "label": "ge.globo (Inter)",
+    "url": "https://ge.globo.com/rs/futebol/times/internacional/noticia/2026/11/18/bernabei-nao-viaja-e-inter-chega-ao-rio-com-novidades-para-enfrentar-o-vasco-veja-relacionados.ghtml"
+   },
+   {
+    "label": "Plantão Paulista",
+    "url": "https://plantaopaulista.com.br/inter-tem-desfalques-de-bernabei-e-thiago-maia-contra-o-vasco"
+   }
+  ]
+ },
+ "Vitoria BA - Bragantino": {
+  "date": "2026-11-19",
+  "adj": 0,
+  "short": "Débuts de Rafael Lacerda pour Vitória (1 pt au-dessus du Z-4), Bragantino sans Lucas Barbosa",
+  "absents": {
+   "home": [
+    "Dudu (blessé)",
+    "Nathan Mendes (blessé)",
+    "Fabiano Souza (blessé)",
+    "Luan Cândido (clause contractuelle)",
+    "Nacho Laquintana (clause contractuelle)"
+   ],
+   "away": [
+    "Lucas Barbosa (suspendu)",
+    "Davi Gomes (blessé)",
+    "Rodriguinho (blessé)"
+   ]
+  },
+  "lineups": {
+   "home": "Lucas Arcanjo ; Mateus Silva, Brítez, Cacá, Jamerson ; Baralhas, Martínez, Matheuzinho ; Erick, Tarzia, Renê",
+   "away": "Tiago Volpi ; Ryan, Gustavo Marques, Guzmán Rodríguez, Juninho Capixaba ; Fabinho, Eric Ramires, Eduardo Sasha ; Herrera, Wallace Yan, Fernando"
+  },
+  "mood": "Vitória 15e-16e (38 pts), 1 victoire en 8, nouveau coach après le renvoi de Jair Ventura. Bragantino 8e (47 pts) sur 2 victoires, vise la Libertadores mais sans victoire à l'extérieur depuis 6 mois.",
+  "sources": [
+   {
+    "label": "ge.globo",
+    "url": "https://ge.globo.com/ba/futebol/times/vitoria/noticia/2026/11/18/escalacao-do-vitoria-contra-o-bragantino-veja-time-provavel-desfalques-e-duvidas-apos-treino.ghtml"
+   },
+   {
+    "label": "A Tarde",
+    "url": "https://atarde.com.br/esportes/ecvitoria/vitoria-x-rb-bragantino-onde-assistir-escalacoes-e-arbitragem-1409739"
+   },
+   {
+    "label": "Bahia Notícias",
+    "url": "https://www.bahianoticias.com.br/esportes/vitoria/31806-vitoria-x-rb-bragantino-veja-provaveis-escalacoes-horario-e-onde-assistir"
+   }
+  ]
+ },
+ "Sao Paulo SP - Fluminense": {
+  "date": "2026-11-20",
+  "adj": -0.5,
+  "short": "São Paulo sans Bobadilla et 3 suspendus, Fluminense sans Canobbio ni Savarino",
+  "absents": {
+   "home": [
+    "Bobadilla (fatigue après la trêve internationale)",
+    "Newton (suspendu)",
+    "Luciano (suspendu)",
+    "Ferreirinha (suspendu)"
+   ],
+   "away": [
+    "Canobbio (retour de sélection)",
+    "Savarino (retour de sélection)",
+    "Martinelli probablement remplaçant"
+   ]
+  },
+  "lineups": {
+   "home": "Rafael ; Tolói, Arboleda, Osorio ; Pedro Lima, Djhordney, Pablo Maia, Iago ; Artur, Lucas, Calleri",
+   "away": "Fábio ; Guga, Ignácio, Thiago Silva, Renê ; Hércules, Nonato, Lucho Acosta ; Serna, Soteldo, Hulk"
+  },
+  "mood": "35e journée du Brasileirão. São Paulo diminué au milieu et devant ; Fluminense privé de deux ailiers mais a gagné 3-0 à Vitória lors de son dernier match.",
+  "sources": [
+   {
+    "label": "ge.globo (São Paulo)",
+    "url": "https://ge.globo.com/futebol/times/sao-paulo/noticia/2026/11/18/escalacao-do-sao-paulo-dorival-nao-tera-bobadilla-contra-o-fluminense.ghtml"
+   },
+   {
+    "label": "ge.globo (Fluminense)",
+    "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/escalacao-do-fluminense-marcao-tem-desfalques-no-ataque-e-martinelli-deve-comecar-no-banco.ghtml"
+   },
+   {
+    "label": "ge.globo (Savarino)",
+    "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/titular-nos-dois-amistosos-da-venezuela-savarino-sera-desfalque-do-fluminense-contra-o-sao-paulo.ghtml"
+   }
+  ]
  }
 }
