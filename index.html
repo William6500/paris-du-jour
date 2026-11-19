@@ -310,7 +310,7 @@ function render(){
   // dates
   const days=[...new Set(D.matches.filter(m=>up(m.id)).map(m=>dayKey(m.start)))].sort();
   if(day!=='all'&&!days.includes(day))day='all';
-  const dl=k=>k===today?'Aujourd\'hui':k===tom?'Demain':new Date(k+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'short',day:'numeric'});
+  const dl=k=>{if(k===today)return'Aujourd\'hui';const d=new Date(k+'T12:00:00'),w=d.toLocaleDateString('fr-FR',{weekday:'long'});return (w[0].toUpperCase()+w.slice(1))+(d-now>6*864e5?' '+d.getDate():'')};
   $('#dates').className='glass dates'+(liveOnly?' off':'');
   $('#dates').innerHTML=`<button data-d="all" class="${day==='all'?'on':''}">Tout</button>`+days.map(k=>`<button data-d="${k}" class="${day===k?'on':''}">${dl(k)}</button>`).join('');
   document.querySelectorAll('#dates button').forEach(b=>b.onclick=()=>{day=b.dataset.d;shown=PAGE;render()});
