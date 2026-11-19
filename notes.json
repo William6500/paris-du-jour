@@ -508,5 +508,53 @@
     "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/titular-nos-dois-amistosos-da-venezuela-savarino-sera-desfalque-do-fluminense-contra-o-sao-paulo.ghtml"
    }
   ]
+ },
+ "Paris FC F. - HB Køge F.": {
+  "date": "2026-11-19",
+  "adj": 0,
+  "short": "Effectifs complets des deux côtés, le Paris FC cherche sa 1re victoire européenne",
+  "absents": {
+   "home": [],
+   "away": []
+  },
+  "lineups": {
+   "home": "Dernier onze (vs Le Havre 14/11) : Chavas ; Ould Hocine, Greboval, Diaz, Roche-Dufour ; Picard, Korošec ; Reynders, Matéo, Le Moguédec ; Viens",
+   "away": "Dernier onze (vs Odense 14/11) : A. Andersen ; Termansen, Sakabe, Jones, Hermann ; Oyama, Witek, Chipasula, Thygesen ; Madsen, Óskarsdóttir"
+  },
+  "mood": "Paris FC 0 victoire en 4 journées (2 nuls vs Arsenal et Häcken). Køge, passé par les qualifs, sur une bonne série en championnat danois et 1-1 à Louvain en dernier match européen. Première confrontation.",
+  "sources": [
+   {
+    "label": "zerozero",
+    "url": "https://www.zerozero.com.mx/noticias/paris-fc-vs-hb-koge-previa-ausencias-y-probables-alineaciones-titulares-liga-de-campeones-fem-19-11/1262224"
+   },
+   {
+    "label": "Paris FC",
+    "url": "https://parisfc.fr/equipe-pro/les-5-choses-a-savoir-avant-paris-fc-hb-koge-18h45-au-stade-charlety/"
+   }
+  ]
+ },
+ "Austria Vienne F. - Bayern Munich F.": {
+  "date": "2026-11-19",
+  "adj": -0.5,
+  "short": "Bayern invaincu (8 pts), victoire impérative avant de recevoir Barcelone",
+  "absents": {
+   "home": [],
+   "away": []
+  },
+  "lineups": {
+   "home": "Non communiquée",
+   "away": "Non communiquée"
+  },
+  "mood": "Bayern 3e, 10/10 en Bundesliga, gagné 2-1 au PSG la semaine dernière ; Bühl et Zadrazil se méfient du pressing viennois. Austria dernière (1 pt, 3-9), première saison en phase de ligue.",
+  "sources": [
+   {
+    "label": "BR24 / sportschau",
+    "url": "https://www.sportschau.de/regional/br/br-barca-schon-im-kopf-fcb-frauen-vor-pflichtaufgabe-in-wien-106.html"
+   },
+   {
+    "label": "fcbayern.com",
+    "url": "https://fcbayern.com/frauen/de/news/2026/11/faktenlage-austria-wien---fc-bayern-frauen"
+   }
+  ]
  }
 }
