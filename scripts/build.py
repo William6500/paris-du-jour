@@ -144,6 +144,15 @@ SHORT = [(r"^Joueur décisif \(buteur ou passeur décisif dans le tps rég\.\) �
          (r"^2ème set - Vainqueur", "2e set"), (r"^Nombre total de jeux", "Total jeux")]
 
 
+# Paris « soit… soit… » (double chance, handicaps « ne perd pas ou perd de N », « ou son remplaçant », buteur double chance,
+# joueur décisif but OU passe, « 2 marquent ou +2,5 »…) : jamais recommandés, seulement visibles dans la liste complète.
+COMPOSITE = re.compile(r"\bou\b|double chance|décisif|remplaçant|d'avance|ne perd pas", re.I)
+
+
+def is_single(mk_name, label, sel):
+    return not (COMPOSITE.search(mk_name) or COMPOSITE.search(label) or COMPOSITE.search(sel))
+
+
 def short_label(lab):
     for rx, rp in SHORT:
         if re.search(rx, lab):
@@ -315,6 +324,8 @@ def main():
                 c = {"matchId": m["id"], "market": lab, "sel": x["name"], "odds": x["odds"],
                      "pm": round(x["pm"], 4), "pk": round(x["pk"], 4), "ev": round(x["pk"] * x["odds"], 4),
                      "value": x["pk"] * x["odds"] > 1.02 and has_ctx and bool(x.get("adj")), "adj": bool(x.get("adj")), "start": m["start"]}
+                if not is_single(mk["name"], lab, x["name"]):
+                    continue  # pari composite « ou » : exclu des recommandations et des combinés
                 cands.append(c)
                 if dk is not None:
                     EVS[(m["id"], lab, x["name"])] = (mk["name"], mk["label"], x["name"])
@@ -381,7 +392,7 @@ def main():
             continue
         margin = sum(1 / s["odds"] for s in m["markets"][0]["selections"]) - 1 if m["markets"] else 0.06
         for cb in m.get("mycombis", []):
-            if 1.20 <= cb["odds"] <= 40 and len(cb["legs"]) >= 2:
+            if 1.20 <= cb["odds"] <= 40 and len(cb["legs"]) >= 2 and all(is_single(l["market"], "", l["name"]) for l in cb["legs"]):
                 mc.append({"kind": "mycombi", "title": "MyCombi Betclic", "matchId": m["id"], "start": m["start"],
                            "legs": [{"matchId": m["id"], "market": l["market"], "sel": l["name"], "odds": l["odds"]} for l in cb["legs"]],
                            "odds": cb["odds"], "p": round(1 / cb["odds"] / (1 + 2 * max(0.03, margin)), 4), "real": True, "pct": 1.0})
