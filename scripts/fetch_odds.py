@@ -22,12 +22,12 @@ HREF_RE = re.compile(r'href="(/[^"?#]+-m(\d+))"')
 # Fenêtre : la semaine — 7 jours glissants, ou jusqu'à la fin du dimanche de la semaine ISO si c'est plus long.
 HORIZON_MIN_H = 168
 FULL_H = 48            # pages match complètes pour tous les matchs foot à moins de 48 h
-MAX_MATCH_PAGES = 160  # au-delà de 48 h : grands championnats en priorité, dans la limite
-TOP_COMPS = ("Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des Champions", "Ligue Europa",
+MAX_MATCH_PAGES = 230  # au-delà de 48 h : grands championnats en priorité, dans la limite
+TOP_COMPS = ("NBA", "ATP", "WTA", "Top 14", "Euroligue", "Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des Champions", "Ligue Europa",
              "Ligue 2", "Liga Betclic", "Eredivisie")
 # Marchés gardés (pages match football). Le reste (buteurs, score exact...) est ignoré.
 KEEP = [
-    (r"^Résultat du match", "1N2"),
+    (r"^Résultat du match \(t\. rég\)$", "1N2"),
     (r"^Double chance \(t\. rég\)$", "Double chance"),
     (r"^Nombre total de buts", "Total buts"),
     (r"^Les 2 équipes marquent \(t\. rég\)$", "Les 2 marquent"),
@@ -36,6 +36,24 @@ KEEP = [
     (r"^1ère mi-temps \(seule\) - Résultat", "1re MT"),
     (r"^2ème mi-temps \(seule\) - Résultat", "2e MT"),
     (r"^Première équipe à marquer", "1re équipe à marquer"),
+    (r"^Dernière équipe à marquer", "Dernière équipe à marquer"),
+    (r"^Écart de buts", "Écart de buts"),
+    # basket
+    (r"^Vainqueur du match$", "Vainqueur"),
+    (r"^Résultat du match \(tps r[ée]g\.?\)", "1N2"),
+    (r"^Nombre total de points$", "Total points"),
+    (r"^Nombre total de points - ", "Points équipe"),
+    (r"^Écart de points", "Écart de points"),
+    (r"^1er QT - Nombre total de points$", "1er QT total"),
+    (r"^1er QT - Vainqueur$", "1er QT"),
+    # tennis
+    (r"^Score final \(sets\)$", "Score en sets"),
+    (r"^Écart de sets$", "Écart de sets"),
+    (r" gagne au moins 1 set$", "Gagne 1 set"),
+    (r"^1er set - Vainqueur$", "1er set"),
+    # rugby
+    (r"^Nombre de points$", "Total points"),
+    (r" - Total de points$", "Points équipe"),
 ]
 
 
@@ -158,7 +176,7 @@ def main():
         print("Échec de la relève:", errors, file=sys.stderr); sys.exit(1)
     for mid, m in matches.items():
         m["url"] = BASE + urls[mid] if mid in urls else None
-    foot = [m for m in sorted(matches.values(), key=lambda m: m["start"]) if m["sport"] == "football" and m["url"]]
+    foot = [m for m in sorted(matches.values(), key=lambda m: m["start"]) if m["url"]]
     near_lim = (now + timedelta(hours=FULL_H)).isoformat().replace("+00:00", "Z")
     near = [m for m in foot if m["start"] <= near_lim]
     far = [m for m in foot if m["start"] > near_lim]
@@ -173,13 +191,34 @@ def main():
     with ThreadPoolExecutor(12) as ex:
         for m, res in ex.map(detail, todo):
             if isinstance(res, dict) and res["markets"]:
-                m["markets"] = res["markets"]; m["mycombis"] = res["mycombis"]; m["round"] = res["round"]
+                main = m["markets"][0]
+                names = sorted(x["name"] for x in main["selections"])
+                rest, dropped = [], False
+                for x in res["markets"]:
+                    if not dropped and x["label"] in ("1N2", "Vainqueur") and sorted(y["name"] for y in x["selections"]) == names:
+                        dropped = True; continue
+                    rest.append(x)
+                m["markets"] = [main] + rest  # le marché principal (vainqueur / 1N2) reste en tête
+                m["mycombis"] = res["mycombis"]; m["round"] = res["round"]
             elif isinstance(res, Exception):
                 errors.append(f"{m['url']}: {res}")
+    # Matchs déjà commencés : Betclic ne montre plus que des cotes live (ignorées). On garde la dernière relève
+    # d'avant-match (raw_odds.json précédent) des matchs commencés depuis moins de 4 h, pour garder les paris prévus.
+    carried = 0
+    try:
+        prev = json.load(open("raw_odds.json", encoding="utf-8"))
+        for pm in prev.get("matches", []):
+            st = datetime.fromisoformat(pm["start"].replace("Z", "+00:00"))
+            if pm["id"] not in matches and now - timedelta(hours=4) < st <= now:
+                pm.setdefault("oddsAt", prev.get("fetchedAt"))
+                pm["started"] = True
+                matches[pm["id"]] = pm; carried += 1
+    except Exception:
+        pass
     out = {"fetchedAt": now.isoformat().replace("+00:00", "Z"), "source": "Betclic.fr",
            "matches": sorted(matches.values(), key=lambda m: m["start"]), "errors": errors}
     json.dump(out, open("raw_odds.json", "w", encoding="utf-8"), ensure_ascii=False)
-    print(f"Betclic : {len(matches)} matchs, {len(todo)} pages match, {ok} pages liste, erreurs: {len(errors)}")
+    print(f"Betclic : {len(matches)} matchs ({carried} déjà commencés gardés avec leurs cotes d'avant-match), {len(todo)} pages match, {ok} pages liste, erreurs: {len(errors)}")
 
 
 if __name__ == "__main__":

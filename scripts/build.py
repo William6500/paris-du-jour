@@ -14,7 +14,10 @@ Modèle (volontairement modeste et transparent) :
          dynamique → ±2 pts max, inclus dans les bornes ci-dessus.
   Sans données → probabilité du marché.  « Value » = p_modèle × cote > 1,02.
 """
-import json, re
+import json, re, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import markets_model as MM
+from collections import Counter
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -60,10 +63,16 @@ def goals_stats(form):
     return (tot / n, both / n) if n else (None, None)
 
 
-def market_probs(mk):
+LINE_MK = ("Total buts", "Buts équipe", "Total points", "Points équipe", "1er QT total")
+NONPART = ("Écart de buts", "Écart de points", "Écart de sets")
+
+
+def market_probs(mk, margin=0.06):
     inv = [1 / s["odds"] for s in mk["selections"]]
     lab = mk["label"]
-    if lab in ("Total buts", "Buts équipe"):
+    if lab in NONPART:  # sélections qui se chevauchent : marge moyenne du match retirée
+        return [min(0.99, x / (1 + margin)) for x in inv]
+    if lab in LINE_MK:
         out = [None] * len(inv)
         lines = {}
         for i, s in enumerate(mk["selections"]):
@@ -88,6 +97,8 @@ def main():
     notes = load("notes.json", {})
     news = load("news.json", {})
     out_matches, picks, pool = [], [], []
+    global MSTAT
+    MSTAT = Counter()
     for m in raw["matches"]:
         home, away = (m["name"].split(" - ", 1) + [""])[:2]
         c = ctx.get(m["id"], {})
@@ -121,8 +132,9 @@ def main():
         has_ctx = s is not None or bool(note) or bool(nadj)
         # --- marchés
         markets = []
+        margin = (sum(1 / x["odds"] for x in m["markets"][0]["selections"]) - 1) if m["markets"] else 0.06
         for mk in m["markets"]:
-            pm = market_probs(mk)
+            pm = market_probs(mk, max(0.02, margin))
             markets.append({"label": mk["label"], "name": mk["name"], "sel": [{"name": x["name"], "odds": x["odds"], "pm": p, "pk": p} for x, p in zip(mk["selections"], pm)]})
         main_mk = markets[0] if markets else None
         model_main = None
@@ -134,24 +146,6 @@ def main():
             model_main = (pH / t, pD / t, pA / t)
             for x, p in zip(main_mk["sel"], model_main):
                 x["pk"] = p
-            gH, bH = goals_stats(fH); gA, bA = goals_stats(fA)
-            for mk in markets:
-                if mk["label"] == "Double chance":
-                    for x in mk["sel"]:
-                        n = x["name"]
-                        hasH, hasA, hasN = home in n, away in n, "Nul" in n
-                        x["pk"] = (model_main[0] if hasH else 0) + (model_main[1] if hasN else 0) + (model_main[2] if hasA else 0)
-                if mk["label"] == "Total buts" and gH is not None and gA is not None:
-                    g = clip(((gH + gA) / 2 - 2.6) / 1.5, -1, 1)
-                    for x in mk["sel"]:
-                        mm = re.search(r"([+-]) de ([\d,]+)", x["name"])
-                        if mm and x["pm"] is not None:
-                            k = 0.03 if mm.group(2) == "2,5" else 0.02 if mm.group(2) in ("1,5", "3,5") else 0
-                            x["pk"] = clip(x["pm"] + (k * g if mm.group(1) == "+" else -k * g), 0.01, 0.99)
-                if mk["label"] == "Les 2 marquent" and bH is not None and bA is not None:
-                    r = clip(((bH + bA) / 2 - 0.5) * 2, -1, 1)
-                    for x in mk["sel"]:
-                        x["pk"] = clip(x["pm"] + (0.03 * r if x["name"] == "Oui" else -0.03 * r), 0.01, 0.99)
         elif main_mk and m["sport"] == "basketball" and c.get("predictor") and len(main_mk["sel"]) == 2:
             pH = main_mk["sel"][0]["pm"]
             d = clip(0.25 * (c["predictor"]["home"] - pH) + nadj, -0.05, 0.05)
@@ -164,6 +158,14 @@ def main():
                 t = sum(x["pk"] for x in sel)
                 for x in sel:
                     x["pk"] /= t
+        # --- tous les autres marchés : modèle par marché (Poisson foot, normale basket/rugby, sets tennis)
+        mm = {"analysed": 0}
+        if main_mk and main_mk["sel"] and all(x["pm"] is not None for x in main_mk["sel"]):
+            mm = MM.apply(m["sport"], markets, home, away, [x["pm"] for x in main_mk["sel"]], [x["pk"] for x in main_mk["sel"]],
+                          fH, fA, (h2h or {}).get("games"))
+        for k, v in (mm.get("by") or {}).items():
+            MSTAT[k] += v
+        MSTAT["_main"] += 1 if main_mk else 0
         # --- raison courte
         if note and note.get("short"):
             reason = note["short"]
@@ -176,6 +178,10 @@ def main():
                 bits.append(f"{sh['rank']}e contre {sa['rank']}e")
             if c.get("predictor"):
                 bits.append(f"prédicteur ESPN {round(c['predictor']['home']*100)} % pour {home}")
+            if mm.get("goals"):
+                g = mm["goals"]; bits.append(f"buts attendus {str(g['model']).replace('.', ',')} (Betclic {str(g['market']).replace('.', ',')}, 5 derniers {str(g['data']).replace('.', ',')})")
+            if mm.get("points"):
+                g = mm["points"]; bits.append(f"points attendus {g['model']:.0f} (Betclic {g['market']:.0f}, 5 derniers {g['data']:.0f})")
             reason = " · ".join(bits) if bits else "Pas de contexte trouvé : probabilité du marché seule"
         sources = []
         if c.get("url"):
@@ -202,6 +208,8 @@ def main():
             "mood": (note or {}).get("mood"), "news": c.get("news", []),
             "predictor": c.get("predictor"), "signal": round(s, 3) if s is not None else None, "adj": adj,
             "espn": {"event": c.get("espnEvent"), "league": c.get("league"), "sport": "soccer" if m["sport"] == "football" else "basketball"} if c.get("espnEvent") else None,
+            "model": {k: mm[k] for k in ("goals", "points") if k in mm}, "analysedMarkets": mm.get("analysed", 0), "nMarkets": len(markets),
+            "started": bool(m.get("started")), "oddsAt": m.get("oddsAt"),
             "auto": {"news": auto_news, "signals": nw.get("signals", []), "adj": round(nadj * 100, 1)},
             "data": {"form": form_src, "h2h": bool(h2h and h2h.get("games")), "news": bool(auto_news), "espn": bool(c)},
             "hasContext": has_ctx, "reason": reason, "sources": sources, "url": m.get("url"),
@@ -214,7 +222,13 @@ def main():
             for x in mk["sel"]:
                 if x["pk"] is None or not (1.15 <= x["odds"] <= 15):
                     continue
-                lab = mk["label"] if mk["label"] != "Buts équipe" else "Buts " + mk["name"].split(" - ")[-1]
+                lab = mk["label"]
+                if lab == "Buts équipe":
+                    lab = "Buts " + mk["name"].split(" - ")[-1]
+                elif lab == "Points équipe":
+                    lab = "Points " + (mk["name"].split(" - ")[-1] if mk["name"].startswith("Nombre") else mk["name"].split(" - ")[0])
+                elif lab == "Gagne 1 set":
+                    lab = mk["name"]
                 cands.append({"matchId": m["id"], "market": lab, "sel": x["name"], "odds": x["odds"],
                               "pm": round(x["pm"], 4), "pk": round(x["pk"], 4), "ev": round(x["pk"] * x["odds"], 4),
                               "value": x["pk"] * x["odds"] > 1.02 and has_ctx, "start": m["start"]})
@@ -229,7 +243,7 @@ def main():
     def multi(title, n, lo, hi, pct, key):
         by_match = {}
         for x in pool:
-            if lo <= x["odds"] <= hi and x["market"] not in ("2 marquent ou +2,5",) and not x["market"].startswith("Buts "):
+            if lo <= x["odds"] <= hi and x["market"] not in ("2 marquent ou +2,5",) and not re.match(r"Buts |Points |Écart|1er QT|Dernière", x["market"]):
                 cur = by_match.get(x["matchId"])
                 if not cur or key(x) > key(cur):
                     by_match[x["matchId"]] = x
@@ -291,7 +305,7 @@ def main():
            "builtAtParis": datetime.now(timezone.utc).astimezone(PARIS).strftime("%d/%m/%Y %H:%M"),
            "matches": out_matches, "picks": picks, "combos": combos}
     json.dump(out, open("data.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    from collections import Counter
+    print("Marchés analysés :", MSTAT["_main"], "principaux +", {k: v for k, v in MSTAT.items() if k != "_main"})
     print("Build :", len(out_matches), "matchs,", dict(Counter(p["tier"] for p in picks)), "|", dict(Counter(c["kind"] for c in combos)),
           "| value :", sum(p["value"] for p in picks), "| avec contexte :", sum(m["hasContext"] for m in out_matches))
 

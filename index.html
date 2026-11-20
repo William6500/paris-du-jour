@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Paris du jour</title>
 <meta name="description" content="Paris sportifs du jour : cotes Betclic, contexte des matchs, mises selon ton solde.">
 <meta name="theme-color" content="#2a1153">
@@ -57,6 +57,22 @@ h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:0 2px 10px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
 .chip{flex:none;padding:7px 13px;border-radius:999px;font-weight:600;font-size:13px;border:1px solid var(--stroke);background:rgba(255,255,255,.1);cursor:pointer}
 .chip.on{background:rgba(255,255,255,.88);color:#1a1033}
+html,body,button,a,.card,.chip,.tab{touch-action:manipulation}
+input,select,textarea{font-size:max(16px,1em)}
+.tsep{display:inline-block;width:1px;height:.9em;background:currentColor;opacity:.55;margin:0 6px;vertical-align:-1px}
+.card.done{opacity:.55;filter:grayscale(.85)}
+.card.done .odd{text-decoration:line-through;text-decoration-thickness:2px}
+.fin{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 8px;padding:9px 12px;border-radius:13px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.18)}
+.fin b{font-size:17px;font-weight:900;letter-spacing:.02em;color:#fff}
+.fin span{font-size:18px;font-weight:900;font-variant-numeric:tabular-nums;color:#fff}
+.lv{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:12px;font-weight:800;color:#fecaca}
+.lv i{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 0 rgba(239,68,68,.7);animation:pulse 1.4s infinite}
+.lv em{font-style:normal;color:#fff;font-variant-numeric:tabular-nums}
+.pre-lbl{font-size:10.5px;font-weight:700;color:var(--muted);text-align:right;margin-top:-2px}
+.plan{margin-top:8px;display:grid;gap:6px}
+.plan div{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:11px;background:rgba(255,255,255,.08);font-size:12.5px}
+.plan div .t{width:8px;height:8px;border-radius:50%;flex:none}
+.plan div .o{margin-left:auto;font-weight:800;font-variant-numeric:tabular-nums}
 .card{padding:13px 14px;margin-bottom:10px;cursor:pointer;transition:transform .15s}
 .card:active{transform:scale(.985)}
 .row{display:flex;align-items:center;gap:10px}
@@ -185,7 +201,12 @@ const $=s=>document.querySelector(s);
 const eur=v=>v.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
 const odd=v=>v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const pc=v=>Math.round(v*100)+' %';
-const hm=d=>new Date(d).toLocaleString('fr-FR',{timeZone:'Europe/Paris',weekday:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+const hm=d=>{const x=new Date(d),o={timeZone:'Europe/Paris'};return `${x.toLocaleDateString('fr-FR',{...o,weekday:'short',day:'numeric'})}<i class="tsep"></i>${x.toLocaleTimeString('fr-FR',{...o,hour:'2-digit',minute:'2-digit'})}`};
+// pas de zoom (iOS ignore user-scalable depuis iOS 10)
+['gesturestart','gesturechange','gestureend'].forEach(t=>document.addEventListener(t,e=>e.preventDefault(),{passive:false}));
+document.addEventListener('touchmove',e=>{if(e.touches.length>1)e.preventDefault()},{passive:false});
+let lastTouch=0;document.addEventListener('touchend',e=>{const n=Date.now();if(n-lastTouch<350&&!e.target.closest('input,textarea,select')){e.preventDefault();e.target.click?.()}lastTouch=n},{passive:false});
+document.addEventListener('dblclick',e=>e.preventDefault(),{passive:false});
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D=null,tab='safe',sports=new Set(),liveOnly=false,shown=PAGE,LIVE={},liveT=0;
 let SORT=(()=>{try{return JSON.parse(localStorage.getItem('pdj_sort'))||{k:'top',d:-1}}catch(e){return {k:'top',d:-1}}})();
@@ -258,23 +279,27 @@ function details(m,p){
   if(m.auto?.signals?.length) h+=`<div class="why">🤖 ${m.auto.signals.map(esc).join(' · ')}${m.auto.adj?` → ${m.auto.adj>0?'+':''}${String(m.auto.adj).replace('.',',')} pt ${esc(m.home)}`:''}</div>`;
   if(m.mood) h+=`<div class="why">🌡️ ${esc(m.mood)}</div>`;
   h+=`<div class="why">💡 ${esc(m.reason)}</div>`;
+  if(m.nMarkets>1) h+=planned(m,`📊 ${m.analysedMarkets+1}/${m.nMarkets} marchés analysés · meilleur pari par catégorie`);
   if(p&&p.pm!=null) h+=`<div class="pbar">Marché ${pc(p.pm)} → modèle <b style="color:#fff">${pc(p.pk)}</b></div>`;
   if(m.sources?.length) h+=`<div class="src" style="margin-top:8px">${m.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join('')}</div>`;
   return `<div class="det">${h}</div>`;
 }
 function pickCard(p){
-  const m=M(p.matchId);
-  return `<article class="glass card" onclick="tog(event,this)">
-   <div class="row"><span class="small">${SP[m.sport]||'🏟️'} ${esc(m.competition)} · ${hm(m.start)}</span>${p.value?'<span class="badge b-value" style="margin-left:auto">Value</span>':''}</div>
+  const m=M(p.matchId),s=stOf(m.id);
+  return `<article class="glass card${s.done?' done':''}" onclick="tog(event,this)">
+   ${s.done?finBox(m):s.live?liveBox(m):''}
+   <div class="row"><span class="small">${SP[m.sport]||'🏟️'} ${esc(m.competition)} · ${hm(m.start)}</span>${p.value&&!s.done?'<span class="badge b-value" style="margin-left:auto">Value</span>':''}</div>
    <div class="teams">${esc(m.home)} – ${esc(m.away)}</div>
    <div class="row"><span class="sel"><span class="mk">${esc(p.market)}</span>${esc(p.sel)}</span><span class="odd">${odd(p.odds)}</span></div>
+   ${s.live||s.done?'<div class="pre-lbl">cote avant-match</div>':''}
    <div class="row" style="margin-top:8px">${ring(p.pk,COL[p.tier])}<span class="small">proba</span>${stakeHtml(PCT[p.tier],p.odds)}</div>
    ${details(m,p)}</article>`;
 }
 function comboCard(c){
   const badge=c.real?`<span class="badge b-real">Cote Betclic</span>`:`<span class="badge b-est">Cote estimée</span>`;
-  const one=c.matchId?M(c.matchId):null;
-  return `<article class="glass card" onclick="tog(event,this)">
+  const one=c.matchId?M(c.matchId):null, done=c.legs.every(l=>stOf(l.matchId).done), lv=!done&&c.legs.some(l=>stOf(l.matchId).live||stOf(l.matchId).done);
+  return `<article class="glass card${done?' done':''}" onclick="tog(event,this)">
+   ${done?(one?finBox(one):'<div class="fin"><b>🏁 Matchs terminés</b></div>'):lv?(one?liveBox(one):'<div class="lv"><i></i>EN COURS · cotes avant-match</div>'):''}
    <div class="row"><span class="small">${c.kind==='multi'?'🔗 '+c.legs.length+' matchs':'🎯 Même match · '+hm(one.start)}</span><span style="margin-left:auto">${badge}</span></div>
    <div class="teams">${esc(c.kind==='multi'?c.title:one.home+' – '+one.away)}</div>
    <ul class="legs">${c.legs.map(l=>{const m=M(l.matchId);return `<li><span>${c.kind==='multi'?SP[m.sport]||'🏟️':'•'}</span><div class="lg">${c.kind==='multi'?`<div class="small">${esc(m.home)} – ${esc(m.away)} · ${hm(m.start)}</div>`:''}<div><span style="color:var(--muted)">${esc(l.market.replace(' (t. rég)','').replace("L'équipe possède 2 buts d'avance ou gagne",'2 buts d\'avance ou gagne'))}</span> · <b>${esc(l.sel)}</b></div></div><span class="o">${odd(l.odds)}</span></li>`}).join('')}</ul>
@@ -284,7 +309,7 @@ function comboCard(c){
 }
 window.tog=(e,el)=>{if(e.target.closest('a'))return;el.classList.toggle('open')};
 
-const DUR={football:120,basketball:140,tennis:200,rugby_union:110,rugby:110,badminton:70,handball:100,ice_hockey:150,volleyball:120};
+const DUR={football:135,basketball:180,tennis:180,rugby_union:135,rugby:135,badminton:90,handball:110,ice_hockey:170,volleyball:150};
 const LBL={football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby',badminton:'Badminton',handball:'Hand',ice_hockey:'Hockey',volleyball:'Volley'};
 const dayKey=d=>new Date(d).toLocaleDateString('fr-CA',{timeZone:'Europe/Paris'});
 function liveState(m,now){
@@ -292,12 +317,22 @@ function liveState(m,now){
   if(e&&e.state==='in')return {live:true,e};
   if(e&&e.state==='post')return {live:false,done:true,e};
   if(e&&e.state==='pre'&&st>now)return {live:false};
+  if(st+(DUR[m.sport]||150)*6e4<=now)return {live:false,done:true,est:true};
   return {live:inWin,est:inWin};
 }
+const ST={};function stOf(id){return ST[id]||(ST[id]=liveState(M(id),Date.now()))}
+function scoreTxt(e){return e&&e.sh!=null?`${esc(e.sh)} – ${esc(e.sa)}`:''}
+function finBox(m){const s=stOf(m.id);return `<div class="fin"><b>🏁 Match terminé</b>${s.e&&s.e.sh!=null?`<span>${scoreTxt(s.e)}</span>`:'<small class="small">score indisponible</small>'}</div>`}
+function liveBox(m){const s=stOf(m.id),e=s.e;return `<div class="lv"><i></i>EN DIRECT${e?.clock?' · '+esc(e.clock):''}${e&&e.sh!=null?` · <em>${esc(m.home)} ${scoreTxt(e)} ${esc(m.away)}</em>`:''}</div>`}
+function planned(m,title){
+  const ps=D.picks.filter(p=>p.matchId===m.id), cs=D.combos.filter(c=>c.legs.some(l=>l.matchId===m.id));
+  if(!ps.length&&!cs.length)return '';
+  const TL={safe:'Sûr',bal:'Équilibré',big:'Grosse',poker:'Poker'};
+  return `<div class="small" style="margin-top:8px">${title||'🎯 Paris prévus avant le match · cotes avant-match'}</div><div class="plan">${ps.map(p=>`<div><span class="t" style="background:${COL[p.tier]}"></span><span><b>${TL[p.tier]}</b> · ${esc(p.market)} · ${esc(p.sel)}</span><span class="o">${odd(p.odds)}</span></div>`).join('')}${cs.map(c=>`<div><span class="t" style="background:${COL.combo}"></span><span><b>${esc(c.title)}</b> · ${c.legs.length} sélections</span><span class="o">${odd(c.odds)}</span></div>`).join('')}</div>`}
 async function pollLive(force){
   if(!D||(!force&&Date.now()-liveT<55000))return;liveT=Date.now();
   const now=Date.now(),need={};
-  for(const m of D.matches){const st=new Date(m.start).getTime();if(m.espn&&st<=now+6e5&&now<st+(DUR[m.sport]||120)*6e4+36e5)need[m.espn.sport+'/'+m.espn.league]=1}
+  for(const m of D.matches){const st=new Date(m.start).getTime();if(m.espn&&st<=now+6e5&&now<st+(DUR[m.sport]||120)*6e4+3*36e5)need[m.espn.sport+'/'+m.espn.league]=1}
   const ks=Object.keys(need);if(!ks.length)return;
   await Promise.all(ks.map(async k=>{try{const r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/${k}/scoreboard`,{cache:'no-store'});const j=await r.json();
     for(const ev of j.events||[]){const m=D.matches.find(x=>x.espn&&String(x.espn.event)===String(ev.id));if(!m)continue;
@@ -312,13 +347,16 @@ function liveCard(m,ls){
    <div class="row"><span class="livebar"><i></i>EN DIRECT${e?.clock?' · '+esc(e.clock):''}</span><span class="small" style="margin-left:auto">${SP[m.sport]||''} ${esc(m.competition)}</span></div>
    <div class="score"><span class="nm">${esc(m.home)}</span>${hasScore?`<span class="sc">${esc(e.sh)} – ${esc(e.sa)}</span>`:'<span class="small">vs</span>'}<span class="nm" style="text-align:right">${esc(m.away)}</span></div>
    ${ls.est?'<div class="small" style="margin-bottom:6px">En cours d\'après l\'heure de début (score indisponible)</div>':''}
-   <div class="small" style="margin-bottom:5px">Cotes Betclic d'avant-match · pas les cotes live</div>
+   <div class="small" style="margin-bottom:5px">Cote avant-match Betclic · pas les cotes live</div>
    <div class="pre">${m.main.map((x,i)=>`<span><em>${m.main.length===3?['1','N','2'][i]:i+1}</em>${odd(x.odds)}</span>`).join('')}</div>
+   ${planned(m)}
    ${details(m,null)}</article>`;
 }
 function render(){
   if(!D)return;
-  const now=Date.now(), up=id=>new Date(M(id).start).getTime()>now;
+  const now=Date.now();for(const k in ST)delete ST[k];
+  const up=id=>new Date(M(id).start).getTime()>now-12*36e5;  // à venir, en cours et terminés récents (terminés en bas)
+  const dn=id=>stOf(id).done?1:0;
   const okSport=id=>!sports.size||sports.has(M(id).sport);
   const okDay=()=>true;
   const allSports=[...new Set(D.matches.map(m=>m.sport))];
@@ -335,12 +373,14 @@ function render(){
   $('#sorts').innerHTML=SK.map(([k,l])=>`<button data-k="${k}" class="${SORT.k===k?'on':''}">${l}${k!=='top'&&SORT.k===k?`<span class="ar">${k==='date'?(SORT.d>0?'↑ tôt':'↓ tard'):(SORT.d>0?'↑':'↓')}</span>`:''}</button>`).join('');
   document.querySelectorAll('#sorts button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;SORT=SORT.k===k&&k!=='top'?{k,d:-SORT.d}:{k,d:SK.find(x=>x[0]===k)[2]};localStorage.setItem('pdj_sort',JSON.stringify(SORT));shown=PAGE;render()});
   const ts=id=>new Date(M(id).start).getTime();
-  const sorter=(o,p,t,top)=>(a,b)=>SORT.k==='odds'?SORT.d*(o(a)-o(b))||t(a)-t(b):SORT.k==='p'?SORT.d*(p(a)-p(b))||t(a)-t(b):SORT.k==='date'?SORT.d*(t(a)-t(b))||p(b)-p(a):top(a,b);
+  const sorter=(o,p,t,top,id)=>(a,b)=>(dn(id(a))-dn(id(b)))||srt(o,p,t,top)(a,b);
+  const srt=(o,p,t,top)=>(a,b)=>SORT.k==='odds'?SORT.d*(o(a)-o(b))||t(a)-t(b):SORT.k==='p'?SORT.d*(p(a)-p(b))||t(a)-t(b):SORT.k==='date'?SORT.d*(t(a)-t(b))||p(b)-p(a):top(a,b);
   $('#rule').textContent=bal?`max ${MAX_PCT} % · min 0,10 €`:'Entre ton solde pour voir les mises';
   // compteurs des onglets
   const pickOk=p=>up(p.matchId)&&okSport(p.matchId)&&okDay(p.matchId);
   const comboOk=c=>c.legs.every(l=>up(l.matchId)&&okSport(l.matchId)&&okDay(l.matchId));
-  const cnt={combo:D.combos.filter(comboOk).length};for(const k of ['safe','bal','big','poker'])cnt[k]=D.picks.filter(p=>p.tier===k&&pickOk(p)).length;
+  const cdone=c=>c.legs.every(l=>stOf(l.matchId).done);
+  const cnt={combo:D.combos.filter(c=>comboOk(c)&&!cdone(c)).length};for(const k of ['safe','bal','big','poker'])cnt[k]=D.picks.filter(p=>p.tier===k&&pickOk(p)&&!dn(p.matchId)).length;
   document.querySelectorAll('.tab').forEach(t=>{let n=t.querySelector('.n');if(!n){n=document.createElement('span');n.className='n';t.appendChild(n)}n.textContent=liveOnly?'–':cnt[t.dataset.t]});
   let html='';
   if(liveOnly){
@@ -349,10 +389,10 @@ function render(){
     const cs=D.combos.filter(comboOk);
     const g=[['multi','Plusieurs matchs'],['mycombi','Même match · cotes Betclic'],['estimate','Même match · estimations']];
     const cst=c=>Math.min(...c.legs.map(l=>ts(l.matchId)));
-    cs.sort(sorter(c=>c.odds,c=>c.p,cst,()=>0));
+    cs.sort((a,b)=>(cdone(a)-cdone(b))||srt(c=>c.odds,c=>c.p,cst,()=>0)(a,b));
     for(const [k,t] of g){const l=cs.filter(c=>c.kind===k);if(l.length)html+=`<div class="sec">${t}</div>`+l.map(comboCard).join('')}
   }else{
-    const ps=D.picks.filter(p=>p.tier===tab&&pickOk(p)).sort(sorter(p=>p.odds,p=>p.pk,p=>ts(p.matchId),(a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk)));
+    const ps=D.picks.filter(p=>p.tier===tab&&pickOk(p)).sort(sorter(p=>p.odds,p=>p.pk,p=>ts(p.matchId),(a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk),p=>p.matchId));
     html=ps.slice(0,shown).map(pickCard).join('');
     if(ps.length>shown) html+=`<button class="more" onclick="shown+=${PAGE};render()">Voir plus (${ps.length-shown})</button>`;
   }
