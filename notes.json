@@ -556,5 +556,242 @@
     "url": "https://fcbayern.com/frauen/de/news/2026/11/faktenlage-austria-wien---fc-bayern-frauen"
    }
   ]
+ },
+ "Bayern Munich - Cologne": {
+  "date": "2026-11-20",
+  "adj": 1,
+  "short": "Bayern sans Davies, Díaz, Gnabry ; Musiala de retour dans le groupe, Cologne privé de Skhiri et Dallinga",
+  "absents": {
+   "home": [
+    "Davies (ischios)",
+    "Luis Díaz (musculaire)",
+    "Gnabry (ischios)",
+    "Neuer",
+    "Saibari",
+    "Musiala (retour, plutôt remplaçant)"
+   ],
+   "away": [
+    "Hübers",
+    "van den Berg",
+    "Skhiri",
+    "Rondić",
+    "Dallinga"
+   ]
+  },
+  "lineups": {
+   "home": "Urbig ; Laimer, Upamecano, Tah, Stanišić ; Kimmich, Pavlović ; Karl, Olise, Brown ; Kane",
+   "away": "Schwäbe ; Schmied, Simpson-Pusey, Lochoshvili ; Sebulonsen, Krauß, Okon-Engstler, Sosa ; Maina, Bülter, S. El Mala"
+  },
+  "mood": "Retour de la trêve, Kompany de retour sur le banc, Lennart Karl en forme au poste de 10.",
+  "sources": [
+   {
+    "label": "bundesliga.com (DE)",
+    "url": "https://www.bundesliga.com/de/bundesliga/news/voraussichtliche-aufstellungen-10-spieltag-ausfalle-verletzungen-sperren-40039"
+   },
+   {
+    "label": "bundesliga.com (EN)",
+    "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+   }
+  ]
+ },
+ "Troyes - Le Havre": {
+  "date": "2026-11-20",
+  "adj": 1.5,
+  "short": "Duel de bas de tableau : Le Havre dernier, 6 défaites de suite et infirmerie pleine",
+  "absents": {
+   "home": [
+    "Koné (blessé)",
+    "Diaz (suspendu)",
+    "Ouzenadji (incertain, cheville)"
+   ],
+   "away": [
+    "Mpasi (Achille)",
+    "Zagadou (croisés)",
+    "Mambimbi (Achille)",
+    "Pembélé (adducteurs)",
+    "R. Ndiaye et Nakamura (incertains)"
+   ]
+  },
+  "lineups": {
+   "home": "Konaté ; Maronnier, Monfray, Gozzi, Boura ; Diop, Mille, Karim ; Ifnaoui, Ripart, Nkada",
+   "away": "Bodart ; Ouziad, Sasso, Touba, Koffi ; Mwanga, Ebonog, Richardson ; Fofana, Maja, Samatta"
+  },
+  "mood": "Le Havre dernier avec 2 pts, aucune victoire, nouveau coach. Troyes 17e, mieux depuis la victoire contre Le Mans et le nul face à Toulouse, mais attaque en panne.",
+  "sources": [
+   {
+    "label": "Sport.fr",
+    "url": "https://www.sport.fr/football/ligue-1-compos-probables-pour-troyes-le-havre-vendredi-a-20h45-sans-mpasi-ni-zagadou-1502914.shtm"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/troyes/preview/troyes-vs-le-havre-prediction-team-news-lineups_609296.html"
+   }
+  ]
+ },
+ "Athletic Bilbao - Espanyol": {
+  "date": "2026-11-20",
+  "adj": -0.5,
+  "short": "Athletic sans Vivian, Guruzeta ni Sannadi ; Espanyol sans Kike García",
+  "absents": {
+   "home": [
+    "Dani Vivian (soléaire)",
+    "Guruzeta",
+    "Sannadi",
+    "Paredes (incertain)"
+   ],
+   "away": [
+    "Kike García",
+    "Álex Calatrava"
+   ]
+  },
+  "lineups": {
+   "home": "Unai Simón ; Rincón, Yeray, Laporte, Yuri ; Ruiz de Galarreta, Gerenabarrena ; Berenguer, Sancet, Nico Williams ; Iñaki Williams",
+   "away": "Fortuño ; Álex Santiago, El Hilali, Cabrera, Hartman, Dolan ; Pol Lozano, Edu Expósito, Javi Hernández ; Pere Milla, Roberto Fernández"
+  },
+  "mood": "Retour de trêve à San Mamés, Sancet associé à Iñaki en attaque faute d'avant-centre. Retour spécial d'Eder Sarabia, Bilbaíno, sur le banc de l'Espanyol.",
+  "sources": [
+   {
+    "label": "AS",
+    "url": "https://as.com/futbol/primera/alineacion-posible-del-athletic-ante-el-espanyol-en-laliga-ea-sport-f202611-n/"
+   },
+   {
+    "label": "Radio Nervión",
+    "url": "https://www.radionervion.com/2026/11/19/athletic-club-rcd-espanyol-alineaciones-probables-de-la-jornada-13-de-laliga-ea-sports/"
+   }
+  ]
+ },
+ "Al-Ahli - Al-Nassr": {
+  "date": "2026-11-20",
+  "adj": -1,
+  "short": "Ronaldo de retour, Al-Ahli sans Spertsyan, Abu Al-Shamat ni son gardien Al-Sanbi (suspendu)",
+  "absents": {
+   "home": [
+    "Spertsyan (adducteurs)",
+    "Abu Al-Shamat (épaule)",
+    "Al-Sanbi (suspendu, Mendy titulaire)"
+   ],
+   "away": [
+    "Sultan Al-Ghannam (croisés)",
+    "Coman et Simakan (de retour à l'entraînement)"
+   ]
+  },
+  "lineups": {
+   "home": "Mendy ; Baattia, Demiral, Ibañez, Balobaid ; Edoa, Al-Johani ; Trincão, Bondarenko, Gonçalves ; Toney",
+   "away": "Bento ; Boushal, Simakan, Martínez, Aman ; Yahya, Samú, Ângelo, Mané ; Ronaldo, Félix"
+  },
+  "mood": "Match en retard de la 9e journée. Al-Ahli 6e, très prolifique mais fragile derrière ; Al-Nassr à la poursuite du leader, Ronaldo reposé.",
+  "sources": [
+   {
+    "label": "101 Great Goals",
+    "url": "https://www.101greatgoals.com/match-previews/al-ahli-v-al-nassr-preview-expected-line-ups-where-to-watch-as-ronaldo-returns-to-action/"
+   },
+   {
+    "label": "The Saudi Times",
+    "url": "https://thesauditimes.net/en/al-ahli-to-face-al-nassr-without-spertsyan-and-abu-al-shamat/"
+   },
+   {
+    "label": "Al Weeam",
+    "url": "https://www.alweeam.com.sa/1301548/2026/al-ahli-al-nassr-absences-injuries-november-20-2026/"
+   }
+  ]
+ },
+ "Molde - Bodø/Glimt": {
+  "date": "2026-11-20",
+  "adj": 0,
+  "short": "Bodø/Glimt à égalité de points avec le leader Viking, Molde privé de 4 joueurs",
+  "absents": {
+   "home": [
+    "Eirik Hestad",
+    "Seydina Diop",
+    "Vebjørn Hoff",
+    "Mads Kikkenborg"
+   ],
+   "away": [
+    "Håkon Evjen",
+    "August Mikkelsen",
+    "Bjørkan et Auklend (incertains, attendus)"
+   ]
+  },
+  "mood": "Avant-dernière journée : Bodø/Glimt 2e à égalité (62 pts) avec Viking dans la course au titre ; Molde 5e (44 pts). Terrain synthétique, −2 °C annoncés.",
+  "sources": [
+   {
+    "label": "Aker Stadion",
+    "url": "https://moldestadion.no/nyheter/fire-molde-spillere-paa-skadelisten-foer-glimt-toppoppgjoere"
+   },
+   {
+    "label": "TV 2",
+    "url": "https://www.tv2.no/livesport/fotball/kamper/molde-bodoglimt/5d633933-fb71-5b1c-a9aa-d2c27ec7a802/oversikt"
+   },
+   {
+    "label": "Avisa Nordland",
+    "url": "https://www.an.no/sto-over-glimt-treningen-har-vart-litt-syk/s/80-4-65042"
+   }
+  ]
+ },
+ "Arminia Bielefeld - Magdebourg": {
+  "date": "2026-11-20",
+  "adj": 0.5,
+  "short": "Magdebourg sans García MacNulty (suspendu), plusieurs changements attendus face à un Bielefeld solide à domicile",
+  "absents": {
+   "home": [
+    "Joel Felix",
+    "David Min",
+    "Vincent Ocansey",
+    "Koudossou (incertain)"
+   ],
+   "away": [
+    "García MacNulty (suspendu)",
+    "Torben Müsel",
+    "Lubambo Musonda",
+    "Kwarteng (incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Kersken ; Koudossou, Bauer, Großer, Sicker ; Russo, Jensen, Wörl ; Momuluh, Rochelt, Grodowski",
+   "away": "Reimann ; Nadjombe, Müller, Heber, Nollenberger ; Hyryläinen, Chávez, Mergner ; Iyoha, Żukowski, Atik"
+  },
+  "mood": "Bielefeld fort à domicile, Magdebourg contraint de remanier son onze.",
+  "sources": [
+   {
+    "label": "liga-zwei.de",
+    "url": "https://www.liga-zwei.de/vorschau-arminia-bielefeld-vs-1-fc-magdeburg-2/"
+   },
+   {
+    "label": "1. FC Magdeburg",
+    "url": "https://1.fc-magdeburg.de/news/detail/pk-vor-bielefeld-2"
+   },
+   {
+    "label": "Tag24",
+    "url": "https://www.tag24.de/sport/fussball/verein/fc-magdeburg/fcm-gegen-heimstarke-bielefelder-es-drohen-mehrere-startelf-aenderungen-3550384"
+   }
+  ]
+ },
+ "FC Metz - Boulogne": {
+  "date": "2026-11-20",
+  "adj": 0,
+  "short": "Metz sans Nampalys Mendy, Fall en pointe ; retour d'Abuashvili dans le groupe",
+  "absents": {
+   "home": [
+    "Nampalys Mendy",
+    "Duarte",
+    "Mangondo"
+   ],
+   "away": []
+  },
+  "lineups": {
+   "home": "Fischer ; Sarr, Mohamed, Mboula, Castro Devenish, Miguel ; Colin, Deminguet, Savanier ; Fall, Pandore",
+   "away": "Noukeu ; Thiam, Kerriou, Pinot ; Fatar, Duflos, Martin, Binet, Boyer ; Epailly, Hbouch"
+  },
+  "mood": "Giorgi Abuashvili de retour dans un groupe élargi à Metz.",
+  "sources": [
+   {
+    "label": "Sport.fr",
+    "url": "https://www.sport.fr/football/ligue-2-compos-probables-pour-metz-boulogne-vendredi-a-20h-fall-en-pointe-et-sans-nampalys-mendy-1502908.shtm"
+   },
+   {
+    "label": "Le Républicain Lorrain",
+    "url": "https://www.republicain-lorrain.fr/sport/2026/11/19/fc-metz-boulogne-retour-de-giorgi-abuashvili-dans-un-groupe-elargi"
+   }
+  ]
  }
 }
