@@ -1,4 +1,4 @@
-# Paris du jour
+# Kote
 
 PWA (style Liquid Glass) : paris sportifs du jour avec les cotes publiques de Betclic.fr, le contexte des matchs
 et un calcul de mise selon le solde.
