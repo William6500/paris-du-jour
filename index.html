@@ -79,6 +79,19 @@ h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .dates button{flex:1 0 auto;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:12.5px;font-weight:700;padding:8px 7px;border-radius:11px;cursor:pointer;white-space:nowrap}
 .dates button.on{background:rgba(255,255,255,.3);color:#fff}
 .dates.off{opacity:.45;pointer-events:none}
+.dates .ar{display:inline-block;margin-left:3px;font-size:11px;opacity:.9}
+#reload{white-space:nowrap;flex:none}
+.wk{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:9px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:11.5px;font-weight:800;text-transform:none;letter-spacing:.2px;font-variant-numeric:tabular-nums}
+.lgm{font-size:12px;color:var(--muted);margin:2px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}
+.lgm b{color:#fff;font-weight:700}
+.h2h{font-size:12px;margin:4px 0;display:grid;gap:2px}
+.h2h span{color:var(--muted)}
+.news{margin:8px 0 2px;display:grid;gap:6px}
+.news a{display:block;color:#fff;text-decoration:none;font-size:12.5px;line-height:1.3;padding:7px 9px;border-radius:11px;background:rgba(255,255,255,.08)}
+.news a i{display:block;font-style:normal;color:var(--muted);font-size:11px;margin-top:2px}
+.dq{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0}
+.dq span{font-size:11px;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(255,255,255,.1)}
+.dq span.no{opacity:.5;text-decoration:line-through}
 .tab{position:relative}.tab .n{position:absolute;top:4px;right:8px;min-width:16px;padding:0 4px;border-radius:8px;background:rgba(255,255,255,.18);font-size:9.5px;line-height:15px}
 .livebar{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:#fecaca;letter-spacing:.03em}
 .livebar i{width:8px;height:8px;border-radius:50%;background:#ef4444;animation:pulse 1.6s infinite}
@@ -147,7 +160,7 @@ details ul{padding-left:18px;margin:6px 0}
  <div class="tab" data-t="combo"><span class="ic">🔗</span>Combinés</div>
 </nav>
 <div class="chips" id="chips"></div>
-<div class="glass dates" id="dates"></div>
+<div class="glass dates" id="sorts"></div>
 <main id="list"></main>
 <div class="glass toast" id="toast"></div>
 
@@ -156,7 +169,8 @@ details ul{padding-left:18px;margin:6px 0}
  <details style="margin-top:8px"><summary>ⓘ Méthode</summary>
  <ul>
   <li>Cotes relevées sur betclic.fr. Proba « marché » = cote sans la marge Betclic.</li>
-  <li>Proba « modèle » = marché corrigé (±6 pts max) par la forme, le classement, les face-à-face (ESPN), les absences (presse) et le prédicteur ESPN en NBA.</li>
+  <li>Proba « modèle » = marché corrigé (±6 pts max) par la forme, le classement, les face-à-face (ESPN, sinon forme Betclic), les absences (presse), le prédicteur ESPN en NBA et les actus automatiques des 7 derniers jours (Google Actualités : blessures, crise, dynamique → ±2 pts max).</li>
+  <li>Toute la semaine Betclic est analysée (7 jours). Les cases barrées (Forme, Face-à-face, Actus) = rien trouvé, rien d'inventé.</li>
   <li>VALUE = le modèle donne plus que la cote. Rare, et ce n'est pas une garantie.</li>
   <li>Mise : % fixe du solde par catégorie (sûrs 4 %, équilibrés 2,5 %, grosses 1 %, poker 0,5 %), jamais plus de 5 %, minimum Betclic 0,10 €.</li>
   <li>Combo maison : cote estimée (produit), la vraie cote MyCombi Betclic sera différente car les paris d'un même match sont liés.</li>
@@ -171,11 +185,13 @@ const $=s=>document.querySelector(s);
 const eur=v=>v.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
 const odd=v=>v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const pc=v=>Math.round(v*100)+' %';
-const hm=d=>new Date(d).toLocaleString('fr-FR',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit'});
+const hm=d=>new Date(d).toLocaleString('fr-FR',{timeZone:'Europe/Paris',weekday:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let D=null,tab='safe',sports=new Set(),liveOnly=false,day='all',shown=PAGE,LIVE={},liveT=0;
+let D=null,tab='safe',sports=new Set(),liveOnly=false,shown=PAGE,LIVE={},liveT=0;
+let SORT=(()=>{try{return JSON.parse(localStorage.getItem('pdj_sort'))||{k:'top',d:-1}}catch(e){return {k:'top',d:-1}}})();
+function isoWeek(t){const d=new Date(new Date(t).toLocaleString('en-US',{timeZone:'Europe/Paris'}));d.setHours(0,0,0,0);d.setDate(d.getDate()+3-(d.getDay()+6)%7);const w1=new Date(d.getFullYear(),0,4);return 1+Math.round(((d-w1)/864e5-3+(w1.getDay()+6)%7)/7)}
 let bal=parseFloat(localStorage.getItem('pdj_balance')||'')||0, prof=parseFloat(localStorage.getItem('pdj_profile')||'1')||1;
-$('#today').textContent=new Date().toLocaleDateString('fr-FR',{timeZone:'Europe/Paris',weekday:'long',day:'numeric',month:'long'});
+$('#today').innerHTML=esc(new Date().toLocaleDateString('fr-FR',{timeZone:'Europe/Paris',weekday:'long',day:'numeric',month:'long'}))+`<span class="wk">Semaine ${isoWeek(Date.now())}</span>`;
 if(bal) $('#bal').value=bal;
 document.querySelectorAll('#profile button').forEach(b=>{b.classList.toggle('on',+b.dataset.p===prof);b.onclick=()=>{prof=+b.dataset.p;localStorage.setItem('pdj_profile',prof);document.querySelectorAll('#profile button').forEach(x=>x.classList.toggle('on',x===b));render()}});
 $('#bal').addEventListener('input',e=>{bal=Math.max(0,parseFloat(String(e.target.value).replace(',','.'))||0);localStorage.setItem('pdj_balance',bal);render()});
@@ -233,6 +249,13 @@ function details(m,p){
     if(ab.length) h+=`<div class="small">❌ Absents ${esc(s==='home'?m.home:m.away)}</div><div class="abs">${ab.slice(0,8).map(a=>`<span>${esc(a)}</span>`).join('')}</div>`;
   }
   if(m.lineups&&(m.lineups.home||m.lineups.away)) h+=`<div class="small" style="white-space:normal">👕 ${m.lineups.home?esc(m.home)+' : '+esc(m.lineups.home):''}${m.lineups.home&&m.lineups.away?'<br>':''}${m.lineups.away?esc(m.away)+' : '+esc(m.lineups.away):''}</div>`;
+  for(const s of ['home','away']){const g=m.lastGames?.[s]||[];if(g.length)h+=`<div class="lgm"><b>${esc(s==='home'?m.home:m.away)}</b>${g.slice().reverse().map(x=>`<span>${{W:'V',D:'N',L:'D'}[x.r]||'·'} ${esc(x.score||'')} ${x.at==='@'?'à':'vs'} ${esc(x.opp||'')}</span>`).join('')}</div>`}
+  if(m.h2h?.games?.length) h+=`<div class="small" style="margin-top:8px">🤝 Derniers face-à-face</div><div class="h2h">${m.h2h.games.map(g=>`<div><span>${esc((g.date||'').split('-').reverse().slice(0,2).join('/'))}${g.date?'/'+g.date.slice(2,4):''}</span> ${esc(g.home)} <b>${esc(g.score)}</b> ${esc(g.away)}</div>`).join('')}</div>`;
+  const dq=m.data||{};
+  h+=`<div class="dq"><span class="${dq.form?'':'no'}">Forme${dq.form?' · '+esc(dq.form):''}</span><span class="${dq.h2h?'':'no'}">Face-à-face</span><span class="${dq.news?'':'no'}">Actus</span></div>`;
+  const an=m.auto?.news||[];
+  if(an.length) h+=`<div class="small" style="margin-top:6px">📰 Actus auto (7 j)</div><div class="news">${an.map(n=>`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}<i>${esc(n.source||'')}${n.date?' · '+esc(n.date.slice(8,10)+'/'+n.date.slice(5,7)):''}${n.side!=='match'?' · '+esc(n.side==='home'?m.home:m.away):''}</i></a>`).join('')}</div>`;
+  if(m.auto?.signals?.length) h+=`<div class="why">🤖 ${m.auto.signals.map(esc).join(' · ')}${m.auto.adj?` → ${m.auto.adj>0?'+':''}${String(m.auto.adj).replace('.',',')} pt ${esc(m.home)}`:''}</div>`;
   if(m.mood) h+=`<div class="why">🌡️ ${esc(m.mood)}</div>`;
   h+=`<div class="why">💡 ${esc(m.reason)}</div>`;
   if(p&&p.pm!=null) h+=`<div class="pbar">Marché ${pc(p.pm)} → modèle <b style="color:#fff">${pc(p.pk)}</b></div>`;
@@ -297,8 +320,7 @@ function render(){
   if(!D)return;
   const now=Date.now(), up=id=>new Date(M(id).start).getTime()>now;
   const okSport=id=>!sports.size||sports.has(M(id).sport);
-  const today=dayKey(now), tom=dayKey(now+864e5);
-  const okDay=id=>day==='all'||dayKey(M(id).start)===day;
+  const okDay=()=>true;
   const allSports=[...new Set(D.matches.map(m=>m.sport))];
   const liveList=D.matches.filter(m=>okSport(m.id)).map(m=>[m,liveState(m,now)]).filter(x=>x[1].live).sort((a,b)=>(!!b[1].e-!!a[1].e)||(new Date(b[0].start)-new Date(a[0].start)));
   // chips
@@ -307,13 +329,13 @@ function render(){
   document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const k=c.dataset.s;
     if(k==='all'){sports.clear();liveOnly=false}else if(k==='live'){liveOnly=!liveOnly;if(liveOnly)pollLive(true)}else{sports.has(k)?sports.delete(k):sports.add(k)}
     shown=PAGE;render()});
-  // dates
-  const days=[...new Set(D.matches.filter(m=>up(m.id)).map(m=>dayKey(m.start)))].sort();
-  if(day!=='all'&&!days.includes(day))day='all';
-  const dl=k=>{if(k===today)return'Aujourd\'hui';const d=new Date(k+'T12:00:00'),w=d.toLocaleDateString('fr-FR',{weekday:'long'});return (w[0].toUpperCase()+w.slice(1))+(d-now>6*864e5?' '+d.getDate():'')};
-  $('#dates').className='glass dates'+(liveOnly?' off':'');
-  $('#dates').innerHTML=`<button data-d="all" class="${day==='all'?'on':''}">Tout</button>`+days.map(k=>`<button data-d="${k}" class="${day===k?'on':''}">${dl(k)}</button>`).join('');
-  document.querySelectorAll('#dates button').forEach(b=>b.onclick=()=>{day=b.dataset.d;shown=PAGE;render()});
+  // tri
+  const SK=[['top','✨ Top',-1],['odds','Cote',-1],['date','Date',1],['p','Proba',-1]];
+  $('#sorts').className='glass dates'+(liveOnly?' off':'');
+  $('#sorts').innerHTML=SK.map(([k,l])=>`<button data-k="${k}" class="${SORT.k===k?'on':''}">${l}${k!=='top'&&SORT.k===k?`<span class="ar">${k==='date'?(SORT.d>0?'↑ tôt':'↓ tard'):(SORT.d>0?'↑':'↓')}</span>`:''}</button>`).join('');
+  document.querySelectorAll('#sorts button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;SORT=SORT.k===k&&k!=='top'?{k,d:-SORT.d}:{k,d:SK.find(x=>x[0]===k)[2]};localStorage.setItem('pdj_sort',JSON.stringify(SORT));shown=PAGE;render()});
+  const ts=id=>new Date(M(id).start).getTime();
+  const sorter=(o,p,t,top)=>(a,b)=>SORT.k==='odds'?SORT.d*(o(a)-o(b))||t(a)-t(b):SORT.k==='p'?SORT.d*(p(a)-p(b))||t(a)-t(b):SORT.k==='date'?SORT.d*(t(a)-t(b))||p(b)-p(a):top(a,b);
   $('#rule').textContent=bal?`max ${MAX_PCT} % · min 0,10 €`:'Entre ton solde pour voir les mises';
   // compteurs des onglets
   const pickOk=p=>up(p.matchId)&&okSport(p.matchId)&&okDay(p.matchId);
@@ -326,9 +348,11 @@ function render(){
   }else if(tab==='combo'){
     const cs=D.combos.filter(comboOk);
     const g=[['multi','Plusieurs matchs'],['mycombi','Même match · cotes Betclic'],['estimate','Même match · estimations']];
+    const cst=c=>Math.min(...c.legs.map(l=>ts(l.matchId)));
+    cs.sort(sorter(c=>c.odds,c=>c.p,cst,()=>0));
     for(const [k,t] of g){const l=cs.filter(c=>c.kind===k);if(l.length)html+=`<div class="sec">${t}</div>`+l.map(comboCard).join('')}
   }else{
-    const ps=D.picks.filter(p=>p.tier===tab&&pickOk(p)).sort((a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk));
+    const ps=D.picks.filter(p=>p.tier===tab&&pickOk(p)).sort(sorter(p=>p.odds,p=>p.pk,p=>ts(p.matchId),(a,b)=>(b.value-a.value)||(b.ev+0.15*b.pk)-(a.ev+0.15*a.pk)));
     html=ps.slice(0,shown).map(pickCard).join('');
     if(ps.length>shown) html+=`<button class="more" onclick="shown+=${PAGE};render()">Voir plus (${ps.length-shown})</button>`;
   }

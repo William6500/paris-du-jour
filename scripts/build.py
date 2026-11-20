@@ -9,6 +9,9 @@ Modèle (volontairement modeste et transparent) :
   Buts : moyenne de buts des 5 derniers matchs des deux équipes vs 2,6 → ±3 pts max sur « + de 2,5 »
          (±2 sur 1,5 / 3,5). Les 2 marquent : fréquence récente → ±3 pts max.
   Basket : 25 % de l'écart entre le prédicteur ESPN et le marché, borné à ±5 pts.
+  Autres sports (et basket sans prédicteur) : forme récente → ±3 pts max.
+  Actus automatiques (news.json, Google Actualités 7 j) : mots-clés blessure/suspension, crise d'entraîneur,
+         dynamique → ±2 pts max, inclus dans les bornes ci-dessus.
   Sans données → probabilité du marché.  « Value » = p_modèle × cote > 1,02.
 """
 import json, re
@@ -83,6 +86,7 @@ def main():
     raw = load("raw_odds.json", None)
     ctx = load("context.json", {})
     notes = load("notes.json", {})
+    news = load("news.json", {})
     out_matches, picks, pool = [], [], []
     for m in raw["matches"]:
         home, away = (m["name"].split(" - ", 1) + [""])[:2]
@@ -111,7 +115,10 @@ def main():
             h2h["record"] = f"{w}V {len(h2h['games']) - w - l}N {l}D"
         s = sum(wt * v for wt, v in comps) / sum(wt for wt, _ in comps) if comps else None
         adj = clip(float(note.get("adj", 0)), -3, 3) / 100 if note else 0
-        has_ctx = s is not None or bool(note)
+        nw = news.get(m["id"]) or {}
+        nadj = clip(float(nw.get("adj", 0)), -2, 2) / 100
+        adj = clip(adj + nadj, -0.04, 0.04)
+        has_ctx = s is not None or bool(note) or bool(nadj)
         # --- marchés
         markets = []
         for mk in m["markets"]:
@@ -147,8 +154,16 @@ def main():
                         x["pk"] = clip(x["pm"] + (0.03 * r if x["name"] == "Oui" else -0.03 * r), 0.01, 0.99)
         elif main_mk and m["sport"] == "basketball" and c.get("predictor") and len(main_mk["sel"]) == 2:
             pH = main_mk["sel"][0]["pm"]
-            d = clip(0.25 * (c["predictor"]["home"] - pH), -0.05, 0.05)
+            d = clip(0.25 * (c["predictor"]["home"] - pH) + nadj, -0.05, 0.05)
             main_mk["sel"][0]["pk"], main_mk["sel"][1]["pk"] = pH + d, 1 - pH - d
+        elif main_mk and len(main_mk["sel"]) in (2, 3) and all(x["pm"] for x in main_mk["sel"]):
+            d = clip((0.03 * s if s is not None else 0) + adj, -0.04, 0.04)
+            sel = main_mk["sel"]
+            if d:
+                sel[0]["pk"] = clip(sel[0]["pm"] + d, 0.01, 0.99); sel[-1]["pk"] = clip(sel[-1]["pm"] - d, 0.01, 0.99)
+                t = sum(x["pk"] for x in sel)
+                for x in sel:
+                    x["pk"] /= t
         # --- raison courte
         if note and note.get("short"):
             reason = note["short"]
@@ -169,6 +184,11 @@ def main():
             sources += note.get("sources", [])
         if m.get("url"):
             sources.append({"label": "Betclic", "url": m["url"]})
+        auto_news = [dict(it, side="match") for it in nw.get("match", [])[:3]]
+        for side in ("home", "away"):
+            auto_news += [dict(it, side=side) for it in nw.get(side, [])[:2]]
+        auto_news = [{k: it.get(k) for k in ("title", "url", "source", "date", "side")} for it in auto_news[:5]]
+        form_src = "ESPN" if teams.get("home", {}).get("form") or teams.get("away", {}).get("form") else ("Betclic" if fH or fA else None)
         om = {
             "id": m["id"], "name": m["name"], "home": home, "away": away, "start": m["start"], "sport": m["sport"],
             "competition": m["competition"], "round": m.get("round"),
@@ -182,6 +202,8 @@ def main():
             "mood": (note or {}).get("mood"), "news": c.get("news", []),
             "predictor": c.get("predictor"), "signal": round(s, 3) if s is not None else None, "adj": adj,
             "espn": {"event": c.get("espnEvent"), "league": c.get("league"), "sport": "soccer" if m["sport"] == "football" else "basketball"} if c.get("espnEvent") else None,
+            "auto": {"news": auto_news, "signals": nw.get("signals", []), "adj": round(nadj * 100, 1)},
+            "data": {"form": form_src, "h2h": bool(h2h and h2h.get("games")), "news": bool(auto_news), "espn": bool(c)},
             "hasContext": has_ctx, "reason": reason, "sources": sources, "url": m.get("url"),
             "main": [{"name": x["name"], "odds": x["odds"], "pm": round(x["pm"], 4), "pk": round(x["pk"], 4)} for x in main_mk["sel"]] if main_mk else [],
         }
@@ -261,7 +283,9 @@ def main():
                     "legs": [r, g], "odds": round(r["odds"] * g["odds"], 2), "p": round(r["pk"] * g["pk"], 4), "real": False, "pct": 1.0})
     combos += sorted(est, key=lambda x: -x["p"])[:6]
     now = datetime.fromisoformat(raw["fetchedAt"].replace("Z", "+00:00"))
-    out = {"source": "Betclic.fr (cotes avant-match) + ESPN (forme, classement, H2H, blessés NBA) + presse (absences, compos)",
+    iso = datetime.now(PARIS).isocalendar()
+    out = {"source": "Betclic.fr (cotes avant-match) + ESPN (forme, classement, H2H, blessés NBA) + Google Actualités (titres 7 j, analyse auto) + notes presse",
+           "week": iso[1],
            "oddsSource": raw.get("source", "Betclic.fr"),
            "fetchedAt": raw["fetchedAt"], "fetchedAtParis": now.astimezone(PARIS).strftime("%d/%m/%Y %H:%M"),
            "builtAtParis": datetime.now(timezone.utc).astimezone(PARIS).strftime("%d/%m/%Y %H:%M"),

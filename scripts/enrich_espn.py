@@ -12,7 +12,7 @@ SOCCER = ["bra.1", "uefa.wchampions", "uefa.champions", "uefa.europa", "uefa.eur
           "fra.1", "fra.2", "eng.1", "eng.2", "esp.1", "ita.1", "ger.1", "por.1", "ned.1", "bel.1", "tur.1",
           "sau.1", "uae.1", "alg.1", "usa.1", "mex.1", "arg.1", "fifa.friendly", "concacaf.nations",
           "fifa.worldq.uefa", "fra.coupe_de_france", "eng.fa", "eng.league_cup", "esp.copa_del_rey",
-          "ita.coppa_italia", "ger.dfb_pokal", "fra.w.1", "eng.w.1"]
+          "ita.coppa_italia", "ger.dfb_pokal", "fra.w.1", "eng.w.1", "jpn.1", "aus.1", "sco.1", "bra.2"]
 BASKET = ["nba"]
 ALIASES = {"paris sg": "paris saint germain", "inter milan": "internazionale", "oud heuverlee": "oud heverlee leuven",
            "philadelphie": "philadelphia", "atletico paranaense": "athletico paranaense", "austria vienne": "austria vienna",
@@ -157,7 +157,7 @@ def summarize(sport_path, lg, eid, home_name, away_name):
 def main():
     raw = json.load(open("raw_odds.json", encoding="utf-8"))
     now = datetime.now(timezone.utc)
-    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 6)})
+    dates = sorted({(now + timedelta(days=i)).strftime("%Y%m%d") for i in range(0, 9)})
     pools = {"football": ("soccer", scoreboards("soccer", SOCCER, dates)),
              "basketball": ("basketball", scoreboards("basketball", BASKET, dates))}
     ctx, jobs = {}, []

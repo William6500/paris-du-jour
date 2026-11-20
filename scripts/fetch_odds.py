@@ -19,10 +19,10 @@ PAGES = [
 ]
 STATE_RE = re.compile(r'<script id="ng-state" type="application/json">(.*?)</script>', re.S)
 HREF_RE = re.compile(r'href="(/[^"?#]+-m(\d+))"')
-# Fenêtre : au moins 4 jours, et toujours jusqu'à la fin du dimanche (heure de Paris) -> tout le week-end.
-HORIZON_MIN_H = 96
+# Fenêtre : la semaine — 7 jours glissants, ou jusqu'à la fin du dimanche de la semaine ISO si c'est plus long.
+HORIZON_MIN_H = 168
 FULL_H = 48            # pages match complètes pour tous les matchs foot à moins de 48 h
-MAX_MATCH_PAGES = 110  # au-delà de 48 h : grands championnats en priorité, dans la limite
+MAX_MATCH_PAGES = 160  # au-delà de 48 h : grands championnats en priorité, dans la limite
 TOP_COMPS = ("Ligue 1", "Premier League", "LaLiga", "Serie A", "Bundesliga", "Ligue des Champions", "Ligue Europa",
              "Ligue 2", "Liga Betclic", "Eredivisie")
 # Marchés gardés (pages match football). Le reste (buteurs, score exact...) est ignoré.
@@ -111,7 +111,7 @@ def parse_match_page(html):
 def main():
     now = datetime.now(timezone.utc)
     paris = now + timedelta(hours=1)  # Europe/Paris en hiver (UTC+1) ; marge suffisante pour la fenêtre
-    to_monday = (7 - paris.weekday()) % 7 or 7
+    to_monday = 7 - paris.weekday()
     end_sunday = (paris + timedelta(days=to_monday)).replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(hours=1)
     horizon = max(now + timedelta(hours=HORIZON_MIN_H), end_sunday.replace(tzinfo=timezone.utc))
     matches, urls, errors, ok = {}, {}, [], 0
