@@ -81,15 +81,28 @@ def payloads(state):
 
 
 def sel_list(mk):
-    out = []
-    for s in mk.get("mainSelections") or []:
-        out.append(s)
+    """Toutes les sélections ouvertes d'un marché (principal, matrice, groupes par équipe), sans doublon."""
+    out, seen = [], set()
+    def add(sel, team=None):
+        if sel and sel.get("odds") and sel.get("status") == 1 and sel.get("id") not in seen:
+            seen.add(sel.get("id"))
+            d = {"name": sel["name"], "odds": float(sel["odds"])}
+            if team:
+                d["team"] = team
+            out.append(d)
+    for x in mk.get("mainSelections") or []:
+        add(x)
     for row in mk.get("selectionMatrix") or []:
         for c in row.get("selections", []):
-            s = (c.get("selectionOneof") or {}).get("selection")
-            if s:
-                out.append(s)
-    return [{"name": s["name"], "odds": float(s["odds"])} for s in out if s.get("odds") and s.get("status") == 1]
+            add((c.get("selectionOneof") or {}).get("selection"))
+    for g in mk.get("splitCardGroups") or []:
+        for x in g.get("selections") or []:
+            add(x, g.get("name"))
+    return out
+
+
+def clean_name(n):
+    return re.sub(r"\s*\((t\. rég|tps rég\.?|tps reg\.?)\)", "", n).strip()
 
 
 def label_for(name):
@@ -106,21 +119,30 @@ def parse_match_page(html):
     for p in payloads(st):
         if "match" in p and isinstance(p["match"], dict):
             m = p["match"]
-            markets = []
+            markets, seen = [], set()
             for sc in m.get("subCategories") or []:
                 for mk in sc.get("markets") or []:
+                    if re.search(r"Extra gains", mk.get("name") or ""):
+                        continue  # variantes « extra gains » (gains bonus par but) : pas une cote simple
                     subs = mk.get("groupMarkets") or [mk]
                     for g in subs:
                         name = g.get("betslipName") or g.get("name") or ""
-                        lab = label_for(name)
+                        sub = g.get("name") or ""
+                        if g is not mk and sub and sub not in name:
+                            name = f"{name} · {sub}"
+                        if re.search(r"Extra gains", name) or name in seen:
+                            continue
                         sels = sel_list(g)
-                        if lab and len(sels) >= 2:
-                            markets.append({"name": name, "label": lab, "selections": sels})
+                        if not sels:
+                            continue
+                        seen.add(name)
+                        lab = label_for(name)
+                        markets.append({"name": name, "label": lab or clean_name(name), "known": bool(lab), "selections": sels})
             combis = []
             for c in p.get("topMycombis") or []:
                 legs = [{"market": s["marketName"], "name": s["selection"]["name"], "odds": float(s["selection"]["odds"])}
                         for s in c.get("selections", []) if s.get("selection")]
-                if c.get("computedOdds") and legs and not any(re.search(r"Buteur", l["market"]) for l in legs):
+                if c.get("computedOdds") and legs:
                     combis.append({"odds": float(c["computedOdds"]), "legs": legs})
             return {"markets": markets, "mycombis": combis, "round": (m.get("competitionInfo") or {}).get("roundName")}
     return None

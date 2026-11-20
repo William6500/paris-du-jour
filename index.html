@@ -50,10 +50,16 @@ h1{font-size:30px;letter-spacing:-.02em;margin:0;font-weight:800}
 .pillsrc{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid var(--stroke);color:#fff;font-weight:600;cursor:pointer}
 .led{width:8px;height:8px;border-radius:50%;background:var(--safe);box-shadow:0 0 8px var(--safe)}
 .led.old{background:var(--big);box-shadow:0 0 8px var(--big)}
-.tabs{position:sticky;top:calc(env(safe-area-inset-top) + 6px);z-index:5;display:flex;gap:4px;padding:4px;margin:14px 0 10px;border-radius:20px}
-.tab{flex:1;text-align:center;padding:8px 2px 6px;border-radius:16px;cursor:pointer;color:var(--muted);font-size:10.5px;font-weight:700}
-.tab .ic{display:block;font-size:19px;margin-bottom:2px;filter:saturate(1.2)}
-.tab.on{background:rgba(255,255,255,.26);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.tabs{position:sticky;top:calc(env(safe-area-inset-top) + 6px);z-index:30;display:flex;gap:4px;padding:5px;margin:14px 0 10px;border-radius:20px;
+  background:linear-gradient(135deg,rgba(30,22,60,.62),rgba(20,14,44,.70));border:1px solid rgba(255,255,255,.28);
+  -webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);
+  box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.25);isolation:isolate;transform:translateZ(0)}
+.tab{flex:1;text-align:center;padding:9px 2px 6px;border-radius:15px;cursor:pointer;color:rgba(255,255,255,.82);font-size:10.5px;font-weight:800;
+  text-shadow:0 1px 2px rgba(0,0,0,.45);-webkit-font-smoothing:antialiased}
+.tab{display:grid;grid-template-columns:auto auto;justify-content:center;align-items:center;column-gap:3px;row-gap:2px}
+.tab .ic{grid-column:1;grid-row:1;font-size:19px;line-height:1.15}
+.tab .lb{grid-column:1 / span 2;grid-row:2;white-space:nowrap}
+.tab.on{background:rgba(255,255,255,.22);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 2px 8px rgba(0,0,0,.2)}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:0 2px 10px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
 .chip{flex:none;padding:7px 13px;border-radius:999px;font-weight:600;font-size:13px;border:1px solid var(--stroke);background:rgba(255,255,255,.1);cursor:pointer}
 .chip.on{background:rgba(255,255,255,.88);color:#1a1033}
@@ -108,7 +114,7 @@ input,select,textarea{font-size:max(16px,1em)}
 .dq{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0}
 .dq span{font-size:11px;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(255,255,255,.1)}
 .dq span.no{opacity:.5;text-decoration:line-through}
-.tab{position:relative}.tab .n{position:absolute;top:4px;right:8px;min-width:16px;padding:0 4px;border-radius:8px;background:rgba(255,255,255,.18);font-size:9.5px;line-height:15px}
+.tab{position:relative}.tab .n{grid-column:2;grid-row:1;align-self:start;min-width:18px;padding:0 5px;border-radius:9px;background:#fff;color:#1e1b4b;font-size:9.5px;font-weight:900;line-height:15px;text-shadow:none;font-variant-numeric:tabular-nums;box-shadow:0 1px 3px rgba(0,0,0,.35);z-index:1}
 .livebar{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:#fecaca;letter-spacing:.03em}
 .livebar i{width:8px;height:8px;border-radius:50%;background:#ef4444;animation:pulse 1.6s infinite}
 .score{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;margin:4px 0 8px;display:flex;gap:8px;align-items:center}
@@ -137,7 +143,18 @@ input,select,textarea{font-size:max(16px,1em)}
 .abs{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 6px}
 .abs span{padding:3px 8px;border-radius:9px;background:rgba(248,113,113,.2);color:#fecaca;font-size:11.5px;font-weight:600}
 .why{margin:8px 0 4px;line-height:1.35}
-.pbar{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:6px}
+.pbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:8px;cursor:pointer}
+.pbar b{color:#fff}.pbar .i{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:900}
+.pexp{display:none;font-size:11.5px;color:var(--muted);line-height:1.35;margin-top:4px}.pexp.on{display:block}
+.allm{margin-top:10px}.allm>summary{font-weight:800;color:#fff;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.12)}
+.mkt{margin:6px 0;border-radius:12px;background:rgba(255,255,255,.06);padding:6px 8px}
+.mkt>summary{font-size:12.5px;font-weight:800;color:#fff;display:flex;gap:6px;align-items:center}
+.mkt>summary small{margin-left:auto;color:var(--muted);font-weight:700}
+.sl{display:flex;align-items:center;gap:8px;padding:5px 2px;border-top:1px solid rgba(255,255,255,.07);font-size:12px}
+.sl .nm{flex:1;min-width:0}.sl .nm i{display:block;font-style:normal;color:var(--muted);font-size:10.5px}
+.sl .pp{color:var(--muted);font-size:10.5px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sl .pp b{color:#fff}.sl .o{font-weight:900;min-width:42px;text-align:right;font-variant-numeric:tabular-nums}
+.sl.v .o{color:#6ee7b7}.na{font-size:9.5px;font-weight:800;padding:1px 5px;border-radius:6px;background:rgba(251,191,36,.2);color:#fde68a}
 .src a{color:#fff;opacity:.8;font-size:12px;margin-right:10px}
 .legs{margin:8px 0 2px;padding:0;list-style:none}
 .legs li{display:flex;gap:8px;align-items:center;padding:5px 0;border-top:1px solid rgba(255,255,255,.1);font-size:13px}
@@ -169,11 +186,11 @@ details ul{padding-left:18px;margin:6px 0}
 <div class="meta"><span class="pillsrc" id="src"><span class="led"></span>Chargement…</span><span id="rule"></span></div>
 
 <nav class="glass tabs" id="tabs">
- <div class="tab on" data-t="safe"><span class="ic">🛡️</span>Sûrs</div>
- <div class="tab" data-t="bal"><span class="ic">⚖️</span>Équilibrés</div>
- <div class="tab" data-t="big"><span class="ic">🚀</span>Grosses</div>
- <div class="tab" data-t="poker"><span class="ic">🎲</span>Poker</div>
- <div class="tab" data-t="combo"><span class="ic">🔗</span>Combinés</div>
+ <div class="tab on" data-t="safe"><span class="ic">🛡️</span><span class="lb">Sûrs</span></div>
+ <div class="tab" data-t="bal"><span class="ic">⚖️</span><span class="lb">Équilibrés</span></div>
+ <div class="tab" data-t="big"><span class="ic">🚀</span><span class="lb">Grosses</span></div>
+ <div class="tab" data-t="poker"><span class="ic">🎲</span><span class="lb">Poker</span></div>
+ <div class="tab" data-t="combo"><span class="ic">🔗</span><span class="lb">Combinés</span></div>
 </nav>
 <div class="chips" id="chips"></div>
 <div class="glass dates" id="sorts"></div>
@@ -280,7 +297,8 @@ function details(m,p){
   if(m.mood) h+=`<div class="why">🌡️ ${esc(m.mood)}</div>`;
   h+=`<div class="why">💡 ${esc(m.reason)}</div>`;
   if(m.nMarkets>1) h+=planned(m,`📊 ${m.analysedMarkets+1}/${m.nMarkets} marchés analysés · meilleur pari par catégorie`);
-  if(p&&p.pm!=null) h+=`<div class="pbar">Marché ${pc(p.pm)} → modèle <b style="color:#fff">${pc(p.pk)}</b></div>`;
+  if(p&&p.pm!=null) h+=pbar(p.pm,p.pk,p.adj!==false);
+  if(m.nMarkets>1) h+=`<details class="allm" data-id="${esc(m.id)}" ontoggle="loadAll(this)"><summary>📋 Tous les paris Betclic · ${m.nMarkets} marchés, ${m.nSel||''} cotes</summary><div class="small" style="padding:8px">Chargement…</div></details>`;
   if(m.sources?.length) h+=`<div class="src" style="margin-top:8px">${m.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join('')}</div>`;
   return `<div class="det">${h}</div>`;
 }
@@ -296,7 +314,8 @@ function pickCard(p){
    ${details(m,p)}</article>`;
 }
 function comboCard(c){
-  const badge=c.real?`<span class="badge b-real">Cote Betclic</span>`:`<span class="badge b-est">Cote estimée</span>`;
+  const TN={safe:'Sûr',bal:'Équilibré',big:'Grosse',poker:'Poker'};
+  const badge=(c.tier?`<span class="badge" style="background:${COL[c.tier]};color:#111;margin-right:4px">${TN[c.tier]}</span>`:'')+(c.real?`<span class="badge b-real">Cote Betclic</span>`:`<span class="badge b-est">Cote estimée</span>`);
   const one=c.matchId?M(c.matchId):null, done=c.legs.every(l=>stOf(l.matchId).done), lv=!done&&c.legs.some(l=>stOf(l.matchId).live||stOf(l.matchId).done);
   return `<article class="glass card${done?' done':''}" onclick="tog(event,this)">
    ${done?(one?finBox(one):'<div class="fin"><b>🏁 Matchs terminés</b></div>'):lv?(one?liveBox(one):'<div class="lv"><i></i>EN COURS · cotes avant-match</div>'):''}
@@ -304,10 +323,19 @@ function comboCard(c){
    <div class="teams">${esc(c.kind==='multi'?c.title:one.home+' – '+one.away)}</div>
    <ul class="legs">${c.legs.map(l=>{const m=M(l.matchId);return `<li><span>${c.kind==='multi'?SP[m.sport]||'🏟️':'•'}</span><div class="lg">${c.kind==='multi'?`<div class="small">${esc(m.home)} – ${esc(m.away)} · ${hm(m.start)}</div>`:''}<div><span style="color:var(--muted)">${esc(l.market.replace(' (t. rég)','').replace("L'équipe possède 2 buts d'avance ou gagne",'2 buts d\'avance ou gagne'))}</span> · <b>${esc(l.sel)}</b></div></div><span class="o">${odd(l.odds)}</span></li>`}).join('')}</ul>
    <div class="row" style="margin-top:6px">${ring(c.p,COL.combo)}<span class="small">${c.real&&c.kind==='mycombi'?'≈ proba':'proba'}</span><span class="odd" style="margin-left:6px;font-size:21px">${odd(c.odds)}</span>${stakeHtml(c.pct,c.odds)}</div>
-   <div class="det">${c.real?(c.kind==='multi'?'Combiné classique : la cote = produit des cotes Betclic (matchs différents). Proba = produit des probas du modèle.':'Combinaison proposée par Betclic (MyCombi) avec sa vraie cote. Proba ≈ 1/cote moins la marge.'):'Combinaison maison à composer dans MyCombi. Cote = produit des cotes, la vraie cote Betclic sera plus basse car les paris d\'un même match sont liés. Proba estimée.'}
+   <div class="det">${c.real?(c.kind==='multi'?'Combiné classique : la cote = produit des cotes Betclic (matchs différents). Proba = produit des probas du modèle.':'Combinaison proposée par Betclic (MyCombi) avec sa vraie cote. Proba ≈ 1/cote moins la marge.'):'Combinaison maison à composer dans MyCombi. Proba = calcul joint de notre modèle (les paris du même match sont liés). Cote estimée = produit des cotes Betclic corrigé de ce lien : la vraie cote MyCombi peut être différente.'}
    ${one?details(one,null):''}</div></article>`;
 }
-window.tog=(e,el)=>{if(e.target.closest('a'))return;el.classList.toggle('open')};
+window.tog=(e,el)=>{if(e.target.closest('a,summary,details,.pbar'))return;el.classList.toggle('open')};
+function pbar(pm,pk,adj){return `<div class="pbar" onclick="this.nextElementSibling.classList.toggle('on')">Betclic <b>${pc(pm)}</b> · Notre analyse <b>${pc(pk)}</b>${adj?'':' <span class="na">non ajusté</span>'} <span class="i">i</span></div><div class="pexp">« Betclic » = la chance que donne la cote, une fois la marge du bookmaker retirée. « Notre analyse » = cette chance corrigée par la forme, les face-à-face, les buts/points récents et les actus (±6 pts max). Si les deux sont proches, Betclic et nos données sont d'accord.</div>`}
+const MCACHE={};
+window.loadAll=async function(el){
+  if(!el.open||el.dataset.done)return;el.dataset.done=1;const id=el.dataset.id;
+  try{const d=MCACHE[id]||(MCACHE[id]=await (await fetch('m/'+id+'.json?v='+encodeURIComponent(D.fetchedAt))).json());
+    el.querySelector('div').outerHTML=d.m.map(([lab,name,sel])=>{const adj=sel.some(x=>x[4]);
+      return `<details class="mkt"><summary>${esc(lab)}${adj?'':' <span class="na">non ajusté</span>'}<small>${sel.length}</small></summary>${name!==lab?`<div class="small" style="margin:2px 0 4px">${esc(name)}</div>`:''}${sel.map(x=>{const v=x[3]!=null&&x[3]*x[1]>1.02&&x[4];return `<div class="sl${v?' v':''}"><span class="nm">${esc(x[0])}${x[5]?`<i>${esc(x[5])}</i>`:''}</span><span class="pp">${x[2]!=null?`Betclic ${pc(x[2])}<br><b>Analyse ${pc(x[3])}</b>`:'spécial'}</span><span class="o">${odd(x[1])}</span></div>`}).join('')}</details>`}).join('')+`<div class="small" style="margin-top:6px">Toutes les cotes publiées sur la page Betclic du match (onglet « Le Top »). « non ajusté » = proba Betclic sans marge, pas de donnée pour l'affiner. En vert : notre analyse dépasse la cote.</div>`;
+  }catch(e){el.querySelector('div').textContent='Détail indisponible.'}
+};
 
 const DUR={football:135,basketball:180,tennis:180,rugby_union:135,rugby:135,badminton:90,handball:110,ice_hockey:170,volleyball:150};
 const LBL={football:'Foot',basketball:'Basket',tennis:'Tennis',rugby_union:'Rugby',badminton:'Badminton',handball:'Hand',ice_hockey:'Hockey',volleyball:'Volley'};

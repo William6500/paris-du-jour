@@ -113,7 +113,7 @@ def event(mk_name, label, sel, home, away, dist):
         period = "q"
     elif re.match(r"1er set", m) or re.match(r"2(è|e)me set", m):
         period = "set"
-    if re.search(r"joueur|buteur|passeur|score exact|aces|tie-break|jeux|possède .* d'avance|extra gains|mi-temps / fin", m):
+    if re.search(r"joueur|buteur|passeur|aces|tie-break|jeux|possède .* d'avance|extra gains|mi-temps / fin|inscrire|perd le|sans prendre|essai", m):
         return None
     eps = 0.5 if dist == "cont" else 0.5
     # totaux
@@ -147,7 +147,10 @@ def event(mk_name, label, sel, home, away, dist):
         f = (lambda h, a: h >= 1) if side == "home" else (lambda h, a: a >= 1)
         return (f if s == "oui" else (lambda h, a: ~f(h, a))), period
     sc = re.match(r"^(\d) - (\d)$", s)
-    if sc and "score final" in m:
+    if m.startswith("les deux joueurs gagnent un set"):
+        f = lambda h, a: (h >= 1) & (a >= 1)
+        return (f if s == "oui" else (lambda h, a: ~f(h, a))), period
+    if sc and ("score final" in m or m.startswith("score exact")):
         x, y = int(sc.group(1)), int(sc.group(2))
         return (lambda h, a: (h == x) & (a == y)), period
     # écarts / handicaps « X gagne de N ou + », « X ne perd pas ou perd de N ou - »
@@ -165,9 +168,7 @@ def event(mk_name, label, sel, home, away, dist):
             n = int(g.group(1)); return (lambda h, a: d(h, a) > -n - eps), period
         if rest == "ne perd pas":
             return (lambda h, a: d(h, a) > -eps), period
-        if rest == "" and not re.search(r"écart|total|nombre", m):  # résultat / vainqueur (match, MT, QT, set)
-            return (lambda h, a: d(h, a) > 0), period
-        if rest == "" and re.search(r"^vainqueur|résultat", m):
+        if rest == "" and re.search(r"vainqueur|résultat|^1er set|^2(è|e)me set|équipe à marquer", m):  # résultat / vainqueur (match, MT, QT, set)
             return (lambda h, a: d(h, a) > 0), period
         return None
     if s == "nul":
@@ -320,8 +321,122 @@ def apply(sport, markets, home, away, main_pm, main_pk, fH, fA, h2h):
             if a is None or b is None:
                 continue
             x["pk"] = clip(x["pm"] + clip(b - a, -CAP, CAP), 0.01, 0.99)
+            x["adj"] = True
             done = True
         if done:
             n += 1; by[mk["label"]] = by.get(mk["label"], 0) + 1
-    info.update({"analysed": n, "by": by})
+    if sport == "football" and dm.get("full", {}).get("lh"):
+        for lab, k in scorers(markets, dm["full"], dk["full"], home, away).items():
+            by[lab] = by.get(lab, 0) + k; n += k
+    info.update({"analysed": n, "by": by, "_dk": dk, "_kind": kind})
     return info
+
+
+# ---------- buteurs / joueurs décisifs (football) ----------
+SCORER = [  # (motif du nom de marché, famille, nb de buts/actions)
+    (r"^buteur$", "but", 1), (r"^buteur ou son remplaçant$", "but_r", 1),
+    (r"^joueur \+ son remplaçant buteur 2 fois", "but_r", 2), (r"^joueur \+ son remplaçant buteur 3 fois", "but_r", 3),
+    (r"^joueur décisif \(buteur ou passeur décisif dans le tps rég\.\) · 1 fois", "dec", 1),
+    (r"^joueur décisif 2 fois", "dec", 2), (r"^joueur décisif 3 fois", "dec", 3),
+    (r"^joueur ou son remplaçant décisif", "dec_r", 1), (r"^joueur \+ son remplaçant décisif 2 fois", "dec_r", 2),
+    (r"^joueur \+ son remplaçant décisif 3 fois", "dec_r", 3),
+]
+TARGET = {"but": 0.9, "but_r": 0.95, "dec": 1.55, "dec_r": 1.6}  # part des buts (ou buts+passes) couverte par la liste
+
+
+def p_atleast(r, k):
+    return 1 - sum(math.exp(-r) * r ** i / math.factorial(i) for i in range(k))
+
+
+def scorers(markets, dm, dk, home, away):
+    """Proba buteur = taux du joueur (déduit des cotes Betclic, marge retirée en calant la somme des taux sur les buts
+    attendus de l'équipe) × (buts attendus modèle / buts attendus marché). Renvoie {label: nb de marchés ajustés}."""
+    lam = {"home": (dm["lh"], dk["lh"]), "away": (dm["la"], dk["la"])}
+    by, rates = {}, {}
+    fams = {}
+    for mk in markets:
+        nm = nrm(re.sub(r"\s*\((t\. rég|tps rég\.?)\)", "", mk["name"]))
+        for rx, fam, k in SCORER:
+            if re.search(rx, nm):
+                fams.setdefault(fam, []).append((k, mk)); break
+    teams = [t for t in {x.get("team") for mk in markets for x in mk["sel"]} if t]
+    side_of = {}
+    from difflib import SequenceMatcher
+    for t in teams:
+        sh, sa = SequenceMatcher(None, nrm(t), nrm(home)).ratio(), SequenceMatcher(None, nrm(t), nrm(away)).ratio()
+        if max(sh, sa) >= 0.5 and sh != sa:
+            side_of[t] = "home" if sh > sa else "away"
+    for fam, lst in fams.items():
+        base = next((mk for k, mk in lst if k == 1), None)
+        if not base:
+            continue
+        f_team = {}
+        for t, side in side_of.items():
+            raw = [1 / x["odds"] for x in base["sel"] if x.get("team") == t]
+            if not raw:
+                continue
+            tgt = TARGET[fam] * lam[side][0]
+            tot = lambda f: sum(-math.log(max(1e-9, 1 - min(0.97, f * p))) for p in raw)
+            f = 1.0 if tot(1.0) <= tgt else bisect(tot, 0.3, 1.0, tgt, 30)
+            f_team[t] = f
+        for k, mk in lst:
+            done = False
+            for x in mk["sel"]:
+                t = x.get("team")
+                if t not in f_team:
+                    continue
+                side = side_of[t]; ratio = lam[side][1] / lam[side][0]
+                pm = clip(f_team[t] / x["odds"], 0.005, 0.97)
+                if k == 1:
+                    r = -math.log(1 - pm); rates[(fam, x["name"])] = r
+                else:
+                    r = rates.get((fam, x["name"]))
+                    if r is None:
+                        continue
+                a, b = p_atleast(r, k), p_atleast(r * ratio, k)
+                x["pm"] = pm
+                x["pk"] = clip(pm + clip(b - a, -CAP, CAP), 0.005, 0.99)
+                x["adj"] = True; done = True
+            if done:
+                by[mk["label"]] = by.get(mk["label"], 0) + 1
+    # double chance buteur « H. Kane / M. Olise »
+    full = {}
+    for (fam, name), r in rates.items():
+        if fam == "but":
+            full[nrm(name).split(" ")[-1]] = (name, r)
+    team_of = {x["name"]: side_of.get(x.get("team")) for mk in markets for x in mk["sel"] if x.get("team")}
+    for mk in markets:
+        if not nrm(mk["name"]).startswith("double chance buteur"):
+            continue
+        done = False
+        for x in mk["sel"]:
+            parts = [nrm(p).split(" ")[-1] for p in x["name"].split(" / ")]
+            if len(parts) != 2 or not all(p in full for p in parts):
+                continue
+            (n1, r1), (n2, r2) = full[parts[0]], full[parts[1]]
+            s1, s2 = team_of.get(n1), team_of.get(n2)
+            if not s1 or not s2:
+                continue
+            q1, q2 = lam[s1][1] / lam[s1][0], lam[s2][1] / lam[s2][0]
+            a = 1 - math.exp(-r1 - r2); b = 1 - math.exp(-r1 * q1 - r2 * q2)
+            pm = clip((1 / x["odds"]) / 1.12, 0.005, 0.97)  # marge type des marchés joueurs (~12 %)
+            x["pm"] = pm; x["pk"] = clip(pm + clip(b - a, -CAP, CAP), 0.005, 0.99); x["adj"] = True; done = True
+        if done:
+            by[mk["label"]] = by.get(mk["label"], 0) + 1
+    return by
+
+
+def joint(dist_by_period, evs):
+    """Proba jointe de plusieurs événements du même match (même période) sur la distribution du modèle."""
+    if np is None or not evs:
+        return None
+    per = {e[1] for e in evs}
+    if len(per) != 1 or any(isinstance(e[0], tuple) for e in evs):
+        return None
+    d = dist_by_period.get(per.pop())
+    if d is None:
+        return None
+    mask = np.ones_like(d["w"], dtype=bool)
+    for f, _ in evs:
+        mask &= f(d["h"], d["a"])
+    return float((d["w"] * mask).sum())
