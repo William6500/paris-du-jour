@@ -193,7 +193,9 @@ details ul{padding-left:18px;margin:6px 0}
 .betbtn.mini{width:26px;height:26px;padding:0;font-size:15px;line-height:24px;text-align:center}
 .hd .small{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
 .bact{display:flex;justify-content:flex-end;margin-top:8px}
-.mine #tabs,.mine #chips,.mine #sbar,.mine #sorts{display:none!important}
+.mine #tabs,.mine #chips,.mine #sbar,.mine #sorts,.livev #tabs,.livev #sorts{display:none!important}
+.plan div .betbtn.mini{width:24px;height:24px;line-height:22px;font-size:13px}
+.ohint{font-size:10.5px;color:var(--muted)}.blv .ldot{width:7px;height:7px;margin:-2px 5px 0 0}
 .tot{display:grid;grid-template-columns:repeat(4,1fr);padding:12px 6px;margin:14px 0 10px;text-align:center}.tot small{display:block;color:var(--muted);font-size:11px;font-weight:600}.tot b{font-size:15px;font-variant-numeric:tabular-nums}.pos{color:var(--safe)}.neg{color:var(--L)}
 .mybet .row .badge{white-space:nowrap;flex:none}.mybet .row>.small{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mybet .legs .lg div{white-space:normal}.mybet .legs li .li{width:20px;flex:none;text-align:center}
 .lsc{font-size:12px;margin-top:2px}
@@ -342,7 +344,7 @@ function pickCard(p){
   const m=M(p.matchId),s=stOf(m.id);
   return `<article class="glass card${s.done?' done':''}" onclick="tog(event,this)">
    ${s.done?finBox(m):s.live?liveBox(m):''}
-   <div class="row hd"><span class="small">${SP[m.sport]||'🏟️'} ${esc(m.competition)} · ${hm(m.start)}</span>${p.value&&!s.done?'<span class="badge b-value">Value</span>':''}${betBtn('p|'+p.tier+'|'+p.matchId+'|'+p.market+'|'+p.sel,{tier:p.tier,odds:p.odds,base:PCT[p.tier],legs:[p]})}</div>
+   <div class="row hd"><span class="small">${SP[m.sport]||'🏟️'} ${esc(m.competition)} · ${hm(m.start)}</span>${p.value&&!s.done?'<span class="badge b-value">Value</span>':''}${pickBtn(p)}</div>
    <div class="teams">${esc(m.home)} – ${esc(m.away)}</div>
    <div class="row"><span class="sel"><span class="mk">${esc(p.market)}</span>${esc(p.sel)}</span><span class="odd">${odd(p.odds)}</span></div>
    ${s.live||s.done?'<div class="pre-lbl">cote avant-match</div>':''}
@@ -359,7 +361,7 @@ function comboCard(c){
    <div class="teams">${esc(c.kind==='multi'?c.title:one.home+' – '+one.away)}</div>
    <ul class="legs">${c.legs.map(l=>{const m=M(l.matchId);return `<li><span>${c.kind==='multi'?SP[m.sport]||'🏟️':'•'}</span><div class="lg">${c.kind==='multi'?`<div class="small">${esc(m.home)} – ${esc(m.away)} · ${hm(m.start)}</div>`:''}<div><span style="color:var(--muted)">${esc(l.market.replace(' (t. rég)','').replace("L'équipe possède 2 buts d'avance ou gagne",'2 buts d\'avance ou gagne'))}</span> · <b>${esc(l.sel)}</b></div></div><span class="o">${odd(l.odds)}</span></li>`}).join('')}</ul>
    <div class="row" style="margin-top:6px">${ring(c.p,COL.combo)}<span class="small">${c.real&&c.kind==='mycombi'?'≈ proba':'proba'}</span><span class="odd" style="margin-left:6px;font-size:21px">${odd(c.odds)}</span>${stakeHtml(c.pct,c.odds)}</div>
-   <div class="bact">${betBtn('c|'+(c.title||c.kind)+'|'+c.legs.map(l=>l.matchId+':'+l.market+':'+l.sel).join('/'),{tier:'combo',title:(c.title||(c.kind==='mycombi'?'MyCombi Betclic':'Combo même match'))+(c.tier?' · '+TN[c.tier]:''),odds:c.odds,base:c.pct,legs:c.legs})}</div>
+   <div class="bact">${comboBtn(c)}</div>
    <div class="det">${c.real?(c.kind==='multi'?'Combiné classique : la cote = produit des cotes Betclic (matchs différents). Proba = produit des probas du modèle.':'Combinaison proposée par Betclic (MyCombi) avec sa vraie cote. Proba ≈ 1/cote moins la marge.'):'Combinaison maison à composer dans MyCombi. Proba = calcul joint de notre modèle (les paris du même match sont liés). Cote estimée = produit des cotes Betclic corrigé de ce lien : la vraie cote MyCombi peut être différente.'}
    ${one?details(one,null):''}</div></article>`;
 }
@@ -393,7 +395,7 @@ function planned(m,title){
   const ps=D.picks.filter(p=>p.matchId===m.id), cs=D.combos.filter(c=>c.legs.some(l=>l.matchId===m.id));
   if(!ps.length&&!cs.length)return '';
   const TL={safe:'Sûr',bal:'Équilibré',big:'Grosse',poker:'Poker'};
-  return `<div class="small" style="margin-top:8px">${title||'🎯 Paris prévus avant le match · cotes avant-match'}</div><div class="plan">${ps.map(p=>`<div><span class="t" style="background:${COL[p.tier]}"></span><span><b>${TL[p.tier]}</b> · ${esc(p.market)} · ${esc(p.sel)}</span><span class="o">${odd(p.odds)}</span></div>`).join('')}${cs.map(c=>`<div><span class="t" style="background:${COL.combo}"></span><span><b>${esc(c.title)}</b> · ${c.legs.length} sélections</span><span class="o">${odd(c.odds)}</span></div>`).join('')}</div>`}
+  return `<div class="small" style="margin-top:8px">${title||'🎯 Paris prévus avant le match · cotes avant-match'}</div><div class="plan">${ps.map(p=>`<div><span class="t" style="background:${COL[p.tier]}"></span><span><b>${TL[p.tier]}</b> · ${esc(p.market)} · ${esc(p.sel)}</span><span class="o">${odd(p.odds)}</span>${pickBtn(p,1)}</div>`).join('')}${cs.map(c=>`<div><span class="t" style="background:${COL.combo}"></span><span><b>${esc(c.title)}</b> · ${c.legs.length} sélections</span><span class="o">${odd(c.odds)}</span>${comboBtn(c,1)}</div>`).join('')}</div>`}
 async function pollLive(force){
   if(!D||(!force&&Date.now()-liveT<55000))return;liveT=Date.now();
   const now=Date.now(),need={};
@@ -449,7 +451,7 @@ function okQ(m){if(!Q||!nz(Q))return true;
 $('#q').addEventListener('input',e=>{Q=e.target.value;shown=PAGE;render()});
 $('#qx').onclick=()=>{if($('#q').value){$('#q').value='';Q='';render();$('#q').focus()}else{$('#sbar').hidden=true;render()}};
 function render(){
-  document.body.classList.toggle('mine',MINE);if(typeof tabbar==='function')tabbar();
+  document.body.classList.toggle('mine',MINE);document.body.classList.toggle('livev',liveOnly&&!MINE);if(typeof tabbar==='function')tabbar();
   if(MINE){$('#list').innerHTML=mineHtml();return}
   if(!D)return;
   const now=Date.now();for(const k in ST)delete ST[k];
@@ -460,11 +462,11 @@ function render(){
   const allSports=[...new Set(D.matches.map(m=>m.sport))];
   const liveList=D.matches.filter(m=>okSport(m.id)).map(m=>[m,liveState(m,now)]).filter(x=>x[1].live).sort((a,b)=>(isTrk(b[0].id)-isTrk(a[0].id))||(!!b[1].e-!!a[1].e)||(new Date(b[0].start)-new Date(a[0].start)));
   // chips
-  $('#chips').innerHTML=`<div class="chip srch ${!$('#sbar').hidden||Q?'on':''}" data-s="search" aria-label="Rechercher">🔍${Q?' '+esc(Q.slice(0,14)):''}</div><div class="chip ${!sports.size&&!liveOnly?'on':''}" data-s="all">Tous</div><div class="chip live ${liveOnly?'on':''}" data-s="live"><i></i>LIVE${liveList.length?' '+liveList.length:''}</div>`+
+  $('#chips').innerHTML=`<div class="chip srch ${!$('#sbar').hidden||Q?'on':''}" data-s="search" aria-label="Rechercher">🔍${Q?' '+esc(Q.slice(0,14)):''}</div><div class="chip ${!sports.size?'on':''}" data-s="all">Tous</div>`+
     allSports.map(s=>`<div class="chip ${sports.has(s)?'on':''}" data-s="${s}">${SP[s]||''} ${LBL[s]||s}</div>`).join('');
   document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const k=c.dataset.s;
     if(k==='search'){const sb=$('#sbar');sb.hidden=!sb.hidden;render();if(!sb.hidden)$('#q').focus();return}
-    MINE=false;if(k==='all'){sports.clear();liveOnly=false}else if(k==='live'){liveOnly=!liveOnly;if(liveOnly)pollLive(true)}else{sports.has(k)?sports.delete(k):sports.add(k)}
+    MINE=false;if(k==='all'){sports.clear()}else if(SP[k]!==undefined||allSports.includes(k)){sports.has(k)?sports.delete(k):sports.add(k)}
     shown=PAGE;render()});
   // tri
   const SK=[['top','✨ Top',-1],['odds','Cote',-1],['date','Date',1],['p','Proba',-1]];
@@ -483,7 +485,7 @@ function render(){
   document.querySelectorAll('.tab').forEach(t=>{let n=t.querySelector('.n');if(!n){n=document.createElement('span');n.className='n';t.appendChild(n)}n.textContent=liveOnly?'–':cnt[t.dataset.t]});
   let html='';
   if(liveOnly){
-    html=liveList.map(([m,ls])=>liveCard(m,ls)).join('')||`<div class="glass empty">🔴 Aucun match en direct pour l'instant${sports.size?' dans ces sports':''}.</div>`;
+    html=(liveList.length?`<div class="sec">🔴 En direct · ${liveList.length}</div><div class="small" style="margin:-4px 4px 8px;white-space:normal">Déjà misé sur un match en cours ? Touche ＋ / « J'ai misé » : la cote avant-match est reprise, tu pourras mettre ta vraie cote live dans 🎟️ Mes paris.</div>`:'')+liveList.map(([m,ls])=>liveCard(m,ls)).join('')||`<div class="glass empty">🔴 Aucun match en direct pour l'instant${sports.size?' dans ces sports':''}.</div>`;
   }else if(tab==='combo'){
     const cs=D.combos.filter(comboOk);
     const g=[['multi','Plusieurs matchs'],['mycombi','Même match · cotes Betclic'],['estimate','Même match · estimations']];
@@ -514,13 +516,15 @@ const REG={};
 const TNB={safe:'Sûr',bal:'Équilibré',big:'Grosse',poker:'Poker',combo:'Combiné',liste:'Liste Betclic'};
 const saveBets=()=>{try{localStorage.setItem('pdj_bets',JSON.stringify(BETS))}catch(e){}};
 const isBet=k=>BETS.some(b=>b.k===k);
+const pickBtn=(p,mini)=>betBtn('p|'+p.tier+'|'+p.matchId+'|'+p.market+'|'+p.sel,{tier:p.tier,odds:p.odds,base:PCT[p.tier],legs:[p]},mini);
+const comboBtn=(c,mini)=>betBtn('c|'+(c.title||c.kind)+'|'+c.legs.map(l=>l.matchId+':'+l.market+':'+l.sel).join('/'),{tier:'combo',title:(c.title||(c.kind==='mycombi'?'MyCombi Betclic':'Combo même match'))+(c.tier?' · '+TNB[c.tier]:''),odds:c.odds,base:c.pct,legs:c.legs},mini);
 function snapLeg(l){const m=M(l.matchId)||{};return {matchId:l.matchId,market:l.market,sel:l.sel,odds:l.odds,team:l.team||null,home:m.home,away:m.away,sport:m.sport,comp:m.competition,start:m.start,espn:m.espn||null,res:LIVE[l.matchId]?{...LIVE[l.matchId]}:null}}
 function betBtn(k,src,mini){REG[k]=src;const on=isBet(k);return `<button class="betbtn${mini?' mini':''}${on?' on':''}" data-k="${esc(k)}" onclick="betTog(event,this)" aria-label="J'ai misé">${mini?(on?'✓':'+'):(on?'✓ Misé':'J\'ai misé')}</button>`}
 window.betTog=(e,el)=>{e.stopPropagation();e.preventDefault();const k=el.dataset.k;
   if(isBet(k)){BETS=BETS.filter(b=>b.k!==k);toast('Retiré de Mes paris')}
   else{const s=REG[k];if(!s)return;const st=stake(s.base||1);
     BETS.push({k,tier:s.tier,title:s.title||'',odds:s.odds,stake:st.e||null,t:Date.now(),legs:s.legs.map(snapLeg)});
-    toast(`✅ Ajouté à Mes paris${st.e?' · mise '+eur(st.e):''} · modifiable dans 🎟️`);pollBets(true)}
+    const lv=s.legs.some(l=>{const m=M(l.matchId);return m&&new Date(m.start).getTime()<=Date.now()});toast(lv?`✅ Ajouté (match en cours) · cote avant-match ${odd(s.odds)} : mets ta vraie cote et ta mise dans 🎟️`:`✅ Ajouté à Mes paris${st.e?' · mise '+eur(st.e):''} · modifiable dans 🎟️`);pollBets(true)}
   saveBets();document.querySelectorAll('.betbtn').forEach(b=>{if(b.dataset.k===k){const on=isBet(k),mini=b.classList.contains('mini');b.classList.toggle('on',on);b.textContent=mini?(on?'✓':'+'):(on?'✓ Misé':'J\'ai misé')}});tabbar()};
 // résultat d'une sélection d'après le score final ESPN : 'won' | 'lost' | null (à vérifier)
 function legRes(l){
@@ -566,6 +570,7 @@ async function pollBets(force){
 }
 setInterval(()=>{if(!document.hidden&&BETS.length)pollBets()},30000);
 window.betStake=(i,v)=>{const b=BETS[i];if(!b)return;const x=parseFloat(String(v).replace(',','.'));b.stake=x>0?Math.round(x*100)/100:null;saveBets();render()};
+window.betOdds=(i,v)=>{const b=BETS[i];if(!b)return;const x=parseFloat(String(v).replace(',','.'));if(x>=1.01){b.odds=Math.round(x*100)/100;b.oddsEdited=true}saveBets();render()};
 window.betDel=i=>{if(!confirm('Retirer ce pari de Mes paris ?'))return;BETS.splice(i,1);saveBets();render()};
 window.betMan=(i,v)=>{const b=BETS[i];if(!b)return;b.man=b.man===v?null:v;saveBets();render()};
 function legLine(l,now,multi){const s=legState(l,now),r=l.res,o=legRes(l),sc=r&&r.sh!=null&&r.state!=='pre'?`${esc(r.sh)} – ${esc(r.sa)}`:'';
@@ -577,7 +582,7 @@ function betCard(b,i,now){const g=betGroup(b,now),o=betOut(b),multi=b.legs.lengt
   return `<article class="glass card mybet ${o||''}">
    <div class="row"><span class="badge" style="background:${COL[b.tier]||'rgba(255,255,255,.3)'};color:#111">${TNB[b.tier]||esc(b.tier)}</span>${multi?`<span class="small">🔗 ${esc(b.title||b.legs.length+' sélections')}</span>`:'<span class="small"></span>'}${stx}<button class="del" onclick="betDel(${i})" aria-label="Retirer">✕</button></div>
    <ul class="legs">${b.legs.map(l=>legLine(l,now,multi)).join('')}</ul>
-   <div class="brow"><span>Cote <b>${odd(b.odds)}</b></span><label>Mise <input class="stk" inputmode="decimal" value="${b.stake!=null?String(b.stake).replace('.',','):''}" placeholder="0,00" onchange="betStake(${i},this.value)"> €</label>
+   <div class="brow"><label>Cote <input class="stk odds" inputmode="decimal" value="${String(b.odds).replace('.',',')}" onchange="betOdds(${i},this.value)"><span class="ohint">${b.oddsEdited?'ta cote':'cote avant-match'}</span></label><label>Mise <input class="stk" inputmode="decimal" value="${b.stake!=null?String(b.stake).replace('.',','):''}" placeholder="0,00" onchange="betStake(${i},this.value)"> €</label>
    <span class="pay">${o==='won'&&pay?'Gain <b>'+eur(pay)+'</b>':o==='lost'?'<b>'+(b.stake?'-'+eur(b.stake):'—')+'</b>':pay?'Gain potentiel <b>'+eur(pay)+'</b>':'<span class="small">entre ta mise</span>'}</span></div>
    ${g==='done'&&!betOut({...b,man:null})?`<div class="man"><span class="small">Score non couvert pour ce pari : vérifie sur Betclic puis</span><button class="${b.man==='won'?'on':''}" onclick="betMan(${i},'won')">✅ Gagné</button><button class="${b.man==='lost'?'on':''}" onclick="betMan(${i},'lost')">❌ Perdu</button></div>`:''}
   </article>`}
