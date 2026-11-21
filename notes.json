@@ -1,76 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Flamengo - Atletico Paranaense": {
-  "date": "2026-11-18",
-  "adj": 2,
-  "short": "Flamengo au complet, Athletico privé de Viveros (21 buts) et de 2 défenseurs centraux",
-  "absents": {
-   "home": [
-    "De la Cruz (sélection)",
-    "Valencia (sélection)",
-    "Paquetá (doute, genou)"
-   ],
-   "away": [
-    "Viveros (suspendu, meilleur buteur du championnat)",
-    "Dantas (suspendu)",
-    "Arthur Dias (sélection)",
-    "Luiz Gustavo (blessure musculaire)",
-    "Claudinho (ligaments croisés)"
-   ]
-  },
-  "lineups": {
-   "home": "Rossi ; Varela, Léo Ortiz, Léo Pereira, Ayrton Lucas ; Pulgar, Jorginho, Arrascaeta ; Carrascal, Pedro, Samuel Lino",
-   "away": "Mycael ; Benavídez, Aguirre, Esquivel ; Gilberto, Jadson, Portilla, Mendoza ; Zapelli, Vargas, João Cruz"
-  },
-  "mood": "Leader avec 3 pts d'avance avant le choc contre Palmeiras samedi, 3 victoires de suite. Athletico 5e, 4 matchs sans victoire.",
-  "sources": [
-   {
-    "label": "ge.globo",
-    "url": "https://ge.globo.com/futebol/brasileirao-serie-a/noticia/2026/11/18/flamengo-x-athletico-pr-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
-   },
-   {
-    "label": "Flashscore",
-    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Cruzeiro - Palmeiras": {
-  "date": "2026-11-18",
-  "adj": 1.5,
-  "short": "Cruzeiro sur 4 victoires, Palmeiras sans Gómez, Murilo, Piquerez ni Maurício",
-  "absents": {
-   "home": [
-    "Arroyo (sélection)",
-    "Jonathan Jesus (sélection)",
-    "Sinisterra (blessé)",
-    "Gabriel Pec (blessé)",
-    "Wesley et Kauã Moraes (suspendus)"
-   ],
-   "away": [
-    "Gustavo Gómez (sélection)",
-    "Maurício (sélection)",
-    "Murilo (cuisse)",
-    "Piquerez (cuisse)",
-    "Paulinho (mollet)",
-    "Arias, Flaco López, Giay probablement remplaçants"
-   ]
-  },
-  "lineups": {
-   "home": "Otávio ; William, Fabrício Bruno, Villalba, Rojas ; Romero, Zé Lucas, Gerson, Matheus Pereira ; Marquinhos, Kaio Jorge",
-   "away": "Carlos Miguel ; E. Martínez, Bruno Fuchs, Barboza ; Khellven, Marlon Freitas, Lucas Evangelista, Andreas Pereira, Arthur ; Sosa, Vitor Roque"
-  },
-  "mood": "Palmeiras 2e à 3 pts de Flamengo, défense inédite, pense à la finale de Libertadores le 28. Cruzeiro 3e et en confiance.",
-  "sources": [
-   {
-    "label": "ge.globo",
-    "url": "https://ge.globo.com/mg/futebol/brasileirao-serie-a/noticia/2026/11/18/cruzeiro-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
-   },
-   {
-    "label": "UOL",
-    "url": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/18/palmeiras-joga-sobrevida-no-brasileiro-com-zaga-inedita-e-ataque-desfalcado.ghtm"
-   }
-  ]
- },
  "Corinthians - Botafogo": {
   "date": "2026-11-19",
   "adj": -1.5,
@@ -116,176 +45,6 @@
    {
     "label": "Flashscore",
     "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Coritiba PR - Santos": {
-  "date": "2026-11-18",
-  "adj": 0,
-  "short": "Beaucoup d'absents des deux côtés, Neymar et Coutinho titulaires probables à Santos",
-  "absents": {
-   "home": [
-    "Pedro Morisco (sélection)",
-    "Keno (genou)",
-    "Lucas Ronier (ligaments croisés)",
-    "Lucas Crepaldi (avant-bras)"
-   ],
-   "away": [
-    "Gabriel Brazão (épaule)",
-    "Lucas Veríssimo (cuisse)",
-    "Barreal (suspendu)",
-    "Gabriel Bontempo (sélection)"
-   ]
-  },
-  "lineups": {
-   "away": "Diógenes ; Rodinei, João Alencar, Willian Arão, Luan Peres ; G. Henrique, Arthur ; Cebolinha, Coutinho, Neymar ; Gabigol"
-  },
-  "sources": [
-   {
-    "label": "Flashscore",
-    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Remo - Chapecoense SC": {
-  "date": "2026-11-18",
-  "adj": 0,
-  "short": "Deux équipes du bas de tableau, Chapecoense sur 4 défaites en 5",
-  "absents": {
-   "home": [
-    "Marllon (suspendu)",
-    "Jaderson (cuisse)",
-    "Gabriel Poveda (cuisse)"
-   ],
-   "away": [
-    "Heitor (cuisse)",
-    "Robert (ligaments croisés)",
-    "Rafael Carvalheira (ligaments croisés)",
-    "Maurício Garcez (jambe)"
-   ]
-  },
-  "sources": [
-   {
-    "label": "Flashscore",
-    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Chelsea F. - Paris SG F.": {
-  "date": "2026-11-18",
-  "adj": -1,
-  "short": "Chelsea 0 but encaissé en 4 matchs de LDC, mais sans Malard (8 buts) ni Lauren James",
-  "absents": {
-   "home": [
-    "Melvine Malard (ischio-jambiers)",
-    "Lauren James (ischio)",
-    "Naomi Girma (mollet)",
-    "Kadeisha Buchanan (doute, choc à la tête)"
-   ],
-   "away": [
-    "Sakina Karchaoui",
-    "Rasheedat Ajibade",
-    "Anaïs Ebayilin",
-    "Leuchter"
-   ]
-  },
-  "mood": "Chelsea 5e (8 pts), invaincu cette saison. PSG 10e (5 pts), battu par le Bayern, doit prendre des points.",
-  "sources": [
-   {
-    "label": "ESPN",
-    "url": "https://www.espn.co.uk/football/story/_/id/50512333/chelsea-melvine-malard-psg-uwcl"
-   },
-   {
-    "label": "Hooligan Soccer",
-    "url": "https://hooligan-soccer.com/chelsea-women-take-on-psg-women-in-champions-league/"
-   }
-  ]
- },
- "Real Madrid F. - Inter Milan F.": {
-  "date": "2026-11-18",
-  "adj": 1,
-  "short": "Inter a encaissé 10 buts sur ses 2 derniers matchs de LDC, Real seulement privé de Toletti",
-  "absents": {
-   "home": [
-    "Sandie Toletti (ischio)"
-   ],
-   "away": [
-    "Sheila García (incertaine)"
-   ]
-  },
-  "mood": "Real 7e (6 pts), 3-0 contre le Paris FC mais nul contre Badalona. Inter 13e, battu 1-4 par City puis renversé 2-3 par la Juve.",
-  "sources": [
-   {
-    "label": "Betfair (preview)",
-    "url": "https://www.betfair.es/blog/futbol/uefa-champions-league-femenina/real-madrid---inter-de-milan-alineaciones-horario-donde-ver-pronosticos-y-estadisticas-171126-1377.html"
-   },
-   {
-    "label": "realmadrid.com",
-    "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo-femenino/previas/previa-real-madrid-inter-j5-wcl-17-11-2026"
-   }
-  ]
- },
- "BK Hacken F. - Manchester City F.": {
-  "date": "2026-11-18",
-  "adj": 0,
-  "short": "City sans Miedema (blessée) ni Yamashita (suspendue) ; Häcken privé de Sampaio, Löwing et Akgün",
-  "absents": {
-   "home": [
-    "Helena Sampaio (ligaments croisés)",
-    "Lisa Löwing (ligaments croisés)",
-    "Nesrin Akgün (ischio-jambiers)",
-    "Elin Rubensson (reprise après grossesse)"
-   ],
-   "away": [
-    "Viviane Miedema (blessée)",
-    "Ayaka Yamashita (suspendue, rouge contre Chelsea)"
-   ]
-  },
-  "lineups": {
-   "home": "Non communiquée (Tindell et Anvegård de retour dans le groupe)",
-   "away": "Non communiquée (Eartha Cumings attendue dans les buts)"
-  },
-  "mood": "Häcken (2 pts en 4 matchs) cherche sa première victoire en phase de ligue ; City doit gagner pour rester dans la course à la qualification directe.",
-  "sources": [
-   {
-    "label": "BK Häcken",
-    "url": "https://bkhacken.se/nyhet/truppen-mot-manchester-city"
-   },
-   {
-    "label": "Fotbollskanalen",
-    "url": "https://www.fotbollskanalen.se/artiklar/womens-champions-league/beskedet-tindell-redo-for-spel"
-   },
-   {
-    "label": "Man City",
-    "url": "https://www.mancity.com/news/womens/bk-hacken-man-city-travelling-squad-63930517"
-   }
-  ]
- },
- "Juventus F. - Oud-Heuverlee F.": {
-  "date": "2026-11-18",
-  "adj": 0.5,
-  "short": "Juventus au complet (retours de Khelifi et Pinto) face au champion de Belgique",
-  "absents": {
-   "home": [],
-   "away": []
-  },
-  "lineups": {
-   "home": "Rusek ; Lenzini, Rosucci, Salvai, Carbonell ; Hayashi, Schatzer, Pavan ; Bartel, Redondo, Noordman",
-   "away": "Seynhaeve ; Smit, Janssen, Gielen, Everaerts ; Biesmans, Bosteels, Hoekx ; Kuijpers, Papatheodorou, Conijnenberg"
-  },
-  "mood": "Guerrero voit des progrès après une période difficile ; la qualification reste à portée avant l'avant-dernière journée. Leuven, direct et rapide, a accroché la Roma.",
-  "sources": [
-   {
-    "label": "Juventus",
-    "url": "https://www.juventus.com/en/news/articles/uwcl-juventus-women-oh-leuven-redondo-and-guerrero-s-pre-match-comments"
-   },
-   {
-    "label": "Tuttosport",
-    "url": "https://www.tuttosport.com/news/calcio/calciofemminile/2026/11/18-152666804/juve_women-leuven_orario_probabili_formazioni_e_dove_vedere_in_tv_e_streaming_la_champions_league"
-   },
-   {
-    "label": "Calcio Rosa",
-    "url": "https://calciorosa.com/juventus-women-leuven-rientri-girelli-champions-league/"
    }
   ]
  },
@@ -791,6 +550,364 @@
    {
     "label": "Le Républicain Lorrain",
     "url": "https://www.republicain-lorrain.fr/sport/2026/11/19/fc-metz-boulogne-retour-de-giorgi-abuashvili-dans-un-groupe-elargi"
+   }
+  ]
+ },
+ "Nice - Paris SG": {
+  "date": "2026-11-21",
+  "adj": -1,
+  "short": "Le PSG récupère Dembélé, Marquinhos, Mendes et Akliouche mais pourrait faire tourner avant la Roma ; Nice privé de quatre joueurs dont Abergel",
+  "absents": {
+   "home": [
+    "Antoine Mendy (genou)",
+    "Moïse Bombito (jambe)",
+    "Laurent Abergel (genou)",
+    "Mohamed Abdelmonem (blessure musculaire en sélection avec l'Égypte)"
+   ],
+   "away": [
+    "Khvicha Kvaratskhelia (genou, longue durée)",
+    "Alessandro Longoni (gardien, absent du point médical)",
+    "Dembélé, Marquinhos, Nuno Mendes, Akliouche de retour mais pas forcément titulaires (rotation avant la Roma)"
+   ]
+  },
+  "lineups": {
+   "home": "Diouf ; Seidu, Ndayishimiye, Mandza ; Clauss, Boudaoui, Witsel, Nkounkou ; Diop, Wahi, Amoura",
+   "away": "Safonov ; Hakimi, Zabarnyi, Marquinhos (ou Pacho), L. Hernandez ; Beraldo, Zaïre-Emery, Fabián Ruiz ; Akliouche, Mayulu, Ferran Torres"
+  },
+  "mood": "Nice 6e avec 17 pts, 5 victoires sur ses 6 derniers matchs de L1, Wahi en feu (6 buts). Le PSG, leader et champion en titre sur une série de victoires, reçoit la Roma mercredi en C1 ; Luis Enrique : « qui est le plus motivé pour jouer ce match ? ».",
+  "sources": [
+   {
+    "label": "Le Parisien (point médical)",
+    "url": "https://www.leparisien.fr/sports/football/ligue-1/nice-psg-dembele-nuno-mendes-marquinhos-et-akliouche-de-retour-linfirmerie-parisienne-se-vide-avant-le-match-20-11-2026-JOKSSX3M7VHA3IQJN4UIA62XVY.php"
+   },
+   {
+    "label": "Le Parisien (compo probable)",
+    "url": "https://www.leparisien.fr/sports/football/ligue-1/nice-psg-la-composition-probable-avec-les-retours-de-marquinhos-mendes-et-dembele-20-11-2026-5I7VBMMOJBHVTCKI7YEGCSEBVE.php"
+   },
+   {
+    "label": "Tribuna",
+    "url": "https://tribuna.com/fr/blogs/nice-vs-psg-actualites-des-equipes-et-compos-probables-1/"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/nice/preview/nice-vs-psg-prediction-team-news-lineups_609361.html"
+   }
+  ]
+ },
+ "Newcastle - Arsenal": {
+  "date": "2026-11-21",
+  "adj": 1,
+  "short": "Arsenal sans Saka, Zubimendi ni Dowman mais avec Saliba de retour ; Newcastle privé de Joelinton et muet lors de ses deux derniers matchs à domicile",
+  "absents": {
+   "home": [
+    "Joelinton (cuisse)",
+    "Ewen Jaouen (gardien remplaçant, ischios)",
+    "Livramento disponible mais temps de jeu géré"
+   ],
+   "away": [
+    "Bukayo Saka (quadriceps, ~4 semaines encore)",
+    "Martin Zubimendi (ischios, blessé avec l'Espagne)",
+    "Max Dowman (suspendu)"
+   ]
+  },
+  "lineups": {
+   "home": "Hornicek ; Dedic, Thiaw, Burn, Hall ; Steur, Gonzalez ; Murphy, Fernandez-Pardo, Barnes ; Osula",
+   "away": "Raya ; Timber, Konsa (ou Saliba), Gabriel, Calafiori ; Bruno Guimarães, Rice ; Madueke, Ødegaard, Tzolis ; Havertz"
+  },
+  "mood": "Arsenal, champion en titre, leader avec 5 pts d'avance (27 pts), 5 victoires de suite et 4 clean sheets d'affilée en PL. Newcastle 12e (12 pts), 3 matchs sans victoire, battu 1-0 par Aston Villa puis Everton à St James' Park.",
+  "sources": [
+   {
+    "label": "Arsenal.com",
+    "url": "https://www.arsenal.com/news/artetas-update-on-saka-saliba-and-zubimendi-aeGpX1u8JqKG"
+   },
+   {
+    "label": "BBC Sport",
+    "url": "https://www.bbc.com/sport/football/articles/cwg7l0vx20yxo"
+   },
+   {
+    "label": "NUFC.com",
+    "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-joelinton-and-livramento-latest-ahead-of-arsenal-visit"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/arsenal/preview/newcastle-vs-arsenal-prediction-team-news-lineups_609363.html"
+   },
+   {
+    "label": "ESPN",
+    "url": "https://www.espn.com/soccer/story/_/id/50529732/newcastle-united-vs-arsenal-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+   }
+  ]
+ },
+ "Manchester City - Fulham": {
+  "date": "2026-11-21",
+  "adj": -0.5,
+  "short": "City sur 3 défaites de suite avec Nunes et Khusanov incertains et Semenyo forfait ; Fulham sans Smith Rowe mais invaincu en 4 matchs",
+  "absents": {
+   "home": [
+    "Antoine Semenyo (genou, longue durée)",
+    "Matheus Nunes (incertain)",
+    "Abdukodir Khusanov (incertain, coup)",
+    "Marc Guéhi a manqué la sélection (hanche) mais attendu disponible"
+   ],
+   "away": [
+    "Emile Smith Rowe (hanche)",
+    "Benjamin Lecomte (tendon d'Achille, saison terminée)"
+   ]
+  },
+  "lineups": {
+   "home": "Donnarumma ; Lewis, Dias, Guéhi, Gvardiol ; Anderson, Bouaddi ; Ndiaye, Cherki, Doku ; Haaland",
+   "away": "Leno ; Castagne, Affengruber, Bassey, Robinson ; Berge, Charles ; Bobb, King, Iwobi ; Gonzalo García"
+  },
+  "mood": "City 3e à 6 pts d'Arsenal : 7 victoires puis 3 défaites (Villa, Brighton, Forest), défense fragile. Mais 20 victoires de suite contre Fulham. Fulham 15e, 2 pts au-dessus de la zone rouge, invaincu en 4 matchs (2V 2N), attaque peu prolifique (10 buts).",
+  "sources": [
+   {
+    "label": "ManCity.com",
+    "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
+   },
+   {
+    "label": "BBC Sport (Maresca)",
+    "url": "https://www.bbc.com/sport/football/articles/cx30gm90qq4mo"
+   },
+   {
+    "label": "BBC Sport (Arbeloa)",
+    "url": "https://www.bbc.com/sport/football/articles/cmwy8e9w5d8yo"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/man-city/preview/man-city-vs-fulham-prediction-team-news-lineups_609367.html"
+   }
+  ]
+ },
+ "Lille - Lyon": {
+  "date": "2026-11-21",
+  "adj": 1.5,
+  "short": "Lille, 2e et meilleure défense, reçoit un OL décimé (Morton, Sulc, Ouédraogo, Openda) pour la première de Carlos Vicens",
+  "absents": {
+   "home": [
+    "Tiago Santos (croisés, saison terminée)",
+    "Hamza Igamane (manque de rythme après les croisés)",
+    "Ayase Ueda (incertain, pied)"
+   ],
+   "away": [
+    "Tyler Morton (adducteur opéré, retour en février)",
+    "Pavel Šulc (ménisque opéré)",
+    "Mohamed Ouédraogo (croisés)",
+    "Loïs Openda (fissure du péroné, forfait probable)",
+    "Keito Nakamura (incertain)",
+    "Tagliafico probablement remplaçant (retour tardif de sélection)"
+   ]
+  },
+  "lineups": {
+   "home": "Özer ; Ngoy, Nianzou, Alexsandro, Perraud ; Mukau, Bentaleb, André ; E. Mbappé, Haraldsson (ou Giroud), Diaoune",
+   "away": "Greif ; Athekame, Bacher, Niakhaté, Abner ; Nartey, Tessmann, Tolisso ; Boudache, Merah (ou Nuamah), Duranville"
+  },
+  "mood": "Lille 2e à 2 pts du PSG (21 pts), une seule défaite en 10 journées, invaincu à domicile, meilleure défense (7 buts). Lyon 5e (17 pts), trois défaites de suite à l'extérieur, nouveau coach Vicens (successeur de Fonseca) ; l'OL reste sur 7 matchs sans défaite face au LOSC.",
+  "sources": [
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.fr/actualites/football-ligue-1-lille-lyon-ou-regarder-le-match-de-ligue-1-heure-et-compos/UNEU4DKH/"
+   },
+   {
+    "label": "Sport.fr",
+    "url": "https://www.sport.fr/football/ligue-1-compos-probables-pour-lille-lyon-samedi-a-20h45-avec-le-cas-giroud-et-les-grands-debuts-de-vicens-sur-le-banc-lyonnais-1503158.shtm"
+   },
+   {
+    "label": "match-ce-soir.fr",
+    "url": "https://match-ce-soir.fr/lineup/lille-lyon-compo-probable/"
+   },
+   {
+    "label": "20 Minutes",
+    "url": "https://www.20minutes.fr/sport/football/4264340-20261121-lille-lyon-chaine-tv-heure-voir-match-11e-journee-ligue-1-direct"
+   }
+  ]
+ },
+ "Real Madrid - Celta Vigo": {
+  "date": "2026-11-21",
+  "adj": 0.5,
+  "short": "Le Real (8 victoires de suite) récupère Bernardo, Tchouaméni et Vinicius ; le Celta sans Borja Iglesias, Starfelt ni Román",
+  "absents": {
+   "home": [
+    "Rodrygo (blessé)",
+    "Ferland Mendy (blessé)",
+    "Raúl Asencio (blessé)",
+    "Rotations possibles avant le PSV mardi (Valverde rentré tard de sélection)"
+   ],
+   "away": [
+    "Borja Iglesias (blessé)",
+    "Carl Starfelt (blessé)",
+    "Miguel Román (blessé)"
+   ]
+  },
+  "lineups": {
+   "home": "Courtois ; Valverde, Militão, Rüdiger, Cucurella ; Tchouaméni, Bernardo Silva ; Bellingham, Güler, Diomande ; Mbappé",
+   "away": "Radu ; Javi Rodríguez, Yoel Lago, Marcos Alonso ; Javi Rueda, Aleix Febas, Moriba, Carreira ; Swedberg, Jutglà, Hugo Álvarez"
+  },
+  "mood": "Real 2e (30 pts) à 3 pts du Barça, 8 victoires consécutives, Mbappé buteur lors des 7 derniers matchs ; retour au Bernabéu après un mois. Celta 11e (13 pts : 2V 7N 3D), engagé en Ligue Europa, avait gagné 0-2 au Bernabéu la saison passée.",
+  "sources": [
+   {
+    "label": "Marca",
+    "url": "https://www.marca.com/futbol/real-madrid/2026/11/20/alineaciones-probables-real-madrid-celta.html"
+   },
+   {
+    "label": "AS",
+    "url": "https://as.com/futbol/alineacion-posible-del-real-madrid-contra-el-celta-en-laliga-ea-sports-f202611-n/"
+   },
+   {
+    "label": "Defensa Central",
+    "url": "https://defensacentral.com/real-madrid-noticias/posible-alineacion-madrid-contra-celta-mourinho-apuesta-por-rudiger-bernardo-silva-diomande_346730_102.html"
+   },
+   {
+    "label": "RealMadrid.com",
+    "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/previas/real-madrid-celta-a-por-la-novena-victoria-consecutiva-en-el-regreso-a-la-liga-21-11-2026"
+   }
+  ]
+ },
+ "Borussia M'gladbach - Borussia Dortmund": {
+  "date": "2026-11-21",
+  "adj": -1,
+  "short": "Gladbach, lanterne rouge, privé d'Itakura (suspendu) et Kleindienst ; le BVB invaincu mais Guirassy et Anton incertains",
+  "absents": {
+   "home": [
+    "Ko Itakura (suspendu, rouge à Hambourg)",
+    "Tim Kleindienst (déchirure musculaire, capitaine)",
+    "Enzo Leopold (croisés)",
+    "Lukas Ullrich (clavicule)",
+    "Jan Leszczyński (genou)",
+    "Hugo Bolin (élongation)"
+   ],
+   "away": [
+    "Emre Can (croisés)",
+    "Giannis Konstantelias (croisés)",
+    "Justin Lerma (blessure musculaire)",
+    "Samuele Inacio (ménisque, en sélection U21)",
+    "Serhou Guirassy, Waldemar Anton, Carney Chukwuemeka (incertains, problèmes musculaires)"
+   ]
+  },
+  "lineups": {
+   "home": "Batz (ou Nicolas) ; Diks, Sander, Chiarodia ; Scally, Uno, Neuhaus, Castrop ; Hack, Mohya ; Machino",
+   "away": "Kobel ; Gadou, Anton, Schlotterbeck ; Ryerson, Bellingham, Nmecha, Svensson ; Karetsas, Beier ; Guirassy (sinon Fábio Silva)"
+  },
+  "mood": "Gladbach 18e avec 4 pts, 7 défaites en 9 matchs (record négatif), pire défense (25 buts), aucune victoire à domicile ; Blessin a remplacé Polanski. Dortmund 2e (21 pts), invaincu, meilleure défense (7 buts), mais 3 nuls sur ses 5 derniers matchs.",
+  "sources": [
+   {
+    "label": "Bundesliga.com",
+    "url": "https://www.bundesliga.com/de/bundesliga/news/voraussichtliche-aufstellungen-10-spieltag-ausfalle-verletzungen-sperren-40039"
+   },
+   {
+    "label": "BVB.de (effectif)",
+    "url": "https://www.bvb.de/de/de/aktuelles/news/news.html/2026/11/19/Personal-Update-Vier-Fragezeichen-vor-dem-Gladbach-Spiel.html"
+   },
+   {
+    "label": "BVB.de (stats)",
+    "url": "https://www.bvb.de/de/de/aktuelles/news/news.html/2026/11/20/Was-die-Zahlen-zum-109-Bundesliga-Duell-mit-Gladbach-sagen.html"
+   },
+   {
+    "label": "Eurosport.de",
+    "url": "https://www.eurosport.de/wetten/prognosen/moenchengladbach-vs-dortmund-prognose-wett-tipps-und-quoten/"
+   }
+  ]
+ },
+ "Séville - Betis": {
+  "date": "2026-11-21",
+  "adj": 0,
+  "short": "Derby équilibré : Séville sans Alfon, Carmona, Sierra ni Marcao ; Betis sans Ceballos ni Morante mais avec le retour du Cucho",
+  "absents": {
+   "home": [
+    "Alfon González (blessé)",
+    "José Ángel Carmona (blessé)",
+    "Miguel Sierra (blessé)",
+    "Marcao (blessé)"
+   ],
+   "away": [
+    "Dani Ceballos (ischios)",
+    "José Antonio Morante (blessé)",
+    "Iker Losada (choix technique)"
+   ]
+  },
+  "lineups": {
+   "home": "Vlachodimos ; Juan Iglesias, Castrín, Kike Salas, Suazo ; Ejuke (ou Vargas), Agoumé, Fofana, Félix Correia ; Isaac Romero (ou Kochorashvili), Stassin",
+   "away": "Álvaro Valles ; Bellerín, Bartra, Natan, Fran García ; Marc Roca, Fornals ; Antony, Isco, Abde ; Parrott"
+  },
+  "mood": "Séville 6e, Betis 4e : deux bons débuts de saison. Premier derby pour García Plaza ; Pellegrini sur 3 derbys sans défaite (2V 1N). Le Betis joue à Bratislava mardi en Ligue des champions.",
+  "sources": [
+   {
+    "label": "Estadio Deportivo",
+    "url": "https://www.estadiodeportivo.com/futbol/primera-division/alineaciones-sevilla-betis-alineaciones-probables-para-el-gran-derbi-sevillano-de-la-jornada-13-en-laliga-ea-sports-20261120-551060.html"
+   },
+   {
+    "label": "ABC Sevilla",
+    "url": "https://www.abc.es/deportes/alfinaldelapalmera/noticias-betis/ceballos-morante-unicas-bajas-betis-derbi-ante-20261120133920-nts.html"
+   }
+  ]
+ },
+ "Naples - Torino": {
+  "date": "2026-11-21",
+  "adj": -1.5,
+  "short": "Naples privé de six joueurs (Di Lorenzo, Lobotka, Buongiorno, Meret...) et sans victoire depuis le 4 novembre, avant d'aller à Manchester City",
+  "absents": {
+   "home": [
+    "Buongiorno (indisponible)",
+    "Badiashile (indisponible)",
+    "Di Lorenzo (indisponible)",
+    "Lobotka (indisponible)",
+    "Meret (indisponible)",
+    "David Neres (indisponible)",
+    "De Bruyne sur le banc"
+   ],
+   "away": [
+    "Israel (indisponible)",
+    "Vlašić incertain, probablement remplaçant"
+   ]
+  },
+  "lineups": {
+   "home": "Milinković-Savić ; Marianucci, Rrahmani, Rafa Marín ; Olivera, McTominay, Gilmour, Politano ; Lang, Højlund, Vergara",
+   "away": "Perri ; Coco, Ismajli, Comuzzo ; Belghali, Casadei, Mandragora, Vlašić (ou Bragança), Cacciamani ; Adams, Simeone"
+  },
+  "mood": "Naples 15 pts, à 9 pts du 4e, nul contre la Lazio après la claque contre Porto en C1, pas de victoire depuis le 4/11 ; déplacement à Man City mardi. Torino (Abate) à un point, sans victoire depuis le 23/10 (nul contre Lecce).",
+  "sources": [
+   {
+    "label": "Tuttosport",
+    "url": "https://www.tuttosport.com/news/calcio/serie-a/2026/11/21-152694941/napoli-torino_probabili_formazioni_aggiornate_orario_e_dove_vedere_in_tv_e_streaming_la_serie_a"
+   },
+   {
+    "label": "Sky Sport Italia",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/20/napoli-torino-probabili-formazioni-12-giornata"
+   }
+  ]
+ },
+ "Chelsea - Leeds": {
+  "date": "2026-11-21",
+  "adj": -1.5,
+  "short": "Chelsea sans João Pedro, Lacroix, Hato, James ni Gittens ; Leeds au complet (hors Mateo Joseph) avec Stach et Okafor de retour",
+  "absents": {
+   "home": [
+    "João Pedro (cuisse)",
+    "Maxence Lacroix (ischios)",
+    "Jorrel Hato (dos)",
+    "Reece James (blessé, encore quelques semaines)",
+    "Jamie Gittens (pas encore réintégré)"
+   ],
+   "away": [
+    "Mateo Joseph (genou, longue durée)"
+   ]
+  },
+  "lineups": {
+   "home": "E. Martínez ; Acheampong, Fofana, Colwill, Palestra ; Caicedo, Lavia ; Estêvão, Palmer, Rogers ; Welbeck",
+   "away": "Trafford ; Justin, Elvedi, Muharemović ; Bogle, Stach, Ampadu, Tanaka, Gudmundsson ; Calvert-Lewin, Okafor"
+  },
+  "mood": "Chelsea 5e après une défaite controversée 1-0 à Sunderland ; avait battu Leeds 6-3 en Carabao Cup en septembre. Leeds 9e après sa victoire 1-0 contre Tottenham ; Farke : « aucune blessure à signaler ».",
+  "sources": [
+   {
+    "label": "ChelseaFC.com",
+    "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-leeds"
+   },
+   {
+    "label": "Sports Illustrated",
+    "url": "https://www.si.com/soccer/chelsea-vs-leeds-predicted-lineups-11-21-26"
+   },
+   {
+    "label": "PremierLeague.com",
+    "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
    }
   ]
  }
