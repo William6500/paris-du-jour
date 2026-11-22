@@ -1,236 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Corinthians - Botafogo": {
-  "date": "2026-11-19",
-  "adj": -1.5,
-  "short": "Corinthians sans Yuri Alberto ni deux titulaires suspendus",
-  "absents": {
-   "home": [
-    "Yuri Alberto (suspendu)",
-    "André Ramalho (suspendu)",
-    "Matheus Pereira (suspendu)",
-    "Kayke (ligaments croisés)"
-   ],
-   "away": [
-    "Danilo (adducteurs)",
-    "Jordan Barrera (cheville)"
-   ]
-  },
-  "lineups": {
-   "home": "Hugo Souza ; Matheuzinho, G. Paulista, G. Henrique, Angileri ; Raniele, Breno Bidon, Bidu ; Kaio César, Memphis, Vitinho",
-   "away": "Gabriel Batista ; Vitinho, Justino, Marçal, Alex Telles ; Huguinho, Edenilson, Medina ; Montoro, Tiquinho Soares, Matheus Martins"
-  },
-  "sources": [
-   {
-    "label": "Flashscore",
-    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Gremio RS - Bahia Salvador BA": {
-  "date": "2026-11-19",
-  "adj": -1,
-  "short": "Grêmio sans Kannemann ni Villasanti (suspendus)",
-  "absents": {
-   "home": [
-    "Kannemann (suspendu)",
-    "Villasanti (suspendu)",
-    "Marlon (doute, mollet)"
-   ],
-   "away": [
-    "Léo Vieira (tendon rotulien)"
-   ]
-  },
-  "sources": [
-   {
-    "label": "Flashscore",
-    "url": "https://www.flashscore.com.br/noticias/futebol-brasileirao-serie-a-confira-desfalques-e-escalacoes-provaveis-da-35-rodada-do-brasileirao/xGEy3Zs9/"
-   }
-  ]
- },
- "Arsenal F. - OL Lyonnes F.": {
-  "date": "2026-11-19",
-  "adj": -1,
-  "short": "Arsenal sans Mariona, Kelly, Blackstenius, Cerci ; Lyon leader, 4/4 avec 20 buts marqués",
-  "absents": {
-   "home": [
-    "Mariona Caldentey (blessée)",
-    "Chloe Kelly (blessée)",
-    "Stina Blackstenius (blessée)",
-    "Selina Cerci (blessée)",
-    "Michelle Agyemang (blessée)",
-    "Katie Reid (cheville)",
-    "Emily Fox (doute, coup)"
-   ],
-   "away": [
-    "Johanna Rytting Kaneryd (ligaments croisés)"
-   ]
-  },
-  "lineups": {
-   "home": "Rodríguez ; Holmberg, Williamson, Catley, Batlle ; Cooney-Cross, Stanway, Baum, Smith, Maanum ; Russo",
-   "away": "Grohs ; Brand, Sangaré, Renard, Bacha ; Egurrola, Yohannes, Dumornay ; Bècho, Chawinga, Katoto"
-  },
-  "mood": "Lyon en tête de la phase de ligue, 8 victoires de suite toutes compétitions et titulaires reposés le week-end (11 changements). Arsenal invaincu sur 5 matchs mais 3 nuls récents, Maanum de retour.",
-  "sources": [
-   {
-    "label": "Pain in the Arsenal",
-    "url": "https://paininthearsenal.com/arsenal-vs-lyon-womens-champions-league-preview-predictions-team-news-and-tv-info"
-   },
-   {
-    "label": "FreeTips",
-    "url": "https://www.freetips.com/football/arsenal-vs-lyon-betting-tips-predictions-20261117-0012/"
-   },
-   {
-    "label": "UEFA.com",
-    "url": "https://www.uefa.com/womenschampionsleague/news/02ab-220ff9af21a9-748c51d8b995-1000--women-s-champions-league-matchday-5-thursday-preview-arsenal/"
-   }
-  ]
- },
- "Barcelone F. - Servette FC Chenois F.": {
-  "date": "2026-11-19",
-  "adj": -0.5,
-  "short": "Barça diminué (V. López, Kika, Kerolin, Aleixandri) mais retrouve Paredes et Graham Hansen",
-  "absents": {
-   "home": [
-    "Vicky López (musculaire)",
-    "Kika Nazareth (musculaire)",
-    "Kerolin (musculaire)",
-    "Laia Aleixandri (genou, fin de rééducation)"
-   ],
-   "away": [
-    "Enith Salón (ligaments croisés)"
-   ]
-  },
-  "lineups": {
-   "home": "Cata Coll ; Camara, Paredes, van Asten, Brugts ; Serrajordi, Guijarro, Schertenleib ; Graham Hansen, Pajor, Pina",
-   "away": "Weimar ; Simon, Ballesté, Nakkach, Bourma ; Serrano, Hernández ; Marinelli, Karchouni, Marchão ; Sobal"
-  },
-  "mood": "Barça 2e (10 pts), deux nuls de suite (Arsenal, Deportivo), une première depuis 2019 ; effectif court. Servette 14e (3 pts), a perdu tous ses déplacements dans cette phase, coach Toro sur le départ.",
-  "sources": [
-   {
-    "label": "Sport",
-    "url": "https://www.sport.es/es/noticias/barca/futbol-femenino/barca-busca-recuperar-pulso-servette-136591275"
-   },
-   {
-    "label": "Betfair (blog)",
-    "url": "https://www.betfair.es/blog/futbol/uefa-champions-league-femenina/fc-barcelona---servette-alineaciones-horario-donde-ver-pronosticos-y-estadisticas-171126-1377.html"
-   },
-   {
-    "label": "La Vanguardia",
-    "url": "https://www.lavanguardia.com/deportes/futbol-femenino/20261119/11687267/barca-herido-recibe-servette-busca-triunfo-balsamico.html"
-   }
-  ]
- },
- "Benfica F. - AS Roma F.": {
-  "date": "2026-11-19",
-  "adj": 1,
-  "short": "Benfica 9e (6 pts) à domicile, Roma 12e (4 pts) privée de Greggi",
-  "absents": {
-   "home": [
-    "Lara Martins (ligaments croisés)",
-    "Joana Valente (ligaments croisés)",
-    "Diana Silva (enceinte)"
-   ],
-   "away": [
-    "Greggi (ischio-jambiers, blessée le 14/11)"
-   ]
-  },
-  "lineups": {
-   "home": "Pauels ; Amado, Diana Gomes, Demehin, Lund ; Pauleta, Norton, Nycole Raysla, Møller, Lúcia Alves, Dorsin",
-   "away": "Baldi ; Thøgersen, Oladipo, Ottey, Oliviero ; Doms, Rieke, Giugliano ; Pilgrim, Van Dooren"
-  },
-  "mood": "Benfica sur 2 victoires (3-1 contre Austria Vienne, 5-0 en coupe), vise 9 pts pour le play-off. Roma leader en Serie A, a battu Servette 2-1, pressing haut.",
-  "sources": [
-   {
-    "label": "SL Benfica",
-    "url": "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/18/futebol-feminino-benfica-as-roma-antevisao-5-jornada-fase-de-liga-liga-dos-campeoes"
-   },
-   {
-    "label": "Dia de Jogo",
-    "url": "https://diadejogo.pt/noticias/antevisao-benfica-roma-feminino-2026-11-19"
-   },
-   {
-    "label": "Bola na Rede",
-    "url": "https://bolanarede.pt/nacional/futebol-feminino-nacional/ivan-baptista-e-anna-csiki-na-antevisao-do-jogo-com-a-roma-para-a-champions-league-feminina-sao-duas-boas-equipas-que-gostam-de-ter-bola-sao-tao-mais-fortes-quanto-mais-tempo-a-tiverem/"
-   }
-  ]
- },
- "Vasco de Gama - Internacional RS": {
-  "date": "2026-11-19",
-  "adj": 1,
-  "short": "Vasco sur 2 victoires, Inter sans Thiago Maia, Bernabei ni Maripán (suspendu)",
-  "absents": {
-   "home": [
-    "Nuno Moreira (adducteur)",
-    "Tchê Tchê (tendinopathie)",
-    "Cuesta (hanche)"
-   ],
-   "away": [
-    "Thiago Maia (cuisse)",
-    "Bernabei (entorse genou)",
-    "Maripán (suspendu)",
-    "Rochet (lombaires)",
-    "Kayky (cheville)"
-   ]
-  },
-  "lineups": {
-   "home": "Léo Jardim ; Paulo Henrique (Puma Rodríguez), Saldivia, Robert Renan, Cuiabano ; Sosa, Thiago Mendes, Lescano ; Andrés Gómez, Colidio, Bruno Duarte",
-   "away": "Kauan Jesus ; Ronaldo, Mercado, Juninho ; Aguirre, Villagra, Bruno Gomes, Matheus Bahia ; Vitinho, Alan Patrick, Alerrandro"
-  },
-  "mood": "Vasco 11e (44 pts), quasi sauvé, vise le G-8 après avoir battu Athletico et Chapecoense. Inter juste au-dessus de la zone rouge (38 pts), sans victoire à l'extérieur sous Eduardo Baptista, arrivé à Rio avec 4 h de retard.",
-  "sources": [
-   {
-    "label": "ge.globo",
-    "url": "https://ge.globo.com/rj/futebol/brasileirao-serie-a/noticia/2026/11/19/vasco-x-internacional-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
-   },
-   {
-    "label": "ge.globo (Inter)",
-    "url": "https://ge.globo.com/rs/futebol/times/internacional/noticia/2026/11/18/bernabei-nao-viaja-e-inter-chega-ao-rio-com-novidades-para-enfrentar-o-vasco-veja-relacionados.ghtml"
-   },
-   {
-    "label": "Plantão Paulista",
-    "url": "https://plantaopaulista.com.br/inter-tem-desfalques-de-bernabei-e-thiago-maia-contra-o-vasco"
-   }
-  ]
- },
- "Vitoria BA - Bragantino": {
-  "date": "2026-11-19",
-  "adj": 0,
-  "short": "Débuts de Rafael Lacerda pour Vitória (1 pt au-dessus du Z-4), Bragantino sans Lucas Barbosa",
-  "absents": {
-   "home": [
-    "Dudu (blessé)",
-    "Nathan Mendes (blessé)",
-    "Fabiano Souza (blessé)",
-    "Luan Cândido (clause contractuelle)",
-    "Nacho Laquintana (clause contractuelle)"
-   ],
-   "away": [
-    "Lucas Barbosa (suspendu)",
-    "Davi Gomes (blessé)",
-    "Rodriguinho (blessé)"
-   ]
-  },
-  "lineups": {
-   "home": "Lucas Arcanjo ; Mateus Silva, Brítez, Cacá, Jamerson ; Baralhas, Martínez, Matheuzinho ; Erick, Tarzia, Renê",
-   "away": "Tiago Volpi ; Ryan, Gustavo Marques, Guzmán Rodríguez, Juninho Capixaba ; Fabinho, Eric Ramires, Eduardo Sasha ; Herrera, Wallace Yan, Fernando"
-  },
-  "mood": "Vitória 15e-16e (38 pts), 1 victoire en 8, nouveau coach après le renvoi de Jair Ventura. Bragantino 8e (47 pts) sur 2 victoires, vise la Libertadores mais sans victoire à l'extérieur depuis 6 mois.",
-  "sources": [
-   {
-    "label": "ge.globo",
-    "url": "https://ge.globo.com/ba/futebol/times/vitoria/noticia/2026/11/18/escalacao-do-vitoria-contra-o-bragantino-veja-time-provavel-desfalques-e-duvidas-apos-treino.ghtml"
-   },
-   {
-    "label": "A Tarde",
-    "url": "https://atarde.com.br/esportes/ecvitoria/vitoria-x-rb-bragantino-onde-assistir-escalacoes-e-arbitragem-1409739"
-   },
-   {
-    "label": "Bahia Notícias",
-    "url": "https://www.bahianoticias.com.br/esportes/vitoria/31806-vitoria-x-rb-bragantino-veja-provaveis-escalacoes-horario-e-onde-assistir"
-   }
-  ]
- },
  "Sao Paulo SP - Fluminense": {
   "date": "2026-11-20",
   "adj": -0.5,
@@ -265,54 +34,6 @@
    {
     "label": "ge.globo (Savarino)",
     "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/titular-nos-dois-amistosos-da-venezuela-savarino-sera-desfalque-do-fluminense-contra-o-sao-paulo.ghtml"
-   }
-  ]
- },
- "Paris FC F. - HB Køge F.": {
-  "date": "2026-11-19",
-  "adj": 0,
-  "short": "Effectifs complets des deux côtés, le Paris FC cherche sa 1re victoire européenne",
-  "absents": {
-   "home": [],
-   "away": []
-  },
-  "lineups": {
-   "home": "Dernier onze (vs Le Havre 14/11) : Chavas ; Ould Hocine, Greboval, Diaz, Roche-Dufour ; Picard, Korošec ; Reynders, Matéo, Le Moguédec ; Viens",
-   "away": "Dernier onze (vs Odense 14/11) : A. Andersen ; Termansen, Sakabe, Jones, Hermann ; Oyama, Witek, Chipasula, Thygesen ; Madsen, Óskarsdóttir"
-  },
-  "mood": "Paris FC 0 victoire en 4 journées (2 nuls vs Arsenal et Häcken). Køge, passé par les qualifs, sur une bonne série en championnat danois et 1-1 à Louvain en dernier match européen. Première confrontation.",
-  "sources": [
-   {
-    "label": "zerozero",
-    "url": "https://www.zerozero.com.mx/noticias/paris-fc-vs-hb-koge-previa-ausencias-y-probables-alineaciones-titulares-liga-de-campeones-fem-19-11/1262224"
-   },
-   {
-    "label": "Paris FC",
-    "url": "https://parisfc.fr/equipe-pro/les-5-choses-a-savoir-avant-paris-fc-hb-koge-18h45-au-stade-charlety/"
-   }
-  ]
- },
- "Austria Vienne F. - Bayern Munich F.": {
-  "date": "2026-11-19",
-  "adj": -0.5,
-  "short": "Bayern invaincu (8 pts), victoire impérative avant de recevoir Barcelone",
-  "absents": {
-   "home": [],
-   "away": []
-  },
-  "lineups": {
-   "home": "Non communiquée",
-   "away": "Non communiquée"
-  },
-  "mood": "Bayern 3e, 10/10 en Bundesliga, gagné 2-1 au PSG la semaine dernière ; Bühl et Zadrazil se méfient du pressing viennois. Austria dernière (1 pt, 3-9), première saison en phase de ligue.",
-  "sources": [
-   {
-    "label": "BR24 / sportschau",
-    "url": "https://www.sportschau.de/regional/br/br-barca-schon-im-kopf-fcb-frauen-vor-pflichtaufgabe-in-wien-106.html"
-   },
-   {
-    "label": "fcbayern.com",
-    "url": "https://fcbayern.com/frauen/de/news/2026/11/faktenlage-austria-wien---fc-bayern-frauen"
    }
   ]
  },
@@ -908,6 +629,296 @@
    {
     "label": "PremierLeague.com",
     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+   }
+  ]
+ },
+ "Liverpool - Manchester United": {
+  "date": "2026-11-22",
+  "adj": 0.5,
+  "short": "Liverpool sans Ekitike mais récupère Gravenberch, Frimpong et Van Dijk ; United privé de Baleba, Ugarte et Sesko",
+  "absents": {
+   "home": [
+    "Hugo Ekitike (Achille)",
+    "Conor Bradley (genou, longue durée)",
+    "Giovanni Leoni (genou, longue durée)"
+   ],
+   "away": [
+    "Carlos Baleba",
+    "Manuel Ugarte",
+    "Benjamin Sesko",
+    "Shaw, Dorgu, Maguire, Rashford (incertains)"
+   ]
+  },
+  "lineups": {
+   "home": "Alisson ; Araujo, Van Dijk, Jacquet, Kerkez ; Mac Allister, Szoboszlai ; Barcola, Wirtz, Gakpo ; Isak",
+   "away": "Lammens ; Dalot, Maguire, Martínez, Shaw ; Tielemans, Mainoo ; Amad, Fernandes, Cunha ; Mbeumo"
+  },
+  "mood": "Iraola (Liverpool) se veut rassurant : Van Dijk apte après son forfait en sélection, Gravenberch et Frimpong de retour à l'entraînement. Côté United, Lisandro Martínez revient de suspension.",
+  "sources": [
+   {
+    "label": "Liverpool FC (team news)",
+    "url": "https://www.liverpoolfc.com/news/liverpool-v-manchester-united-team-news-premier-league-112026"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/liverpool/injury-news/team-news/liverpool-vs-man-utd-injury-suspension-list-predicted-xis_609494.html"
+   },
+   {
+    "label": "The Standard",
+    "url": "https://www.standard.co.uk/sport/football/man-utd-xi-vs-liverpool-fc-confirmed-team-news-predicted-lineup-injury-latest-premier-league-b1305631.html"
+   }
+  ]
+ },
+ "Barcelone - Villarreal": {
+  "date": "2026-11-22",
+  "adj": 0,
+  "short": "Barça sans Christensen ni Rodri mais Koundé et Olmo de retour ; Villarreal sans Diatta, trois incertains",
+  "absents": {
+   "home": [
+    "Andreas Christensen (mollet)",
+    "Rodri (ischio-jambiers)",
+    "Xavi Espart (cheville)",
+    "Roony Bardghji (genou)",
+    "Cubarsí (hanche, probablement remplaçant)"
+   ],
+   "away": [
+    "Krépin Diatta",
+    "Foyth, Gerard Moreno, Akhomach (incertains)"
+   ]
+  },
+  "lineups": {
+   "home": "Joan García ; Koundé, Eric García, Gerard Martín, Cancelo ; De Jong, Pedri ; Yamal, Fermín, Adeyemi ; Raphinha"
+  },
+  "mood": "Retour de trêve à domicile pour le Barça ; Flick : « nous sommes dans un bon moment ».",
+  "sources": [
+   {
+    "label": "Barca Blaugranes",
+    "url": "https://www.barcablaugranes.com/barcelona-la-liga/138634/barcelona-villarreal-la-liga-team-news-squad-list"
+   },
+   {
+    "label": "AS",
+    "url": "https://as.com/futbol/luz-verde-para-kounde-frenkie-cubarsi-y-olmo-f202611-n/"
+   },
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/barcelona/race-for-the-la-liga-title/team-news/barcelona-vs-villarreal-injury-suspension-list-predicted-xis_609475.html"
+   },
+   {
+    "label": "FC Barcelona",
+    "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612353/hansi-flick-we-are-in-a-good-moment"
+   }
+  ]
+ },
+ "Atalanta - Inter Milan": {
+  "date": "2026-11-22",
+  "adj": -0.5,
+  "short": "Atalanta sans Hien, Kossounou et Pompei, Kristensen de retour ; Inter sans Bonny, Zielinski incertain",
+  "absents": {
+   "home": [
+    "Isak Hien (musculaire)",
+    "Odilon Kossounou (cuisse)",
+    "Pompei",
+    "Gaetano (incertain)"
+   ],
+   "away": [
+    "Ange-Yoan Bonny",
+    "Piotr Zielinski (incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Carnesecchi ; Bellanova, Scalvini, Kolasinac, Zappacosta ; Kessie, Ederson ; Elmas, De Ketelaere, Rowe ; Krstovic",
+   "away": "Martinez ; Pavard, Bisseck, Bastoni ; Spence, Barella, Calhanoglu, Sucic, Dimarco ; Pio Esposito, Thuram"
+  },
+  "mood": "Choc de la 12e journée de Serie A face aux champions d'Italie ; Stankovic récupéré côté Inter.",
+  "sources": [
+   {
+    "label": "TuttoAtalanta",
+    "url": "https://www.tuttoatalanta.com/primo-piano/zingonia-kristensen-recuperato-atalanta-prepara-inter-142259"
+   },
+   {
+    "label": "Sky Sport",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/21/atalanta-inter-probabili-formazioni-12-giornata"
+   },
+   {
+    "label": "Sky Sport (Inter)",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/20/inter-zielinski-stankovic-news"
+   }
+  ]
+ },
+ "OM - Le Mans": {
+  "date": "2026-11-22",
+  "adj": 0,
+  "short": "OM quasiment au complet (sans Emerson ni Cornelius) ; Le Mans sans Bourabaa ni Sidibé",
+  "absents": {
+   "home": [
+    "Emerson Palmieri (opéré du genou)",
+    "Derek Cornelius (hanche, plusieurs mois)"
+   ],
+   "away": [
+    "Adil Bourabaa (cheville)",
+    "Djibril Sidibé (pied)"
+   ]
+  },
+  "lineups": {
+   "home": "De Lange ; Weah, Egan-Riley, Aguerd, U. Garcia ; Hojbjerg, Nnadi ; Harit, Abdelli, Paixão ; Gouiri"
+  },
+  "mood": "Genesio retrouve tous ses internationaux (Aguerd, Hojbjerg, Abdelli, Gouiri, Nnadi, Kondogbia) avant la réception du promu au Vélodrome.",
+  "sources": [
+   {
+    "label": "Football Club de Marseille",
+    "url": "https://www.footballclubdemarseille.fr/om-actualites/om-a-deux-jours-du-mans-la-seance-revele-un-groupe-presque-au-complet.html"
+   },
+   {
+    "label": "Ligue 1 (compos probables J11)",
+    "url": "https://ligue1.com/fr/articles/l1_article_5704-les-compositions-probables-ligue-1-2026-2027"
+   },
+   {
+    "label": "Ouest-France",
+    "url": "https://www.ouest-france.fr/sport/football/le-mans-fc/om-le-mans-fc-decouvrez-les-compositions-probables-de-ce-match-de-la-11e-journee-de-ligue-1-7aa668ee-e5d1-11f1-afa7-9a0bb82a33d1"
+   }
+  ]
+ },
+ "Getafe - Atlético Madrid": {
+  "date": "2026-11-22",
+  "adj": 0.5,
+  "short": "Atlético sans Cuti Romero ni Lookman, Pubill incertain ; Getafe sans Gudelj (suspendu), Uche et Juanmi",
+  "absents": {
+   "home": [
+    "Nemanja Gudelj (suspendu)",
+    "Christantus Uche",
+    "Juanmi"
+   ],
+   "away": [
+    "Cristian Romero",
+    "Ademola Lookman (entorse du genou, ~1 mois)",
+    "Marc Pubill (cheville, incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Soria ; Carvajal, Boselli, Zaïd Romero, Djené, Mojica ; Andrés García, Terrats, Mangala ; Ünal, Satriano",
+   "away": "Oblak ; Llorente, Le Normand, Hancko, Grimaldo ; Barrios, Koke, Cardoso ; Giuliano Simeone, Julián Álvarez, Baena"
+  },
+  "mood": "Atlético en manque d'efficacité offensive (aucun attaquant au-delà de 3 buts en 16 matchs) et privé de ses deux centraux droitiers ; Bordalás récupère Zaïd Romero et exclut toute rotation.",
+  "sources": [
+   {
+    "label": "AS",
+    "url": "https://as.com/futbol/primera/posible-once-del-atletico-ante-el-getafe-en-liga-f202611-n/"
+   },
+   {
+    "label": "Mundo Deportivo",
+    "url": "https://www.mundodeportivo.com/guias-de-juego/pronosticos/getafe-vs-atletico-de-madrid-pronostico-cuotas-y-alineaciones-posibles-laliga-22-11-26/"
+   },
+   {
+    "label": "Comuniate",
+    "url": "https://www.comuniate.com/noticias/39240/bordalas-recupera-a-zaid-romero-confirma-las-bajas-de-gudelj-y-uche-y-descarta-rotaciones-ante-el-atletico"
+   }
+  ]
+ },
+ "Juventus - Venezia": {
+  "date": "2026-11-22",
+  "adj": -1,
+  "short": "Juventus privée de six joueurs dont Yildiz et Locatelli ; Venezia sans Basic, Mazzocchi, Sverko et Franjic",
+  "absents": {
+   "home": [
+    "Kenan Yildiz",
+    "Manuel Locatelli",
+    "Pierre Kalulu",
+    "Khéphren Thuram",
+    "Grabara",
+    "Nico González"
+   ],
+   "away": [
+    "Basic (ischio-jambiers)",
+    "Mazzocchi (ischio-jambiers)",
+    "Sverko",
+    "Franjic",
+    "Correia (non convoqué)"
+   ]
+  },
+  "lineups": {
+   "home": "Vicario ; Gatti, Bremer, Lucumí ; McKennie, Douglas Luiz, Koopmeiners, Cabal ; Kolo Muani, Alajbegovic ; Woltemade",
+   "away": "Stankovic ; Halhal, Moreno, Juan Jesus ; Hainaut, Pérez, Sohm, Busio, Haps ; Adams, Yeboah"
+  },
+  "sources": [
+   {
+    "label": "Sky Sport",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/21/juventus-venezia-probabili-formazioni-12-giornata"
+   },
+   {
+    "label": "Gazzetta dello Sport",
+    "url": "https://www.gazzetta.it/Calcio/prob_form/juventus-venezia/2638235"
+   },
+   {
+    "label": "TuttoMercatoWeb",
+    "url": "https://www.tuttomercatoweb.com/serie-a/juventus-venezia-convocati-nicola-out-basic-mazzocchi-correia-motivo-2296045"
+   }
+  ]
+ },
+ "Milan AC - Frosinone": {
+  "date": "2026-11-22",
+  "adj": -0.5,
+  "short": "Milan sans Gabbia, Tomori, Saelemaekers, Loftus-Cheek ni Chukwueze ; Frosinone sans Bracaglia (suspendu)",
+  "absents": {
+   "home": [
+    "Gabbia",
+    "Tomori",
+    "Saelemaekers",
+    "Loftus-Cheek",
+    "Chukwueze",
+    "Pavlović (convoqué, pas titulaire)"
+   ],
+   "away": [
+    "Bracaglia (suspendu)",
+    "Grillitsch",
+    "Raimondo"
+   ]
+  },
+  "lineups": {
+   "home": "Maignan ; Gila, De Winter, Diawara, Bartesaghi ; Moreira, Musah, Modrić, Pulisic ; Rabiot ; Ramos",
+   "away": "Palmisani ; Oyono, Calvani, Monterisi, Tchato ; Masini, Calò ; Ghedjemis, Schmid, Kvernadze ; Bîrligea"
+  },
+  "mood": "Amorim en conférence de veille : « Nous sommes prêts, nous pouvons faire plus ».",
+  "sources": [
+   {
+    "label": "AC Milan (conférence)",
+    "url": "https://www.acmilan.com/it/news/articoli/conferenza-stampa/2026-11-21/amorim-siamo-pronti-possiamo-fare-di-piu"
+   },
+   {
+    "label": "Sky Sport",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/21/milan-frosinone-probabili-formazioni-12-giornata"
+   },
+   {
+    "label": "Adnkronos",
+    "url": "https://www.adnkronos.com/sport/milan-frosinone-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_5FAE8BABLa1obRySUayFMk"
+   }
+  ]
+ },
+ "Lorient - Rennes": {
+  "date": "2026-11-22",
+  "adj": 0,
+  "short": "Derby breton : Lorient sans Touré ni Katseris ; Rennes récupère Lepaul mais perd Frankowski",
+  "absents": {
+   "home": [
+    "Touré",
+    "Katseris"
+   ],
+   "away": [
+    "Przemysław Frankowski (forfait)"
+   ]
+  },
+  "lineups": {
+   "home": "Mvogo ; Adjei, Talbi, Obaretin ; Sylla, Avom, Cadiou, Kouassi ; Bernardeau, Makengo, Tosin",
+   "away": "Samba ; Aït Boudlal, Cresswell, Oliveira ; Reynolds, Camara, Rongier, Cissé, Nagida ; Dia, Lepaul"
+  },
+  "mood": "Derby breton de la 11e journée ; retour d'Estéban Lepaul côté rennais.",
+  "sources": [
+   {
+    "label": "Ouest-France",
+    "url": "https://www.ouest-france.fr/sport/football/stade-rennais/fc-lorient-stade-rennais-les-compositions-probables-et-les-absents-pour-ce-derby-de-ligue-1-cf39b8e4-e5a8-11f1-bd4e-6f30b8f49e21"
+   },
+   {
+    "label": "Le Télégramme",
+    "url": "https://www.letelegramme.fr/sports/football/stade-rennais/lorient-rennes-esteban-lepaul-de-retour-pour-le-derby-la-composition-probable-du-stade-rennais-7162889.php"
    }
   ]
  }
