@@ -1,279 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Sao Paulo SP - Fluminense": {
-  "date": "2026-11-20",
-  "adj": -0.5,
-  "short": "São Paulo sans Bobadilla et 3 suspendus, Fluminense sans Canobbio ni Savarino",
-  "absents": {
-   "home": [
-    "Bobadilla (fatigue après la trêve internationale)",
-    "Newton (suspendu)",
-    "Luciano (suspendu)",
-    "Ferreirinha (suspendu)"
-   ],
-   "away": [
-    "Canobbio (retour de sélection)",
-    "Savarino (retour de sélection)",
-    "Martinelli probablement remplaçant"
-   ]
-  },
-  "lineups": {
-   "home": "Rafael ; Tolói, Arboleda, Osorio ; Pedro Lima, Djhordney, Pablo Maia, Iago ; Artur, Lucas, Calleri",
-   "away": "Fábio ; Guga, Ignácio, Thiago Silva, Renê ; Hércules, Nonato, Lucho Acosta ; Serna, Soteldo, Hulk"
-  },
-  "mood": "35e journée du Brasileirão. São Paulo diminué au milieu et devant ; Fluminense privé de deux ailiers mais a gagné 3-0 à Vitória lors de son dernier match.",
-  "sources": [
-   {
-    "label": "ge.globo (São Paulo)",
-    "url": "https://ge.globo.com/futebol/times/sao-paulo/noticia/2026/11/18/escalacao-do-sao-paulo-dorival-nao-tera-bobadilla-contra-o-fluminense.ghtml"
-   },
-   {
-    "label": "ge.globo (Fluminense)",
-    "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/escalacao-do-fluminense-marcao-tem-desfalques-no-ataque-e-martinelli-deve-comecar-no-banco.ghtml"
-   },
-   {
-    "label": "ge.globo (Savarino)",
-    "url": "https://ge.globo.com/futebol/times/fluminense/noticia/2026/11/18/titular-nos-dois-amistosos-da-venezuela-savarino-sera-desfalque-do-fluminense-contra-o-sao-paulo.ghtml"
-   }
-  ]
- },
- "Bayern Munich - Cologne": {
-  "date": "2026-11-20",
-  "adj": 1,
-  "short": "Bayern sans Davies, Díaz, Gnabry ; Musiala de retour dans le groupe, Cologne privé de Skhiri et Dallinga",
-  "absents": {
-   "home": [
-    "Davies (ischios)",
-    "Luis Díaz (musculaire)",
-    "Gnabry (ischios)",
-    "Neuer",
-    "Saibari",
-    "Musiala (retour, plutôt remplaçant)"
-   ],
-   "away": [
-    "Hübers",
-    "van den Berg",
-    "Skhiri",
-    "Rondić",
-    "Dallinga"
-   ]
-  },
-  "lineups": {
-   "home": "Urbig ; Laimer, Upamecano, Tah, Stanišić ; Kimmich, Pavlović ; Karl, Olise, Brown ; Kane",
-   "away": "Schwäbe ; Schmied, Simpson-Pusey, Lochoshvili ; Sebulonsen, Krauß, Okon-Engstler, Sosa ; Maina, Bülter, S. El Mala"
-  },
-  "mood": "Retour de la trêve, Kompany de retour sur le banc, Lennart Karl en forme au poste de 10.",
-  "sources": [
-   {
-    "label": "bundesliga.com (DE)",
-    "url": "https://www.bundesliga.com/de/bundesliga/news/voraussichtliche-aufstellungen-10-spieltag-ausfalle-verletzungen-sperren-40039"
-   },
-   {
-    "label": "bundesliga.com (EN)",
-    "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
-   }
-  ]
- },
- "Troyes - Le Havre": {
-  "date": "2026-11-20",
-  "adj": 1.5,
-  "short": "Duel de bas de tableau : Le Havre dernier, 6 défaites de suite et infirmerie pleine",
-  "absents": {
-   "home": [
-    "Koné (blessé)",
-    "Diaz (suspendu)",
-    "Ouzenadji (incertain, cheville)"
-   ],
-   "away": [
-    "Mpasi (Achille)",
-    "Zagadou (croisés)",
-    "Mambimbi (Achille)",
-    "Pembélé (adducteurs)",
-    "R. Ndiaye et Nakamura (incertains)"
-   ]
-  },
-  "lineups": {
-   "home": "Konaté ; Maronnier, Monfray, Gozzi, Boura ; Diop, Mille, Karim ; Ifnaoui, Ripart, Nkada",
-   "away": "Bodart ; Ouziad, Sasso, Touba, Koffi ; Mwanga, Ebonog, Richardson ; Fofana, Maja, Samatta"
-  },
-  "mood": "Le Havre dernier avec 2 pts, aucune victoire, nouveau coach. Troyes 17e, mieux depuis la victoire contre Le Mans et le nul face à Toulouse, mais attaque en panne.",
-  "sources": [
-   {
-    "label": "Sport.fr",
-    "url": "https://www.sport.fr/football/ligue-1-compos-probables-pour-troyes-le-havre-vendredi-a-20h45-sans-mpasi-ni-zagadou-1502914.shtm"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/troyes/preview/troyes-vs-le-havre-prediction-team-news-lineups_609296.html"
-   }
-  ]
- },
- "Athletic Bilbao - Espanyol": {
-  "date": "2026-11-20",
-  "adj": -0.5,
-  "short": "Athletic sans Vivian, Guruzeta ni Sannadi ; Espanyol sans Kike García",
-  "absents": {
-   "home": [
-    "Dani Vivian (soléaire)",
-    "Guruzeta",
-    "Sannadi",
-    "Paredes (incertain)"
-   ],
-   "away": [
-    "Kike García",
-    "Álex Calatrava"
-   ]
-  },
-  "lineups": {
-   "home": "Unai Simón ; Rincón, Yeray, Laporte, Yuri ; Ruiz de Galarreta, Gerenabarrena ; Berenguer, Sancet, Nico Williams ; Iñaki Williams",
-   "away": "Fortuño ; Álex Santiago, El Hilali, Cabrera, Hartman, Dolan ; Pol Lozano, Edu Expósito, Javi Hernández ; Pere Milla, Roberto Fernández"
-  },
-  "mood": "Retour de trêve à San Mamés, Sancet associé à Iñaki en attaque faute d'avant-centre. Retour spécial d'Eder Sarabia, Bilbaíno, sur le banc de l'Espanyol.",
-  "sources": [
-   {
-    "label": "AS",
-    "url": "https://as.com/futbol/primera/alineacion-posible-del-athletic-ante-el-espanyol-en-laliga-ea-sport-f202611-n/"
-   },
-   {
-    "label": "Radio Nervión",
-    "url": "https://www.radionervion.com/2026/11/19/athletic-club-rcd-espanyol-alineaciones-probables-de-la-jornada-13-de-laliga-ea-sports/"
-   }
-  ]
- },
- "Al-Ahli - Al-Nassr": {
-  "date": "2026-11-20",
-  "adj": -1,
-  "short": "Ronaldo de retour, Al-Ahli sans Spertsyan, Abu Al-Shamat ni son gardien Al-Sanbi (suspendu)",
-  "absents": {
-   "home": [
-    "Spertsyan (adducteurs)",
-    "Abu Al-Shamat (épaule)",
-    "Al-Sanbi (suspendu, Mendy titulaire)"
-   ],
-   "away": [
-    "Sultan Al-Ghannam (croisés)",
-    "Coman et Simakan (de retour à l'entraînement)"
-   ]
-  },
-  "lineups": {
-   "home": "Mendy ; Baattia, Demiral, Ibañez, Balobaid ; Edoa, Al-Johani ; Trincão, Bondarenko, Gonçalves ; Toney",
-   "away": "Bento ; Boushal, Simakan, Martínez, Aman ; Yahya, Samú, Ângelo, Mané ; Ronaldo, Félix"
-  },
-  "mood": "Match en retard de la 9e journée. Al-Ahli 6e, très prolifique mais fragile derrière ; Al-Nassr à la poursuite du leader, Ronaldo reposé.",
-  "sources": [
-   {
-    "label": "101 Great Goals",
-    "url": "https://www.101greatgoals.com/match-previews/al-ahli-v-al-nassr-preview-expected-line-ups-where-to-watch-as-ronaldo-returns-to-action/"
-   },
-   {
-    "label": "The Saudi Times",
-    "url": "https://thesauditimes.net/en/al-ahli-to-face-al-nassr-without-spertsyan-and-abu-al-shamat/"
-   },
-   {
-    "label": "Al Weeam",
-    "url": "https://www.alweeam.com.sa/1301548/2026/al-ahli-al-nassr-absences-injuries-november-20-2026/"
-   }
-  ]
- },
- "Molde - Bodø/Glimt": {
-  "date": "2026-11-20",
-  "adj": 0,
-  "short": "Bodø/Glimt à égalité de points avec le leader Viking, Molde privé de 4 joueurs",
-  "absents": {
-   "home": [
-    "Eirik Hestad",
-    "Seydina Diop",
-    "Vebjørn Hoff",
-    "Mads Kikkenborg"
-   ],
-   "away": [
-    "Håkon Evjen",
-    "August Mikkelsen",
-    "Bjørkan et Auklend (incertains, attendus)"
-   ]
-  },
-  "mood": "Avant-dernière journée : Bodø/Glimt 2e à égalité (62 pts) avec Viking dans la course au titre ; Molde 5e (44 pts). Terrain synthétique, −2 °C annoncés.",
-  "sources": [
-   {
-    "label": "Aker Stadion",
-    "url": "https://moldestadion.no/nyheter/fire-molde-spillere-paa-skadelisten-foer-glimt-toppoppgjoere"
-   },
-   {
-    "label": "TV 2",
-    "url": "https://www.tv2.no/livesport/fotball/kamper/molde-bodoglimt/5d633933-fb71-5b1c-a9aa-d2c27ec7a802/oversikt"
-   },
-   {
-    "label": "Avisa Nordland",
-    "url": "https://www.an.no/sto-over-glimt-treningen-har-vart-litt-syk/s/80-4-65042"
-   }
-  ]
- },
- "Arminia Bielefeld - Magdebourg": {
-  "date": "2026-11-20",
-  "adj": 0.5,
-  "short": "Magdebourg sans García MacNulty (suspendu), plusieurs changements attendus face à un Bielefeld solide à domicile",
-  "absents": {
-   "home": [
-    "Joel Felix",
-    "David Min",
-    "Vincent Ocansey",
-    "Koudossou (incertain)"
-   ],
-   "away": [
-    "García MacNulty (suspendu)",
-    "Torben Müsel",
-    "Lubambo Musonda",
-    "Kwarteng (incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Kersken ; Koudossou, Bauer, Großer, Sicker ; Russo, Jensen, Wörl ; Momuluh, Rochelt, Grodowski",
-   "away": "Reimann ; Nadjombe, Müller, Heber, Nollenberger ; Hyryläinen, Chávez, Mergner ; Iyoha, Żukowski, Atik"
-  },
-  "mood": "Bielefeld fort à domicile, Magdebourg contraint de remanier son onze.",
-  "sources": [
-   {
-    "label": "liga-zwei.de",
-    "url": "https://www.liga-zwei.de/vorschau-arminia-bielefeld-vs-1-fc-magdeburg-2/"
-   },
-   {
-    "label": "1. FC Magdeburg",
-    "url": "https://1.fc-magdeburg.de/news/detail/pk-vor-bielefeld-2"
-   },
-   {
-    "label": "Tag24",
-    "url": "https://www.tag24.de/sport/fussball/verein/fc-magdeburg/fcm-gegen-heimstarke-bielefelder-es-drohen-mehrere-startelf-aenderungen-3550384"
-   }
-  ]
- },
- "FC Metz - Boulogne": {
-  "date": "2026-11-20",
-  "adj": 0,
-  "short": "Metz sans Nampalys Mendy, Fall en pointe ; retour d'Abuashvili dans le groupe",
-  "absents": {
-   "home": [
-    "Nampalys Mendy",
-    "Duarte",
-    "Mangondo"
-   ],
-   "away": []
-  },
-  "lineups": {
-   "home": "Fischer ; Sarr, Mohamed, Mboula, Castro Devenish, Miguel ; Colin, Deminguet, Savanier ; Fall, Pandore",
-   "away": "Noukeu ; Thiam, Kerriou, Pinot ; Fatar, Duflos, Martin, Binet, Boyer ; Epailly, Hbouch"
-  },
-  "mood": "Giorgi Abuashvili de retour dans un groupe élargi à Metz.",
-  "sources": [
-   {
-    "label": "Sport.fr",
-    "url": "https://www.sport.fr/football/ligue-2-compos-probables-pour-metz-boulogne-vendredi-a-20h-fall-en-pointe-et-sans-nampalys-mendy-1502908.shtm"
-   },
-   {
-    "label": "Le Républicain Lorrain",
-    "url": "https://www.republicain-lorrain.fr/sport/2026/11/19/fc-metz-boulogne-retour-de-giorgi-abuashvili-dans-un-groupe-elargi"
-   }
-  ]
- },
  "Nice - Paris SG": {
   "date": "2026-11-21",
   "adj": -1,
@@ -919,6 +645,224 @@
    {
     "label": "Le Télégramme",
     "url": "https://www.letelegramme.fr/sports/football/stade-rennais/lorient-rennes-esteban-lepaul-de-retour-pour-le-derby-la-composition-probable-du-stade-rennais-7162889.php"
+   }
+  ]
+ },
+ "Monza - Fiorentina": {
+  "date": "2026-11-23",
+  "adj": 0,
+  "short": "12e journée : Monza sans Maye ni Folorunsho, Fiorentina sans Pongracic ni Parisi ; Atta et Njie incertains/remplaçants",
+  "absents": {
+   "home": [
+    "Maye",
+    "Folorunsho",
+    "Ngonge (indisponible selon Sky Sport)"
+   ],
+   "away": [
+    "Pongracic",
+    "Parisi",
+    "Atta (incertain, plutôt remplaçant)",
+    "Njie (incertain, coup reçu en sélection)"
+   ]
+  },
+  "lineups": {
+   "home": "Törnqvist ; Kouadio, Goglichidze, Lucchesi ; Birindelli, Akinsanmiro, Colombo (ou Foe Ondoa), Mangas ; Mota, Robinson ; Varela (3-4-2-1, Juric)",
+   "away": "De Gea ; Jiménez, Dragusin, Ranieri, João Mário ; Oulai, Ndour (ou Brescianini/Fagioli) ; Mastantuono, Gonçalves, Gnonto ; Pellegrino (4-2-3-1, Vanoli)"
+  },
+  "mood": "Posticipo de la 12e journée de Serie A après la trêve. La Fiorentina reste sur 5 points en 3 matchs (bonnes prestations contre Sassuolo et la Juventus) ; Monza, mal placé dans la lutte pour le maintien, a un besoin pressant de victoire. Varela, meilleur buteur de Monza, est la référence offensive.",
+  "sources": [
+   {
+    "label": "Viola News (probabili formazioni)",
+    "url": "https://www.violanews.com/formazioni/monza-fiorentina-probabili-formazioni-si-ranieri-occasione-per-gnonto/"
+   },
+   {
+    "label": "La Nazione",
+    "url": "https://www.lanazione.it/sport/monza-fiorentina-le-probabili-formazioni-e-dove-vederla-in-tv-ca650a6f"
+   },
+   {
+    "label": "Sky Sport (formazioni)",
+    "url": "https://sport.sky.it/calcio/serie-a/partite/2026/giornata-12/monza-fiorentina/formazioni"
+   },
+   {
+    "label": "TuttoFantacalcio",
+    "url": "https://www.tuttofantacalcio.it/probabili-formazioni/serie-a-probabili-formazioni-monza-fiorentina-fantacalcio-35459"
+   }
+  ]
+ },
+ "FC Sochaux - Dunkerque": {
+  "date": "2026-11-23",
+  "adj": -1.5,
+  "short": "Sochaux (17e) sur 4 défaites de rang et très diminué, Dunkerque (11e) vient de battre Guingamp 3-0",
+  "absents": {
+   "home": [
+    "Nombreux absents non détaillés par le club (blessures, raisons personnelles)",
+    "Lobry (retour progressif)"
+   ],
+   "away": []
+  },
+  "lineups": {
+   "home": "Non communiquée par une source fiable",
+   "away": "Non communiquée par une source fiable"
+  },
+  "mood": "13e journée de Ligue 2. Sochaux, promu, n'a plus gagné en championnat depuis le 12 septembre (4 défaites consécutives : Metz, Annecy, Reims, Nancy) et s'est qualifié péniblement aux tirs au but à Boulay en Coupe de France. Hognon reconnaît « pas mal d'absents » et la pression ; affluence attendue la plus basse depuis le retour en L2 (~12 000) et moral des supporters en berne. Dunkerque (Webo) a battu Guingamp 3-0 lors de sa dernière sortie en L2 mais a été éliminé 0-3 par QRM en Coupe ; équipe offensive (Robail, Ayari, Keita) mais irrégulière. Historique : Sochaux 5 clean sheets en 6 matchs de L2 contre Dunkerque.",
+  "sources": [
+   {
+    "label": "USL Dunkerque (avant-match en 5 points)",
+    "url": "https://www.usldunkerque.com/fcsmusld-lavant-match-en-5-points/"
+   },
+   {
+    "label": "FC Sochaux (point presse)",
+    "url": "https://www.fcsochaux.fr/actualites/avant-match/fcsm-usld-le-point-presse"
+   },
+   {
+    "label": "AntiChambre",
+    "url": "https://antichambre.eu/fc-sochaux-usl-dunkerque-vincent-hognon-veut-casser-cette-serie-de-defaites/"
+   },
+   {
+    "label": "L'Est Républicain",
+    "url": "https://www.estrepublicain.fr/sport/2026/11/23/le-fc-sochaux-reclame-du-soutien-avant-de-defier-dunkerque-pour-un-match-a-tres-fort-enjeu"
+   }
+  ]
+ },
+ "FC Nantes - Grenoble": {
+  "date": "2026-11-23",
+  "adj": 1,
+  "short": "Nantes (14e) sur deux victoires mais privé de 6 joueurs ; Grenoble (lanterne rouge) sans Vidal, Hoogewerf, Zé Leité, Xantippe, Ngatta, Lallias",
+  "absents": {
+   "home": [
+    "Mirbach (ménisque)",
+    "Tati (ménisque)",
+    "Sow (ménisque)",
+    "Robinet (ischios)",
+    "Fodé Doucouré (suspendu)",
+    "Merrifield (France U17)",
+    "Perrin (incertain)",
+    "Cafaro (incertain)",
+    "Corredor (incertain)"
+   ],
+   "away": [
+    "Clément Vidal (mollet)",
+    "Hoogewerf (malade)",
+    "Zé Leité (trop juste)",
+    "Xantippe (cheville)",
+    "Ngatta",
+    "Lallias (dos)"
+   ]
+  },
+  "lineups": {
+   "home": "Carlgren ; Guilbert, Perrin, Amian ; Centonze, Lepenant, Pierret, Hachem ou Cafaro ; Leroux ; Corredor, Joujou (compo probable But!)",
+   "away": "Non fiable (la compo probable de But! inclut Vidal, forfait). Groupe : Olliero, Allain ; Limouri, Maçon, Pelon, Kouassi, Medroub, Niakaté, Zahui ; Lélé Diba, Bernadou, Mouazan, Magnin, Martinez-Jullien, Corboz ; Bonnet, Bechikh, Djitté, Cerri, Akpa Akpro"
+  },
+  "mood": "13e journée de Ligue 2, décalée du samedi au lundi en raison de mouvements sociaux à Nantes. Duel pour le maintien : Nantes, relégué et décevant (14e, 12 pts), a repris confiance en gagnant à Pau (0-2) puis 9-1 en Coupe de France ; Grenoble (11 pts), désormais dernier après la victoire de Laval, a battu Reims 3-2 puis Chambéry en Coupe après 4 défaites de suite, mais a la pire différence de buts (-9). Retour de Zahui côté grenoblois.",
+  "sources": [
+   {
+    "label": "But! FC Nantes (pronostic et compos)",
+    "url": "https://www.butfootballclub.fr/1715291-pronostic-fc-nantes-grenoble-23-11-prono-cotes-et-compos/"
+   },
+   {
+    "label": "But! FC Nantes (absents Grenoble)",
+    "url": "https://www.butfootballclub.fr/1715716-fc-nantes-pluie-de-bonnes-nouvelles-pour-poirier-avant-grenoble/"
+   },
+   {
+    "label": "Tribune Nantaise (point médical)",
+    "url": "https://www.tribunenantaise.fr/actus-fcnantes/fc-nantes-grenoble-gregory-poirier-point-medical-j13/"
+   },
+   {
+    "label": "Le Dauphiné (GF38)",
+    "url": "https://www.ledauphine.com/sport/2026/11/20/gf38-absences-majeures-long-voyage-et-gta-vi-les-infos-avant-le-match-a-nantes"
+   },
+   {
+    "label": "Grenoble Foot Info (groupe)",
+    "url": "https://www.grenoblefoot.info/gf38-le-groupe-face-au-fc-nantes/"
+   },
+   {
+    "label": "FC Nantes (match décalé)",
+    "url": "https://www.fcnantes.com/articles/article2809.php?num=49929"
+   }
+  ]
+ },
+ "Brentford - Everton": {
+  "date": "2026-11-23",
+  "adj": -2,
+  "short": "Brentford sans Igor Thiago (suspendu), Hickey et Collins ; Everton au complet et sur 3 victoires",
+  "absents": {
+   "home": [
+    "Igor Thiago (suspendu, 1er des 3 matchs)",
+    "Hickey (ischios)",
+    "Collins (genou)",
+    "Rico Henry (hanche/quadriceps)",
+    "Kaye Furo (métatarse)",
+    "Dasilva (retour en réserve)",
+    "Milambo (retour en réserve)",
+    "Fábio Carvalho (incertain, possible retour)"
+   ],
+   "away": []
+  },
+  "lineups": {
+   "home": "Kelleher ; Kayode, Van den Berg, Ajer, Diouf ; Yarmoliuk, Janelt, Jensen ; Schade, Wilson, Lewis-Potter (prédiction Sports Mole)",
+   "away": "Pickford ; Röhl (ou O'Brien), Tarkowski, Branthwaite, Mykolenko ; Garner, Armstrong ; Dibling, Dewsbury-Hall, George ; Barry (4-2-3-1)"
+  },
+  "mood": "Premier League, retour de trêve. Brentford a perdu 2-0 à Brighton (carton rouge de Thiago, son buteur vedette) et compte 2 points de moins qu'Everton. Everton de Moyes (593e match record sur le banc) a gagné ses 3 derniers matchs toutes compétitions, vise le top 6 ; Thierno Barry en forme (4 buts en 3 matchs). Grealish de nouveau disponible après une sanction disciplinaire. Brentford n'a plus battu Everton à domicile depuis 2021.",
+  "sources": [
+   {
+    "label": "Brentford FC (team news)",
+    "url": "https://www.brentfordfc.com/en/news/first-team-brentford-v-everton-team-news-aaron-hickey-nathan-collins-injury-update"
+   },
+   {
+    "label": "Brentford FC (match preview)",
+    "url": "https://www.brentfordfc.com/en/news/match-previews-brentford-v-everton-premier-league-23-11-2026"
+   },
+   {
+    "label": "Everton FC (team news)",
+    "url": "https://www.evertonfc.com/news/2026/november/20/moyes-reveals-everton-team-news-for-brentford/"
+   },
+   {
+    "label": "ESPN (Grealish)",
+    "url": "https://www.espn.com/soccer/story/_/id/50541708/jack-grealish-everton-brentford"
+   },
+   {
+    "label": "Sports Mole (team news)",
+    "url": "https://www.sportsmole.co.uk/football/brentford/injury-news/team-news/brentford-vs-everton-injury-suspension-list-predicted-xis_609565.html"
+   }
+  ]
+ },
+ "Levante - Elche": {
+  "date": "2026-11-23",
+  "adj": 0.5,
+  "short": "Duel de relégables : Levante (18e) avec tout son effectif, Elche (19e) sans Aguado ni Yago Santiago ; Lemar de retour",
+  "absents": {
+   "home": [
+    "Aucun absent (certains joueurs pas à 100 % selon Luís Castro)"
+   ],
+   "away": [
+    "Marc Aguado (cheville)",
+    "Yago Santiago",
+    "Adam Boayar (selon Mundo Deportivo/EFE)",
+    "Ali Houary (selon AS)",
+    "Lemar (de retour, plutôt remplaçant)"
+   ]
+  },
+  "lineups": {
+   "home": "Ryan ; Toljan (ou Nacho Pérez), Dela (ou Ndukwe), Mandi, Manu Sánchez ; Olasagasti, Requena ; Brugué, Iván Romero, Thiago Fernández ; Etta Eyong ou Ratkov (4-2-3-1)",
+   "away": "Dituro ; Rubén Sánchez (ou Sangaré), Redondo, Chust, Revivo ; Morcillo, Gonzalo Villar, Neto ; Cepeda, Fer Niño, Valera (4-3-3, Anselmi)"
+  },
+  "mood": "Clôture de la 13e journée de LaLiga au Ciutat de València, derby régional décisif pour sortir de la zone de relégation (Levante 11 pts, Elche 10 pts). Levante dans un moment délicat : deux défaites et un nul, et une qualification laborieuse en Coupe contre Tarancón (Tercera RFEF) en prolongation ; Manu Sánchez récupéré. Elche reste sur deux défaites à domicile (Valencia, Betis) mais compte sur sa bonne dynamique à l'extérieur ; Villar et Sangaré de retour, Fer Niño meilleur buteur.",
+  "sources": [
+   {
+    "label": "Mundo Deportivo (EFE)",
+    "url": "https://www.mundodeportivo.com/futbol/laliga/20261123/1004254083/levante-elche-juegan-salir-descenso.html"
+   },
+   {
+    "label": "AS (Levante)",
+    "url": "https://as.com/futbol/primera/alineacion-posible-del-levante-ante-el-elche-en-laliga-ea-sports-f202611-n/"
+   },
+   {
+    "label": "AS (Elche)",
+    "url": "https://as.com/futbol/primera/alineacion-posible-del-elche-ante-el-levante-en-laliga-ea-sports-f202611-n/"
+   },
+   {
+    "label": "Alineaciones Hoy",
+    "url": "https://alineacioneshoy.es/laliga/levante-elche-23-11-2026/"
    }
   ]
  }
