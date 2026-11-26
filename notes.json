@@ -1,223 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Monza - Fiorentina": {
-  "date": "2026-11-23",
-  "adj": 0,
-  "short": "12e journée : Monza sans Maye ni Folorunsho, Fiorentina sans Pongracic ni Parisi ; Atta et Njie incertains/remplaçants",
-  "absents": {
-   "home": [
-    "Maye",
-    "Folorunsho",
-    "Ngonge (indisponible selon Sky Sport)"
-   ],
-   "away": [
-    "Pongracic",
-    "Parisi",
-    "Atta (incertain, plutôt remplaçant)",
-    "Njie (incertain, coup reçu en sélection)"
-   ]
-  },
-  "lineups": {
-   "home": "Törnqvist ; Kouadio, Goglichidze, Lucchesi ; Birindelli, Akinsanmiro, Colombo (ou Foe Ondoa), Mangas ; Mota, Robinson ; Varela (3-4-2-1, Juric)",
-   "away": "De Gea ; Jiménez, Dragusin, Ranieri, João Mário ; Oulai, Ndour (ou Brescianini/Fagioli) ; Mastantuono, Gonçalves, Gnonto ; Pellegrino (4-2-3-1, Vanoli)"
-  },
-  "mood": "Posticipo de la 12e journée de Serie A après la trêve. La Fiorentina reste sur 5 points en 3 matchs (bonnes prestations contre Sassuolo et la Juventus) ; Monza, mal placé dans la lutte pour le maintien, a un besoin pressant de victoire. Varela, meilleur buteur de Monza, est la référence offensive.",
-  "sources": [
-   {
-    "label": "Viola News (probabili formazioni)",
-    "url": "https://www.violanews.com/formazioni/monza-fiorentina-probabili-formazioni-si-ranieri-occasione-per-gnonto/"
-   },
-   {
-    "label": "La Nazione",
-    "url": "https://www.lanazione.it/sport/monza-fiorentina-le-probabili-formazioni-e-dove-vederla-in-tv-ca650a6f"
-   },
-   {
-    "label": "Sky Sport (formazioni)",
-    "url": "https://sport.sky.it/calcio/serie-a/partite/2026/giornata-12/monza-fiorentina/formazioni"
-   },
-   {
-    "label": "TuttoFantacalcio",
-    "url": "https://www.tuttofantacalcio.it/probabili-formazioni/serie-a-probabili-formazioni-monza-fiorentina-fantacalcio-35459"
-   }
-  ]
- },
- "FC Sochaux - Dunkerque": {
-  "date": "2026-11-23",
-  "adj": -1.5,
-  "short": "Sochaux (17e) sur 4 défaites de rang et très diminué, Dunkerque (11e) vient de battre Guingamp 3-0",
-  "absents": {
-   "home": [
-    "Nombreux absents non détaillés par le club (blessures, raisons personnelles)",
-    "Lobry (retour progressif)"
-   ],
-   "away": []
-  },
-  "lineups": {
-   "home": "Non communiquée par une source fiable",
-   "away": "Non communiquée par une source fiable"
-  },
-  "mood": "13e journée de Ligue 2. Sochaux, promu, n'a plus gagné en championnat depuis le 12 septembre (4 défaites consécutives : Metz, Annecy, Reims, Nancy) et s'est qualifié péniblement aux tirs au but à Boulay en Coupe de France. Hognon reconnaît « pas mal d'absents » et la pression ; affluence attendue la plus basse depuis le retour en L2 (~12 000) et moral des supporters en berne. Dunkerque (Webo) a battu Guingamp 3-0 lors de sa dernière sortie en L2 mais a été éliminé 0-3 par QRM en Coupe ; équipe offensive (Robail, Ayari, Keita) mais irrégulière. Historique : Sochaux 5 clean sheets en 6 matchs de L2 contre Dunkerque.",
-  "sources": [
-   {
-    "label": "USL Dunkerque (avant-match en 5 points)",
-    "url": "https://www.usldunkerque.com/fcsmusld-lavant-match-en-5-points/"
-   },
-   {
-    "label": "FC Sochaux (point presse)",
-    "url": "https://www.fcsochaux.fr/actualites/avant-match/fcsm-usld-le-point-presse"
-   },
-   {
-    "label": "AntiChambre",
-    "url": "https://antichambre.eu/fc-sochaux-usl-dunkerque-vincent-hognon-veut-casser-cette-serie-de-defaites/"
-   },
-   {
-    "label": "L'Est Républicain",
-    "url": "https://www.estrepublicain.fr/sport/2026/11/23/le-fc-sochaux-reclame-du-soutien-avant-de-defier-dunkerque-pour-un-match-a-tres-fort-enjeu"
-   }
-  ]
- },
- "FC Nantes - Grenoble": {
-  "date": "2026-11-23",
-  "adj": 1,
-  "short": "Nantes (14e) sur deux victoires mais privé de 6 joueurs ; Grenoble (lanterne rouge) sans Vidal, Hoogewerf, Zé Leité, Xantippe, Ngatta, Lallias",
-  "absents": {
-   "home": [
-    "Mirbach (ménisque)",
-    "Tati (ménisque)",
-    "Sow (ménisque)",
-    "Robinet (ischios)",
-    "Fodé Doucouré (suspendu)",
-    "Merrifield (France U17)",
-    "Perrin (incertain)",
-    "Cafaro (incertain)",
-    "Corredor (incertain)"
-   ],
-   "away": [
-    "Clément Vidal (mollet)",
-    "Hoogewerf (malade)",
-    "Zé Leité (trop juste)",
-    "Xantippe (cheville)",
-    "Ngatta",
-    "Lallias (dos)"
-   ]
-  },
-  "lineups": {
-   "home": "Carlgren ; Guilbert, Perrin, Amian ; Centonze, Lepenant, Pierret, Hachem ou Cafaro ; Leroux ; Corredor, Joujou (compo probable But!)",
-   "away": "Non fiable (la compo probable de But! inclut Vidal, forfait). Groupe : Olliero, Allain ; Limouri, Maçon, Pelon, Kouassi, Medroub, Niakaté, Zahui ; Lélé Diba, Bernadou, Mouazan, Magnin, Martinez-Jullien, Corboz ; Bonnet, Bechikh, Djitté, Cerri, Akpa Akpro"
-  },
-  "mood": "13e journée de Ligue 2, décalée du samedi au lundi en raison de mouvements sociaux à Nantes. Duel pour le maintien : Nantes, relégué et décevant (14e, 12 pts), a repris confiance en gagnant à Pau (0-2) puis 9-1 en Coupe de France ; Grenoble (11 pts), désormais dernier après la victoire de Laval, a battu Reims 3-2 puis Chambéry en Coupe après 4 défaites de suite, mais a la pire différence de buts (-9). Retour de Zahui côté grenoblois.",
-  "sources": [
-   {
-    "label": "But! FC Nantes (pronostic et compos)",
-    "url": "https://www.butfootballclub.fr/1715291-pronostic-fc-nantes-grenoble-23-11-prono-cotes-et-compos/"
-   },
-   {
-    "label": "But! FC Nantes (absents Grenoble)",
-    "url": "https://www.butfootballclub.fr/1715716-fc-nantes-pluie-de-bonnes-nouvelles-pour-poirier-avant-grenoble/"
-   },
-   {
-    "label": "Tribune Nantaise (point médical)",
-    "url": "https://www.tribunenantaise.fr/actus-fcnantes/fc-nantes-grenoble-gregory-poirier-point-medical-j13/"
-   },
-   {
-    "label": "Le Dauphiné (GF38)",
-    "url": "https://www.ledauphine.com/sport/2026/11/20/gf38-absences-majeures-long-voyage-et-gta-vi-les-infos-avant-le-match-a-nantes"
-   },
-   {
-    "label": "Grenoble Foot Info (groupe)",
-    "url": "https://www.grenoblefoot.info/gf38-le-groupe-face-au-fc-nantes/"
-   },
-   {
-    "label": "FC Nantes (match décalé)",
-    "url": "https://www.fcnantes.com/articles/article2809.php?num=49929"
-   }
-  ]
- },
- "Brentford - Everton": {
-  "date": "2026-11-23",
-  "adj": -2,
-  "short": "Brentford sans Igor Thiago (suspendu), Hickey et Collins ; Everton au complet et sur 3 victoires",
-  "absents": {
-   "home": [
-    "Igor Thiago (suspendu, 1er des 3 matchs)",
-    "Hickey (ischios)",
-    "Collins (genou)",
-    "Rico Henry (hanche/quadriceps)",
-    "Kaye Furo (métatarse)",
-    "Dasilva (retour en réserve)",
-    "Milambo (retour en réserve)",
-    "Fábio Carvalho (incertain, possible retour)"
-   ],
-   "away": []
-  },
-  "lineups": {
-   "home": "Kelleher ; Kayode, Van den Berg, Ajer, Diouf ; Yarmoliuk, Janelt, Jensen ; Schade, Wilson, Lewis-Potter (prédiction Sports Mole)",
-   "away": "Pickford ; Röhl (ou O'Brien), Tarkowski, Branthwaite, Mykolenko ; Garner, Armstrong ; Dibling, Dewsbury-Hall, George ; Barry (4-2-3-1)"
-  },
-  "mood": "Premier League, retour de trêve. Brentford a perdu 2-0 à Brighton (carton rouge de Thiago, son buteur vedette) et compte 2 points de moins qu'Everton. Everton de Moyes (593e match record sur le banc) a gagné ses 3 derniers matchs toutes compétitions, vise le top 6 ; Thierno Barry en forme (4 buts en 3 matchs). Grealish de nouveau disponible après une sanction disciplinaire. Brentford n'a plus battu Everton à domicile depuis 2021.",
-  "sources": [
-   {
-    "label": "Brentford FC (team news)",
-    "url": "https://www.brentfordfc.com/en/news/first-team-brentford-v-everton-team-news-aaron-hickey-nathan-collins-injury-update"
-   },
-   {
-    "label": "Brentford FC (match preview)",
-    "url": "https://www.brentfordfc.com/en/news/match-previews-brentford-v-everton-premier-league-23-11-2026"
-   },
-   {
-    "label": "Everton FC (team news)",
-    "url": "https://www.evertonfc.com/news/2026/november/20/moyes-reveals-everton-team-news-for-brentford/"
-   },
-   {
-    "label": "ESPN (Grealish)",
-    "url": "https://www.espn.com/soccer/story/_/id/50541708/jack-grealish-everton-brentford"
-   },
-   {
-    "label": "Sports Mole (team news)",
-    "url": "https://www.sportsmole.co.uk/football/brentford/injury-news/team-news/brentford-vs-everton-injury-suspension-list-predicted-xis_609565.html"
-   }
-  ]
- },
- "Levante - Elche": {
-  "date": "2026-11-23",
-  "adj": 0.5,
-  "short": "Duel de relégables : Levante (18e) avec tout son effectif, Elche (19e) sans Aguado ni Yago Santiago ; Lemar de retour",
-  "absents": {
-   "home": [
-    "Aucun absent (certains joueurs pas à 100 % selon Luís Castro)"
-   ],
-   "away": [
-    "Marc Aguado (cheville)",
-    "Yago Santiago",
-    "Adam Boayar (selon Mundo Deportivo/EFE)",
-    "Ali Houary (selon AS)",
-    "Lemar (de retour, plutôt remplaçant)"
-   ]
-  },
-  "lineups": {
-   "home": "Ryan ; Toljan (ou Nacho Pérez), Dela (ou Ndukwe), Mandi, Manu Sánchez ; Olasagasti, Requena ; Brugué, Iván Romero, Thiago Fernández ; Etta Eyong ou Ratkov (4-2-3-1)",
-   "away": "Dituro ; Rubén Sánchez (ou Sangaré), Redondo, Chust, Revivo ; Morcillo, Gonzalo Villar, Neto ; Cepeda, Fer Niño, Valera (4-3-3, Anselmi)"
-  },
-  "mood": "Clôture de la 13e journée de LaLiga au Ciutat de València, derby régional décisif pour sortir de la zone de relégation (Levante 11 pts, Elche 10 pts). Levante dans un moment délicat : deux défaites et un nul, et une qualification laborieuse en Coupe contre Tarancón (Tercera RFEF) en prolongation ; Manu Sánchez récupéré. Elche reste sur deux défaites à domicile (Valencia, Betis) mais compte sur sa bonne dynamique à l'extérieur ; Villar et Sangaré de retour, Fer Niño meilleur buteur.",
-  "sources": [
-   {
-    "label": "Mundo Deportivo (EFE)",
-    "url": "https://www.mundodeportivo.com/futbol/laliga/20261123/1004254083/levante-elche-juegan-salir-descenso.html"
-   },
-   {
-    "label": "AS (Levante)",
-    "url": "https://as.com/futbol/primera/alineacion-posible-del-levante-ante-el-elche-en-laliga-ea-sports-f202611-n/"
-   },
-   {
-    "label": "AS (Elche)",
-    "url": "https://as.com/futbol/primera/alineacion-posible-del-elche-ante-el-levante-en-laliga-ea-sports-f202611-n/"
-   },
-   {
-    "label": "Alineaciones Hoy",
-    "url": "https://alineacioneshoy.es/laliga/levante-elche-23-11-2026/"
-   }
-  ]
- },
  "Galatasaray - Aston Villa": {
   "date": "2026-11-24",
   "adj": 0,
@@ -933,6 +715,336 @@
    {
     "label": "Sports Mole",
     "url": "https://www.sportsmole.co.uk/football/shakhtar-donetsk/champions-league/preview/shakhtar-vs-fenerbahce-prediction-team-news-lineups_609711.html"
+   }
+  ]
+ },
+ "Marseille - Levski Sofia": {
+  "date": "2026-11-26",
+  "adj": 0,
+  "short": "5e journée de C3 : l'OM sans Emerson ni Cornelius, Højbjerg incertain (malade) ; Levski privé de Kirilov",
+  "absents": {
+   "home": [
+    "Emerson Palmieri (genou, opéré le 2/11)",
+    "Derek Cornelius (blessé)",
+    "Højbjerg (incertain, malade)"
+   ],
+   "away": [
+    "Radoslav Kirilov (genou)"
+   ]
+  },
+  "lineups": {
+   "home": "De Lange ; Weah, Egan-Riley, Aguerd, Garcia ; Højbjerg (ou Kondogbia), Nnadi ; Harit, Abdelli, Paixão ; Gouiri (4-2-3-1, Genesio)",
+   "away": "Vutsov ; Neves, Dimitrov, Makoun, Maicon ; Grujić, Serginho ; Moubarik, Soula, Bala ; Reinaldo (4-2-3-1, Velázquez, selon TopMercato)"
+  },
+  "mood": "L'OM reçoit au Vélodrome après une défaite contre Le Mans en championnat (Paixão et Gouiri buteurs) et doit encore prendre des points pour viser les barrages. Bouras et Mitkov sont revenus de blessure côté Levski lors de la victoire contre le Lokomotiv Sofia. Seul précédent entre les deux clubs en 2005.",
+  "sources": [
+   {
+    "label": "TopMercato (pronostic)",
+    "url": "https://www.topmercato.com/2156799-pronostic-marseille-vs-levski-sofia-26-11-2026/"
+   },
+   {
+    "label": "Football Club de Marseille (onze probable)",
+    "url": "https://www.footballclubdemarseille.fr/om-actualites/om-levski-sofia-les-probables-titulaires-marseillais.html"
+   },
+   {
+    "label": "Made in Foot / Ouest-France (entraînement)",
+    "url": "https://madeinfoot.ouest-france.fr/infos/article-om-deux-joueurs-importants-absents-de-l-entrainement-avant-la-reception-du-levski-sofia-547008.html"
+   },
+   {
+    "label": "FotMob",
+    "url": "https://www.fotmob.com/fr/matches/marseille-vs-levski-sofia/2gbnuk"
+   }
+  ]
+ },
+ "Olympiakos - Milan AC": {
+  "date": "2026-11-26",
+  "adj": 1,
+  "short": "Milan (28e, 3 pts) décimé : 9 blessés dont Modric, Pavlovic, Bartesaghi ; Olympiakos invaincu (10 pts) mais sans Bailey ni El Kaabi",
+  "absents": {
+   "home": [
+    "Bailey",
+    "El Kaabi",
+    "Hezze",
+    "Puerta",
+    "Chiquinho",
+    "Yazici",
+    "Scipioni (non inscrit liste UEFA)"
+   ],
+   "away": [
+    "Modric",
+    "Pavlovic",
+    "Bartesaghi",
+    "Camarda",
+    "Gabbia",
+    "Saelemaekers",
+    "Chukwueze",
+    "Loftus-Cheek",
+    "P. Terracciano"
+   ]
+  },
+  "lineups": {
+   "home": "Ortega ; Saliakas, Retsos, Pirola, Bruno ; Freuler, Gustavo Sá ; Gelson Martins, Fortounis, Jota Silva ; Gonzalez (4-2-3-1, selon Sky Sport)",
+   "away": "Maignan ; Gila, De Winter, Diawara, Estupiñán ; Moreira, Jashari, Rabiot, Pulisic ; Hutchinson ; Gonçalo Ramos (4-4-1-1, Amorim)"
+  },
+  "mood": "Milan n'a gagné qu'une fois en 4 matchs de C3 (à Salzbourg) et n'a plus marqué depuis ; la qualification est en danger et le club en fait une priorité. Maignan revient de suspension, Tomori a repris l'entraînement (option en 2e période selon Goal). L'Olympiakos est invaincu (victoires contre Jagiellonia, Marseille, Sparta Prague, nul 0-0 contre Rennes).",
+  "sources": [
+   {
+    "label": "Sky Sport (probabili formazioni)",
+    "url": "https://sport.sky.it/calcio/europa-league/2026/11/25/olympiacos-milan-probabili-formazioni-5-giornata"
+   },
+   {
+    "label": "Sky Sport (Bartesaghi infortunato)",
+    "url": "https://sport.sky.it/calcio/europa-league/2026/11/25/bartesaghi-infortunio-milan-news"
+   },
+   {
+    "label": "Goal.com (Camarda, Tomori)",
+    "url": "https://www.goal.com/en/news/milan-suffer-another-setback-as-camarda-has-ankle-problem-tomori-returns-to-training-predicted-line-up-for-olympiacos/blt4b1a342a297e061e"
+   },
+   {
+    "label": "Goal.com Italia (formazioni)",
+    "url": "https://www.goal.com/it/notizie/formazioni-olympiacos-milan-le-ultime-sulla-partita-e-dove-vederla-in-tv-e-streaming/bltb256716ba97e6aa8"
+   },
+   {
+    "label": "Sports Mole (preview)",
+    "url": "https://www.sportsmole.co.uk/football/olympiacos/europa-league/preview/olympiacos-vs-ac-milan-prediction-team-news-lineups_609768.html"
+   }
+  ]
+ },
+ "Dinamo Zagreb - Bayer Leverkusen": {
+  "date": "2026-11-26",
+  "adj": 0.5,
+  "short": "Choc 9e (7 pts) contre 7e (9 pts) : Dinamo sur 3 victoires de rang sous Leko, sans McKenna ni Mudrazija ; Leverkusen sans Terrier",
+  "absents": {
+   "home": [
+    "Scott McKenna (muscle)",
+    "Robert Mudrazija (blessé)"
+   ],
+   "away": [
+    "Martin Terrier (ischio)",
+    "Kennet Eichhorn (reprise progressive)",
+    "Boniface et Oermann (non inscrits en C3)",
+    "Guela Doué (mollet, retour possible)"
+   ]
+  },
+  "lineups": {
+   "home": "Kotarski ; Valinčić, Galešić, Domínguez, Goda ; Kačavenda, Mišić, Stojković ; Lisica, Beljo, Oršić",
+   "away": "Flekken ; Quansah, Tapsoba, Medina, Gutiérrez ; Andrich, García ; Hofmann, Maza, Moreira ; Schick (Martínez)"
+  },
+  "mood": "Dinamo, invaincu depuis l'arrivée de Jerko Leko (2-0 à Sunderland, 3-1 à Varaždin, 3-2 contre Istra), n'a perdu qu'une fois à Maksimir depuis février (2-4 contre NEC). Leverkusen a gagné ses 3 premiers matchs de C3 sans encaisser puis perdu 0-1 contre Marseille, avant de battre Cologne (2-1) et Paderborn (4-0). Dion Beljo co-meilleur buteur de la C3.",
+  "sources": [
+   {
+    "label": "Sports Mole (preview)",
+    "url": "https://www.sportsmole.co.uk/football/dinamo-zagreb/europa-league/preview/dinamo-zagreb-vs-b-leverkusen-prediction-team-news-lineups_609792.html"
+   },
+   {
+    "label": "Bundesliga.com (live blog/preview)",
+    "url": "https://www.bundesliga.com/en/bundesliga/news/dinamo-zagreb-bayer-leverkusen-live-europa-league-blog-preview-report-maza-quansah-40064"
+   },
+   {
+    "label": "Baykusen (voraussichtliche Aufstellung)",
+    "url": "https://www.baykusen.de/bayer-leverkusen-voraussichtliche-aufstellung-gegen-dinamo-zagreb/"
+   },
+   {
+    "label": "Yahoo Sports (preview)",
+    "url": "https://sports.yahoo.com/soccer/articles/gnk-dinamo-zagreb-vs-bayer-070500745.html"
+   }
+  ]
+ },
+ "Lyon - Lillestrøm SK": {
+  "date": "2026-11-26",
+  "adj": 0,
+  "short": "OL (13e, 7 pts) face à Lillestrøm (34e, 1 pt) : retour d'Openda, mais sans Bidstrup, Mata, Sulc, Morton",
+  "absents": {
+   "home": [
+    "Mads Bidstrup (pied, ménagé)",
+    "Clinton Mata (muscle)",
+    "Pavel Sulc",
+    "Tyler Morton (opéré, retour février)",
+    "Mohamed Ouédraogo"
+   ],
+   "away": [
+    "Espen Garnas (blessé)",
+    "Lars Ranger (incertain)",
+    "Daniel Bassi (incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Greif ; Athekame, Bacher, Kluivert, Abner ; Tessmann, Tolisso (+ remplaçant de Bidstrup, forfait, annoncé titulaire par Sport.fr/Flashscore) ; Duranville, Merah, Nakamura (Vicens)",
+   "away": "Dahlberg ; Ranger (ou Ottesen), Gabrielsen, Kristiansen, Paintsil ; Ibrahimaj, Ottosson, Nyheim ; Va, Gulbrandsen, Kitolano (Ødegaard)"
+  },
+  "mood": "Vainqueur 1-0 à Lille pour la première de Carlos Vicens, l'OL peut intégrer le top 8. Lillestrøm n'a pris qu'un point en C3 (2 buts marqués, 10 encaissés, 0-6 contre la Real Sociedad) mais reste sur 5 victoires de rang en Eliteserien (3e). Première confrontation officielle entre les deux clubs. Bidstrup ménagé avant le choc contre Monaco dimanche.",
+  "sources": [
+   {
+    "label": "Made in Gones / Ouest-France (groupe)",
+    "url": "https://madeingones.ouest-france.fr/infos/article-ol-lois-openda-fait-son-grand-retour-mais-quatre-joueurs-importants-manquent-a-l-appel-face-a-lillestrom-546986.html"
+   },
+   {
+    "label": "Maxifoot",
+    "url": "https://news.maxifoot.fr/lyon/2-forfaits-et-1-retour-contre-lillestrom-foot-468354.htm"
+   },
+   {
+    "label": "Flashscore",
+    "url": "https://www.flashscore.fr/actualites/football-ligue-europa-lyon-lillestr-m-ou-regarder-le-match-de-ligue-europa-heure-et-compos/tCRhAIFD/"
+   },
+   {
+    "label": "Sport.fr (compos probables)",
+    "url": "https://www.sport.fr/football/ol-lillestrom-les-compos-probables-avec-duranville-et-nakamura-1505083.shtm"
+   }
+  ]
+ },
+ "NEC Nimègue - Rennes": {
+  "date": "2026-11-26",
+  "adj": 0,
+  "short": "Rennes (17e, 6 pts, invaincu en C3) sans Rongier ni Camara, sans victoire depuis un mois ; NEC (12e, 7 pts) privé de 4 blessés",
+  "absents": {
+   "home": [
+    "Sandler",
+    "Schuurs",
+    "Nuytinck",
+    "Moslih (blessés)",
+    "Bakker, Hansen-Aaroen, Tahaui (non qualifiés)"
+   ],
+   "away": [
+    "Valentin Rongier (blessé)",
+    "Mahdi Camara (blessé)"
+   ]
+  },
+  "lineups": {
+   "home": "Crettaz ; Bras, Kaplan, Fonville ; Kers, Nejasmic, Lebreton, Thomas ; Chery, Tadic ; Linssen (3-4-2-1, Schreuder)",
+   "away": "Samba ; Ait Boudlal, Cresswell, Oliveira ; Reynolds, Szymanski, Thomasson, Cissé, Nagida ; Lepaul, Al-Tamari (3-5-2, Haise)"
+  },
+  "mood": "Rennes n'a plus gagné depuis le 3-0 contre Strasbourg le 25 octobre, n'a marqué que 4 buts en 4 matchs de C3 et a perdu 3 de ses 5 derniers déplacements en L1. Frankowski est de retour dans le groupe, Lepaul attendu titulaire. Le NEC a battu le Dinamo Zagreb et l'Omonia en C3 et reste sur un succès à Utrecht puis un 4-1 contre le PSV après une longue série sans victoire en Eredivisie.",
+  "sources": [
+   {
+    "label": "Ouest-France (compos probables et absents)",
+    "url": "https://www.ouest-france.fr/sport/football/stade-rennais/nec-nimegue-stade-rennais-les-compositions-probables-et-les-absents-45e95180-e927-11f1-86c1-70195b4d2e52"
+   },
+   {
+    "label": "Ouest-France (groupe rennais)",
+    "url": "https://www.ouest-france.fr/sport/football/stade-rennais/stade-rennais-sans-mahdi-camara-ni-valentin-rongier-a-nimegue-premiere-convocation-pour-ruben-lomet-3d5df5ea-e8da-11f1-86c1-70195b4d2e52"
+   },
+   {
+    "label": "Sport.fr (compos probables)",
+    "url": "https://www.sport.fr/football/ligue-europa-compos-probables-pour-nec-nimegue-rennes-jeudi-a-21h-avec-rongier-en-suspens-un-duel-al-tamari-lepaul-et-une-defense-a-cinq-qui-interroge-1504863.shtm"
+   }
+  ]
+ },
+ "Juventus - Omonia Nicosie": {
+  "date": "2026-11-26",
+  "adj": -1,
+  "short": "Juventus (5e, 10 pts, invaincue) fait tourner avant Côme : Neto, Ekhator titulaires, Kolo Muani et Woltemade sur le banc",
+  "absents": {
+   "home": [
+    "Kalulu (cuisse)",
+    "Nico González (mollet)",
+    "Yıldız (pied)",
+    "Locatelli (ménisque)",
+    "Thuram (blessé)",
+    "Grabara (ligaments croisés)"
+   ],
+   "away": [
+    "Carel Eiting (genou)"
+   ]
+  },
+  "lineups": {
+   "home": "Neto ; Gatti, Bremer, Lucumí ; McKennie, Douglas Luiz, Sarr, Cambiaso ; Conceição, Ekhator, Boga (3-4-3, Spalletti)",
+   "away": "Kaminski ; Mayambela, Coulibaly, Šatka, Duverne ; Andreou, Tănase, Marić ; Ewandro, Diony, Montnor (4-3-3, Berg)"
+  },
+  "mood": "La Juve, victorieuse 4-0 contre Venezia, peut se rapprocher du top 8 (victoires contre NEC, Celta, AZ ; nul contre Rennes) mais Spalletti opère un large turnover avant le déplacement à Côme (Vicario, Koopmeiners, Kolo Muani, Woltemade au repos ; TMW évoque aussi Bremer ménagé). L'Omonia (18e, 6 pts) a battu Celta et Celje, perdu contre Benfica et NEC ; 4e en championnat chypriote après un 1-1 contre l'APOEL.",
+  "sources": [
+   {
+    "label": "Sky Sport (probabili formazioni)",
+    "url": "https://sport.sky.it/calcio/europa-league/2026/11/25/juventus-omonia-nicosia-probabili-formazioni-5-giornata"
+   },
+   {
+    "label": "Goal.com Italia (formazioni)",
+    "url": "https://www.goal.com/it/notizie/formazioni-juventus-omonia-nicosia-le-ultime-sulla-partita-e-dove-vederla-in-tv-e-streaming/blt7c0aacc49d176a44"
+   },
+   {
+    "label": "TuttoMercatoWeb",
+    "url": "https://www.tuttomercatoweb.com/probabili-formazioni/juventus-omonia-probabili-formazioni-neto-titolare-chance-ekhator-2297481"
+   },
+   {
+    "label": "ANSA (Spalletti)",
+    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/25/europa-league-spalletti-ci-arriviamo-bene-allenamenti-vengono-meglio_10bf23e6-5f2a-498d-8670-23909d81f978.html"
+   },
+   {
+    "label": "FotMob (absents)",
+    "url": "https://www.fotmob.com/matches/omonia-nicosia-vs-juventus/2npadm"
+   }
+  ]
+ },
+ "Crystal Palace - Real Sociedad": {
+  "date": "2026-11-26",
+  "adj": -1,
+  "short": "Premier match à domicile de Thomas Frank : Palace (dernier de PL, 5 défaites de rang) sans Wharton (suspendu), Sarr, Riad, Tomiyasu",
+  "absents": {
+   "home": [
+    "Adam Wharton (suspendu)",
+    "Ismaïla Sarr (aine)",
+    "Chadi Riad (genou)",
+    "Takehiro Tomiyasu (mollet)",
+    "Óscar Mingueza (incertain)"
+   ],
+   "away": [
+    "Álvaro Odriozola (genou)",
+    "Ander Barrenetxea (ischio, opéré)"
+   ]
+  },
+  "lineups": {
+   "home": "Henderson ; Khalaili, Canvot, Richards, Chilwell ; Timber, Doucouré, Hughes ; Pino, McNeil ; Strand Larsen (selon Sports Mole ; Mateta disponible en C3)",
+   "away": "Remiro ; Aramburu, Martín, Zubeldia, Gómez ; Gorrotxategi, Soler ; Kubo, Sučić, Guedes ; Oyarzabal (Matarazzo, selon Sports Mole)"
+  },
+  "mood": "Les deux équipes ont 5 points (21e et 20e). Palace a perdu 3-2 à Coventry pour la première de Frank, a encaissé au moins 2 buts dans 11 de ses 17 matchs, mais reste invaincu sur ses 8 derniers matchs européens à domicile. Frank appelle à une ambiance « à tout casser ». La Real (5e de Liga) a perdu 3-2 à Racing Santander et n'a gagné qu'un de ses 11 derniers matchs contre des clubs anglais.",
+  "sources": [
+   {
+    "label": "BBC Sport (conférence Thomas Frank)",
+    "url": "https://www.bbc.com/sport/football/articles/cm5y1g4e8zp6o"
+   },
+   {
+    "label": "Sports Mole (preview)",
+    "url": "https://www.sportsmole.co.uk/football/crystal-palace/europa-league/preview/crystal-palace-vs-real-sociedad-prediction-team-news-lineups_609735.html"
+   }
+  ]
+ },
+ "Heart of Midlothian - AS Monaco": {
+  "date": "2026-11-26",
+  "adj": 1,
+  "short": "Monaco (3/3 en C4) sans Brunner, Köhn, Salisu, Golovin, Fati, Idumbo ; Hearts (1 pt) sort d'un 8-0 à Dundee, Spittal de retour",
+  "absents": {
+   "home": [
+    "Kabashi et Ageu (non inscrits liste UEFA)",
+    "Craig Halkett (retour janvier)",
+    "Oisin McEntee",
+    "Calvin Miller",
+    "Malachi Fagan-Walcott"
+   ],
+   "away": [
+    "Paris Brunner (ischio)",
+    "Philipp Köhn (gêne musculaire)",
+    "Mohammed Salisu (genou)",
+    "Aleksandr Golovin (soins)",
+    "Ansu Fati (soins)",
+    "Stanis Idumbo (réathlétisation)"
+   ]
+  },
+  "lineups": {
+   "home": "Non communiquée par une source fiable",
+   "away": "Non communiquée par une source fiable"
+  },
+  "mood": "Hearts n'a gagné aucun de ses 9 matchs européens cette saison (32e, 1 point) et reste sur 4 matchs sans victoire à Tynecastle, mais arrive en confiance après le 8-0 à Dundee (doublé de Kabore). Vrancken compte 16 joueurs de champ disponibles et croit encore à la qualification. Monaco a gagné ses 3 matchs de C4 (7 buts pour, 1 contre) mais reste sur 6 matchs sans victoire en L1 et 3 déplacements sans succès ; groupe de 24 avec 10 jeunes de l'Academy.",
+  "sources": [
+   {
+    "label": "AS Monaco (groupe et point médical)",
+    "url": "https://www.asmonaco.com/fr/news/le-groupe-de-l-as-monaco-pour-affronter-heart-of-midlothian-en-ligue-conference"
+   },
+   {
+    "label": "BBC Sport (conférence Vrancken)",
+    "url": "https://www.bbc.com/sport/articles/c9e853266rg4o"
+   },
+   {
+    "label": "Sports Mole (preview)",
+    "url": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html"
    }
   ]
  }
