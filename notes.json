@@ -726,10 +726,13 @@
    "home": [
     "Emerson Palmieri (genou, opéré le 2/11)",
     "Derek Cornelius (blessé)",
-    "Højbjerg (incertain, malade)"
+    "Højbjerg (incertain, malade)",
+    "Timothy Weah (hors groupe)",
+    "Geoffrey Kondogbia (hors groupe)"
    ],
    "away": [
-    "Radoslav Kirilov (genou)"
+    "Radoslav Kirilov (genou)",
+    "Serginho (adducteurs)"
    ]
   },
   "lineups": {
@@ -753,6 +756,14 @@
    {
     "label": "FotMob",
     "url": "https://www.fotmob.com/fr/matches/marseille-vs-levski-sofia/2gbnuk"
+   },
+   {
+    "label": "Maxifoot (compos probables)",
+    "url": "https://news.maxifoot.fr/c3/marseille-levski-sofia-les-compos-prob-foot-468395.htm"
+   },
+   {
+    "label": "Fakti.bg (Serginho forfait)",
+    "url": "https://fakti.bg/en/sport/1104075-serginho-to-miss-levskis-match-against-marseille-as-well"
    }
   ]
  },
