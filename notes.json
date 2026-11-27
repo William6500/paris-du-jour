@@ -1,366 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Galatasaray - Aston Villa": {
-  "date": "2026-11-24",
-  "adj": 0,
-  "short": "Galatasaray privé d'Osimhen, Leão et Sallai mais sur 5 victoires de suite ; Villa sans Cash, Onana ni Ruggeri et sans victoire en 5 matchs",
-  "absents": {
-   "home": [
-    "Victor Osimhen (genou)",
-    "Rafael Leão (ischio/muscle)",
-    "Roland Sallai (ischio-jambiers)",
-    "Ismail Jakobs (aine, incertain)"
-   ],
-   "away": [
-    "Matty Cash (commotion)",
-    "Amadou Onana (genou)",
-    "Matteo Ruggeri (ischio-jambiers)",
-    "Victor Lindelöf (malade, incertain mais attendu)"
-   ]
-  },
-  "lineups": {
-   "home": "Çakır ; Singo, Sánchez, Bardakçı, Elmalı ; Torreira, Lemina ; Akgün, Batrakov, Barış Alper Yılmaz ; Gül",
-   "away": "Suzuki ; Bogarde (ou Wan-Bissaka), Harwood-Bellis (ou Lindelöf), Pau Torres, Maatsen ; Kamara, João Gomes ; McGinn, Buendía, Manzambi ; Jackson"
-  },
-  "mood": "Galatasaray leader de Süper Lig (31 pts en 12 matchs), 5 victoires de suite toutes compétitions dont 2-0 contre Stuttgart en C1, mais seulement 18e de la phase de ligue (6 pts). Villa 6e en C1 (9 pts) après le 3-0 encaissé à Barcelone, mais sans victoire sur ses 5 derniers matchs (0-0 contre Sunderland samedi) et au ventre mou de Premier League. Batrakov (4 buts en C1) est l'homme fort côté turc ; les clubs anglais n'ont gagné qu'une fois en 10 visites à Galatasaray.",
-  "sources": [
-   {
-    "label": "Sports Mole (team news)",
-    "url": "https://www.sportsmole.co.uk/football/galatasaray/injury-news/team-news/galatasaray-vs-aston-villa-injury-suspension-list-predicted-xis_609643.html"
-   },
-   {
-    "label": "Goal.com (preview)",
-    "url": "https://www.goal.com/en/news/galatasaray-aston-villa-champions-league-preview/blt0a99e84a23b49ca7"
-   },
-   {
-    "label": "Sportsgambler (preview)",
-    "url": "https://www.sportsgambler.com/betting-tips/football/galatasaray-vs-aston-villa-prediction-lineups-odds-2026-11-24/"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Bodø/Glimt - LASK Linz": {
-  "date": "2026-11-24",
-  "adj": 1,
-  "short": "Bodø sans Evjen ni Mikkelsen mais redoutable à domicile ; LASK, en forme, privé d'Andrade, Bello et Flecker",
-  "absents": {
-   "home": [
-    "Håkon Evjen (ligaments croisés, saison possiblement terminée)",
-    "August Mikkelsen (aine)",
-    "Isak Sjong (gardien remplaçant, incertain/absent)"
-   ],
-   "away": [
-    "Andrés Andrade (cheville, ligaments)",
-    "George Bello (muscle)",
-    "Flecker (mollet)",
-    "Ramiz Harakaté (blessé, selon Freetips)",
-    "Art Smakaj (suspendu, selon Freetips)"
-   ]
-  },
-  "lineups": {
-   "home": "Haikin ; Sjøvold, Bjørtuft, Gundersen, Bjørkan ; Auklend, Berg, Brunstad Fet ; Blomberg, Helmersen, Hauge",
-   "away": "Jungwirth ; Mbuyamba, Verhaeghe, Alemão ; Jørgensen, Ljubičić, Bogarde, Horvath, Dibango ; Usor, Kalajdžić (source UEFA)"
-  },
-  "mood": "Bodø 25e de la phase de ligue (4 pts, une seule victoire contre Dortmund, 0-0 contre Lille), attaque en panne en C1 mais 13 victoires en 15 matchs à domicile depuis mai et invaincu sur 6 matchs de C1 à l'Aspmyra ; en course pour le titre norvégien (3 victoires de suite). LASK 16e (6 pts), deux victoires de rang (3-2 au Sporting, 4-0 contre Slovan) et en forme en Bundesliga autrichienne. Knutsen : « Glimt marquera » si l'animation offensive s'améliore.",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/bodo-glimt/champions-league/preview/bodoglimt-vs-lask-prediction-team-news-lineups_609647.html"
-   },
-   {
-    "label": "Freetips (preview)",
-    "url": "https://www.freetips.com/football/uefa-champions-league/bodo-glimt-vs-lask-tips-20261122-0008/"
-   },
-   {
-    "label": "LASK (blessure Andrade)",
-    "url": "https://www.lask.at/de/m/news/verletzungsupdate-andres-andrade"
-   },
-   {
-    "label": "Bodø/Glimt (avant-match Knutsen)",
-    "url": "https://www.glimt.no/nyheter/selvsikker-for-kamp-da-tror-jeg-glimt-scorer"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Real Madrid - PSV Eindhoven": {
-  "date": "2026-11-24",
-  "adj": 1,
-  "short": "Real sans Asencio, Rodrygo ni Endrick et avec rotation possible (Bellingham, Güler) ; PSV privé de son capitaine Mauro Júnior et de plusieurs titulaires",
-  "absents": {
-   "home": [
-    "Raúl Asencio (fracture de fatigue)",
-    "Rodrygo (genou, ligaments)",
-    "Endrick (petite blessure musculaire)",
-    "Ferland Mendy (non inscrit en C1)",
-    "Bellingham et Arda Güler possiblement mis au repos (presse espagnole)"
-   ],
-   "away": [
-    "Mauro Júnior (capitaine, aine/muscle)",
-    "Adamo Nagalo (blessé)",
-    "Jerdy Schouten (retour de rupture des croisés)",
-    "Sami Ouaissa (genou)",
-    "Alassane Pléa (blessé)"
-   ]
-  },
-  "lineups": {
-   "home": "Courtois ; Valverde, Militão, Rüdiger, Cucurella ; Tchouaméni, Camavinga (ou Bernardo Silva) ; Diomande, Brahim Díaz, Vinícius ; Mbappé (Vinícius titulaire confirmé par Mourinho)",
-   "away": "Kovář ; Dest, Geertruida, Obispo, Kostić ; Sano, Noah Fernández ; Perišić, Mijnans, Van Bommel ; Til"
-  },
-  "mood": "Real 2e de Liga (31 pts, à 3 du Barça), 4 victoires en 4 matchs de C1 (3-2 à l'AEK), invaincu en 12 matchs à domicile ; victoire 2-1 contre le Celta samedi. PSV leader d'Eredivisie (29 pts) après un 4-1 à NEC, mais seulement 4 pts en C1 (défaite 2-1 contre Bruges).",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/real-madrid/champions-league/preview/real-madrid-vs-psv-prediction-team-news-lineups_609630.html"
-   },
-   {
-    "label": "Sports Illustrated (compos probables)",
-    "url": "https://www.si.com/soccer/real-madrid-predicted-lineup-vs-psv-champions-league-11-24-26"
-   },
-   {
-    "label": "Sportsgambler (preview)",
-    "url": "https://www.sportsgambler.com/betting-tips/football/real-madrid-vs-psv-prediction-lineups-odds-2026-11-24/"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Côme - AEK Athènes": {
-  "date": "2026-11-24",
-  "adj": 0,
-  "short": "Côme, attaque record en C1, privé de Kean, Diao, Addai, Rodríguez et Caqueret ; l'AEK sans Koita (suspendu) ni Arriaga",
-  "absents": {
-   "home": [
-    "Moise Kean (tibia)",
-    "Assane Diao (cuisse)",
-    "Jayden Addai (blessé)",
-    "Jesús Rodríguez (blessé)",
-    "Maxence Caqueret (problème musculaire, non convoqué)"
-   ],
-   "away": [
-    "Aboubakary Koita (suspendu 2 matchs)",
-    "Arriaga (clavicule)",
-    "Zini et Oleksandr Zubkov (blessés selon Sports Mole)"
-   ]
-  },
-  "lineups": {
-   "home": "Butez ; Yan Couto, Ramón, Kempf (ou Chalobah), Valle ; Perrone, Luis Milla ; Da Cunha, Nico Paz, Baturina ; Douvikas",
-   "away": "Strakosha ; Rota, Moukoudi, Relvas, Pilios ; Majer, Marin, Kairinen, Vitalis (ou Mantalos) ; Jović, Varga"
-  },
-  "mood": "Côme, débutant en C1, a gagné 3 de ses 4 matchs (4-1 contre Leipzig et Manchester United, 9-1 à Lens) avec 19 buts ; Douvikas meilleur buteur de la compétition (6 buts), Nico Paz 8 participations décisives ; victoire 2-0 contre Cagliari samedi, dans la course au titre en Serie A. L'AEK 29e (3 pts), trois défaites de suite en C1 et jamais vainqueur à l'extérieur en Ligue des champions (12 défaites, 5 nuls).",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/como/champions-league/preview/como-vs-aek-athens-prediction-team-news-lineups_609600.html"
-   },
-   {
-    "label": "Tuttosport (probabili formazioni)",
-    "url": "https://www.tuttosport.com/news/calcio/champions-league/2026/11/24-152794793/como-aek_atene_probabili_formazioni_e_diretta_dove_si_vede_in_tv_e_streaming"
-   },
-   {
-    "label": "TuttoMercatoWeb (convocati Como)",
-    "url": "https://www.tuttomercatoweb.com/serie-a/domani-como-aek-convocati-fabregas-assenze-giovani-aggregati-2296802"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "RB Leipzig - RC Lens": {
-  "date": "2026-11-24",
-  "adj": 1,
-  "short": "Lens, humilié 9-1 par Côme, se déplace sans Cuisance (malade), Aguilar ni Édouard pour la première de Digard en C1 ; Leipzig sans Ouédraogo, Guiu ni Finkgräfe",
-  "absents": {
-   "home": [
-    "Assan Ouédraogo (épaule)",
-    "Marc Guiu (blessé)",
-    "Maximilian Finkgräfe (blessé)",
-    "Neil El Aynaoui (mollet, incertain)"
-   ],
-   "away": [
-    "Michaël Cuisance (malade)",
-    "Ruben Aguilar (légèrement touché contre Toulouse)",
-    "Odsonne Édouard (adducteurs)",
-    "Jhoanner Chávez et Nawrocki (non inscrits en C1)",
-    "Gradit, Ivanović et Bulatović de retour dans le groupe"
-   ]
-  },
-  "lineups": {
-   "home": "Vandevoordt ; Baku, Orbán, Lukeba, Raum ; Banzuzi, El Aynaoui, Baumgartner ; Gruda, Nkunku, Nusa",
-   "away": "Risser ; Ganiou, Baidoo, Todibo ; Udol, Titraoui, Haidara ; Thauvin, Ivanović ; Sima, Mesloub (proposition Lensois.com d'après le groupe convoqué)"
-  },
-  "mood": "Leipzig (Demichelis) 30e avec 3 pts en C1 (défaites à Côme, contre le Real et City, puis 1-0 contre le PSV) mais 4e de Bundesliga (18 pts). Lens 33e (3 pts, -12), quatre défaites de suite en C1 dont sa pire défaite historique (1-9 contre Côme), 1-1 contre Toulouse samedi ; première de Didier Digard en Ligue des champions, supporters lensois interdits de déplacement.",
-  "sources": [
-   {
-    "label": "Lensois.com (groupe lensois)",
-    "url": "https://www.lensois.com/leipzig-rc-lens-le-groupe-lensois-sans-aguilar-ni-cuisance-mais-avec-bulatovic-gradit-et-ivanovic/"
-   },
-   {
-    "label": "Sport.fr (compos probables)",
-    "url": "https://www.sport.fr/football/ligue-des-champions-compos-probables-pour-rb-leipzig-rc-lens-mardi-avec-nkunku-face-a-des-lensois-sans-sima-ni-ganiou-1504235.shtm"
-   },
-   {
-    "label": "But! Football Club (pronostic)",
-    "url": "https://www.butfootballclub.fr/1715302-pronostic-rb-leipzig-rc-lens-24-11-prono-cotes-et-compos/"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Arsenal - Borussia Dortmund": {
-  "date": "2026-11-24",
-  "adj": -1,
-  "short": "Arsenal sans Raya (Kepa au but), Saka ni Zubimendi ; Dortmund privé d'Emre Can, Inácio et Konstantelias, Guirassy incertain",
-  "absents": {
-   "home": [
-    "David Raya (épaule)",
-    "Bukayo Saka (quadriceps, ~4 semaines)",
-    "Martín Zubimendi (ischio-jambiers)"
-   ],
-   "away": [
-    "Emre Can (ligaments croisés)",
-    "Samuele Inácio (ménisque)",
-    "Justin Lerma (muscle)",
-    "Giannis Konstantelias (ligaments croisés)",
-    "Mussa Kaba (épaule)",
-    "Serhou Guirassy (cuisse, incertain)",
-    "Carney Chukwuemeka (cuisse, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Kepa ; White, Konsa (ou Saliba), Gabriel, Calafiori ; Rice, Lewis-Skelly ; Madueke, Merino (ou Ødegaard), Tzolis (ou Eze) ; Gyökeres",
-   "away": "Kobel ; Gadou (ou Bensebaini), Anton, Schlotterbeck ; Ryerson, Veerman, Nmecha, Svensson ; J. Bellingham, Karetsas ; Fábio Silva"
-  },
-  "mood": "Arsenal 3e de la phase de ligue (10 pts), nul 2-2 à Newcastle samedi ; reçoit Manchester City dimanche. Dortmund 12e (9 pts), vainqueur 1-0 à Gladbach samedi (but de Nmecha) et 2-1 contre le Betis en C1. Arsenal largement favori des bookmakers.",
-  "sources": [
-   {
-    "label": "Sports Mole (team news)",
-    "url": "https://www.sportsmole.co.uk/football/arsenal/champions-league/team-news/arsenal-vs-borussia-dortmund-injury-suspension-list-predicted-xis_609613.html"
-   },
-   {
-    "label": "RotoWire (preview)",
-    "url": "https://www.rotowire.com/soccer/article/arsenal-vs-dortmund-prediction-predicted-lineups-team-news-147748"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Manchester City - Naples": {
-  "date": "2026-11-24",
-  "adj": 1,
-  "short": "City en crise (une victoire en 5 en PL) mais Naples décimé : Di Lorenzo, Lobotka, Meret, Badiashile absents et Rafa Marín suspendu",
-  "absents": {
-   "home": [
-    "Antoine Semenyo (genou)",
-    "Matheus Nunes (incertain)"
-   ],
-   "away": [
-    "Giovanni Di Lorenzo (cuisse)",
-    "Stanislav Lobotka (cheville)",
-    "Alex Meret (dos)",
-    "Badiashile (ischio-jambiers)",
-    "Vergara (cuisse)",
-    "Alisson Santos (cuisse)",
-    "Rafa Marín (suspendu)"
-   ]
-  },
-  "lineups": {
-   "home": "Donnarumma ; Khusanov, Rúben Dias, Guéhi, Gvardiol ; Anderson, Enzo Fernández ; Ndiaye, Cherki (ou Foden), Doku ; Haaland",
-   "away": "Milinković-Savić ; Politano, Rrahmani, Beukema, Spinazzola ; Anguissa, Gilmour, McTominay ; De Bruyne ; Højlund, Lang"
-  },
-  "mood": "City (Maresca) 7e de la phase de ligue (9 pts), mais 3 défaites et un nul sur ses 4 derniers matchs de PL (1-1 contre Fulham samedi), défense friable (au moins 2 buts encaissés dans 7 des 11 derniers matchs) ; 7 victoires en 10 matchs à l'Etihad. Naples (Allegri) 27e en C1 (3 pts, défaites contre Arsenal, Villarreal et Porto), 8e de Serie A après le 1-0 contre le Torino, 5 défaites sur ses 7 derniers déplacements ; retour de De Bruyne à l'Etihad.",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/man-city/champions-league/preview/man-city-vs-napoli-prediction-team-news-lineups_609624.html"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Slovan Bratislava - Betis": {
-  "date": "2026-11-24",
-  "adj": 0,
-  "short": "Slovan, 0 point et 17 buts encaissés en C1, reçoit un Betis privé de Ceballos et Morante, Cucho Hernández incertain",
-  "absents": {
-   "home": [
-    "Suleiman Camara (cheville)",
-    "Artur Gajdoš (genou)",
-    "Roman Čerepkai (dos, incertain)"
-   ],
-   "away": [
-    "Dani Ceballos (ischio-jambiers, retour pas avant décembre)",
-    "José Antonio Morante (adducteurs)",
-    "Cucho Hernández (mollet, incertain)",
-    "Antony touché lors du derby mais du voyage"
-   ]
-  },
-  "lineups": {
-   "home": "Takáč ; Blackman, Bajrić, Marković, Sandro Cruz ; Martínez, Pokorný, Ibrahim ; Barseghyan, Šporar, Marcelli (UEFA ; Sports Mole voit Popović au but et Matsuoka, Maroš)",
-   "away": "Álvaro Vallés ; Ángel Ortiz, Diego Llorente, Natan, Valentín Gómez ; Deossa, Bernal ; Antony, Isco, Abde Ezzalzouli ; Parrott"
-  },
-  "mood": "Slovan (Yaya Touré) dernier de la phase de ligue : 4 défaites, 1 but marqué, 17 encaissés ; 2e du championnat slovaque à 7 pts du DAC et sans victoire sur ses 5 derniers matchs à domicile, mais un nul et une victoire depuis le passage au 4-1-4-1. Betis 11e (9 pts, victoires contre Lille, Porto et Feyenoord, défaite 2-1 à Dortmund), invaincu en 3 matchs après le 1-1 dans le derby contre Séville.",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/slovan-bratislava/preview/slovan-bratislava-vs-betis-prediction-team-news-lineups_609622.html"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
- "Feyenoord - FC Porto": {
-  "date": "2026-11-24",
-  "adj": -1,
-  "short": "Feyenoord, six matchs sans victoire et défense décimée (Bos, St. Juste, Beelen, Nieuwkoop, Moder absents), reçoit un Porto leader invaincu au Portugal",
-  "absents": {
-   "home": [
-    "Jordan Bos (ligaments croisés)",
-    "Jerry St. Juste (tibia)",
-    "Thomas Beelen (jambe)",
-    "Bart Nieuwkoop (genou)",
-    "Jakub Moder (dos)",
-    "Anis Hadj Moussa (cheville, incertain)",
-    "Tsuyoshi Watanabe (pied, incertain)"
-   ],
-   "away": [
-    "Vasco Sousa (jambe, longue durée)",
-    "Chris Smalling (genou, non inscrit en C1)",
-    "William Gomes (cheville, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Ernst ; Read, Kraaijeveld, Mármol, López ; Zechiël, Vanhoutte, Targhalline ; Valente, Hadj Moussa ; Ferri",
-   "away": "Diogo Costa ; Alberto Costa, Bednarek, Kiwior, Zaidu (ou Martim Fernandes) ; Veiga, Rosario, Froholdt ; Pepê, Borja Sainz, André Silva"
-  },
-  "mood": "Feyenoord (Van Bronckhorst) 32e (3 pts), trois défaites de suite dont 2-3 contre Excelsior samedi, au moins 3 buts encaissés lors des 3 derniers matchs, 5e d'Eredivisie. Porto (Farioli) 26e (3 pts) mais relancé par un 4-1 contre Naples, 11 victoires en 11 matchs de championnat ; qualifié aux tirs au but en Coupe vendredi contre Paredes (D3).",
-  "sources": [
-   {
-    "label": "Sports Mole (preview)",
-    "url": "https://www.sportsmole.co.uk/football/feyenoord/champions-league/preview/feyenoord-vs-porto-prediction-team-news-lineups_609638.html"
-   },
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
-   }
-  ]
- },
  "Paris SG - Roma": {
   "date": "2026-11-25",
   "adj": -0.5,
@@ -1056,6 +695,146 @@
    {
     "label": "Sports Mole (preview)",
     "url": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html"
+   }
+  ]
+ },
+ "Nottingham Forest - Chelsea": {
+  "date": "2026-11-27",
+  "adj": 0,
+  "short": "Forest sans Domínguez ni Savona ; Chelsea sans James, Hato, João Pedro ni Lacroix, Caicedo apte",
+  "absents": {
+   "home": [
+    "Domínguez (ischio-jambiers)",
+    "Savona (genou)"
+   ],
+   "away": [
+    "Reece James",
+    "Hato",
+    "João Pedro",
+    "Lacroix"
+   ]
+  },
+  "lineups": {
+   "home": "Sels ; Cunha, Milenković, Murillo ; Muñoz, McAtee, Schlager, Williams ; Ndoye, Gibbs-White ; Delap",
+   "away": "Martínez ; Acheampong, Fofana, Colwill, Chavarría ; Caicedo, Henderson ; Estêvão, Palmer, Rogers ; Emegha"
+  },
+  "mood": "Compos probables selon Sports Mole et les sites des clubs ; pas d'élément d'ambiance sourcé au-delà des absences.",
+  "sources": [
+   {
+    "label": "Sports Mole",
+    "url": "https://www.sportsmole.co.uk/football/nottingham-forest/injury-news/team-news/nottingham-forest-vs-chelsea-injury-suspension-list-predicted-xis_609858.html"
+   },
+   {
+    "label": "Chelsea FC (officiel)",
+    "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-nottingham-forest?ssoc=1"
+   }
+  ]
+ },
+ "Brest - Paris FC": {
+  "date": "2026-11-27",
+  "adj": 0,
+  "short": "Brest sans Chardonnet ni Le Guen, Doumbia de retour, Lala incertain",
+  "absents": {
+   "home": [
+    "Chardonnet (mollet)",
+    "Le Guen (jambe cassée)",
+    "Lala (genou, incertain)"
+   ],
+   "away": []
+  },
+  "lineups": {
+   "home": "Selvik ; Zogbé (ou Lala), Tousart, Lloris, Locko ; Magnetti, Chotard ; Edjouma, Doumbia, Mboup ; Ajorque",
+   "away": ""
+  },
+  "mood": "Brest, 6e de Ligue 1 selon Le Télégramme, mise sur la confiance d'Edjouma. Absents du Paris FC non vérifiés.",
+  "sources": [
+   {
+    "label": "Le Télégramme",
+    "url": "https://www.letelegramme.fr/sports/football/stade-brestois/brest-paris-fc-les-compositions-probables-7167025.php"
+   },
+   {
+    "label": "Ouest-France",
+    "url": "https://www.ouest-france.fr/sport/football/stade-brestois/stade-brestois-paris-fc-capitaliser-sur-la-confiance-de-noah-edjouma-kamory-doumbia-de-retour-les-compositions-probables-6d16b342-e99f-11f1-86c1-70195b4d2e52"
+   }
+  ]
+ },
+ "Werder Brême - Borussia M'gladbach": {
+  "date": "2026-11-27",
+  "adj": -1,
+  "short": "Werder avec sept absents ; Gladbach sans Kleindienst, Leopold, Leszczyński ni Ullrich",
+  "absents": {
+   "home": [
+    "Grüll",
+    "Musah",
+    "Ndiaye",
+    "Stage",
+    "Topp",
+    "Agu (incertain)",
+    "Alvero (incertain)",
+    "Njinmah (incertain)"
+   ],
+   "away": [
+    "Kleindienst",
+    "Leopold",
+    "Leszczyński",
+    "Ullrich",
+    "Bolin (incertain)",
+    "Hack (incertain)",
+    "Hashioka (incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Hein ; Arthur, Pieper, Friedl, Deman ; Regeer, Reis ; Dinkçi, Chuki, Njinmah ; Füllkrug",
+   "away": "Batz ; Diks, Sander, Chiarodia ; Scally, Uno, Neuhaus, Castrop ; Hack, Mohya ; Machino"
+  },
+  "mood": "Werder diminué par l'infirmerie ; Weiser proche d'un retour dans le groupe.",
+  "sources": [
+   {
+    "label": "Bundesliga.com",
+    "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+   },
+   {
+    "label": "Tu Futbolero",
+    "url": "https://www.tufutbolero.com/fr/actualites/werder-breme-gladbach-le-werder-arrive-avec-sept-absents-fcccf0"
+   },
+   {
+    "label": "SV Werder Bremen",
+    "url": "https://www.werder.de/news/maenner/2026-2027/personal-26112026"
+   }
+  ]
+ },
+ "Venezia - Bologne": {
+  "date": "2026-11-27",
+  "adj": 0,
+  "short": "Venezia sans Sverko, Adorante, Correia ni Franjic ; Bologne sans Miranda, Enem, Holm, Happonen ni De Silvestri",
+  "absents": {
+   "home": [
+    "Sverko",
+    "Adorante",
+    "Correia",
+    "Franjic"
+   ],
+   "away": [
+    "Miranda",
+    "Enem",
+    "Holm",
+    "Happonen",
+    "De Silvestri"
+   ]
+  },
+  "lineups": {
+   "home": "Stankovic ; Halhal, Moreno, Juan Jesus ; Hainaut, Perez, Sohm, Busio, Haps ; Lauberbach, Adams",
+   "away": "Skorupski ; Darmian, Casale, Theate ; Zortea, Ferguson, Pobega, Bernardeschi ; Orsolini, Cambiaghi ; Odgaard"
+  },
+  "mood": "13e journée de Serie A ; compos probables Eurosport.",
+  "sources": [
+   {
+    "label": "Eurosport Italia",
+    "url": "https://www.eurosport.it/calcio/serie-a/2026-2027/venezia-bologna-probabili-formazioni-statistiche-quando-e-dove-vederla_sto23358976/story.shtml"
+   },
+   {
+    "label": "Fantacalcio",
+    "url": "https://www.fantacalcio.it/news/calcio-italia/27_11_2026/venezia-bologna-le-probabili-formazioni-e-dove-vederla-in-tv-501207"
    }
   ]
  }
