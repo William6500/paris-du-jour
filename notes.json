@@ -1,362 +1,5 @@
 {
  "_info": "Notes de contexte recherchées sur le web (absences, compos, ambiance). Clé = nom du match Betclic. 'adj' = ajustement en points de % de la victoire de l'équipe à domicile (borné à ±3 par le script). 'date' = jour du match (UTC). Ne rien inventer : chaque note cite ses sources.",
- "Paris SG - Roma": {
-  "date": "2026-11-25",
-  "adj": -0.5,
-  "short": "PSG privé de Doué et Kvaratskhelia (croisés) mais Dembélé et Marquinhos de retour ; Roma récupère Dybala et Svilar, Pellegrini forfait",
-  "absents": {
-   "home": [
-    "Désiré Doué (rupture du ligament croisé, saison terminée)",
-    "Khvicha Kvaratskhelia (genou, longue durée)"
-   ],
-   "away": [
-    "Lorenzo Pellegrini (ischio-jambiers)",
-    "Leonardo Balerdi (cheville, incertain)",
-    "Devyne Rensch (adducteurs, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Safonov ; Hakimi, Marquinhos, Pacho, Nuno Mendes ; Zaïre-Emery, Vitinha, Fabián Ruiz ; Akliouche, Dembélé, Mayulu",
-   "away": "Svilar ; Mancini, N'Dicka, Hermoso ; Molina, Cristante, Koné, Wesley ; Mora, Malen, Soulé"
-  },
-  "mood": "Le PSG, double tenant du titre, a gagné ses 4 matchs de C1 et reste sur 12 victoires de suite toutes compétitions, mais doit réinventer son attaque après la grave blessure de Doué à Nice (3-2). La Roma, 2e de Serie A, arrive après un 5-1 à Parme (quadruplé de Malen, meilleur buteur de Serie A) mais n'est que 20e de la phase de ligue.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Ouest-France",
-    "url": "https://www.ouest-france.fr/sport/football/paris-sg/psg-as-rome-les-compositions-probables-avec-les-retours-de-dembele-et-marquinhos-dans-le-onze-de-depart-eb1d5a34-e841-11f1-9b33-2f81462d3339"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/psg/champions-league/preview/psg-vs-roma-prediction-team-news-lineups_609703.html"
-   },
-   {
-    "label": "Goal.com",
-    "url": "https://www.goal.com/en/news/paris-saint-germain-roma-champions-league-preview/blt6990dddc2b4fdbee"
-   },
-   {
-    "label": "AS Roma (liste des convoqués)",
-    "url": "https://www.asroma.com/en/news/76262/the-giallorossi-squad-for-psg-roma"
-   }
-  ]
- },
- "Lille - Bayern Munich": {
-  "date": "2026-11-25",
-  "adj": 1.5,
-  "short": "Bayern décimé : Kane (opéré, ~3 mois), Neuer, Davies, Gnabry, Saibari forfaits, Olise et Luis Díaz incertains ; Lille sans Tiago Santos, Igamane, Nianzou incertain",
-  "absents": {
-   "home": [
-    "Tiago Santos (genou)",
-    "Hamza Igamane (genou)",
-    "Tanguy Nianzou (muscle ; forfait selon UEFA, incertain selon Bulinews)"
-   ],
-   "away": [
-    "Harry Kane (cheville, opéré)",
-    "Manuel Neuer (pied)",
-    "Alphonso Davies (ischio-jambiers)",
-    "Serge Gnabry (muscle)",
-    "Ismael Saibari (cheville)",
-    "Michael Olise (pied, incertain)",
-    "Luis Díaz (ischio-jambiers, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Özer ; Goffi, Ngoy, Alexsandro, Perraud ; André, Bentaleb ; E. Mbappé, Mukau, Haraldsson ; Ueda",
-   "away": "Urbig ; Laimer, Upamecano, Tah, Stanisic ; Kimmich, Pavlovic ; Binder, Bischof, Brown ; Karl"
-  },
-  "mood": "Lille (Davide Ancelotti) a perdu 1-0 contre Lyon samedi et peine en C1 ; Ethan Mbappé revient de 3 matchs de suspension européenne. Le Bayern, invaincu en C1, a concédé le nul 1-1 contre Cologne et perdu la tête de la Bundesliga ; Kompany, de retour sur le banc après des soucis de santé, refuse la panique malgré l'absence d'avant-centre de métier.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/lille/champions-league/preview/lille-vs-bayern-prediction-team-news-lineups_609676.html"
-   },
-   {
-    "label": "Goal.com",
-    "url": "https://www.goal.com/en/news/lille-bayern-munich-uefa-champions-league-preview/blt363750c3dc84a1db"
-   },
-   {
-    "label": "Bulinews",
-    "url": "https://bulinews.com/lille-bayern-munich-preview-team-news-and-predicted-lineups"
-   }
-  ]
- },
- "Club Bruges - Liverpool": {
-  "date": "2026-11-25",
-  "adj": 0.5,
-  "short": "Liverpool sans Gakpo, Ekitiké, Bradley, Leoni, Gravenberch incertain/non convoqué ; Bruges sans Ordóñez ni Virgili",
-  "absents": {
-   "home": [
-    "Joel Ordóñez (fracture du métatarse)",
-    "Jan Virgili (aine)"
-   ],
-   "away": [
-    "Cody Gakpo (mollet)",
-    "Hugo Ekitiké (tendon d'Achille)",
-    "Conor Bradley (genou)",
-    "Giovanni Leoni (ligament croisé)",
-    "Jaroš (tibia)",
-    "Ryan Gravenberch (talon, incertain ; absent du groupe de 22 selon SI)"
-   ]
-  },
-  "lineups": {
-   "home": "Sommer ; Sabbe, Spileers, Mechele, Seys ; Potts, Vanaken ; Forbs, Vetlesen, Lemaréchal ; Tresoldi",
-   "away": "Alisson ; Araújo, Jacquet, Van Dijk, Tsimikas ; Mac Allister, Szoboszlai ; Barcola, Wirtz, Ngumoha ; Isak"
-  },
-  "mood": "Bruges reste sur 3 victoires de suite en C1, porté par Tresoldi (5 buts en C1). Liverpool arrive gonflé à bloc après le 4-0 contre Manchester United mais avait perdu 3-2 à Fenerbahçe lors de la dernière journée de C1 ; Iraola pourrait faire tourner (Isak ménagé possible avant le derby).",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "ESPN",
-    "url": "https://www.espn.co.uk/football/story/_/id/50570994/club-brugge-vs-liverpool-channel-how-watch-uk-kickoff-live-stream-team-news-predicted-lineups"
-   },
-   {
-    "label": "Sports Illustrated",
-    "url": "https://www.si.com/soccer/liverpool-predicted-lineup-vs-club-brugge-champions-league-11-25-26"
-   },
-   {
-    "label": "The Standard",
-    "url": "https://www.standard.co.uk/sport/football/liverpool-fc-xi-vs-club-brugge-confirmed-team-news-predicted-lineup-injury-latest-champions-league-b1306107.html"
-   }
-  ]
- },
- "Inter Milan - Stuttgart": {
-  "date": "2026-11-25",
-  "adj": -1,
-  "short": "Inter sans Çalhanoğlu, Bonny ni Zieliński ; Stuttgart au complet avec les retours de Stiller et Jaquez",
-  "absents": {
-   "home": [
-    "Hakan Çalhanoğlu (cuisse)",
-    "Ange-Yoan Bonny (cuisse)",
-    "Piotr Zieliński (forfait annoncé par Chivu)"
-   ],
-   "away": [
-    "Leo Sauer (muscle, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "J. Martínez ; Pavard, Akanji, Bastoni ; Spence, Barella, Sučić, Mkhitaryan, Dimarco ; Esposito, L. Martínez",
-   "away": "Bredlow ; Hendriks, Chabot, Mittelstädt ; Leweling, Prömel, Karazor, Führich ; Undav, El Khannouss ; Demirović"
-  },
-  "mood": "Inter (15e, 6 pts) a fait 4-4 à Bergame malgré un triplé d'Esposito et reste fragile défensivement ; Lautaro est de retour et Bastoni revient de suspension. Stuttgart (14e, 7 pts) peine en Bundesliga mais a resserré sa défense ; Hoeneß confirme que tous les joueurs inscrits en C1 sont disponibles.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Inter (conférence de Chivu)",
-    "url": "https://www.inter.it/en/news/chivu-press-conference-inter-vs-stuttgart-champions-league-2026-27"
-   },
-   {
-    "label": "VfB Stuttgart (conférence)",
-    "url": "https://www.vfb.de/en/vfb/latest/news/professionals/2627/pressekonferenz-vor-inter-mailand-gegen-vfb-stuttgart/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/inter-milan/champions-league/preview/inter-milan-vs-stuttgart-prediction-team-news-lineups_609700.html"
-   },
-   {
-    "label": "Previa90",
-    "url": "https://previa90.com/en/preview/inter-vs-vfb-stuttgart-2026-11-25/"
-   }
-  ]
- },
- "Sporting Portugal - Manchester United": {
-  "date": "2026-11-25",
-  "adj": 1,
-  "short": "United en crise (0-4 à Anfield) et sans Cunha (suspendu), Baleba, Ugarte, Šeško, Rashford ; Sporting sans Debast ni Nuno Santos",
-  "absents": {
-   "home": [
-    "Zeno Debast (muscle)",
-    "Nuno Santos (muscle, longue durée)"
-   ],
-   "away": [
-    "Matheus Cunha (suspendu)",
-    "Carlos Baleba (cuisse)",
-    "Manuel Ugarte (genou)",
-    "Benjamin Šeško (mollet)",
-    "Marcus Rashford (hanche)",
-    "Luke Shaw (muscle, incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Rui Silva ; Fresneda, Gonçalo Inácio, Eduardo Quaresma, Araújo ; Andersen, Sergi Altimira ; Catamo, Zalazar, Irankunda ; Suárez",
-   "away": "Lammens ; Yoro, Maguire, Martínez, Dalot, Mainoo, Tielemans ; Mbeumo, Bruno Fernandes, Dorgu ; Zirkzee"
-  },
-  "mood": "Sporting (10e, 9 pts) a gagné ses 2 matchs sous Paulo Fonseca, nommé le 4 novembre, et l'Alvalade affiche complet. United, relégable en Premier League, a sombré 4-0 à Liverpool pour la première de Pochettino (rouge de Yoro) ; aucune victoire lors des 6 derniers déplacements en C1 et au moins 2 buts encaissés lors des 4 derniers matchs de C1.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "101 Great Goals",
-    "url": "https://www.101greatgoals.com/match-previews/champions-league-matches/sporting-cp-v-manchester-united-preview-expected-line-ups-stats-where-to-watch/"
-   },
-   {
-    "label": "Opta Analyst",
-    "url": "https://theanalyst.com/articles/sporting-cp-vs-man-utd-prediction-champions-league-preview-11-2026"
-   },
-   {
-    "label": "Goal.com",
-    "url": "https://www.goal.com/en/news/sporting-cp-manchester-united-uefa-champions-league-preview/blt8357b21a9dfb9cdf"
-   }
-  ]
- },
- "Atlético Madrid - Viking FK": {
-  "date": "2026-11-25",
-  "adj": 0,
-  "short": "Atlético sans Lookman, Pubill ni Romero ; Viking sans Baertelsen, Bjørshol, D'Agostino, Roseth, Berisha et Haugen incertains",
-  "absents": {
-   "home": [
-    "Ademola Lookman (genou)",
-    "Marc Pubill (cheville)",
-    "Cristian Romero (muscle)"
-   ],
-   "away": [
-    "Anders Baertelsen (pied)",
-    "Sondre Bjørshol (genou)",
-    "Nick D'Agostino (jambe)",
-    "Martin Ove Roseth (muscle)",
-    "Veton Berisha (incertain)",
-    "Kristoffer Haugen (incertain)"
-   ]
-  },
-  "lineups": {
-   "home": "Oblak ; Llorente, Le Normand, Hancko, Grimaldo ; Simeone, Barrios, Cardoso, Baena ; Sørloth, Álvarez",
-   "away": "Østbø ; Heggheim, Stensness, Falchener, Auklend ; Bjørdal, Bell, Askildsen ; Christiansen, Botheim, Tripić"
-  },
-  "mood": "Les deux équipes ont 4 points ; l'Atlético (23e) reste sur une défaite 2-0 contre le Bayern en C1 mais a battu Getafe 3-0 en Liga et vise le top 8 avec le Metropolitano derrière lui. Viking, de retour en C1 pour la première fois depuis 1992-93, a tenu le Bayern (3-3) et battu Sabah 4-1 ; Christiansen compte 19 buts cette saison.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/atletico-madrid/champions-league/preview/atletico-vs-viking-fk-prediction-team-news-lineups_609709.html"
-   },
-   {
-    "label": "Atlético de Madrid",
-    "url": "https://en.atleticodemadrid.com/noticias/targeting-three-crucial-points-at-the-ucl"
-   }
-  ]
- },
- "Slavia Prague - Villarreal": {
-  "date": "2026-11-25",
-  "adj": -0.5,
-  "short": "Slavia privé de cinq joueurs (Chaloupek, Moses, Ouanda, Piták, Šturm), Provod incertain ; Villarreal sans Foyth, Gerard Moreno, Akhomach, Diatta",
-  "absents": {
-   "home": [
-    "Štěpán Chaloupek (ischio-jambiers)",
-    "David Moses (muscle)",
-    "Adonija Ouanda (muscle)",
-    "Elias Piták (cheville)",
-    "Daniel Šturm (muscle)",
-    "Lukáš Provod (tendon, incertain)"
-   ],
-   "away": [
-    "Juan Foyth (muscle)",
-    "Gerard Moreno (muscle)",
-    "Ilias Akhomach (muscle)",
-    "Diatta (ischio-jambiers)",
-    "Saliba (cheville, selon UEFA)"
-   ]
-  },
-  "lineups": {
-   "home": "Markovič ; Holeš, Zima, N'Guessan ; Vlček, Sadílek, Nowak, Jurásek ; Ayaosi, Suleiman ; Chytil",
-   "away": "Gulácsi ; Mouriño, Logan Costa, Renato Veiga, Carlos Romero ; Comesaña, Gueye ; Buchanan, Moleiro, Oluwaseyi ; Mikautadze"
-  },
-  "mood": "Slavia (34e, 1 pt) est leader de son championnat et a bien résisté à Arsenal (1-2), mais n'a jamais battu un club espagnol en C1. Villarreal (28e, 3 pts) reste sur 2 défaites en C1 (Liverpool, PSG) et un 3-2 perdu au Barça ; Mouriño est sous la menace d'une suspension.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/villarreal/champions-league/preview/slavia-prague-vs-villarreal-prediction-team-news-lineups_609704.html"
-   }
-  ]
- },
- "Sabah FK - Barcelone": {
-  "date": "2026-11-25",
-  "adj": 1,
-  "short": "Barça sans Lamine Yamal (cheville, ménagé), Rodri, Christensen, Espart ; Sabah privé de McCarthy (suspendu)",
-  "absents": {
-   "home": [
-    "Aden McCarthy (suspendu)",
-    "Khaibulaev (coup, incertain)",
-    "Veljko Simić (incertain selon Sports Mole)"
-   ],
-   "away": [
-    "Lamine Yamal (cheville)",
-    "Rodri (ischio-jambiers)",
-    "Andreas Christensen (muscle)",
-    "Xavi Espart (cheville)",
-    "Roony Bardghji (genou)"
-   ]
-  },
-  "lineups": {
-   "home": "Pokatilov ; Zedadka, Dashdamirov, Solvet, Puchacz ; Lepinjica, Rakhmonaliev, Du Queiroz ; Parris, Nwachukwu ; Mickels",
-   "away": "Joan García ; Koundé, De Jong, Gerard Martín, Cancelo ; Bernal, Pedri ; Adeyemi, Fermín López, Gordon ; Raphinha"
-  },
-  "mood": "Sabah (31e, 3 pts) vit sa première C1 et vient de battre Sumqayit 5-1 en championnat. Le Barça (5e, 9 pts), redevenu leader de Liga après le 3-2 contre Villarreal, vise une 5e victoire de suite, mais a encaissé lors de ses 12 derniers matchs de phase de groupes/ligue à l'extérieur.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/barcelona/champions-league/preview/sabah-vs-barcelona-prediction-team-news-lineups_609690.html"
-   }
-  ]
- },
- "Shakhtar Donetsk - Fenerbahçe": {
-  "date": "2026-11-25",
-  "adj": 0,
-  "short": "Shakhtar sans Kauã Elias, Marlon Santos ni Mendoza (selon UEFA) ; Fenerbahçe sans Aké ni Asensio, porté par sa victoire sur Liverpool",
-  "absents": {
-   "home": [
-    "Kauã Elias (fracture de la jambe/pied)",
-    "Marlon Santos (muscle)",
-    "Mendoza (cheville, selon UEFA)",
-    "Pedrinho (muscle, selon Sports Mole)",
-    "Eguinaldo (épaule, selon Sports Mole)"
-   ],
-   "away": [
-    "Nathan Aké (ischio-jambiers)",
-    "Marco Asensio (genou)",
-    "Jayden Oosterwolde (Achille, selon Sports Mole)"
-   ]
-  },
-  "lineups": {
-   "home": "Riznyk ; Vinícius Tobias, Bondar, Matviyenko, Pedro Henrique ; Nazaryna ; Alisson Santana, Ocheretko, Marlon Gomes, Newertton ; Luca Meirelles",
-   "away": "Ederson ; Semedo, Škriniar, Oppong, Brown ; İsmail Yüksek, Guendouzi, Kanté ; Greenwood, İrfan Can Kahveci, Muriqi"
-  },
-  "mood": "Match délocalisé à Stamford Bridge. Shakhtar (21e, 4 pts) reste sur 3 matchs sans victoire et peine offensivement (4 buts en C1), mais n'a jamais perdu contre un club turc en 11 matchs (10 victoires). Fenerbahçe (19e, 5 pts) est galvanisé par son 3-2 contre Liverpool, mais n'a gagné aucun de ses 12 derniers déplacements en C1. Marlon Gomes sous la menace d'une suspension.",
-  "sources": [
-   {
-    "label": "UEFA.com (compos probables J5)",
-    "url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
-   },
-   {
-    "label": "Sports Mole",
-    "url": "https://www.sportsmole.co.uk/football/shakhtar-donetsk/champions-league/preview/shakhtar-vs-fenerbahce-prediction-team-news-lineups_609711.html"
-   }
-  ]
- },
  "Marseille - Levski Sofia": {
   "date": "2026-11-26",
   "adj": 0,
@@ -835,6 +478,205 @@
    {
     "label": "Fantacalcio",
     "url": "https://www.fantacalcio.it/news/calcio-italia/27_11_2026/venezia-bologna-le-probabili-formazioni-e-dove-vederla-in-tv-501207"
+   }
+  ]
+ },
+ "Paris SG - FC Lorient": {
+  "date": "2026-11-28",
+  "adj": -0.5,
+  "short": "PSG sans Nuno Mendes (cuisse, préservé), Kvaratskhelia ni Doué ; Lorient privé de Katseris, Fadiga et Bamba",
+  "absents": {
+   "home": [
+    "Nuno Mendes (gêne à la cuisse, préservé probable)",
+    "Khvicha Kvaratskhelia (genou)",
+    "Désiré Doué (genou)"
+   ],
+   "away": [
+    "Katseris",
+    "Fadiga",
+    "Bamba",
+    "Touré (incertain)"
+   ]
+  },
+  "lineups": {
+   "home": "Safonov ; Hakimi, Marquinhos, Pacho, Hernandez ; Zaïre-Emery, Vitinha, Dro ; Torres, Dembélé, Mayulu",
+   "away": "Mvogo ; Adjei, Talbi, Obaretin ; Sylla, Cadiou, Avom, Kouassi ; Makengo, Bernardeau ; Tosin"
+  },
+  "mood": "PSG sort d'un nul 2-2 contre la Roma en C1 et veut renouer avec la victoire ; Luis Enrique devrait changer plusieurs joueurs.",
+  "sources": [
+   {
+    "label": "VIPSG.FR",
+    "url": "https://www.vipsg.fr/ligue1-psg/psg-lorient-la-compo-probable-avec-deux-grands-retours-300682/"
+   },
+   {
+    "label": "Ouest-France",
+    "url": "https://www.ouest-france.fr/sport/football/fc-lorient/paris-saint-germain-fc-lorient-les-compos-probables-obaretin-reconduit-en-defense-kone-titulaire-en-pointe-avec-les-merlus-4b82a2b8-ea67-11f1-8e4e-f44a9b15a834"
+   }
+  ]
+ },
+ "Inter Milan - Genoa": {
+  "date": "2026-11-28",
+  "adj": 0,
+  "short": "Inter sans Calhanoglu ni Bastoni (~3 semaines), Lautaro de retour ; Genoa quasi au complet",
+  "absents": {
+   "home": [
+    "Hakan Calhanoglu (forfait)",
+    "Alessandro Bastoni (blessé, environ 3 semaines)"
+   ],
+   "away": []
+  },
+  "lineups": {
+   "home": "Provedel ; Pavard, Akanji, Carlos Augusto ; Diouf, Barella, Sucic, Jones, Dimarco ; Lautaro Martinez, Pio Esposito",
+   "away": ""
+  },
+  "mood": "Rotation attendue côté Inter après la victoire en Ligue des champions ; De Rossi dispose d'un Genoa quasi au complet (Baldanzi de retour, sur le banc).",
+  "sources": [
+   {
+    "label": "FCInterNews",
+    "url": "https://www.fcinternews.it/in-primo-piano/i-preview-i-inter-genoa-1024165"
+   },
+   {
+    "label": "Sport.fr",
+    "url": "https://www.sport.fr/football/serie-a-compos-probables-pour-inter-genoa-samedi-a-20h45-avec-lautaro-de-retour-pavard-en-defense-et-calhanoglu-forfait-1505720.shtm"
+   }
+  ]
+ },
+ "Real Madrid - Alaves": {
+  "date": "2026-11-28",
+  "adj": 0,
+  "short": "Real sans Rodrygo, Asencio, Endrick ni Alexander-Arnold (malade) ; Alavés avec 4 absents",
+  "absents": {
+   "home": [
+    "Rodrygo",
+    "Asencio",
+    "Endrick",
+    "Trent Alexander-Arnold (malade)"
+   ],
+   "away": [
+    "Garcés",
+    "Mikel Rodríguez",
+    "Hugo Novoa",
+    "Carlos Protesoni"
+   ]
+  },
+  "lineups": {
+   "home": "Courtois ; Valverde, Konaté, Huijsen, Cucurella ; Bernardo, Tchouaméni ; Diomandé, Bellingham, Vinícius ; Mbappé",
+   "away": "Sivera ; Ángel, Tenaglia, Koski, Jonny, Rebbach ; Ibáñez, Blanco, Denis Suárez ; Toni Martínez, Boyé"
+  },
+  "mood": "Real favori contre un Alavés qui vient de renouer avec la victoire ; plusieurs changements attendus après le match européen.",
+  "sources": [
+   {
+    "label": "Le Journal du Real",
+    "url": "https://lejournaldureal.fr/2026/11/27/real-madrid-alaves-compos"
+   },
+   {
+    "label": "Marca",
+    "url": "https://www.marca.com/futbol/primera-division/2026/11/27/real-madrid-alaves-alineaciones-probables.html"
+   }
+  ]
+ },
+ "Manchester United - Brentford": {
+  "date": "2026-11-28",
+  "adj": 0,
+  "short": "United : Fernandes en doute (virus), Baleba, Ugarte et Šeško out ; Brentford sans Igor Thiago (suspendu)",
+  "absents": {
+   "home": [
+    "Bruno Fernandes (malade, incertain)",
+    "Amad (doute)",
+    "Carlos Baleba",
+    "Manuel Ugarte",
+    "Benjamin Šeško",
+    "Marcus Rashford (retour de blessure à la hanche)"
+   ],
+   "away": [
+    "Aaron Hickey",
+    "Nathan Collins",
+    "Rico Henry",
+    "Kaye Furo",
+    "Igor Thiago (suspendu)"
+   ]
+  },
+  "lineups": {
+   "home": "",
+   "away": ""
+  },
+  "mood": "United, déjà touché par les blessures, pourrait manquer de nombreux joueurs ; Brentford a un point positif avec Dasilva et Milambo proches d'un retour.",
+  "sources": [
+   {
+    "label": "The Mirror",
+    "url": "https://www.mirror.co.uk/sport/football/news/manchester-united-brentford-injury-update-37923733"
+   },
+   {
+    "label": "Brentford FC",
+    "url": "https://www.brentfordfc.com/en/news/first-team-manchester-united-v-brentford-premier-league-28-11-2026-injury-update"
+   }
+  ]
+ },
+ "Angers SCO - RC Lens": {
+  "date": "2026-11-28",
+  "adj": 0.5,
+  "short": "Angers sans but depuis 4 matchs et privé de Diatta, Zinga, Bermont ; Lens avec de nombreux absents (Aguilar, Édouard...)",
+  "absents": {
+   "home": [
+    "Diatta",
+    "Zinga",
+    "Bermont"
+   ],
+   "away": [
+    "Aguilar",
+    "Nawrocki",
+    "Édouard",
+    "Thorgan Hazard",
+    "Kyllian Antonio",
+    "Nidal Celik"
+   ]
+  },
+  "lineups": {
+   "home": "Lopes ; Arcus, Camara, Lefort, Kalulu ; Van den Boomen, Belkebla ; Allevinah, Belkhdim, Sbaï ; El Ouazzani",
+   "away": "Risser ; Ganiou, Baidoo, Todibo ; Abdulhamid, Titraoui, Cuisance, Udol ; Thauvin, Sotoca, Sima"
+  },
+  "mood": "Angers n'a pas marqué depuis quatre matchs ; Lens est amoindri par plusieurs absences de taille.",
+  "sources": [
+   {
+    "label": "Sport.fr",
+    "url": "https://www.sport.fr/football/ligue-1-compos-probables-pour-angers-lens-samedi-a-17h15-avec-thauvin-en-vedette-cuisance-et-aguilar-en-doute-et-un-angers-sans-but-depuis-quatre-matchs-1505702.shtm"
+   },
+   {
+    "label": "Ligue1.com",
+    "url": "https://ligue1.com/fr/articles/l1_article_5704-les-compositions-probables-ligue-1-2026-2027"
+   }
+  ]
+ },
+ "Torino - Lazio": {
+  "date": "2026-11-28",
+  "adj": 0,
+  "short": "Torino sans Ismajli (~3 semaines) ni Belghali ; Lazio sans Nuno Tavares, Sutalo, Marusic et Taylor",
+  "absents": {
+   "home": [
+    "Ismajli (opéré à la main + problème musculaire, ~3 semaines)",
+    "Belghali",
+    "Biraghi (indisponible selon une source)"
+   ],
+   "away": [
+    "Nuno Tavares",
+    "Sutalo",
+    "Marusic",
+    "Taylor (œdème)"
+   ]
+  },
+  "lineups": {
+   "home": "",
+   "away": ""
+  },
+  "mood": "Gattuso annonce Dele-Bashiru en remplacement de Taylor côté Lazio.",
+  "sources": [
+   {
+    "label": "Gazzetta.it",
+    "url": "https://www.gazzetta.it/Calcio/Serie-A/Lazio/27-11-2026/torino-lazio-conferenza-gattuso-infortunio-taylor-gioca-dele-bashiru-e-sfida-ad-abate.shtml"
+   },
+   {
+    "label": "Sky Sport",
+    "url": "https://sport.sky.it/calcio/serie-a/2026/11/27/torino-lazio-probabili-formazioni-13-giornata"
    }
   ]
  }
